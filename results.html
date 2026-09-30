@@ -271,6 +271,34 @@ footer {
 
 }
 
+
+
+/* family-navigation-v3 */
+
+.family-nav {
+  grid-template-columns:
+    repeat(
+      3,
+      minmax(0, 1fr)
+    ) !important;
+}
+
+.family-nav a {
+  min-width: 0;
+}
+
+@media (max-width: 560px) {
+
+  .family-nav a {
+    font-size: 12px;
+
+    padding-left: 4px;
+    padding-right: 4px;
+  }
+
+}
+
+
 </style>
 
 </head>
@@ -292,18 +320,9 @@ footer {
 </header>
 
 <nav class="family-nav">
-
-<a href="index.html">
-  最新予想
-</a>
-
-<a
-  href="results.html"
-  class="active"
->
-  結果・成績
-</a>
-
+<a href="index.html">最新予想</a>
+<a href="results.html" class="active">結果・成績</a>
+<a href="analysis.html">AI分析</a>
 </nav>
 
 <section class="section-card"><h2>3連単フォーメーション総合</h2><div class="metric-grid"><div class="metric"><div class="metric-label">対象レース</div><div class="metric-value">144</div></div><div class="metric"><div class="metric-label">的中</div><div class="metric-value">46</div><div class="metric-sub">31.9%</div></div><div class="metric"><div class="metric-label">購入点数</div><div class="metric-value">1,104</div></div><div class="metric"><div class="metric-label">投資額</div><div class="metric-value">110,400円</div></div><div class="metric"><div class="metric-label">払戻額</div><div class="metric-value">65,710円</div></div><div class="metric"><div class="metric-label">損益</div><div class="metric-value">-44,690円</div></div><div class="metric"><div class="metric-label">回収率</div><div class="metric-value">59.5%</div></div></div></section><section class="section-card"><h2>方式別成績</h2><div class="type-grid"><div class="type-card"><h3>1着強軸</h3><div class="type-row"><span>的中</span><b>17 / 60</b></div><div class="type-row"><span>的中率</span><b>28.3%</b></div><div class="type-row"><span>回収率</span><b>64.4%</b></div><div class="type-row"><span>損益</span><b>-8,550円</b></div></div><div class="type-card"><h3>準軸</h3><div class="type-row"><span>的中</span><b>8 / 36</b></div><div class="type-row"><span>的中率</span><b>22.2%</b></div><div class="type-row"><span>回収率</span><b>52.2%</b></div><div class="type-row"><span>損益</span><b>-13,770円</b></div></div><div class="type-card"><h3>混戦</h3><div class="type-row"><span>的中</span><b>21 / 48</b></div><div class="type-row"><span>的中率</span><b>43.8%</b></div><div class="type-row"><span>回収率</span><b>61.2%</b></div><div class="type-row"><span>損益</span><b>-22,370円</b></div></div></div></section>

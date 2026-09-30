@@ -354,49 +354,27 @@
 
   
 
+/* family-navigation-v3 */
+
 .family-nav {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 8px;
-
-  margin-bottom: 14px;
-
-  padding: 6px;
-
-  border:
-    1px solid
-    var(--line);
-
-  border-radius: 14px;
-
-  background: var(--card);
+  grid-template-columns:
+    repeat(
+      3,
+      minmax(0, 1fr)
+    ) !important;
 }
 
 .family-nav a {
-  display: block;
-
-  padding: 11px 8px;
-
-  border-radius: 10px;
-
-  text-align: center;
-
-  text-decoration: none;
-
-  color: var(--text);
-
-  font-weight: 800;
+  min-width: 0;
 }
 
-.family-nav a.active {
-  background: #2563eb;
-  color: #ffffff;
-}
+@media (max-width: 560px) {
 
-@media (prefers-color-scheme: dark) {
+  .family-nav a {
+    font-size: 12px;
 
-  .family-nav a.active {
-    background: #3b82f6;
+    padding-left: 4px;
+    padding-right: 4px;
   }
 
 }
@@ -429,22 +407,11 @@
       </div>
 
     </header>
-
 <nav class="family-nav">
-
-<a
-  href="index.html"
-  class="active"
->
-  最新予想
-</a>
-
-<a href="results.html">
-  結果・成績
-</a>
-
+<a href="index.html" class="active">最新予想</a>
+<a href="results.html">結果・成績</a>
+<a href="analysis.html">AI分析</a>
 </nav>
-
 
     <div class="notice">
 
