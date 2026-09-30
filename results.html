@@ -1,0 +1,330 @@
+<!doctype html>
+<html lang="ja">
+
+<head>
+
+<meta charset="utf-8">
+
+<meta
+  name="viewport"
+  content="width=device-width, initial-scale=1"
+>
+
+<meta
+  name="robots"
+  content="noindex,nofollow"
+>
+
+<meta
+  http-equiv="refresh"
+  content="300"
+>
+
+<title>
+  ボートレースAI 結果・成績
+</title>
+
+<style>
+
+:root {
+  color-scheme: light dark;
+
+  --bg: #f4f6f8;
+  --card: #ffffff;
+  --text: #111827;
+  --muted: #667085;
+  --line: #e5e7eb;
+  --chip: #f3f4f6;
+  --primary: #2563eb;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+
+  font-family:
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    "Hiragino Sans",
+    "Noto Sans JP",
+    sans-serif;
+
+  background: var(--bg);
+  color: var(--text);
+}
+
+.wrap {
+  width: min(920px, 100%);
+  margin: 0 auto;
+  padding: 16px 12px 48px;
+}
+
+header {
+  margin-bottom: 12px;
+}
+
+h1 {
+  margin: 0;
+  font-size: 23px;
+}
+
+.meta {
+  margin-top: 6px;
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.family-nav {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+
+  margin-bottom: 14px;
+
+  padding: 6px;
+
+  border: 1px solid var(--line);
+  border-radius: 14px;
+
+  background: var(--card);
+}
+
+.family-nav a {
+  display: block;
+
+  padding: 11px 8px;
+
+  border-radius: 10px;
+
+  text-align: center;
+
+  text-decoration: none;
+
+  color: var(--text);
+
+  font-weight: 800;
+}
+
+.family-nav a.active {
+  background: var(--primary);
+  color: white;
+}
+
+.section-card {
+  margin-bottom: 12px;
+  padding: 14px;
+
+  border: 1px solid var(--line);
+  border-radius: 14px;
+
+  background: var(--card);
+}
+
+.section-card h2 {
+  margin: 0 0 12px;
+
+  font-size: 18px;
+}
+
+.metric-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(2, minmax(0, 1fr));
+
+  gap: 8px;
+}
+
+.metric {
+  padding: 12px;
+
+  border-radius: 12px;
+
+  background: var(--chip);
+}
+
+.metric-label {
+  color: var(--muted);
+
+  font-size: 12px;
+}
+
+.metric-value {
+  margin-top: 4px;
+
+  font-size: 21px;
+  font-weight: 900;
+
+  font-variant-numeric:
+    tabular-nums;
+}
+
+.metric-sub {
+  margin-top: 3px;
+
+  color: var(--muted);
+
+  font-size: 12px;
+}
+
+.type-grid {
+  display: grid;
+  gap: 8px;
+}
+
+.type-card {
+  padding: 12px;
+
+  border-radius: 12px;
+
+  background: var(--chip);
+}
+
+.type-card h3 {
+  margin: 0 0 8px;
+
+  font-size: 16px;
+}
+
+.type-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+
+  padding: 4px 0;
+
+  font-size: 14px;
+}
+
+.type-row span {
+  color: var(--muted);
+}
+
+.history-list details {
+  margin-top: 8px;
+
+  padding: 10px 12px;
+
+  border-radius: 10px;
+
+  background: var(--chip);
+}
+
+.history-list summary {
+  cursor: pointer;
+  font-weight: 800;
+}
+
+.history-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(3, minmax(0, 1fr));
+
+  gap: 6px;
+
+  margin-top: 10px;
+}
+
+.history-grid .metric-value {
+  font-size: 17px;
+}
+
+.empty {
+  padding: 30px 10px;
+
+  text-align: center;
+
+  color: var(--muted);
+}
+
+footer {
+  margin-top: 18px;
+
+  color: var(--muted);
+
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+@media (
+  max-width: 560px
+) {
+
+  .history-grid {
+    grid-template-columns: 1fr;
+  }
+
+}
+
+@media (
+  prefers-color-scheme: dark
+) {
+
+  :root {
+    --bg: #0f1115;
+    --card: #171a21;
+    --text: #f3f4f6;
+    --muted: #a8b0bd;
+    --line: #2a3039;
+    --chip: #222833;
+    --primary: #3b82f6;
+  }
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="wrap">
+
+<header>
+
+<h1>
+  ボートレースAI 結果・成績
+</h1>
+
+<div class="meta">
+  最新評価：2026/09/30
+</div>
+
+</header>
+
+<nav class="family-nav">
+
+<a href="index.html">
+  最新予想
+</a>
+
+<a
+  href="results.html"
+  class="active"
+>
+  結果・成績
+</a>
+
+</nav>
+
+<section class="section-card"><h2>朝予測</h2><div class="metric-grid"><div class="metric"><div class="metric-label">評価レース</div><div class="metric-value">144</div></div><div class="metric"><div class="metric-label">1着的中率</div><div class="metric-value">—</div></div><div class="metric"><div class="metric-label">上位2艇捕捉率</div><div class="metric-value">—</div></div><div class="metric"><div class="metric-label">上位3艇捕捉率</div><div class="metric-value">—</div></div></div></section><section class="section-card"><h2>直前予測</h2><div class="metric-grid"><div class="metric"><div class="metric-label">評価レース</div><div class="metric-value">104</div></div><div class="metric"><div class="metric-label">1着的中率</div><div class="metric-value">—</div></div><div class="metric"><div class="metric-label">上位2艇捕捉率</div><div class="metric-value">—</div></div><div class="metric"><div class="metric-label">上位3艇捕捉率</div><div class="metric-value">—</div></div></div></section><section class="section-card"><h2>3連単フォーメーション総合</h2><div class="metric-grid"><div class="metric"><div class="metric-label">対象レース</div><div class="metric-value">144</div></div><div class="metric"><div class="metric-label">的中</div><div class="metric-value">46</div><div class="metric-sub">31.9%</div></div><div class="metric"><div class="metric-label">購入点数</div><div class="metric-value">1,104</div></div><div class="metric"><div class="metric-label">投資額</div><div class="metric-value">110,400円</div></div><div class="metric"><div class="metric-label">払戻額</div><div class="metric-value">65,710円</div></div><div class="metric"><div class="metric-label">損益</div><div class="metric-value">-44,690円</div></div><div class="metric"><div class="metric-label">回収率</div><div class="metric-value">59.5%</div></div></div></section><section class="section-card"><h2>方式別成績</h2><div class="type-grid"><div class="type-card"><h3>1着強軸</h3><div class="type-row"><span>的中</span><b>17 / 60</b></div><div class="type-row"><span>的中率</span><b>28.3%</b></div><div class="type-row"><span>回収率</span><b>64.4%</b></div><div class="type-row"><span>損益</span><b>-8,550円</b></div></div><div class="type-card"><h3>準軸</h3><div class="type-row"><span>的中</span><b>8 / 36</b></div><div class="type-row"><span>的中率</span><b>22.2%</b></div><div class="type-row"><span>回収率</span><b>52.2%</b></div><div class="type-row"><span>損益</span><b>-13,770円</b></div></div><div class="type-card"><h3>混戦</h3><div class="type-row"><span>的中</span><b>21 / 48</b></div><div class="type-row"><span>的中率</span><b>43.8%</b></div><div class="type-row"><span>回収率</span><b>61.2%</b></div><div class="type-row"><span>損益</span><b>-22,370円</b></div></div></div></section>
+
+<footer>
+
+このページは自動更新されます。
+
+予測・検証結果は将来の結果を
+保証するものではありません。
+
+</footer>
+
+</div>
+
+</body>
+
+</html>
