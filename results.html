@@ -1,34 +1,14 @@
 <!doctype html>
 <html lang="ja">
-
 <head>
-
 <meta charset="utf-8">
-
-<meta
-  name="viewport"
-  content="width=device-width, initial-scale=1"
->
-
-<meta
-  name="robots"
-  content="noindex,nofollow"
->
-
-<meta
-  http-equiv="refresh"
-  content="300"
->
-
-<title>
-  ボートレースAI 結果・成績
-</title>
-
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<meta http-equiv="refresh" content="300">
+<title>ボートレースAI 結果・成績</title>
 <style>
-
 :root {
   color-scheme: light dark;
-
   --bg: #f4f6f8;
   --card: #ffffff;
   --text: #111827;
@@ -37,228 +17,75 @@
   --chip: #f3f4f6;
   --primary: #2563eb;
 }
-
-* {
-  box-sizing: border-box;
-}
-
+* { box-sizing: border-box; }
 body {
   margin: 0;
-
-  font-family:
-    -apple-system,
-    BlinkMacSystemFont,
-    "Segoe UI",
-    "Hiragino Sans",
-    "Noto Sans JP",
-    sans-serif;
-
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Hiragino Sans", "Noto Sans JP", sans-serif;
   background: var(--bg);
   color: var(--text);
 }
-
-.wrap {
-  width: min(920px, 100%);
-  margin: 0 auto;
-  padding: 16px 12px 48px;
-}
-
-header {
-  margin-bottom: 12px;
-}
-
-h1 {
-  margin: 0;
-  font-size: 23px;
-}
-
-.meta {
-  margin-top: 6px;
-  color: var(--muted);
-  font-size: 13px;
-}
-
+.wrap { width: min(920px, 100%); margin: 0 auto; padding: 16px 12px 48px; }
+header { margin-bottom: 12px; }
+h1 { margin: 0; font-size: 23px; }
+.meta { margin-top: 6px; color: var(--muted); font-size: 13px; }
 .family-nav {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 8px;
-
   margin-bottom: 14px;
   padding: 6px;
-
   border: 1px solid var(--line);
   border-radius: 14px;
-
   background: var(--card);
 }
-
 .family-nav a {
   display: block;
-
   padding: 11px 8px;
-
   border-radius: 10px;
-
   text-align: center;
   text-decoration: none;
-
   color: var(--text);
-
   font-weight: 800;
 }
-
-.family-nav a.active {
-  background: var(--primary);
-  color: white;
-}
-
+.family-nav a.active { background: var(--primary); color: white; }
 .section-card {
   margin-bottom: 12px;
   padding: 14px;
-
   border: 1px solid var(--line);
   border-radius: 14px;
-
   background: var(--card);
 }
-
-.section-card h2 {
-  margin: 0 0 12px;
-  font-size: 18px;
+.section-card h2 { margin: 0 0 8px; font-size: 18px; }
+.section-note { margin: 0 0 12px; color: var(--muted); font-size: 12px; line-height: 1.6; }
+.metric-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; }
+.metric { padding: 12px; border-radius: 12px; background: var(--chip); }
+.metric-label { color: var(--muted); font-size: 12px; }
+.metric-value { margin-top: 4px; font-size: 21px; font-weight: 900; font-variant-numeric: tabular-nums; }
+.metric-sub { margin-top: 3px; color: var(--muted); font-size: 12px; }
+.table-scroll { overflow-x: auto; }
+.compare-table { width: 100%; border-collapse: collapse; min-width: 560px; }
+.compare-table th, .compare-table td { padding: 10px 8px; border-bottom: 1px solid var(--line); text-align: right; font-size: 13px; }
+.compare-table th:first-child, .compare-table td:first-child { text-align: left; }
+.compare-table thead th { color: var(--muted); font-size: 12px; }
+.type-grid { display: grid; gap: 8px; }
+.type-card { padding: 12px; border-radius: 12px; background: var(--chip); }
+.type-card h3 { margin: 0 0 8px; font-size: 16px; }
+.type-row { display: flex; justify-content: space-between; gap: 12px; padding: 4px 0; font-size: 14px; }
+.type-row span { color: var(--muted); }
+.history-list details { margin-top: 8px; padding: 10px 12px; border-radius: 10px; background: var(--chip); }
+.history-list summary { cursor: pointer; font-weight: 800; }
+.history-strategy { display: grid; gap: 10px; margin-top: 10px; }
+.history-block h3 { margin: 0 0 6px; font-size: 14px; }
+.history-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 6px; }
+.history-grid .metric-value { font-size: 17px; }
+.empty { padding: 30px 10px; text-align: center; color: var(--muted); }
+footer { margin-top: 18px; color: var(--muted); font-size: 12px; line-height: 1.6; }
+@media (max-width: 560px) {
+  .family-nav { gap: 6px; padding: 5px; }
+  .family-nav a { padding: 10px 4px; font-size: 12px; }
+  .history-grid { grid-template-columns: 1fr; }
 }
-
-.metric-grid {
-  display: grid;
-
-  grid-template-columns:
-    repeat(2, minmax(0, 1fr));
-
-  gap: 8px;
-}
-
-.metric {
-  padding: 12px;
-
-  border-radius: 12px;
-
-  background: var(--chip);
-}
-
-.metric-label {
-  color: var(--muted);
-  font-size: 12px;
-}
-
-.metric-value {
-  margin-top: 4px;
-
-  font-size: 21px;
-  font-weight: 900;
-
-  font-variant-numeric:
-    tabular-nums;
-}
-
-.metric-sub {
-  margin-top: 3px;
-
-  color: var(--muted);
-  font-size: 12px;
-}
-
-.type-grid {
-  display: grid;
-  gap: 8px;
-}
-
-.type-card {
-  padding: 12px;
-
-  border-radius: 12px;
-
-  background: var(--chip);
-}
-
-.type-card h3 {
-  margin: 0 0 8px;
-  font-size: 16px;
-}
-
-.type-row {
-  display: flex;
-  justify-content: space-between;
-  gap: 12px;
-
-  padding: 4px 0;
-
-  font-size: 14px;
-}
-
-.type-row span {
-  color: var(--muted);
-}
-
-.history-list details {
-  margin-top: 8px;
-
-  padding: 10px 12px;
-
-  border-radius: 10px;
-
-  background: var(--chip);
-}
-
-.history-list summary {
-  cursor: pointer;
-  font-weight: 800;
-}
-
-.history-grid {
-  display: grid;
-
-  grid-template-columns:
-    repeat(3, minmax(0, 1fr));
-
-  gap: 6px;
-
-  margin-top: 10px;
-}
-
-.history-grid .metric-value {
-  font-size: 17px;
-}
-
-.empty {
-  padding: 30px 10px;
-
-  text-align: center;
-
-  color: var(--muted);
-}
-
-footer {
-  margin-top: 18px;
-
-  color: var(--muted);
-
-  font-size: 12px;
-  line-height: 1.6;
-}
-
-@media (
-  max-width: 560px
-) {
-
-  .history-grid {
-    grid-template-columns: 1fr;
-  }
-
-}
-
-@media (
-  prefers-color-scheme: dark
-) {
-
+@media (prefers-color-scheme: dark) {
   :root {
     --bg: #0f1115;
     --card: #171a21;
@@ -268,9 +95,7 @@ footer {
     --chip: #222833;
     --primary: #3b82f6;
   }
-
 }
-
 
 /* family-navigation-v4-unified */
 
@@ -400,44 +225,24 @@ header .meta {
 }
 
 </style>
-
 </head>
-
 <body>
-
 <div class="wrap">
-
 <header>
-
-<h1>
-  ボートレースAI 結果・成績
-</h1>
-
-<div class="meta">
-  最新評価：2026/09/30
-</div>
-
+<h1>ボートレースAI 結果・成績</h1>
+<div class="meta">最新評価：2026/09/30</div>
 </header>
-
 <nav class="family-nav">
 <a href="index.html">最新予想</a>
 <a href="results.html" class="active">結果・成績</a>
 <a href="analysis.html">AI分析</a>
 </nav>
-
-<section class="section-card"><h2>3連単フォーメーション総合</h2><div class="metric-grid"><div class="metric"><div class="metric-label">対象レース</div><div class="metric-value">144</div></div><div class="metric"><div class="metric-label">的中</div><div class="metric-value">46</div><div class="metric-sub">31.9%</div></div><div class="metric"><div class="metric-label">購入点数</div><div class="metric-value">1,104</div></div><div class="metric"><div class="metric-label">投資額</div><div class="metric-value">110,400円</div></div><div class="metric"><div class="metric-label">払戻額</div><div class="metric-value">65,710円</div></div><div class="metric"><div class="metric-label">損益</div><div class="metric-value">-44,690円</div></div><div class="metric"><div class="metric-label">回収率</div><div class="metric-value">59.5%</div></div></div></section><section class="section-card"><h2>方式別成績</h2><div class="type-grid"><div class="type-card"><h3>1着強軸</h3><div class="type-row"><span>的中</span><b>17 / 60</b></div><div class="type-row"><span>的中率</span><b>28.3%</b></div><div class="type-row"><span>回収率</span><b>64.4%</b></div><div class="type-row"><span>損益</span><b>-8,550円</b></div></div><div class="type-card"><h3>準軸</h3><div class="type-row"><span>的中</span><b>8 / 36</b></div><div class="type-row"><span>的中率</span><b>22.2%</b></div><div class="type-row"><span>回収率</span><b>52.2%</b></div><div class="type-row"><span>損益</span><b>-13,770円</b></div></div><div class="type-card"><h3>混戦</h3><div class="type-row"><span>的中</span><b>21 / 48</b></div><div class="type-row"><span>的中率</span><b>43.8%</b></div><div class="type-row"><span>回収率</span><b>61.2%</b></div><div class="type-row"><span>損益</span><b>-22,370円</b></div></div></div></section>
-
+<section class="section-card"><h2>2戦略比較</h2><div class="section-note">フォーメーションと3艇BOXは別会計です。両方を同時購入した収支ではありません。</div><div class="table-scroll"><table class="compare-table"><thead><tr><th>指標</th><th>フォーメーション</th><th>上位3艇BOX</th></tr></thead><tbody><tr><th>対象レース</th><td>144</td><td>144</td></tr><tr><th>的中</th><td>46</td><td>25</td></tr><tr><th>的中率</th><td>31.9%</td><td>17.4%</td></tr><tr><th>購入点数</th><td>1,104</td><td>864</td></tr><tr><th>投資額</th><td>110,400円</td><td>86,400円</td></tr><tr><th>払戻額</th><td>65,710円</td><td>32,800円</td></tr><tr><th>損益</th><td>-44,690円</td><td>-53,600円</td></tr><tr><th>回収率</th><td>59.5%</td><td>38.0%</td></tr></tbody></table></div></section><section class="section-card"><h2>3連単フォーメーション</h2><div class="section-note">現在の1着強軸・準軸・混戦ルールによる買い目。各買い目100円。</div><div class="metric-grid"><div class="metric"><div class="metric-label">対象レース</div><div class="metric-value">144</div></div><div class="metric"><div class="metric-label">的中</div><div class="metric-value">46</div><div class="metric-sub">31.9%</div></div><div class="metric"><div class="metric-label">購入点数</div><div class="metric-value">1,104</div></div><div class="metric"><div class="metric-label">投資額</div><div class="metric-value">110,400円</div></div><div class="metric"><div class="metric-label">払戻額</div><div class="metric-value">65,710円</div></div><div class="metric"><div class="metric-label">損益</div><div class="metric-value">-44,690円</div></div><div class="metric"><div class="metric-label">回収率</div><div class="metric-value">59.5%</div></div></div></section><section class="section-card"><h2>AI上位3艇・3連単BOX</h2><div class="section-note">AI順位1〜3位の3艇を6通りの3連単BOXで購入。1レース600円固定。</div><div class="metric-grid"><div class="metric"><div class="metric-label">対象レース</div><div class="metric-value">144</div></div><div class="metric"><div class="metric-label">的中</div><div class="metric-value">25</div><div class="metric-sub">17.4%</div></div><div class="metric"><div class="metric-label">購入点数</div><div class="metric-value">864</div></div><div class="metric"><div class="metric-label">投資額</div><div class="metric-value">86,400円</div></div><div class="metric"><div class="metric-label">払戻額</div><div class="metric-value">32,800円</div></div><div class="metric"><div class="metric-label">損益</div><div class="metric-value">-53,600円</div></div><div class="metric"><div class="metric-label">回収率</div><div class="metric-value">38.0%</div></div></div></section><section class="section-card"><h2>フォーメーション方式別成績</h2><div class="type-grid"><div class="type-card"><h3>1着強軸</h3><div class="type-row"><span>的中</span><b>17 / 60</b></div><div class="type-row"><span>的中率</span><b>28.3%</b></div><div class="type-row"><span>回収率</span><b>64.4%</b></div><div class="type-row"><span>損益</span><b>-8,550円</b></div></div><div class="type-card"><h3>準軸</h3><div class="type-row"><span>的中</span><b>8 / 36</b></div><div class="type-row"><span>的中率</span><b>22.2%</b></div><div class="type-row"><span>回収率</span><b>52.2%</b></div><div class="type-row"><span>損益</span><b>-13,770円</b></div></div><div class="type-card"><h3>混戦</h3><div class="type-row"><span>的中</span><b>21 / 48</b></div><div class="type-row"><span>的中率</span><b>43.8%</b></div><div class="type-row"><span>回収率</span><b>61.2%</b></div><div class="type-row"><span>損益</span><b>-22,370円</b></div></div></div></section><section class="section-card"><h2>3艇BOX・予測種別成績</h2><div class="type-grid"><div class="type-card"><h3>live</h3><div class="type-row"><span>的中</span><b>17 / 104</b></div><div class="type-row"><span>的中率</span><b>16.3%</b></div><div class="type-row"><span>回収率</span><b>32.4%</b></div><div class="type-row"><span>損益</span><b>-42,210円</b></div></div><div class="type-card"><h3>morning</h3><div class="type-row"><span>的中</span><b>8 / 40</b></div><div class="type-row"><span>的中率</span><b>20.0%</b></div><div class="type-row"><span>回収率</span><b>52.5%</b></div><div class="type-row"><span>損益</span><b>-11,390円</b></div></div></div></section>
 <footer>
-
-このページは自動更新されます。
-
-予測・検証結果は将来の結果を
-保証するものではありません。
-
+このページは自動更新されます。<br>
+フォーメーションと3艇BOXは別戦略として個別に集計しています。<br>
+予測・検証結果は将来の結果を保証するものではありません。
 </footer>
-
 </div>
-
 </body>
-
 </html>
