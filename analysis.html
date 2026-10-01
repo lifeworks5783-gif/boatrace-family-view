@@ -1,4 +1,5 @@
 <!doctype html>
+
 <html lang="ja">
 
 <head>
@@ -6,106 +7,159 @@
 <meta charset="utf-8">
 
 <meta
+
   name="viewport"
+
   content="width=device-width, initial-scale=1"
+
 >
 
 <meta
+
   name="robots"
+
   content="noindex,nofollow"
+
 >
 
 <meta
+
   http-equiv="refresh"
+
   content="300"
+
 >
 
 <title>
+
   ボートレースAI 分析
+
 </title>
 
 <style>
 
 :root {
+
   color-scheme: light dark;
 
   --bg: #f4f6f8;
+
   --card: #ffffff;
+
   --text: #111827;
+
   --muted: #667085;
+
   --line: #e5e7eb;
+
   --chip: #f3f4f6;
+
   --primary: #2563eb;
 
   --good-bg: #ecfdf3;
+
   --good-text: #027a48;
 
   --warn-bg: #fff7ed;
+
   --warn-text: #b54708;
+
 }
 
 * {
+
   box-sizing: border-box;
+
 }
 
 body {
+
   margin: 0;
 
   font-family:
+
     -apple-system,
+
     BlinkMacSystemFont,
+
     "Segoe UI",
+
     "Hiragino Sans",
+
     "Noto Sans JP",
+
     sans-serif;
 
   background: var(--bg);
+
   color: var(--text);
+
 }
 
 .wrap {
+
   width: min(920px, 100%);
+
   margin: 0 auto;
+
   padding: 16px 12px 48px;
+
 }
 
 header {
+
   margin-bottom: 12px;
+
 }
 
 h1 {
+
   margin: 0;
+
   font-size: 23px;
+
 }
 
-.meta {
+.meta,
+
+.small-meta {
+
   margin-top: 6px;
 
   color: var(--muted);
-  font-size: 13px;
+
+  font-size: 12px;
+
 }
 
 .family-nav {
+
   display: grid;
 
   grid-template-columns:
+
     repeat(3, minmax(0, 1fr));
 
   gap: 8px;
 
   margin-bottom: 14px;
+
   padding: 6px;
 
   border:
+
     1px solid
+
     var(--line);
 
   border-radius: 14px;
 
   background: var(--card);
+
 }
 
 .family-nav a {
+
   display: block;
 
   padding: 11px 6px;
@@ -113,106 +167,191 @@ h1 {
   border-radius: 10px;
 
   text-align: center;
+
   text-decoration: none;
 
   color: var(--text);
 
   font-size: 14px;
+
   font-weight: 800;
+
 }
 
 .family-nav a.active {
+
   background: var(--primary);
+
   color: white;
+
 }
 
 .section-card {
+
   margin-bottom: 12px;
+
   padding: 14px;
 
   border:
+
     1px solid
+
     var(--line);
 
   border-radius: 14px;
 
   background: var(--card);
+
 }
 
 .section-card h2 {
+
   margin: 0 0 12px;
 
   font-size: 18px;
+
 }
 
 .section-card h3 {
+
   margin: 0 0 10px;
 
   font-size: 15px;
+
 }
 
+.section-note,
+
+.pdca-hero p,
+
 .intro-card p {
+
   margin: 8px 0;
 
   color: var(--muted);
 
   line-height: 1.65;
+
+}
+
+.title-row {
+
+  display: flex;
+
+  justify-content:
+
+    space-between;
+
+  align-items:
+
+    flex-start;
+
+  gap: 10px;
+
+}
+
+.title-row h2 {
+
+  margin-bottom: 4px;
+
+}
+
+.policy-note {
+
+  margin-top: 10px;
+
+  padding: 10px 12px;
+
+  border-radius: 10px;
+
+  background: var(--chip);
+
+  color: var(--muted);
+
+  font-size: 12px;
+
+  line-height: 1.6;
+
 }
 
 .metric-grid {
+
   display: grid;
 
   grid-template-columns:
+
     repeat(2, minmax(0, 1fr));
 
   gap: 8px;
+
+}
+
+.mini-grid {
+
+  margin-bottom: 10px;
+
 }
 
 .metric {
+
   padding: 12px;
 
   border-radius: 12px;
 
   background: var(--chip);
+
 }
 
 .metric-label {
+
   color: var(--muted);
 
   font-size: 12px;
+
 }
 
 .metric-value {
+
   margin-top: 4px;
 
   font-size: 21px;
+
   font-weight: 900;
 
   font-variant-numeric:
+
     tabular-nums;
+
 }
 
 .metric-sub {
+
   margin-top: 3px;
 
   color: var(--muted);
 
   font-size: 12px;
+
 }
 
 .weight-grid {
+
   display: grid;
 
   grid-template-columns:
+
     repeat(2, minmax(0, 1fr));
 
   gap: 8px;
+
 }
 
 .weight-chip {
+
   display: flex;
 
   justify-content:
+
     space-between;
 
   gap: 8px;
@@ -222,45 +361,39 @@ h1 {
   background: var(--chip);
 
   border-radius: 12px;
+
 }
 
 .weight-chip span {
+
   color: var(--muted);
 
   font-size: 13px;
-}
 
-.weight-chip b {
-  font-size: 14px;
 }
 
 .subsection {
+
   margin-top: 18px;
-}
 
-.notes {
-  margin: 0;
-
-  padding-left: 20px;
-
-  line-height: 1.7;
-}
-
-.notes li + li {
-  margin-top: 6px;
 }
 
 .table-wrap {
+
   overflow-x: auto;
 
   border:
+
     1px solid
+
     var(--line);
 
   border-radius: 12px;
+
 }
 
 table {
+
   width: 100%;
 
   border-collapse: collapse;
@@ -268,60 +401,127 @@ table {
   min-width: 560px;
 
   font-size: 13px;
+
 }
 
 th,
+
 td {
+
   padding: 10px 8px;
 
   border-bottom:
+
     1px solid
+
     var(--line);
 
   text-align: right;
 
   white-space: nowrap;
+
 }
 
 th:first-child,
+
 td:first-child {
+
   text-align: left;
+
 }
 
 tr:last-child td {
+
   border-bottom: 0;
+
 }
 
 .factor-list {
+
   display: grid;
 
   gap: 8px;
+
 }
 
 .factor-card {
+
   padding: 12px;
 
   background: var(--chip);
 
   border-radius: 12px;
+
 }
 
 .factor-head {
+
   display: flex;
+
+  justify-content:
+
+    space-between;
 
   align-items: center;
 
-  justify-content:
-    space-between;
-
   gap: 8px;
+
 }
 
 .factor-head h3 {
+
   margin: 0;
+
+}
+
+.factor-grid {
+
+  display: grid;
+
+  grid-template-columns:
+
+    repeat(2, minmax(0, 1fr));
+
+  gap: 7px;
+
+  margin-top: 10px;
+
+}
+
+.factor-grid div {
+
+  display: flex;
+
+  justify-content:
+
+    space-between;
+
+  gap: 8px;
+
+  font-size: 13px;
+
+}
+
+.factor-grid span,
+
+.feature-name {
+
+  color: var(--muted);
+
+}
+
+.feature-name {
+
+  margin-top: 9px;
+
+  font-size: 11px;
+
+  overflow-wrap: anywhere;
+
 }
 
 .badge {
+
   display: inline-block;
 
   padding: 4px 7px;
@@ -329,92 +529,33 @@ tr:last-child td {
   border-radius: 999px;
 
   font-size: 11px;
+
   font-weight: 800;
 
   background: var(--chip);
+
   color: var(--muted);
+
 }
 
 .badge.good {
+
   background: var(--good-bg);
+
   color: var(--good-text);
+
 }
 
 .badge.warn {
+
   background: var(--warn-bg);
+
   color: var(--warn-text);
-}
 
-.factor-grid {
-  display: grid;
-
-  grid-template-columns:
-    repeat(2, minmax(0, 1fr));
-
-  gap: 7px;
-
-  margin-top: 10px;
-}
-
-.factor-grid div {
-  display: flex;
-
-  justify-content:
-    space-between;
-
-  gap: 8px;
-
-  font-size: 13px;
-}
-
-.factor-grid span {
-  color: var(--muted);
-}
-
-.feature-name {
-  margin-top: 9px;
-
-  color: var(--muted);
-
-  font-size: 11px;
-
-  overflow-wrap: anywhere;
-}
-
-.overlap-row {
-  display: flex;
-
-  justify-content:
-    space-between;
-
-  align-items: center;
-
-  gap: 8px;
-
-  padding: 10px 0;
-
-  border-bottom:
-    1px solid
-    var(--line);
-
-  font-size: 13px;
-}
-
-.overlap-row:last-child {
-  border-bottom: 0;
-}
-
-.overlap-right {
-  display: flex;
-
-  align-items: center;
-
-  gap: 7px;
-
-  color: var(--muted);
 }
 
 .history-list details {
+
   margin-top: 8px;
 
   padding: 10px 12px;
@@ -422,42 +563,53 @@ tr:last-child td {
   border-radius: 10px;
 
   background: var(--chip);
+
 }
 
 .history-list summary {
+
   cursor: pointer;
 
   font-weight: 800;
+
 }
 
 .history-grid {
+
   display: grid;
 
   grid-template-columns:
+
     repeat(2, minmax(0, 1fr));
 
   gap: 6px;
 
   margin-top: 10px;
+
 }
 
 .empty {
+
   padding: 30px 10px;
 
   text-align: center;
 
   color: var(--muted);
+
 }
 
 .empty-small {
+
   padding: 8px 0;
 
   color: var(--muted);
 
   font-size: 13px;
+
 }
 
 footer {
+
   margin-top: 18px;
 
   color: var(--muted);
@@ -465,48 +617,67 @@ footer {
   font-size: 12px;
 
   line-height: 1.6;
+
 }
 
 @media (
+
   max-width: 560px
+
 ) {
 
   .family-nav a {
+
     padding: 10px 4px;
 
     font-size: 12px;
+
   }
 
   .factor-grid {
+
     grid-template-columns: 1fr;
+
   }
 
-  .overlap-row {
-    align-items: flex-start;
+  .title-row {
 
     flex-direction: column;
+
   }
 
 }
 
 @media (
+
   prefers-color-scheme: dark
+
 ) {
 
   :root {
+
     --bg: #0f1115;
+
     --card: #171a21;
+
     --text: #f3f4f6;
+
     --muted: #a8b0bd;
+
     --line: #2a3039;
+
     --chip: #222833;
+
     --primary: #3b82f6;
 
     --good-bg: #123524;
+
     --good-text: #75e0a7;
 
     --warn-bg: #3a2815;
+
     --warn-text: #fdb022;
+
   }
 
 }
@@ -650,11 +821,15 @@ header .meta {
 <header>
 
 <h1>
+
   ボートレースAI 分析
+
 </h1>
 
 <div class="meta">
+
   最新分析：2026/10/01
+
 </div>
 
 </header>
@@ -665,16 +840,18 @@ header .meta {
 <a href="analysis.html" class="active">AI分析</a>
 </nav>
 
-<section class="section-card intro-card"><h2>AI分析について</h2><p>予測時点のスコアと実際の着順を照合し、現在の配点がどこで機能し、どこで弱いかを確認するページです。</p><p><b>ここでは配点を自動変更しません。</b> 日ごとの診断を蓄積し、変更は別途判断します。</p></section><section class="section-card"><h2>現在の配点</h2><div class="weight-grid"><div class="weight-chip"><span>枠・コース</span><b>31点</b></div><div class="weight-chip"><span>選手公式能力</span><b>17点</b></div><div class="weight-chip"><span>選手直近成績</span><b>20点</b></div><div class="weight-chip"><span>当地・場適性</span><b>10点</b></div><div class="weight-chip"><span>モーター</span><b>14点</b></div><div class="weight-chip"><span>ボート</span><b>4点</b></div><div class="weight-chip"><span>級別</span><b>4点</b></div></div></section><section class="section-card"><h2>朝予測の診断</h2><div class="metric-grid"><div class="metric"><div class="metric-label">スコア1位の1着率</div><div class="metric-value">50.6%</div><div class="metric-sub">168R</div></div><div class="metric"><div class="metric-label">スコア1位の3着内率</div><div class="metric-value">81.5%</div></div><div class="metric"><div class="metric-label">スコア1位の平均着順</div><div class="metric-value">2.2</div></div><div class="metric"><div class="metric-label">総合スコア取得艇数</div><div class="metric-value">1,008</div><div class="metric-sub">答え合わせ対象</div></div></div><div class="subsection"><h3>この日の観察メモ</h3><ul class="notes"><li>この日だけを見ると、スコア差が大きい帯の1着率は小さい帯より31.1pt高く、スコア差が自信度として機能している可能性があります。</li></ul></div><div class="subsection"><h3>1位−2位 スコア差別</h3><div class="table-wrap"><table><thead><tr><th>スコア差</th><th>R数</th><th>1着率</th><th>3着内率</th><th>平均着順</th></tr></thead><tbody><tr><td>0-5未満</td><td>67</td><td>40.3%</td><td>80.6%</td><td>2.39</td></tr><tr><td>5-10未満</td><td>58</td><td>55.2%</td><td>79.3%</td><td>2.16</td></tr><tr><td>10-15未満</td><td>29</td><td>55.2%</td><td>89.7%</td><td>1.93</td></tr><tr><td>15以上</td><td>14</td><td>71.4%</td><td>78.6%</td><td>2</td></tr></tbody></table></div></div><div class="subsection"><h3>配点要素別</h3><div class="factor-list"><div class="factor-card"><div class="factor-head"><h3>枠・コース</h3><span class="badge warn">代理指標</span></div><div class="factor-grid"><div><span>現配点</span><b>31点</b></div><div><span>検証項目数</span><b>0</b></div><div><span>|順位相関|</span><b>—</b></div><div><span>高値側1着率</span><b>—</b></div><div><span>低値側1着率</span><b>—</b></div><div><span>高値−低値</span><b>—</b></div></div><div class="feature-name">代表指標：—</div></div><div class="factor-card"><div class="factor-head"><h3>選手公式能力</h3><span class="badge warn">代理指標</span></div><div class="factor-grid"><div><span>現配点</span><b>17点</b></div><div><span>検証項目数</span><b>0</b></div><div><span>|順位相関|</span><b>—</b></div><div><span>高値側1着率</span><b>—</b></div><div><span>低値側1着率</span><b>—</b></div><div><span>高値−低値</span><b>—</b></div></div><div class="feature-name">代表指標：—</div></div><div class="factor-card"><div class="factor-head"><h3>選手直近成績</h3><span class="badge warn">代理指標</span></div><div class="factor-grid"><div><span>現配点</span><b>20点</b></div><div><span>検証項目数</span><b>0</b></div><div><span>|順位相関|</span><b>—</b></div><div><span>高値側1着率</span><b>—</b></div><div><span>低値側1着率</span><b>—</b></div><div><span>高値−低値</span><b>—</b></div></div><div class="feature-name">代表指標：—</div></div><div class="factor-card"><div class="factor-head"><h3>当地・場適性</h3><span class="badge warn">代理指標</span></div><div class="factor-grid"><div><span>現配点</span><b>10点</b></div><div><span>検証項目数</span><b>0</b></div><div><span>|順位相関|</span><b>—</b></div><div><span>高値側1着率</span><b>—</b></div><div><span>低値側1着率</span><b>—</b></div><div><span>高値−低値</span><b>—</b></div></div><div class="feature-name">代表指標：—</div></div><div class="factor-card"><div class="factor-head"><h3>モーター</h3><span class="badge warn">代理指標</span></div><div class="factor-grid"><div><span>現配点</span><b>14点</b></div><div><span>検証項目数</span><b>0</b></div><div><span>|順位相関|</span><b>—</b></div><div><span>高値側1着率</span><b>—</b></div><div><span>低値側1着率</span><b>—</b></div><div><span>高値−低値</span><b>—</b></div></div><div class="feature-name">代表指標：—</div></div><div class="factor-card"><div class="factor-head"><h3>ボート</h3><span class="badge warn">代理指標</span></div><div class="factor-grid"><div><span>現配点</span><b>4点</b></div><div><span>検証項目数</span><b>0</b></div><div><span>|順位相関|</span><b>—</b></div><div><span>高値側1着率</span><b>—</b></div><div><span>低値側1着率</span><b>—</b></div><div><span>高値−低値</span><b>—</b></div></div><div class="feature-name">代表指標：—</div></div><div class="factor-card"><div class="factor-head"><h3>級別</h3><span class="badge warn">代理指標</span></div><div class="factor-grid"><div><span>現配点</span><b>4点</b></div><div><span>検証項目数</span><b>0</b></div><div><span>|順位相関|</span><b>—</b></div><div><span>高値側1着率</span><b>—</b></div><div><span>低値側1着率</span><b>—</b></div><div><span>高値−低値</span><b>—</b></div></div><div class="feature-name">代表指標：—</div></div></div></div><div class="subsection"><h3>要素どうしの重複</h3><div class="empty-small">重複チェック結果はまだありません。</div></div></section><section class="section-card"><h2>直前予測の診断</h2><div class="metric-grid"><div class="metric"><div class="metric-label">スコア1位の1着率</div><div class="metric-value">54.8%</div><div class="metric-sub">168R</div></div><div class="metric"><div class="metric-label">スコア1位の3着内率</div><div class="metric-value">83.3%</div></div><div class="metric"><div class="metric-label">スコア1位の平均着順</div><div class="metric-value">2.08</div></div><div class="metric"><div class="metric-label">総合スコア取得艇数</div><div class="metric-value">1,008</div><div class="metric-sub">答え合わせ対象</div></div></div><div class="subsection"><h3>この日の観察メモ</h3><ul class="notes"><li>この日だけを見ると、スコア差が大きい帯の1着率は小さい帯より23.6pt高く、スコア差が自信度として機能している可能性があります。</li></ul></div><div class="subsection"><h3>1位−2位 スコア差別</h3><div class="table-wrap"><table><thead><tr><th>スコア差</th><th>R数</th><th>1着率</th><th>3着内率</th><th>平均着順</th></tr></thead><tbody><tr><td>0-5未満</td><td>60</td><td>40.0%</td><td>81.7%</td><td>2.37</td></tr><tr><td>5-10未満</td><td>43</td><td>60.5%</td><td>83.7%</td><td>1.93</td></tr><tr><td>10-15未満</td><td>32</td><td>65.6%</td><td>90.6%</td><td>1.72</td></tr><tr><td>15以上</td><td>33</td><td>63.6%</td><td>78.8%</td><td>2.12</td></tr></tbody></table></div></div><div class="subsection"><h3>配点要素別</h3><div class="factor-list"><div class="factor-card"><div class="factor-head"><h3>枠・コース</h3><span class="badge warn">代理指標</span></div><div class="factor-grid"><div><span>現配点</span><b>31点</b></div><div><span>検証項目数</span><b>0</b></div><div><span>|順位相関|</span><b>—</b></div><div><span>高値側1着率</span><b>—</b></div><div><span>低値側1着率</span><b>—</b></div><div><span>高値−低値</span><b>—</b></div></div><div class="feature-name">代表指標：—</div></div><div class="factor-card"><div class="factor-head"><h3>選手公式能力</h3><span class="badge warn">代理指標</span></div><div class="factor-grid"><div><span>現配点</span><b>17点</b></div><div><span>検証項目数</span><b>0</b></div><div><span>|順位相関|</span><b>—</b></div><div><span>高値側1着率</span><b>—</b></div><div><span>低値側1着率</span><b>—</b></div><div><span>高値−低値</span><b>—</b></div></div><div class="feature-name">代表指標：—</div></div><div class="factor-card"><div class="factor-head"><h3>選手直近成績</h3><span class="badge warn">代理指標</span></div><div class="factor-grid"><div><span>現配点</span><b>20点</b></div><div><span>検証項目数</span><b>0</b></div><div><span>|順位相関|</span><b>—</b></div><div><span>高値側1着率</span><b>—</b></div><div><span>低値側1着率</span><b>—</b></div><div><span>高値−低値</span><b>—</b></div></div><div class="feature-name">代表指標：—</div></div><div class="factor-card"><div class="factor-head"><h3>当地・場適性</h3><span class="badge warn">代理指標</span></div><div class="factor-grid"><div><span>現配点</span><b>10点</b></div><div><span>検証項目数</span><b>0</b></div><div><span>|順位相関|</span><b>—</b></div><div><span>高値側1着率</span><b>—</b></div><div><span>低値側1着率</span><b>—</b></div><div><span>高値−低値</span><b>—</b></div></div><div class="feature-name">代表指標：—</div></div><div class="factor-card"><div class="factor-head"><h3>モーター</h3><span class="badge warn">代理指標</span></div><div class="factor-grid"><div><span>現配点</span><b>14点</b></div><div><span>検証項目数</span><b>0</b></div><div><span>|順位相関|</span><b>—</b></div><div><span>高値側1着率</span><b>—</b></div><div><span>低値側1着率</span><b>—</b></div><div><span>高値−低値</span><b>—</b></div></div><div class="feature-name">代表指標：—</div></div><div class="factor-card"><div class="factor-head"><h3>ボート</h3><span class="badge warn">代理指標</span></div><div class="factor-grid"><div><span>現配点</span><b>4点</b></div><div><span>検証項目数</span><b>0</b></div><div><span>|順位相関|</span><b>—</b></div><div><span>高値側1着率</span><b>—</b></div><div><span>低値側1着率</span><b>—</b></div><div><span>高値−低値</span><b>—</b></div></div><div class="feature-name">代表指標：—</div></div><div class="factor-card"><div class="factor-head"><h3>級別</h3><span class="badge warn">代理指標</span></div><div class="factor-grid"><div><span>現配点</span><b>4点</b></div><div><span>検証項目数</span><b>0</b></div><div><span>|順位相関|</span><b>—</b></div><div><span>高値側1着率</span><b>—</b></div><div><span>低値側1着率</span><b>—</b></div><div><span>高値−低値</span><b>—</b></div></div><div class="feature-name">代表指標：—</div></div></div></div><div class="subsection"><h3>要素どうしの重複</h3><div class="empty-small">重複チェック結果はまだありません。</div></div></section><section class="section-card"><h2>過去の分析</h2><div class="history-list"><details><summary>2026/09/30</summary><div class="history-grid"><div class="metric"><div class="metric-label">朝・1着率</div><div class="metric-value">52.8%</div></div><div class="metric"><div class="metric-label">直前・1着率</div><div class="metric-value">51.4%</div></div><div class="metric"><div class="metric-label">朝・3着内率</div><div class="metric-value">80.6%</div></div><div class="metric"><div class="metric-label">直前・3着内率</div><div class="metric-value">80.6%</div></div></div></details></div></section>
+<section class="section-card pdca-hero"><div class="title-row"><div><h2>直近7日PDCA</h2><div class="small-meta">基準日：2026/10/01 / 対象：7日 / データあり：2日</div></div><span class="badge good">自動集計</span></div><p>フォーメーションと上位3艇BOXを別会計で比較し、予測精度・特徴量・直前要素・不足データをまとめて確認します。</p><div class="policy-note">全特徴量を保存・集計し、TOP10だけに固定しない。配点変更は7日以上の再現性を確認してから候補として扱う。</div></section><section class="section-card"><h2>買い方2パターンの累計</h2><div class="table-wrap"><table><thead><tr><th>指標</th><th>フォーメーション</th><th>上位3艇BOX</th></tr></thead><tbody><tr><td>対象レース</td><td>312</td><td>312</td></tr><tr><td>的中</td><td>115</td><td>69</td></tr><tr><td>的中率</td><td>36.9%</td><td>22.1%</td></tr><tr><td>投資額</td><td>242,800円</td><td>187,200円</td></tr><tr><td>払戻額</td><td>186,580円</td><td>99,570円</td></tr><tr><td>損益</td><td>-56,220円</td><td>-87,630円</td></tr><tr><td>回収率</td><td>76.8%</td><td>53.2%</td></tr></tbody></table></div></section><section class="section-card"><h2>朝予測・直前予測の累計精度</h2><div class="table-wrap"><table><thead><tr><th>段階</th><th>評価R</th><th>1着率</th><th>勝者TOP2率</th><th>勝者TOP3率</th></tr></thead><tbody><tr><td>朝予測</td><td>312</td><td>51.6%</td><td>70.5%</td><td>83.3%</td></tr><tr><td>直前予測</td><td>215</td><td>54.9%</td><td>73.0%</td><td>84.2%</td></tr></tbody></table></div></section><section class="section-card"><h2>整合性TOP10</h2><p class="section-note">TOP10外の要素も削除せず、全件を毎日再評価しています。</p><div class="table-wrap"><table><thead><tr><th>順位</th><th>段階</th><th>要素</th><th>日数</th><th>R数</th><th>|順位相関|</th><th>高値首位1着率</th></tr></thead><tbody><tr><td>1</td><td>朝</td><td>総合スコア</td><td>2</td><td>312</td><td>0.497</td><td>51.6%</td></tr><tr><td>2</td><td>直前</td><td>総合スコア</td><td>2</td><td>312</td><td>0.496</td><td>53.2%</td></tr><tr><td>3</td><td>直前</td><td>枠・コース</td><td>1</td><td>144</td><td>0.397</td><td>53.5%</td></tr><tr><td>4</td><td>朝</td><td>枠・コース</td><td>1</td><td>144</td><td>0.397</td><td>53.5%</td></tr><tr><td>5</td><td>直前</td><td>選手公式能力</td><td>1</td><td>144</td><td>0.337</td><td>29.9%</td></tr><tr><td>6</td><td>直前</td><td>選手公式能力</td><td>1</td><td>144</td><td>0.337</td><td>3.5%</td></tr><tr><td>7</td><td>朝</td><td>選手公式能力</td><td>1</td><td>144</td><td>0.337</td><td>29.9%</td></tr><tr><td>8</td><td>朝</td><td>選手公式能力</td><td>1</td><td>144</td><td>0.337</td><td>3.5%</td></tr><tr><td>9</td><td>直前</td><td>選手公式能力</td><td>1</td><td>144</td><td>0.33</td><td>29.9%</td></tr><tr><td>10</td><td>朝</td><td>選手公式能力</td><td>1</td><td>144</td><td>0.33</td><td>29.9%</td></tr></tbody></table></div></section><section class="section-card"><h2>直前要素の累計</h2><div class="factor-list"><div class="factor-card"><div class="factor-head"><h3>展示タイム</h3><span class="badge neutral">253R</span></div><div class="factor-grid"><div><span>最良艇1着率</span><b>31.6%</b></div><div><span>最良艇3着内率</span><b>64.4%</b></div><div><span>最悪艇1着率</span><b>8.3%</b></div></div></div><div class="factor-card"><div class="factor-head"><h3>展示ST</h3><span class="badge neutral">239R</span></div><div class="factor-grid"><div><span>最良艇1着率</span><b>21.0%</b></div><div><span>最良艇3着内率</span><b>56.0%</b></div><div><span>最悪艇1着率</span><b>14.2%</b></div></div></div><div class="factor-card"><div class="factor-head"><h3>展示F</h3><span class="badge neutral">1,554艇</span></div><div class="factor-grid"><div><span>該当艇数</span><b>126</b></div><div><span>集計日数</span><b>2</b></div></div></div><div class="factor-card"><div class="factor-head"><h3>展示進入変化</h3><span class="badge neutral">1,552艇</span></div><div class="factor-grid"><div><span>該当艇数</span><b>104</b></div><div><span>集計日数</span><b>2</b></div></div></div></div><div class="subsection"><h3>直前重み探索</h3><p class="section-note">候補探索のみです。本番配点は自動変更しません。</p><div class="metric-grid mini-grid"><div class="metric"><div class="metric-label">比較レース</div><div class="metric-value">312</div></div><div class="metric"><div class="metric-label">ベース1着率</div><div class="metric-value">51.6%</div></div></div><div class="table-wrap"><table><thead><tr><th>展示タイム</th><th>展示ST</th><th>F減点</th><th>1着率</th><th>改善</th></tr></thead><tbody><tr><td>2</td><td>8</td><td>2</td><td>53.2%</td><td>1.6pt</td></tr><tr><td>2</td><td>8</td><td>0</td><td>52.9%</td><td>1.3pt</td></tr><tr><td>6</td><td>6</td><td>0</td><td>52.9%</td><td>1.3pt</td></tr><tr><td>2</td><td>8</td><td>4</td><td>52.9%</td><td>1.3pt</td></tr><tr><td>4</td><td>2</td><td>0</td><td>52.6%</td><td>1pt</td></tr><tr><td>6</td><td>4</td><td>0</td><td>52.6%</td><td>1pt</td></tr><tr><td>0</td><td>10</td><td>2</td><td>52.6%</td><td>1pt</td></tr><tr><td>0</td><td>12</td><td>0</td><td>52.6%</td><td>1pt</td></tr><tr><td>2</td><td>10</td><td>0</td><td>52.6%</td><td>1pt</td></tr><tr><td>4</td><td>8</td><td>0</td><td>52.6%</td><td>1pt</td></tr></tbody></table></div></div></section><section class="section-card"><h2>不足データ・収集状況</h2><div class="table-wrap"><table><thead><tr><th>項目</th><th>取得数</th><th>取得率</th><th>優先度</th></tr></thead><tbody><tr><td>展示タイム</td><td>1,516</td><td>81.0%</td><td><span class="badge good">良好</span></td></tr><tr><td>展示ST</td><td>1,552</td><td>82.9%</td><td><span class="badge good">良好</span></td></tr><tr><td>展示F</td><td>1,554</td><td>83.0%</td><td><span class="badge good">良好</span></td></tr><tr><td>展示進入</td><td>1,516</td><td>81.0%</td><td><span class="badge good">良好</span></td></tr><tr><td>風速</td><td>690</td><td>36.9%</td><td><span class="badge warn">要改善</span></td></tr><tr><td>風向</td><td>1,482</td><td>79.2%</td><td><span class="badge good">良好</span></td></tr><tr><td>波高</td><td>690</td><td>36.9%</td><td><span class="badge warn">要改善</span></td></tr></tbody></table></div></section><section class="section-card intro-card"><h2>日次のAI分析</h2><p>予測時点のスコアと実際の着順を照合し、現在の配点がどこで機能し、どこで弱いかを確認します。</p><p><b>配点は自動変更しません。</b> 日次診断と直近PDCAを蓄積してから判断します。</p></section><section class="section-card"><h2>現在の配点</h2><div class="weight-grid"><div class="weight-chip"><span>枠・コース</span><b>31点</b></div><div class="weight-chip"><span>選手公式能力</span><b>17点</b></div><div class="weight-chip"><span>選手直近成績</span><b>20点</b></div><div class="weight-chip"><span>当地・場適性</span><b>10点</b></div><div class="weight-chip"><span>モーター</span><b>14点</b></div><div class="weight-chip"><span>ボート</span><b>4点</b></div><div class="weight-chip"><span>級別</span><b>4点</b></div></div></section><section class="section-card"><h2>朝予測の診断</h2><div class="metric-grid"><div class="metric"><div class="metric-label">スコア1位の1着率</div><div class="metric-value">50.6%</div><div class="metric-sub">168R</div></div><div class="metric"><div class="metric-label">スコア1位の3着内率</div><div class="metric-value">81.5%</div></div><div class="metric"><div class="metric-label">スコア1位の平均着順</div><div class="metric-value">2.2</div></div><div class="metric"><div class="metric-label">総合スコア取得艇数</div><div class="metric-value">1,008</div><div class="metric-sub">答え合わせ対象</div></div></div><div class="subsection"><h3>1位−2位 スコア差別</h3><div class="table-wrap"><table><thead><tr><th>スコア差</th><th>R数</th><th>1着率</th><th>3着内率</th><th>平均着順</th></tr></thead><tbody><tr><td>0-5未満</td><td>67</td><td>40.3%</td><td>80.6%</td><td>2.39</td></tr><tr><td>5-10未満</td><td>58</td><td>55.2%</td><td>79.3%</td><td>2.16</td></tr><tr><td>10-15未満</td><td>29</td><td>55.2%</td><td>89.7%</td><td>1.93</td></tr><tr><td>15以上</td><td>14</td><td>71.4%</td><td>78.6%</td><td>2</td></tr></tbody></table></div></div><div class="subsection"><h3>配点要素別</h3><div class="factor-list"><div class="factor-card"><div class="factor-head"><h3>枠・コース</h3><span class="badge warn">代理指標</span></div><div class="factor-grid"><div><span>現配点</span><b>31点</b></div><div><span>検証項目数</span><b>0</b></div><div><span>|順位相関|</span><b>—</b></div><div><span>高値側1着率</span><b>—</b></div><div><span>低値側1着率</span><b>—</b></div></div><div class="feature-name">代表指標：—</div></div><div class="factor-card"><div class="factor-head"><h3>選手公式能力</h3><span class="badge warn">代理指標</span></div><div class="factor-grid"><div><span>現配点</span><b>17点</b></div><div><span>検証項目数</span><b>0</b></div><div><span>|順位相関|</span><b>—</b></div><div><span>高値側1着率</span><b>—</b></div><div><span>低値側1着率</span><b>—</b></div></div><div class="feature-name">代表指標：—</div></div><div class="factor-card"><div class="factor-head"><h3>選手直近成績</h3><span class="badge warn">代理指標</span></div><div class="factor-grid"><div><span>現配点</span><b>20点</b></div><div><span>検証項目数</span><b>0</b></div><div><span>|順位相関|</span><b>—</b></div><div><span>高値側1着率</span><b>—</b></div><div><span>低値側1着率</span><b>—</b></div></div><div class="feature-name">代表指標：—</div></div><div class="factor-card"><div class="factor-head"><h3>当地・場適性</h3><span class="badge warn">代理指標</span></div><div class="factor-grid"><div><span>現配点</span><b>10点</b></div><div><span>検証項目数</span><b>0</b></div><div><span>|順位相関|</span><b>—</b></div><div><span>高値側1着率</span><b>—</b></div><div><span>低値側1着率</span><b>—</b></div></div><div class="feature-name">代表指標：—</div></div><div class="factor-card"><div class="factor-head"><h3>モーター</h3><span class="badge warn">代理指標</span></div><div class="factor-grid"><div><span>現配点</span><b>14点</b></div><div><span>検証項目数</span><b>0</b></div><div><span>|順位相関|</span><b>—</b></div><div><span>高値側1着率</span><b>—</b></div><div><span>低値側1着率</span><b>—</b></div></div><div class="feature-name">代表指標：—</div></div><div class="factor-card"><div class="factor-head"><h3>ボート</h3><span class="badge warn">代理指標</span></div><div class="factor-grid"><div><span>現配点</span><b>4点</b></div><div><span>検証項目数</span><b>0</b></div><div><span>|順位相関|</span><b>—</b></div><div><span>高値側1着率</span><b>—</b></div><div><span>低値側1着率</span><b>—</b></div></div><div class="feature-name">代表指標：—</div></div><div class="factor-card"><div class="factor-head"><h3>級別</h3><span class="badge warn">代理指標</span></div><div class="factor-grid"><div><span>現配点</span><b>4点</b></div><div><span>検証項目数</span><b>0</b></div><div><span>|順位相関|</span><b>—</b></div><div><span>高値側1着率</span><b>—</b></div><div><span>低値側1着率</span><b>—</b></div></div><div class="feature-name">代表指標：—</div></div></div></div></section><section class="section-card"><h2>直前予測の診断</h2><div class="metric-grid"><div class="metric"><div class="metric-label">スコア1位の1着率</div><div class="metric-value">54.8%</div><div class="metric-sub">168R</div></div><div class="metric"><div class="metric-label">スコア1位の3着内率</div><div class="metric-value">83.3%</div></div><div class="metric"><div class="metric-label">スコア1位の平均着順</div><div class="metric-value">2.08</div></div><div class="metric"><div class="metric-label">総合スコア取得艇数</div><div class="metric-value">1,008</div><div class="metric-sub">答え合わせ対象</div></div></div><div class="subsection"><h3>1位−2位 スコア差別</h3><div class="table-wrap"><table><thead><tr><th>スコア差</th><th>R数</th><th>1着率</th><th>3着内率</th><th>平均着順</th></tr></thead><tbody><tr><td>0-5未満</td><td>60</td><td>40.0%</td><td>81.7%</td><td>2.37</td></tr><tr><td>5-10未満</td><td>43</td><td>60.5%</td><td>83.7%</td><td>1.93</td></tr><tr><td>10-15未満</td><td>32</td><td>65.6%</td><td>90.6%</td><td>1.72</td></tr><tr><td>15以上</td><td>33</td><td>63.6%</td><td>78.8%</td><td>2.12</td></tr></tbody></table></div></div><div class="subsection"><h3>配点要素別</h3><div class="factor-list"><div class="factor-card"><div class="factor-head"><h3>枠・コース</h3><span class="badge warn">代理指標</span></div><div class="factor-grid"><div><span>現配点</span><b>31点</b></div><div><span>検証項目数</span><b>0</b></div><div><span>|順位相関|</span><b>—</b></div><div><span>高値側1着率</span><b>—</b></div><div><span>低値側1着率</span><b>—</b></div></div><div class="feature-name">代表指標：—</div></div><div class="factor-card"><div class="factor-head"><h3>選手公式能力</h3><span class="badge warn">代理指標</span></div><div class="factor-grid"><div><span>現配点</span><b>17点</b></div><div><span>検証項目数</span><b>0</b></div><div><span>|順位相関|</span><b>—</b></div><div><span>高値側1着率</span><b>—</b></div><div><span>低値側1着率</span><b>—</b></div></div><div class="feature-name">代表指標：—</div></div><div class="factor-card"><div class="factor-head"><h3>選手直近成績</h3><span class="badge warn">代理指標</span></div><div class="factor-grid"><div><span>現配点</span><b>20点</b></div><div><span>検証項目数</span><b>0</b></div><div><span>|順位相関|</span><b>—</b></div><div><span>高値側1着率</span><b>—</b></div><div><span>低値側1着率</span><b>—</b></div></div><div class="feature-name">代表指標：—</div></div><div class="factor-card"><div class="factor-head"><h3>当地・場適性</h3><span class="badge warn">代理指標</span></div><div class="factor-grid"><div><span>現配点</span><b>10点</b></div><div><span>検証項目数</span><b>0</b></div><div><span>|順位相関|</span><b>—</b></div><div><span>高値側1着率</span><b>—</b></div><div><span>低値側1着率</span><b>—</b></div></div><div class="feature-name">代表指標：—</div></div><div class="factor-card"><div class="factor-head"><h3>モーター</h3><span class="badge warn">代理指標</span></div><div class="factor-grid"><div><span>現配点</span><b>14点</b></div><div><span>検証項目数</span><b>0</b></div><div><span>|順位相関|</span><b>—</b></div><div><span>高値側1着率</span><b>—</b></div><div><span>低値側1着率</span><b>—</b></div></div><div class="feature-name">代表指標：—</div></div><div class="factor-card"><div class="factor-head"><h3>ボート</h3><span class="badge warn">代理指標</span></div><div class="factor-grid"><div><span>現配点</span><b>4点</b></div><div><span>検証項目数</span><b>0</b></div><div><span>|順位相関|</span><b>—</b></div><div><span>高値側1着率</span><b>—</b></div><div><span>低値側1着率</span><b>—</b></div></div><div class="feature-name">代表指標：—</div></div><div class="factor-card"><div class="factor-head"><h3>級別</h3><span class="badge warn">代理指標</span></div><div class="factor-grid"><div><span>現配点</span><b>4点</b></div><div><span>検証項目数</span><b>0</b></div><div><span>|順位相関|</span><b>—</b></div><div><span>高値側1着率</span><b>—</b></div><div><span>低値側1着率</span><b>—</b></div></div><div class="feature-name">代表指標：—</div></div></div></div></section><section class="section-card"><h2>過去の分析</h2><div class="history-list"><details><summary>2026/09/30</summary><div class="history-grid"><div class="metric"><div class="metric-label">朝・1着率</div><div class="metric-value">52.8%</div></div><div class="metric"><div class="metric-label">直前・1着率</div><div class="metric-value">51.4%</div></div><div class="metric"><div class="metric-label">朝・3着内率</div><div class="metric-value">80.6%</div></div><div class="metric"><div class="metric-label">直前・3着内率</div><div class="metric-value">80.6%</div></div></div></details></div></section>
 
 <footer>
 
 分析は過去結果との答え合わせです。
+
 将来の結果を保証するものではありません。
 
 <br>
 
 配点変更は自動実行せず、
+
 複数日分を確認してから判断します。
 
 </footer>
@@ -684,3 +861,4 @@ header .meta {
 </body>
 
 </html>
+
