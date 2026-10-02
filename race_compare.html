@@ -358,6 +358,51 @@ h1 {
   font-size:12px;
 }
 
+.simulation-label {
+  margin-top:12px;
+}
+.simulation-grid {
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:8px;
+  margin-top:6px;
+}
+.simulation-box {
+  padding:10px;
+  border:1px solid var(--line);
+  border-radius:10px;
+  background:var(--chip);
+}
+.simulation-title {
+  font-size:13px;
+  font-weight:900;
+}
+.simulation-meta,
+.simulation-money {
+  margin-top:5px;
+  font-size:12px;
+  line-height:1.5;
+}
+.simulation-combos {
+  margin-top:7px;
+  font-size:12px;
+  line-height:1.8;
+}
+.combo-pick {
+  display:inline-block;
+  margin:1px 3px 1px 0;
+}
+.hit-pick {
+  color:#dc2626;
+  font-weight:900;
+}
+.hit-status {
+  color:#dc2626;
+  font-weight:900;
+}
+.miss-status {
+  color:var(--muted);
+}
 .money-grid {
   display:grid;
 
@@ -428,6 +473,10 @@ h1 {
   .summary {
     grid-template-columns:
       1fr;
+  }
+
+  .simulation-grid {
+    grid-template-columns:1fr;
   }
 
   .money-grid {
@@ -603,7 +652,7 @@ header .meta {
   ・確定
   0R
   ・更新
-  2026/10/03 01:28
+  2026/10/03 03:13
   JST
 </div>
 
