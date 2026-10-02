@@ -457,6 +457,134 @@ h1 {
 
 }
 
+
+/* family-navigation-v5-unified */
+
+.family-nav {
+  display: grid !important;
+  grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+  gap: 8px !important;
+  width: 100% !important;
+  margin: 0 0 14px 0 !important;
+  padding: 6px !important;
+  border: 1px solid var(--line) !important;
+  border-radius: 14px !important;
+  background: var(--card) !important;
+  box-sizing: border-box !important;
+}
+
+.family-nav a {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  min-width: 0 !important;
+  min-height: 44px !important;
+  padding: 11px 5px !important;
+  border: 0 !important;
+  border-radius: 10px !important;
+  background: transparent !important;
+  color: var(--text) !important;
+  text-align: center !important;
+  text-decoration: none !important;
+  font-size: 13px !important;
+  font-weight: 800 !important;
+  line-height: 1.25 !important;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.family-nav a:link,
+.family-nav a:visited {
+  color: var(--text) !important;
+  text-decoration: none !important;
+}
+
+.family-nav a.active,
+.family-nav a.active:link,
+.family-nav a.active:visited {
+  background: #2563eb !important;
+  color: #ffffff !important;
+  text-decoration: none !important;
+}
+
+.wrap {
+  width: min(920px, 100%) !important;
+  margin: 0 auto !important;
+  padding: 16px 12px 48px !important;
+}
+
+header {
+  margin-bottom: 12px !important;
+}
+
+header h1 {
+  margin: 0 !important;
+  font-size: 23px !important;
+  font-weight: 800 !important;
+  line-height: 1.35 !important;
+  letter-spacing: 0 !important;
+}
+
+header .meta {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  gap: 4px 10px !important;
+  margin-top: 6px !important;
+  color: var(--muted) !important;
+  font-size: 13px !important;
+  line-height: 1.5 !important;
+}
+
+.notice {
+  margin: 0 0 14px 0 !important;
+  padding: 14px !important;
+  border: 1px solid var(--line) !important;
+  border-radius: 14px !important;
+  background: var(--card) !important;
+  color: var(--muted) !important;
+  font-size: 13px !important;
+  line-height: 1.7 !important;
+  box-sizing: border-box !important;
+}
+
+@media (prefers-color-scheme: dark) {
+
+  .family-nav a.active,
+  .family-nav a.active:link,
+  .family-nav a.active:visited {
+    background: #3b82f6 !important;
+    color: #ffffff !important;
+  }
+
+}
+
+@media (max-width: 560px) {
+
+  .family-nav {
+    gap: 4px !important;
+    padding: 5px !important;
+  }
+
+  .family-nav a {
+    min-height: 42px !important;
+    padding: 9px 2px !important;
+    font-size: 11px !important;
+  }
+
+  header h1 {
+    font-size: 23px !important;
+  }
+
+  header .meta {
+    font-size: 13px !important;
+  }
+
+  .notice {
+    padding: 13px !important;
+    font-size: 13px !important;
+  }
+
+}
+
 </style>
 
 </head>
@@ -473,34 +601,18 @@ h1 {
 <div class="meta">
   2026/10/02
   ・確定
-  6R
+  7R
   ・更新
-  2026/10/02 09:49
+  2026/10/02 09:53
   JST
 </div>
 
 
-<nav class="nav">
-
-  <a href="index.html">
-    最新予想
-  </a>
-
-  <a href="results.html">
-    結果・成績
-  </a>
-
-  <a href="analysis.html">
-    AI分析
-  </a>
-
-  <a
-    href="race_compare.html"
-    class="active"
-  >
-    レース照合
-  </a>
-
+<nav class="family-nav">
+<a href="index.html">最新予想</a>
+<a href="race_compare.html" class="active">レース照合</a>
+<a href="results.html">結果・成績</a>
+<a href="analysis.html">AI分析</a>
 </nav>
 
 
@@ -532,7 +644,7 @@ TOP3整合率は、
   </span>
 
   <strong>
-    6R
+    7R
   </strong>
 
 </div>
@@ -546,13 +658,13 @@ TOP3整合率は、
   </span>
 
   <strong>
-    72.2%
+    71.4%
     /
-    16.7%
+    14.3%
   </strong>
 
   <span>
-    6R
+    7R
   </span>
 
 </div>
@@ -581,6 +693,118 @@ TOP3整合率は、
 </section>
 
 
+
+<article class="race-card">
+
+  <div class="race-head">
+
+    <div>
+
+      <div class="race-title">
+        鳴門
+        3R
+      </div>
+
+      <div class="sub">
+        締切
+        09:27
+        ／
+        結果
+        0931
+        ／
+        逃　げ
+      </div>
+
+    </div>
+
+    <div class="combo">
+      1-2-3
+    </div>
+
+  </div>
+
+
+  <div class="actual">
+
+    <div class="label">
+      実結果
+    </div>
+
+    <div>
+      <span class="boat"><b>1</b>号艇 室田  泰史</span><span class="arrow"> → </span><span class="boat"><b>2</b>号艇 長谷川  暖</span><span class="arrow"> → </span><span class="boat"><b>3</b>号艇 吉田   光</span>
+    </div>
+
+  </div>
+
+
+  <div class="prediction-row">
+
+    <div class="label">
+      朝予測
+    </div>
+
+    <div>
+      <span class="boat"><b>1</b>号艇 </span><span class="arrow"> → </span><span class="boat"><b>6</b>号艇 </span><span class="arrow"> → </span><span class="boat"><b>2</b>号艇 </span>
+    </div>
+
+    <div class="metrics">
+      <span class="tag">TOP3 2/3 (66.7%)</span><span class="tag">完全一致 ×</span><span class="tag">1着一致 ○</span>
+    </div>
+
+  </div>
+
+
+  <div class="prediction-row">
+
+    <div class="label">
+      直前予測
+    </div>
+
+    <div>
+      <span class="missing">予測なし</span>
+    </div>
+
+    <div class="metrics">
+      <span class="missing">未評価</span>
+    </div>
+
+  </div>
+
+
+  <div class="money-grid">
+
+    <div class="money-box">
+
+      <span>
+        3連単払戻
+      </span>
+
+      <strong>
+        890円
+      </strong>
+
+    </div>
+
+
+    <div class="money-box">
+
+      <span>
+        結果3連単の締切前オッズ
+      </span>
+
+      <strong>
+        19.5倍
+      </strong>
+
+      <small>
+        締切6.4分前
+      </small>
+
+    </div>
+
+  </div>
+
+</article>
 
 <article class="race-card">
 
