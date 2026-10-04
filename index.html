@@ -107,6 +107,39 @@
       font-size: 13px;
     }
 
+    .refresh-panel {
+      padding: 12px;
+      margin-bottom: 12px;
+      border-radius: 10px;
+      background: var(--card);
+      border: 1px solid var(--line);
+    }
+
+    .refresh-button {
+      width: 100%;
+      min-height: 48px;
+      border: 0;
+      border-radius: 10px;
+      font-size: 16px;
+      font-weight: 800;
+      cursor: pointer;
+      background: #2563eb;
+      color: #ffffff;
+    }
+
+    .refresh-button:disabled {
+      opacity: .6;
+      cursor: wait;
+    }
+
+    .refresh-status {
+      margin-top: 8px;
+      min-height: 20px;
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.5;
+    }
+
     .notice {
       padding: 10px 12px;
       margin-bottom: 12px;
@@ -526,7 +559,7 @@ header .meta {
         </span>
 
         <span>
-          締切前 8レース ／ 終了済み 148レース
+          締切前 4レース ／ 終了済み 152レース
         </span>
 
       </div>
@@ -539,6 +572,19 @@ header .meta {
 <a href="results.html">結果・成績</a>
 <a href="analysis.html">AI分析</a>
 </nav>
+
+    <div class="refresh-panel">
+      <button
+        id="refreshPredictionButton"
+        class="refresh-button"
+        type="button"
+      >
+        最新データに更新して予測
+      </button>
+      <div id="refreshStatus" class="refresh-status">
+        押すと直前情報を再収集し、最新予測へ更新します。
+      </div>
+    </div>
 
     <div class="notice">
 
@@ -562,254 +608,6 @@ header .meta {
 
         <div class="race-order">
           1
-        </div>
-
-        <div class="race-main">
-
-          <div class="deadline">
-            19:36
-          </div>
-
-          <div class="race-name">
-            蒲郡 10R
-          </div>
-
-        </div>
-
-        <div class="race-status upcoming">締切前</div>
-
-        <div class="badge live">
-          直前
-        </div>
-
-      </div>
-
-      <div class="top-picks">
-        <div class="pick"><span class="mark">◎</span><span class="pick-name">1号艇 北山康介</span><span class="score">71.3</span></div><div class="pick"><span class="mark">○</span><span class="pick-name">4号艇 三宅健太</span><span class="score">60.7</span></div><div class="pick"><span class="mark">▲</span><span class="pick-name">2号艇 水摩敦</span><span class="score">59.8</span></div>
-      </div>
-
-      <details>
-        <summary>
-          6艇すべてのスコア
-        </summary>
-
-        <div class="scores">
-          <span class="chip">1号艇 71.3</span><span class="chip">4号艇 60.7</span><span class="chip">2号艇 59.8</span><span class="chip">5号艇 47.2</span><span class="chip">3号艇 39.6</span><span class="chip">6号艇 21.4</span>
-        </div>
-      </details>
-
-      
-        <div class="formation">
-          <div class="formation-title">
-            3連単 1着固定＋相手流し・12点・1,200円
-          </div>
-
-          <div class="formation-grid">
-            <div><b>1着</b> 1</div>
-            <div><b>2着</b> 4・2・5・3・6</div>
-            <div><b>3着</b> 4・2・5・3・6</div>
-          </div>
-
-          <div class="combos">
-            1-4-2 / 1-2-4 / 1-4-5 / 1-2-5 / 1-5-4 / 1-4-3 / 1-5-2 / 1-2-3 / 1-3-4 / 1-3-2 / 1-4-6 / 1-2-6
-          </div>
-        </div>
-        
-
-    </article>
-    
-    <article class="race-card">
-
-      <div class="race-head">
-
-        <div class="race-order">
-          2
-        </div>
-
-        <div class="race-main">
-
-          <div class="deadline">
-            19:47
-          </div>
-
-          <div class="race-name">
-            下関 10R
-          </div>
-
-        </div>
-
-        <div class="race-status upcoming">締切前</div>
-
-        <div class="badge live">
-          直前
-        </div>
-
-      </div>
-
-      <div class="top-picks">
-        <div class="pick"><span class="mark">◎</span><span class="pick-name">1号艇 原田佑実</span><span class="score">71.5</span></div><div class="pick"><span class="mark">○</span><span class="pick-name">2号艇 村上奈穂</span><span class="score">65.7</span></div><div class="pick"><span class="mark">▲</span><span class="pick-name">6号艇 高田ひか</span><span class="score">53.4</span></div>
-      </div>
-
-      <details>
-        <summary>
-          6艇すべてのスコア
-        </summary>
-
-        <div class="scores">
-          <span class="chip">1号艇 71.5</span><span class="chip">2号艇 65.7</span><span class="chip">6号艇 53.4</span><span class="chip">3号艇 51.3</span><span class="chip">5号艇 35.8</span><span class="chip">4号艇 22.4</span>
-        </div>
-      </details>
-
-      
-        <div class="formation">
-          <div class="formation-title">
-            3連単 準軸・8点・800円
-          </div>
-
-          <div class="formation-grid">
-            <div><b>1着</b> 1・2</div>
-            <div><b>2着</b> 1・2・6</div>
-            <div><b>3着</b> 1・2・6・3</div>
-          </div>
-
-          <div class="combos">
-            1-2-6 / 1-2-3 / 2-1-6 / 1-6-2 / 2-1-3 / 2-6-1 / 1-6-3 / 2-6-3
-          </div>
-        </div>
-        
-
-    </article>
-    
-    <article class="race-card">
-
-      <div class="race-head">
-
-        <div class="race-order">
-          3
-        </div>
-
-        <div class="race-main">
-
-          <div class="deadline">
-            19:58
-          </div>
-
-          <div class="race-name">
-            住之江 11R
-          </div>
-
-        </div>
-
-        <div class="race-status upcoming">締切前</div>
-
-        <div class="badge morning">
-          朝
-        </div>
-
-      </div>
-
-      <div class="top-picks">
-        <div class="pick"><span class="mark">◎</span><span class="pick-name">1号艇 秦英悟</span><span class="score">84.9</span></div><div class="pick"><span class="mark">○</span><span class="pick-name">3号艇 里岡右貴</span><span class="score">74.6</span></div><div class="pick"><span class="mark">▲</span><span class="pick-name">2号艇 竹間隆晟</span><span class="score">54.8</span></div>
-      </div>
-
-      <details>
-        <summary>
-          6艇すべてのスコア
-        </summary>
-
-        <div class="scores">
-          <span class="chip">1号艇 84.9</span><span class="chip">3号艇 74.6</span><span class="chip">2号艇 54.8</span><span class="chip">4号艇 43.5</span><span class="chip">5号艇 37.4</span><span class="chip">6号艇 4.8</span>
-        </div>
-      </details>
-
-      
-        <div class="formation">
-          <div class="formation-title">
-            3連単 1・2着固定＋3着流し・4点・400円
-          </div>
-
-          <div class="formation-grid">
-            <div><b>1着</b> 1</div>
-            <div><b>2着</b> 3</div>
-            <div><b>3着</b> 2・4・5・6</div>
-          </div>
-
-          <div class="combos">
-            1-3-2 / 1-3-4 / 1-3-5 / 1-3-6
-          </div>
-        </div>
-        
-
-    </article>
-    
-    <article class="race-card">
-
-      <div class="race-head">
-
-        <div class="race-order">
-          4
-        </div>
-
-        <div class="race-main">
-
-          <div class="deadline">
-            20:07
-          </div>
-
-          <div class="race-name">
-            蒲郡 11R
-          </div>
-
-        </div>
-
-        <div class="race-status upcoming">締切前</div>
-
-        <div class="badge morning">
-          朝
-        </div>
-
-      </div>
-
-      <div class="top-picks">
-        <div class="pick"><span class="mark">◎</span><span class="pick-name">1号艇 茅原悠紀</span><span class="score">83.9</span></div><div class="pick"><span class="mark">○</span><span class="pick-name">3号艇 野中一平</span><span class="score">71.0</span></div><div class="pick"><span class="mark">▲</span><span class="pick-name">4号艇 末永祐輝</span><span class="score">45.7</span></div>
-      </div>
-
-      <details>
-        <summary>
-          6艇すべてのスコア
-        </summary>
-
-        <div class="scores">
-          <span class="chip">1号艇 83.9</span><span class="chip">3号艇 71.0</span><span class="chip">4号艇 45.7</span><span class="chip">2号艇 44.1</span><span class="chip">5号艇 32.8</span><span class="chip">6号艇 22.5</span>
-        </div>
-      </details>
-
-      
-        <div class="formation">
-          <div class="formation-title">
-            3連単 1・2着固定＋3着流し・4点・400円
-          </div>
-
-          <div class="formation-grid">
-            <div><b>1着</b> 1</div>
-            <div><b>2着</b> 3</div>
-            <div><b>3着</b> 4・2・5・6</div>
-          </div>
-
-          <div class="combos">
-            1-3-4 / 1-3-2 / 1-3-5 / 1-3-6
-          </div>
-        </div>
-        
-
-    </article>
-    
-    <article class="race-card">
-
-      <div class="race-head">
-
-        <div class="race-order">
-          5
         </div>
 
         <div class="race-main">
@@ -871,7 +669,7 @@ header .meta {
       <div class="race-head">
 
         <div class="race-order">
-          6
+          2
         </div>
 
         <div class="race-main">
@@ -933,7 +731,7 @@ header .meta {
       <div class="race-head">
 
         <div class="race-order">
-          7
+          3
         </div>
 
         <div class="race-main">
@@ -995,7 +793,7 @@ header .meta {
       <div class="race-head">
 
         <div class="race-order">
-          8
+          4
         </div>
 
         <div class="race-main">
@@ -10228,6 +10026,254 @@ header .meta {
 
     </article>
     
+    <article class="race-card">
+
+      <div class="race-head">
+
+        <div class="race-order">
+          149
+        </div>
+
+        <div class="race-main">
+
+          <div class="deadline">
+            19:36
+          </div>
+
+          <div class="race-name">
+            蒲郡 10R
+          </div>
+
+        </div>
+
+        <div class="race-status completed">終了済み</div>
+
+        <div class="badge live">
+          直前
+        </div>
+
+      </div>
+
+      <div class="top-picks">
+        <div class="pick"><span class="mark">◎</span><span class="pick-name">1号艇 北山康介</span><span class="score">71.3</span></div><div class="pick"><span class="mark">○</span><span class="pick-name">4号艇 三宅健太</span><span class="score">60.7</span></div><div class="pick"><span class="mark">▲</span><span class="pick-name">2号艇 水摩敦</span><span class="score">59.8</span></div>
+      </div>
+
+      <details>
+        <summary>
+          6艇すべてのスコア
+        </summary>
+
+        <div class="scores">
+          <span class="chip">1号艇 71.3</span><span class="chip">4号艇 60.7</span><span class="chip">2号艇 59.8</span><span class="chip">5号艇 47.2</span><span class="chip">3号艇 39.6</span><span class="chip">6号艇 21.4</span>
+        </div>
+      </details>
+
+      
+        <div class="formation">
+          <div class="formation-title">
+            3連単 1着固定＋相手流し・12点・1,200円
+          </div>
+
+          <div class="formation-grid">
+            <div><b>1着</b> 1</div>
+            <div><b>2着</b> 4・2・5・3・6</div>
+            <div><b>3着</b> 4・2・5・3・6</div>
+          </div>
+
+          <div class="combos">
+            1-4-2 / 1-2-4 / 1-4-5 / 1-2-5 / 1-5-4 / 1-4-3 / 1-5-2 / 1-2-3 / 1-3-4 / 1-3-2 / 1-4-6 / 1-2-6
+          </div>
+        </div>
+        
+
+    </article>
+    
+    <article class="race-card">
+
+      <div class="race-head">
+
+        <div class="race-order">
+          150
+        </div>
+
+        <div class="race-main">
+
+          <div class="deadline">
+            19:47
+          </div>
+
+          <div class="race-name">
+            下関 10R
+          </div>
+
+        </div>
+
+        <div class="race-status completed">終了済み</div>
+
+        <div class="badge live">
+          直前
+        </div>
+
+      </div>
+
+      <div class="top-picks">
+        <div class="pick"><span class="mark">◎</span><span class="pick-name">1号艇 原田佑実</span><span class="score">71.5</span></div><div class="pick"><span class="mark">○</span><span class="pick-name">2号艇 村上奈穂</span><span class="score">65.7</span></div><div class="pick"><span class="mark">▲</span><span class="pick-name">6号艇 高田ひか</span><span class="score">53.4</span></div>
+      </div>
+
+      <details>
+        <summary>
+          6艇すべてのスコア
+        </summary>
+
+        <div class="scores">
+          <span class="chip">1号艇 71.5</span><span class="chip">2号艇 65.7</span><span class="chip">6号艇 53.4</span><span class="chip">3号艇 51.3</span><span class="chip">5号艇 35.8</span><span class="chip">4号艇 22.4</span>
+        </div>
+      </details>
+
+      
+        <div class="formation">
+          <div class="formation-title">
+            3連単 準軸・8点・800円
+          </div>
+
+          <div class="formation-grid">
+            <div><b>1着</b> 1・2</div>
+            <div><b>2着</b> 1・2・6</div>
+            <div><b>3着</b> 1・2・6・3</div>
+          </div>
+
+          <div class="combos">
+            1-2-6 / 1-2-3 / 2-1-6 / 1-6-2 / 2-1-3 / 2-6-1 / 1-6-3 / 2-6-3
+          </div>
+        </div>
+        
+
+    </article>
+    
+    <article class="race-card">
+
+      <div class="race-head">
+
+        <div class="race-order">
+          151
+        </div>
+
+        <div class="race-main">
+
+          <div class="deadline">
+            19:58
+          </div>
+
+          <div class="race-name">
+            住之江 11R
+          </div>
+
+        </div>
+
+        <div class="race-status completed">終了済み</div>
+
+        <div class="badge morning">
+          朝
+        </div>
+
+      </div>
+
+      <div class="top-picks">
+        <div class="pick"><span class="mark">◎</span><span class="pick-name">1号艇 秦英悟</span><span class="score">84.9</span></div><div class="pick"><span class="mark">○</span><span class="pick-name">3号艇 里岡右貴</span><span class="score">74.6</span></div><div class="pick"><span class="mark">▲</span><span class="pick-name">2号艇 竹間隆晟</span><span class="score">54.8</span></div>
+      </div>
+
+      <details>
+        <summary>
+          6艇すべてのスコア
+        </summary>
+
+        <div class="scores">
+          <span class="chip">1号艇 84.9</span><span class="chip">3号艇 74.6</span><span class="chip">2号艇 54.8</span><span class="chip">4号艇 43.5</span><span class="chip">5号艇 37.4</span><span class="chip">6号艇 4.8</span>
+        </div>
+      </details>
+
+      
+        <div class="formation">
+          <div class="formation-title">
+            3連単 1・2着固定＋3着流し・4点・400円
+          </div>
+
+          <div class="formation-grid">
+            <div><b>1着</b> 1</div>
+            <div><b>2着</b> 3</div>
+            <div><b>3着</b> 2・4・5・6</div>
+          </div>
+
+          <div class="combos">
+            1-3-2 / 1-3-4 / 1-3-5 / 1-3-6
+          </div>
+        </div>
+        
+
+    </article>
+    
+    <article class="race-card">
+
+      <div class="race-head">
+
+        <div class="race-order">
+          152
+        </div>
+
+        <div class="race-main">
+
+          <div class="deadline">
+            20:07
+          </div>
+
+          <div class="race-name">
+            蒲郡 11R
+          </div>
+
+        </div>
+
+        <div class="race-status completed">終了済み</div>
+
+        <div class="badge morning">
+          朝
+        </div>
+
+      </div>
+
+      <div class="top-picks">
+        <div class="pick"><span class="mark">◎</span><span class="pick-name">1号艇 茅原悠紀</span><span class="score">83.9</span></div><div class="pick"><span class="mark">○</span><span class="pick-name">3号艇 野中一平</span><span class="score">71.0</span></div><div class="pick"><span class="mark">▲</span><span class="pick-name">4号艇 末永祐輝</span><span class="score">45.7</span></div>
+      </div>
+
+      <details>
+        <summary>
+          6艇すべてのスコア
+        </summary>
+
+        <div class="scores">
+          <span class="chip">1号艇 83.9</span><span class="chip">3号艇 71.0</span><span class="chip">4号艇 45.7</span><span class="chip">2号艇 44.1</span><span class="chip">5号艇 32.8</span><span class="chip">6号艇 22.5</span>
+        </div>
+      </details>
+
+      
+        <div class="formation">
+          <div class="formation-title">
+            3連単 1・2着固定＋3着流し・4点・400円
+          </div>
+
+          <div class="formation-grid">
+            <div><b>1着</b> 1</div>
+            <div><b>2着</b> 3</div>
+            <div><b>3着</b> 4・2・5・6</div>
+          </div>
+
+          <div class="combos">
+            1-3-4 / 1-3-2 / 1-3-5 / 1-3-6
+          </div>
+        </div>
+        
+
+    </article>
+    
 
     <footer>
 
@@ -10238,6 +10284,39 @@ header .meta {
     </footer>
 
   </div>
+
+  <script>
+    (() => {
+      const button = document.getElementById("refreshPredictionButton");
+      const status = document.getElementById("refreshStatus");
+      const endpoint = "https://boatrace-family-trigger.onrender.com/trigger";
+
+      if (!button || !status) return;
+
+      button.addEventListener("click", async () => {
+        if (!window.confirm("最新の直前情報を収集して予測を更新します。実行しますか？")) return;
+
+        button.disabled = true;
+        status.textContent = "更新を受け付けています…";
+
+        try {
+          const response = await fetch(endpoint, {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: "{}"
+          });
+
+          if (response.status !== 202) throw new Error("request_failed");
+
+          status.textContent = "更新を開始しました。約1分後に自動で再読み込みします。";
+          window.setTimeout(() => window.location.reload(), 65000);
+        } catch (error) {
+          status.textContent = "更新を開始できませんでした。少し時間をおいて再度お試しください。";
+          button.disabled = false;
+        }
+      });
+    })();
+  </script>
 
 </body>
 
