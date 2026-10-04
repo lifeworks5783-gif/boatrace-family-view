@@ -533,6 +533,15 @@ header .meta {
 
     </header>
 
+    <section class="refresh-panel" aria-label="最新予測更新">
+      <button id="refreshPredictionButton" class="refresh-button" type="button">
+        最新データに更新して予測
+      </button>
+      <div id="refreshPredictionStatus" class="refresh-status">
+        ボタンを押すと、直前情報を再収集して最新予測へ更新します。
+      </div>
+    </section>
+
 <nav class="family-nav">
 <a href="index.html" class="active">最新予想</a>
 <a href="race_compare.html">レース照合</a>
@@ -10238,6 +10247,32 @@ header .meta {
     </footer>
 
   </div>
+
+  <script>
+    (() => {
+      const endpoint = "https://boatrace-family-trigger.onrender.com/trigger";
+      const button = document.getElementById("refreshPredictionButton");
+      const status = document.getElementById("refreshPredictionStatus");
+      if (!button || !status) return;
+
+      button.addEventListener("click", async () => {
+        if (!confirm("最新データを収集して予測を更新します。実行しますか？")) return;
+        button.disabled = true;
+        status.textContent = "更新を受け付けています…";
+        try {
+          const res = await fetch(endpoint, { method: "POST", headers: { "Content-Type": "application/json" }, body: "{}" });
+          const data = await res.json().catch(() => ({}));
+          if (!res.ok) throw new Error(data.error || "更新要求に失敗しました");
+          status.textContent = "更新を開始しました。約1分後に自動で再読み込みします。";
+          setTimeout(() => location.reload(), 65000);
+        } catch (err) {
+          status.textContent = "更新要求に失敗しました。少し時間をおいて再度お試しください。";
+        } finally {
+          setTimeout(() => { button.disabled = false; }, 5000);
+        }
+      });
+    })();
+  </script>
 
 </body>
 
