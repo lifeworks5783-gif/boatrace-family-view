@@ -155,6 +155,49 @@
       margin-top: 4px;
     }
 
+    .prediction-tabs {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 6px;
+      margin-bottom: 10px;
+    }
+    .prediction-tab {
+      min-height: 44px;
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      background: var(--card);
+      color: var(--text);
+      font-weight: 800;
+      cursor: pointer;
+    }
+    .prediction-tab.active {
+      background: #2563eb;
+      color: #fff;
+      border-color: #2563eb;
+    }
+    .prediction-panel { display: none; }
+    .prediction-panel.active { display: block; }
+    .ai-candidates {
+      display: grid;
+      gap: 5px;
+      margin: 8px 0 12px;
+      font-size: 14px;
+    }
+    .ai-combos { display: grid; gap: 6px; }
+    .ai-combo {
+      display: flex;
+      justify-content: space-between;
+      gap: 10px;
+      padding: 8px 10px;
+      border-radius: 9px;
+      background: var(--chip);
+    }
+    .ai-table-wrap { overflow-x: auto; margin-top: 8px; }
+    .ai-table { width: 100%; border-collapse: collapse; font-size: 13px; }
+    .ai-table th, .ai-table td { padding: 7px; border-bottom: 1px solid var(--line); text-align: right; }
+    .ai-table th:first-child, .ai-table td:first-child { text-align: left; }
+    .ai-note { margin-top: 10px; color: var(--muted); font-size: 12px; }
+
     .notice {
       padding: 10px 12px;
       margin-bottom: 12px;
@@ -574,7 +617,7 @@ header .meta {
         </span>
 
         <span>
-          締切前 88レース
+          締切前 87レース
         </span>
 
       </div>
@@ -601,6 +644,11 @@ header .meta {
       </div>
     </div>
 
+    <div class="prediction-tabs">
+      <button class="prediction-tab active" data-tab="normal" type="button">通常予測</button>
+      <button class="prediction-tab" data-tab="ai" type="button">AIスコア予測</button>
+    </div>
+
     <div class="notice">
 
       最新予想には締切前レースだけを表示します。終了済みレースの予測データはPDCA・結果検証用として保存しています。
@@ -616,75 +664,14 @@ header .meta {
 
     </div>
 
-    
+    <div id="normalPredictionPanel" class="prediction-panel active">
+      
     <article class="race-card">
 
       <div class="race-head">
 
         <div class="race-order">
           1
-        </div>
-
-        <div class="race-main">
-
-          <div class="deadline">
-            13:07
-          </div>
-
-          <div class="race-name">
-            尼崎 6R
-          </div>
-
-        </div>
-
-        <div class="race-status upcoming">締切前</div>
-
-        <div class="badge live">
-          直前
-        </div>
-
-      </div>
-
-      <div class="top-picks">
-        <div class="pick"><span class="mark">◎</span><span class="pick-name">4号艇 井上遥妃</span><span class="score">82.9</span></div><div class="pick"><span class="mark">○</span><span class="pick-name">1号艇 畑竜生</span><span class="score">79.6</span></div><div class="pick"><span class="mark">▲</span><span class="pick-name">2号艇 嶋田貴支</span><span class="score">47.2</span></div>
-      </div>
-
-      <details>
-        <summary>
-          6艇すべてのスコア
-        </summary>
-
-        <div class="scores">
-          <span class="chip">4号艇 82.9</span><span class="chip">1号艇 79.6</span><span class="chip">2号艇 47.2</span><span class="chip">3号艇 40.6</span><span class="chip">5号艇 26.6</span><span class="chip">6号艇 23.1</span>
-        </div>
-      </details>
-
-      
-        <div class="formation">
-          <div class="formation-title">
-            3連単 1・2着折返し＋3着流し・8点・800円
-          </div>
-
-          <div class="formation-grid">
-            <div><b>1着</b> 4・1</div>
-            <div><b>2着</b> 4・1</div>
-            <div><b>3着</b> 2・3・5・6</div>
-          </div>
-
-          <div class="combos">
-            4-1-2 / 4-1-3 / 4-1-5 / 4-1-6 / 1-4-2 / 1-4-3 / 1-4-5 / 1-4-6
-          </div>
-        </div>
-        
-
-    </article>
-    
-    <article class="race-card">
-
-      <div class="race-head">
-
-        <div class="race-order">
-          2
         </div>
 
         <div class="race-main">
@@ -746,7 +733,7 @@ header .meta {
       <div class="race-head">
 
         <div class="race-order">
-          3
+          2
         </div>
 
         <div class="race-main">
@@ -808,7 +795,7 @@ header .meta {
       <div class="race-head">
 
         <div class="race-order">
-          4
+          3
         </div>
 
         <div class="race-main">
@@ -870,7 +857,7 @@ header .meta {
       <div class="race-head">
 
         <div class="race-order">
-          5
+          4
         </div>
 
         <div class="race-main">
@@ -932,7 +919,7 @@ header .meta {
       <div class="race-head">
 
         <div class="race-order">
-          6
+          5
         </div>
 
         <div class="race-main">
@@ -994,7 +981,7 @@ header .meta {
       <div class="race-head">
 
         <div class="race-order">
-          7
+          6
         </div>
 
         <div class="race-main">
@@ -1056,7 +1043,7 @@ header .meta {
       <div class="race-head">
 
         <div class="race-order">
-          8
+          7
         </div>
 
         <div class="race-main">
@@ -1118,7 +1105,7 @@ header .meta {
       <div class="race-head">
 
         <div class="race-order">
-          9
+          8
         </div>
 
         <div class="race-main">
@@ -1180,7 +1167,7 @@ header .meta {
       <div class="race-head">
 
         <div class="race-order">
-          10
+          9
         </div>
 
         <div class="race-main">
@@ -1242,7 +1229,7 @@ header .meta {
       <div class="race-head">
 
         <div class="race-order">
-          11
+          10
         </div>
 
         <div class="race-main">
@@ -1304,7 +1291,7 @@ header .meta {
       <div class="race-head">
 
         <div class="race-order">
-          12
+          11
         </div>
 
         <div class="race-main">
@@ -1366,7 +1353,7 @@ header .meta {
       <div class="race-head">
 
         <div class="race-order">
-          13
+          12
         </div>
 
         <div class="race-main">
@@ -1428,7 +1415,7 @@ header .meta {
       <div class="race-head">
 
         <div class="race-order">
-          14
+          13
         </div>
 
         <div class="race-main">
@@ -1490,7 +1477,7 @@ header .meta {
       <div class="race-head">
 
         <div class="race-order">
-          15
+          14
         </div>
 
         <div class="race-main">
@@ -1552,7 +1539,7 @@ header .meta {
       <div class="race-head">
 
         <div class="race-order">
-          16
+          15
         </div>
 
         <div class="race-main">
@@ -1614,7 +1601,7 @@ header .meta {
       <div class="race-head">
 
         <div class="race-order">
-          17
+          16
         </div>
 
         <div class="race-main">
@@ -1676,7 +1663,7 @@ header .meta {
       <div class="race-head">
 
         <div class="race-order">
-          18
+          17
         </div>
 
         <div class="race-main">
@@ -1738,7 +1725,7 @@ header .meta {
       <div class="race-head">
 
         <div class="race-order">
-          19
+          18
         </div>
 
         <div class="race-main">
@@ -1800,7 +1787,7 @@ header .meta {
       <div class="race-head">
 
         <div class="race-order">
-          20
+          19
         </div>
 
         <div class="race-main">
@@ -1862,7 +1849,7 @@ header .meta {
       <div class="race-head">
 
         <div class="race-order">
-          21
+          20
         </div>
 
         <div class="race-main">
@@ -1924,7 +1911,7 @@ header .meta {
       <div class="race-head">
 
         <div class="race-order">
-          22
+          21
         </div>
 
         <div class="race-main">
@@ -1986,7 +1973,7 @@ header .meta {
       <div class="race-head">
 
         <div class="race-order">
-          23
+          22
         </div>
 
         <div class="race-main">
@@ -2048,7 +2035,7 @@ header .meta {
       <div class="race-head">
 
         <div class="race-order">
-          24
+          23
         </div>
 
         <div class="race-main">
@@ -2110,7 +2097,7 @@ header .meta {
       <div class="race-head">
 
         <div class="race-order">
-          25
+          24
         </div>
 
         <div class="race-main">
@@ -2172,7 +2159,7 @@ header .meta {
       <div class="race-head">
 
         <div class="race-order">
-          26
+          25
         </div>
 
         <div class="race-main">
@@ -2234,7 +2221,7 @@ header .meta {
       <div class="race-head">
 
         <div class="race-order">
-          27
+          26
         </div>
 
         <div class="race-main">
@@ -2296,7 +2283,7 @@ header .meta {
       <div class="race-head">
 
         <div class="race-order">
-          28
+          27
         </div>
 
         <div class="race-main">
@@ -2358,7 +2345,7 @@ header .meta {
       <div class="race-head">
 
         <div class="race-order">
-          29
+          28
         </div>
 
         <div class="race-main">
@@ -2420,7 +2407,7 @@ header .meta {
       <div class="race-head">
 
         <div class="race-order">
-          30
+          29
         </div>
 
         <div class="race-main">
@@ -2482,7 +2469,7 @@ header .meta {
       <div class="race-head">
 
         <div class="race-order">
-          31
+          30
         </div>
 
         <div class="race-main">
@@ -2544,7 +2531,7 @@ header .meta {
       <div class="race-head">
 
         <div class="race-order">
-          32
+          31
         </div>
 
         <div class="race-main">
@@ -2606,7 +2593,7 @@ header .meta {
       <div class="race-head">
 
         <div class="race-order">
-          33
+          32
         </div>
 
         <div class="race-main">
@@ -2668,7 +2655,7 @@ header .meta {
       <div class="race-head">
 
         <div class="race-order">
-          34
+          33
         </div>
 
         <div class="race-main">
@@ -2730,7 +2717,7 @@ header .meta {
       <div class="race-head">
 
         <div class="race-order">
-          35
+          34
         </div>
 
         <div class="race-main">
@@ -2792,7 +2779,7 @@ header .meta {
       <div class="race-head">
 
         <div class="race-order">
-          36
+          35
         </div>
 
         <div class="race-main">
@@ -2854,7 +2841,7 @@ header .meta {
       <div class="race-head">
 
         <div class="race-order">
-          37
+          36
         </div>
 
         <div class="race-main">
@@ -2916,7 +2903,7 @@ header .meta {
       <div class="race-head">
 
         <div class="race-order">
-          38
+          37
         </div>
 
         <div class="race-main">
@@ -2978,7 +2965,7 @@ header .meta {
       <div class="race-head">
 
         <div class="race-order">
-          39
+          38
         </div>
 
         <div class="race-main">
@@ -3040,7 +3027,7 @@ header .meta {
       <div class="race-head">
 
         <div class="race-order">
-          40
+          39
         </div>
 
         <div class="race-main">
@@ -3102,7 +3089,7 @@ header .meta {
       <div class="race-head">
 
         <div class="race-order">
-          41
+          40
         </div>
 
         <div class="race-main">
@@ -3164,7 +3151,7 @@ header .meta {
       <div class="race-head">
 
         <div class="race-order">
-          42
+          41
         </div>
 
         <div class="race-main">
@@ -3226,7 +3213,7 @@ header .meta {
       <div class="race-head">
 
         <div class="race-order">
-          43
+          42
         </div>
 
         <div class="race-main">
@@ -3288,7 +3275,7 @@ header .meta {
       <div class="race-head">
 
         <div class="race-order">
-          44
+          43
         </div>
 
         <div class="race-main">
@@ -3350,7 +3337,7 @@ header .meta {
       <div class="race-head">
 
         <div class="race-order">
-          45
+          44
         </div>
 
         <div class="race-main">
@@ -3412,7 +3399,7 @@ header .meta {
       <div class="race-head">
 
         <div class="race-order">
-          46
+          45
         </div>
 
         <div class="race-main">
@@ -3474,7 +3461,7 @@ header .meta {
       <div class="race-head">
 
         <div class="race-order">
-          47
+          46
         </div>
 
         <div class="race-main">
@@ -3536,7 +3523,7 @@ header .meta {
       <div class="race-head">
 
         <div class="race-order">
-          48
+          47
         </div>
 
         <div class="race-main">
@@ -3598,7 +3585,7 @@ header .meta {
       <div class="race-head">
 
         <div class="race-order">
-          49
+          48
         </div>
 
         <div class="race-main">
@@ -3660,7 +3647,7 @@ header .meta {
       <div class="race-head">
 
         <div class="race-order">
-          50
+          49
         </div>
 
         <div class="race-main">
@@ -3722,7 +3709,7 @@ header .meta {
       <div class="race-head">
 
         <div class="race-order">
-          51
+          50
         </div>
 
         <div class="race-main">
@@ -3784,7 +3771,7 @@ header .meta {
       <div class="race-head">
 
         <div class="race-order">
-          52
+          51
         </div>
 
         <div class="race-main">
@@ -3846,7 +3833,7 @@ header .meta {
       <div class="race-head">
 
         <div class="race-order">
-          53
+          52
         </div>
 
         <div class="race-main">
@@ -3908,7 +3895,7 @@ header .meta {
       <div class="race-head">
 
         <div class="race-order">
-          54
+          53
         </div>
 
         <div class="race-main">
@@ -3970,7 +3957,7 @@ header .meta {
       <div class="race-head">
 
         <div class="race-order">
-          55
+          54
         </div>
 
         <div class="race-main">
@@ -4032,7 +4019,7 @@ header .meta {
       <div class="race-head">
 
         <div class="race-order">
-          56
+          55
         </div>
 
         <div class="race-main">
@@ -4094,7 +4081,7 @@ header .meta {
       <div class="race-head">
 
         <div class="race-order">
-          57
+          56
         </div>
 
         <div class="race-main">
@@ -4156,7 +4143,7 @@ header .meta {
       <div class="race-head">
 
         <div class="race-order">
-          58
+          57
         </div>
 
         <div class="race-main">
@@ -4218,7 +4205,7 @@ header .meta {
       <div class="race-head">
 
         <div class="race-order">
-          59
+          58
         </div>
 
         <div class="race-main">
@@ -4280,7 +4267,7 @@ header .meta {
       <div class="race-head">
 
         <div class="race-order">
-          60
+          59
         </div>
 
         <div class="race-main">
@@ -4342,7 +4329,7 @@ header .meta {
       <div class="race-head">
 
         <div class="race-order">
-          61
+          60
         </div>
 
         <div class="race-main">
@@ -4404,7 +4391,7 @@ header .meta {
       <div class="race-head">
 
         <div class="race-order">
-          62
+          61
         </div>
 
         <div class="race-main">
@@ -4466,7 +4453,7 @@ header .meta {
       <div class="race-head">
 
         <div class="race-order">
-          63
+          62
         </div>
 
         <div class="race-main">
@@ -4528,7 +4515,7 @@ header .meta {
       <div class="race-head">
 
         <div class="race-order">
-          64
+          63
         </div>
 
         <div class="race-main">
@@ -4590,7 +4577,7 @@ header .meta {
       <div class="race-head">
 
         <div class="race-order">
-          65
+          64
         </div>
 
         <div class="race-main">
@@ -4652,7 +4639,7 @@ header .meta {
       <div class="race-head">
 
         <div class="race-order">
-          66
+          65
         </div>
 
         <div class="race-main">
@@ -4714,7 +4701,7 @@ header .meta {
       <div class="race-head">
 
         <div class="race-order">
-          67
+          66
         </div>
 
         <div class="race-main">
@@ -4776,7 +4763,7 @@ header .meta {
       <div class="race-head">
 
         <div class="race-order">
-          68
+          67
         </div>
 
         <div class="race-main">
@@ -4838,7 +4825,7 @@ header .meta {
       <div class="race-head">
 
         <div class="race-order">
-          69
+          68
         </div>
 
         <div class="race-main">
@@ -4900,7 +4887,7 @@ header .meta {
       <div class="race-head">
 
         <div class="race-order">
-          70
+          69
         </div>
 
         <div class="race-main">
@@ -4962,7 +4949,7 @@ header .meta {
       <div class="race-head">
 
         <div class="race-order">
-          71
+          70
         </div>
 
         <div class="race-main">
@@ -5024,7 +5011,7 @@ header .meta {
       <div class="race-head">
 
         <div class="race-order">
-          72
+          71
         </div>
 
         <div class="race-main">
@@ -5086,7 +5073,7 @@ header .meta {
       <div class="race-head">
 
         <div class="race-order">
-          73
+          72
         </div>
 
         <div class="race-main">
@@ -5148,7 +5135,7 @@ header .meta {
       <div class="race-head">
 
         <div class="race-order">
-          74
+          73
         </div>
 
         <div class="race-main">
@@ -5210,7 +5197,7 @@ header .meta {
       <div class="race-head">
 
         <div class="race-order">
-          75
+          74
         </div>
 
         <div class="race-main">
@@ -5272,7 +5259,7 @@ header .meta {
       <div class="race-head">
 
         <div class="race-order">
-          76
+          75
         </div>
 
         <div class="race-main">
@@ -5334,7 +5321,7 @@ header .meta {
       <div class="race-head">
 
         <div class="race-order">
-          77
+          76
         </div>
 
         <div class="race-main">
@@ -5396,7 +5383,7 @@ header .meta {
       <div class="race-head">
 
         <div class="race-order">
-          78
+          77
         </div>
 
         <div class="race-main">
@@ -5458,7 +5445,7 @@ header .meta {
       <div class="race-head">
 
         <div class="race-order">
-          79
+          78
         </div>
 
         <div class="race-main">
@@ -5520,7 +5507,7 @@ header .meta {
       <div class="race-head">
 
         <div class="race-order">
-          80
+          79
         </div>
 
         <div class="race-main">
@@ -5582,7 +5569,7 @@ header .meta {
       <div class="race-head">
 
         <div class="race-order">
-          81
+          80
         </div>
 
         <div class="race-main">
@@ -5644,7 +5631,7 @@ header .meta {
       <div class="race-head">
 
         <div class="race-order">
-          82
+          81
         </div>
 
         <div class="race-main">
@@ -5706,7 +5693,7 @@ header .meta {
       <div class="race-head">
 
         <div class="race-order">
-          83
+          82
         </div>
 
         <div class="race-main">
@@ -5768,7 +5755,7 @@ header .meta {
       <div class="race-head">
 
         <div class="race-order">
-          84
+          83
         </div>
 
         <div class="race-main">
@@ -5830,7 +5817,7 @@ header .meta {
       <div class="race-head">
 
         <div class="race-order">
-          85
+          84
         </div>
 
         <div class="race-main">
@@ -5892,7 +5879,7 @@ header .meta {
       <div class="race-head">
 
         <div class="race-order">
-          86
+          85
         </div>
 
         <div class="race-main">
@@ -5954,7 +5941,7 @@ header .meta {
       <div class="race-head">
 
         <div class="race-order">
-          87
+          86
         </div>
 
         <div class="race-main">
@@ -6016,7 +6003,7 @@ header .meta {
       <div class="race-head">
 
         <div class="race-order">
-          88
+          87
         </div>
 
         <div class="race-main">
@@ -6073,6 +6060,2446 @@ header .meta {
 
     </article>
     
+    </div>
+    <div id="aiPredictionPanel" class="prediction-panel">
+      
+    <article class="race-card">
+      <div class="race-head">
+        <div class="race-order">1</div>
+        <div class="race-main">
+          <div class="deadline">13:09</div>
+          <div class="race-name">福岡 5R</div>
+        </div>
+        <div class="badge live">AIスコア</div>
+      </div>
+      <div class="formation-title">AIスコア予測・推奨 0点</div>
+      <div class="ai-candidates">
+        <div><b>1着候補</b> </div>
+        <div><b>2着候補</b> </div>
+        <div><b>3着候補</b> </div>
+      </div>
+      <div class="ai-combos">AI予測はまだ生成されていません。</div>
+      <details>
+        <summary>着順別AIスコアを見る</summary>
+        <div class="ai-table-wrap">
+          <table class="ai-table">
+            <thead><tr><th>艇</th><th>1着</th><th>2着</th><th>3着</th></tr></thead>
+            <tbody></tbody>
+          </table>
+        </div>
+      </details>
+      <div class="ai-note">検証版。現行フォーメーション／BOXとは独立して記録・評価します。</div>
+    </article>
+    
+    <article class="race-card">
+      <div class="race-head">
+        <div class="race-order">2</div>
+        <div class="race-main">
+          <div class="deadline">13:12</div>
+          <div class="race-name">多摩川 6R</div>
+        </div>
+        <div class="badge live">AIスコア</div>
+      </div>
+      <div class="formation-title">AIスコア予測・推奨 0点</div>
+      <div class="ai-candidates">
+        <div><b>1着候補</b> </div>
+        <div><b>2着候補</b> </div>
+        <div><b>3着候補</b> </div>
+      </div>
+      <div class="ai-combos">AI予測はまだ生成されていません。</div>
+      <details>
+        <summary>着順別AIスコアを見る</summary>
+        <div class="ai-table-wrap">
+          <table class="ai-table">
+            <thead><tr><th>艇</th><th>1着</th><th>2着</th><th>3着</th></tr></thead>
+            <tbody></tbody>
+          </table>
+        </div>
+      </details>
+      <div class="ai-note">検証版。現行フォーメーション／BOXとは独立して記録・評価します。</div>
+    </article>
+    
+    <article class="race-card">
+      <div class="race-head">
+        <div class="race-order">3</div>
+        <div class="race-main">
+          <div class="deadline">13:14</div>
+          <div class="race-name">徳山 10R</div>
+        </div>
+        <div class="badge live">AIスコア</div>
+      </div>
+      <div class="formation-title">AIスコア予測・推奨 0点</div>
+      <div class="ai-candidates">
+        <div><b>1着候補</b> </div>
+        <div><b>2着候補</b> </div>
+        <div><b>3着候補</b> </div>
+      </div>
+      <div class="ai-combos">AI予測はまだ生成されていません。</div>
+      <details>
+        <summary>着順別AIスコアを見る</summary>
+        <div class="ai-table-wrap">
+          <table class="ai-table">
+            <thead><tr><th>艇</th><th>1着</th><th>2着</th><th>3着</th></tr></thead>
+            <tbody></tbody>
+          </table>
+        </div>
+      </details>
+      <div class="ai-note">検証版。現行フォーメーション／BOXとは独立して記録・評価します。</div>
+    </article>
+    
+    <article class="race-card">
+      <div class="race-head">
+        <div class="race-order">4</div>
+        <div class="race-main">
+          <div class="deadline">13:18</div>
+          <div class="race-name">びわこ 7R</div>
+        </div>
+        <div class="badge live">AIスコア</div>
+      </div>
+      <div class="formation-title">AIスコア予測・推奨 0点</div>
+      <div class="ai-candidates">
+        <div><b>1着候補</b> </div>
+        <div><b>2着候補</b> </div>
+        <div><b>3着候補</b> </div>
+      </div>
+      <div class="ai-combos">AI予測はまだ生成されていません。</div>
+      <details>
+        <summary>着順別AIスコアを見る</summary>
+        <div class="ai-table-wrap">
+          <table class="ai-table">
+            <thead><tr><th>艇</th><th>1着</th><th>2着</th><th>3着</th></tr></thead>
+            <tbody></tbody>
+          </table>
+        </div>
+      </details>
+      <div class="ai-note">検証版。現行フォーメーション／BOXとは独立して記録・評価します。</div>
+    </article>
+    
+    <article class="race-card">
+      <div class="race-head">
+        <div class="race-order">5</div>
+        <div class="race-main">
+          <div class="deadline">13:21</div>
+          <div class="race-name">戸田 6R</div>
+        </div>
+        <div class="badge live">AIスコア</div>
+      </div>
+      <div class="formation-title">AIスコア予測・推奨 0点</div>
+      <div class="ai-candidates">
+        <div><b>1着候補</b> </div>
+        <div><b>2着候補</b> </div>
+        <div><b>3着候補</b> </div>
+      </div>
+      <div class="ai-combos">AI予測はまだ生成されていません。</div>
+      <details>
+        <summary>着順別AIスコアを見る</summary>
+        <div class="ai-table-wrap">
+          <table class="ai-table">
+            <thead><tr><th>艇</th><th>1着</th><th>2着</th><th>3着</th></tr></thead>
+            <tbody></tbody>
+          </table>
+        </div>
+      </details>
+      <div class="ai-note">検証版。現行フォーメーション／BOXとは独立して記録・評価します。</div>
+    </article>
+    
+    <article class="race-card">
+      <div class="race-head">
+        <div class="race-order">6</div>
+        <div class="race-main">
+          <div class="deadline">13:23</div>
+          <div class="race-name">津 7R</div>
+        </div>
+        <div class="badge live">AIスコア</div>
+      </div>
+      <div class="formation-title">AIスコア予測・推奨 0点</div>
+      <div class="ai-candidates">
+        <div><b>1着候補</b> </div>
+        <div><b>2着候補</b> </div>
+        <div><b>3着候補</b> </div>
+      </div>
+      <div class="ai-combos">AI予測はまだ生成されていません。</div>
+      <details>
+        <summary>着順別AIスコアを見る</summary>
+        <div class="ai-table-wrap">
+          <table class="ai-table">
+            <thead><tr><th>艇</th><th>1着</th><th>2着</th><th>3着</th></tr></thead>
+            <tbody></tbody>
+          </table>
+        </div>
+      </details>
+      <div class="ai-note">検証版。現行フォーメーション／BOXとは独立して記録・評価します。</div>
+    </article>
+    
+    <article class="race-card">
+      <div class="race-head">
+        <div class="race-order">7</div>
+        <div class="race-main">
+          <div class="deadline">13:30</div>
+          <div class="race-name">三国 7R</div>
+        </div>
+        <div class="badge live">AIスコア</div>
+      </div>
+      <div class="formation-title">AIスコア予測・推奨 0点</div>
+      <div class="ai-candidates">
+        <div><b>1着候補</b> </div>
+        <div><b>2着候補</b> </div>
+        <div><b>3着候補</b> </div>
+      </div>
+      <div class="ai-combos">AI予測はまだ生成されていません。</div>
+      <details>
+        <summary>着順別AIスコアを見る</summary>
+        <div class="ai-table-wrap">
+          <table class="ai-table">
+            <thead><tr><th>艇</th><th>1着</th><th>2着</th><th>3着</th></tr></thead>
+            <tbody></tbody>
+          </table>
+        </div>
+      </details>
+      <div class="ai-note">検証版。現行フォーメーション／BOXとは独立して記録・評価します。</div>
+    </article>
+    
+    <article class="race-card">
+      <div class="race-head">
+        <div class="race-order">8</div>
+        <div class="race-main">
+          <div class="deadline">13:35</div>
+          <div class="race-name">福岡 6R</div>
+        </div>
+        <div class="badge live">AIスコア</div>
+      </div>
+      <div class="formation-title">AIスコア予測・推奨 0点</div>
+      <div class="ai-candidates">
+        <div><b>1着候補</b> </div>
+        <div><b>2着候補</b> </div>
+        <div><b>3着候補</b> </div>
+      </div>
+      <div class="ai-combos">AI予測はまだ生成されていません。</div>
+      <details>
+        <summary>着順別AIスコアを見る</summary>
+        <div class="ai-table-wrap">
+          <table class="ai-table">
+            <thead><tr><th>艇</th><th>1着</th><th>2着</th><th>3着</th></tr></thead>
+            <tbody></tbody>
+          </table>
+        </div>
+      </details>
+      <div class="ai-note">検証版。現行フォーメーション／BOXとは独立して記録・評価します。</div>
+    </article>
+    
+    <article class="race-card">
+      <div class="race-head">
+        <div class="race-order">9</div>
+        <div class="race-main">
+          <div class="deadline">13:39</div>
+          <div class="race-name">尼崎 7R</div>
+        </div>
+        <div class="badge live">AIスコア</div>
+      </div>
+      <div class="formation-title">AIスコア予測・推奨 0点</div>
+      <div class="ai-candidates">
+        <div><b>1着候補</b> </div>
+        <div><b>2着候補</b> </div>
+        <div><b>3着候補</b> </div>
+      </div>
+      <div class="ai-combos">AI予測はまだ生成されていません。</div>
+      <details>
+        <summary>着順別AIスコアを見る</summary>
+        <div class="ai-table-wrap">
+          <table class="ai-table">
+            <thead><tr><th>艇</th><th>1着</th><th>2着</th><th>3着</th></tr></thead>
+            <tbody></tbody>
+          </table>
+        </div>
+      </details>
+      <div class="ai-note">検証版。現行フォーメーション／BOXとは独立して記録・評価します。</div>
+    </article>
+    
+    <article class="race-card">
+      <div class="race-head">
+        <div class="race-order">10</div>
+        <div class="race-main">
+          <div class="deadline">13:41</div>
+          <div class="race-name">唐津 11R</div>
+        </div>
+        <div class="badge live">AIスコア</div>
+      </div>
+      <div class="formation-title">AIスコア予測・推奨 0点</div>
+      <div class="ai-candidates">
+        <div><b>1着候補</b> </div>
+        <div><b>2着候補</b> </div>
+        <div><b>3着候補</b> </div>
+      </div>
+      <div class="ai-combos">AI予測はまだ生成されていません。</div>
+      <details>
+        <summary>着順別AIスコアを見る</summary>
+        <div class="ai-table-wrap">
+          <table class="ai-table">
+            <thead><tr><th>艇</th><th>1着</th><th>2着</th><th>3着</th></tr></thead>
+            <tbody></tbody>
+          </table>
+        </div>
+      </details>
+      <div class="ai-note">検証版。現行フォーメーション／BOXとは独立して記録・評価します。</div>
+    </article>
+    
+    <article class="race-card">
+      <div class="race-head">
+        <div class="race-order">11</div>
+        <div class="race-main">
+          <div class="deadline">13:43</div>
+          <div class="race-name">多摩川 7R</div>
+        </div>
+        <div class="badge live">AIスコア</div>
+      </div>
+      <div class="formation-title">AIスコア予測・推奨 0点</div>
+      <div class="ai-candidates">
+        <div><b>1着候補</b> </div>
+        <div><b>2着候補</b> </div>
+        <div><b>3着候補</b> </div>
+      </div>
+      <div class="ai-combos">AI予測はまだ生成されていません。</div>
+      <details>
+        <summary>着順別AIスコアを見る</summary>
+        <div class="ai-table-wrap">
+          <table class="ai-table">
+            <thead><tr><th>艇</th><th>1着</th><th>2着</th><th>3着</th></tr></thead>
+            <tbody></tbody>
+          </table>
+        </div>
+      </details>
+      <div class="ai-note">検証版。現行フォーメーション／BOXとは独立して記録・評価します。</div>
+    </article>
+    
+    <article class="race-card">
+      <div class="race-head">
+        <div class="race-order">12</div>
+        <div class="race-main">
+          <div class="deadline">13:47</div>
+          <div class="race-name">びわこ 8R</div>
+        </div>
+        <div class="badge live">AIスコア</div>
+      </div>
+      <div class="formation-title">AIスコア予測・推奨 0点</div>
+      <div class="ai-candidates">
+        <div><b>1着候補</b> </div>
+        <div><b>2着候補</b> </div>
+        <div><b>3着候補</b> </div>
+      </div>
+      <div class="ai-combos">AI予測はまだ生成されていません。</div>
+      <details>
+        <summary>着順別AIスコアを見る</summary>
+        <div class="ai-table-wrap">
+          <table class="ai-table">
+            <thead><tr><th>艇</th><th>1着</th><th>2着</th><th>3着</th></tr></thead>
+            <tbody></tbody>
+          </table>
+        </div>
+      </details>
+      <div class="ai-note">検証版。現行フォーメーション／BOXとは独立して記録・評価します。</div>
+    </article>
+    
+    <article class="race-card">
+      <div class="race-head">
+        <div class="race-order">13</div>
+        <div class="race-main">
+          <div class="deadline">13:50</div>
+          <div class="race-name">徳山 11R</div>
+        </div>
+        <div class="badge live">AIスコア</div>
+      </div>
+      <div class="formation-title">AIスコア予測・推奨 0点</div>
+      <div class="ai-candidates">
+        <div><b>1着候補</b> </div>
+        <div><b>2着候補</b> </div>
+        <div><b>3着候補</b> </div>
+      </div>
+      <div class="ai-combos">AI予測はまだ生成されていません。</div>
+      <details>
+        <summary>着順別AIスコアを見る</summary>
+        <div class="ai-table-wrap">
+          <table class="ai-table">
+            <thead><tr><th>艇</th><th>1着</th><th>2着</th><th>3着</th></tr></thead>
+            <tbody></tbody>
+          </table>
+        </div>
+      </details>
+      <div class="ai-note">検証版。現行フォーメーション／BOXとは独立して記録・評価します。</div>
+    </article>
+    
+    <article class="race-card">
+      <div class="race-head">
+        <div class="race-order">14</div>
+        <div class="race-main">
+          <div class="deadline">13:52</div>
+          <div class="race-name">戸田 7R</div>
+        </div>
+        <div class="badge live">AIスコア</div>
+      </div>
+      <div class="formation-title">AIスコア予測・推奨 0点</div>
+      <div class="ai-candidates">
+        <div><b>1着候補</b> </div>
+        <div><b>2着候補</b> </div>
+        <div><b>3着候補</b> </div>
+      </div>
+      <div class="ai-combos">AI予測はまだ生成されていません。</div>
+      <details>
+        <summary>着順別AIスコアを見る</summary>
+        <div class="ai-table-wrap">
+          <table class="ai-table">
+            <thead><tr><th>艇</th><th>1着</th><th>2着</th><th>3着</th></tr></thead>
+            <tbody></tbody>
+          </table>
+        </div>
+      </details>
+      <div class="ai-note">検証版。現行フォーメーション／BOXとは独立して記録・評価します。</div>
+    </article>
+    
+    <article class="race-card">
+      <div class="race-head">
+        <div class="race-order">15</div>
+        <div class="race-main">
+          <div class="deadline">13:54</div>
+          <div class="race-name">津 8R</div>
+        </div>
+        <div class="badge live">AIスコア</div>
+      </div>
+      <div class="formation-title">AIスコア予測・推奨 0点</div>
+      <div class="ai-candidates">
+        <div><b>1着候補</b> </div>
+        <div><b>2着候補</b> </div>
+        <div><b>3着候補</b> </div>
+      </div>
+      <div class="ai-combos">AI予測はまだ生成されていません。</div>
+      <details>
+        <summary>着順別AIスコアを見る</summary>
+        <div class="ai-table-wrap">
+          <table class="ai-table">
+            <thead><tr><th>艇</th><th>1着</th><th>2着</th><th>3着</th></tr></thead>
+            <tbody></tbody>
+          </table>
+        </div>
+      </details>
+      <div class="ai-note">検証版。現行フォーメーション／BOXとは独立して記録・評価します。</div>
+    </article>
+    
+    <article class="race-card">
+      <div class="race-head">
+        <div class="race-order">16</div>
+        <div class="race-main">
+          <div class="deadline">14:01</div>
+          <div class="race-name">三国 8R</div>
+        </div>
+        <div class="badge live">AIスコア</div>
+      </div>
+      <div class="formation-title">AIスコア予測・推奨 0点</div>
+      <div class="ai-candidates">
+        <div><b>1着候補</b> </div>
+        <div><b>2着候補</b> </div>
+        <div><b>3着候補</b> </div>
+      </div>
+      <div class="ai-combos">AI予測はまだ生成されていません。</div>
+      <details>
+        <summary>着順別AIスコアを見る</summary>
+        <div class="ai-table-wrap">
+          <table class="ai-table">
+            <thead><tr><th>艇</th><th>1着</th><th>2着</th><th>3着</th></tr></thead>
+            <tbody></tbody>
+          </table>
+        </div>
+      </details>
+      <div class="ai-note">検証版。現行フォーメーション／BOXとは独立して記録・評価します。</div>
+    </article>
+    
+    <article class="race-card">
+      <div class="race-head">
+        <div class="race-order">17</div>
+        <div class="race-main">
+          <div class="deadline">14:06</div>
+          <div class="race-name">福岡 7R</div>
+        </div>
+        <div class="badge live">AIスコア</div>
+      </div>
+      <div class="formation-title">AIスコア予測・推奨 0点</div>
+      <div class="ai-candidates">
+        <div><b>1着候補</b> </div>
+        <div><b>2着候補</b> </div>
+        <div><b>3着候補</b> </div>
+      </div>
+      <div class="ai-combos">AI予測はまだ生成されていません。</div>
+      <details>
+        <summary>着順別AIスコアを見る</summary>
+        <div class="ai-table-wrap">
+          <table class="ai-table">
+            <thead><tr><th>艇</th><th>1着</th><th>2着</th><th>3着</th></tr></thead>
+            <tbody></tbody>
+          </table>
+        </div>
+      </details>
+      <div class="ai-note">検証版。現行フォーメーション／BOXとは独立して記録・評価します。</div>
+    </article>
+    
+    <article class="race-card">
+      <div class="race-head">
+        <div class="race-order">18</div>
+        <div class="race-main">
+          <div class="deadline">14:10</div>
+          <div class="race-name">尼崎 8R</div>
+        </div>
+        <div class="badge live">AIスコア</div>
+      </div>
+      <div class="formation-title">AIスコア予測・推奨 0点</div>
+      <div class="ai-candidates">
+        <div><b>1着候補</b> </div>
+        <div><b>2着候補</b> </div>
+        <div><b>3着候補</b> </div>
+      </div>
+      <div class="ai-combos">AI予測はまだ生成されていません。</div>
+      <details>
+        <summary>着順別AIスコアを見る</summary>
+        <div class="ai-table-wrap">
+          <table class="ai-table">
+            <thead><tr><th>艇</th><th>1着</th><th>2着</th><th>3着</th></tr></thead>
+            <tbody></tbody>
+          </table>
+        </div>
+      </details>
+      <div class="ai-note">検証版。現行フォーメーション／BOXとは独立して記録・評価します。</div>
+    </article>
+    
+    <article class="race-card">
+      <div class="race-head">
+        <div class="race-order">19</div>
+        <div class="race-main">
+          <div class="deadline">14:12</div>
+          <div class="race-name">多摩川 8R</div>
+        </div>
+        <div class="badge live">AIスコア</div>
+      </div>
+      <div class="formation-title">AIスコア予測・推奨 0点</div>
+      <div class="ai-candidates">
+        <div><b>1着候補</b> </div>
+        <div><b>2着候補</b> </div>
+        <div><b>3着候補</b> </div>
+      </div>
+      <div class="ai-combos">AI予測はまだ生成されていません。</div>
+      <details>
+        <summary>着順別AIスコアを見る</summary>
+        <div class="ai-table-wrap">
+          <table class="ai-table">
+            <thead><tr><th>艇</th><th>1着</th><th>2着</th><th>3着</th></tr></thead>
+            <tbody></tbody>
+          </table>
+        </div>
+      </details>
+      <div class="ai-note">検証版。現行フォーメーション／BOXとは独立して記録・評価します。</div>
+    </article>
+    
+    <article class="race-card">
+      <div class="race-head">
+        <div class="race-order">20</div>
+        <div class="race-main">
+          <div class="deadline">14:19</div>
+          <div class="race-name">唐津 12R</div>
+        </div>
+        <div class="badge live">AIスコア</div>
+      </div>
+      <div class="formation-title">AIスコア予測・推奨 0点</div>
+      <div class="ai-candidates">
+        <div><b>1着候補</b> </div>
+        <div><b>2着候補</b> </div>
+        <div><b>3着候補</b> </div>
+      </div>
+      <div class="ai-combos">AI予測はまだ生成されていません。</div>
+      <details>
+        <summary>着順別AIスコアを見る</summary>
+        <div class="ai-table-wrap">
+          <table class="ai-table">
+            <thead><tr><th>艇</th><th>1着</th><th>2着</th><th>3着</th></tr></thead>
+            <tbody></tbody>
+          </table>
+        </div>
+      </details>
+      <div class="ai-note">検証版。現行フォーメーション／BOXとは独立して記録・評価します。</div>
+    </article>
+    
+    <article class="race-card">
+      <div class="race-head">
+        <div class="race-order">21</div>
+        <div class="race-main">
+          <div class="deadline">14:22</div>
+          <div class="race-name">びわこ 9R</div>
+        </div>
+        <div class="badge live">AIスコア</div>
+      </div>
+      <div class="formation-title">AIスコア予測・推奨 0点</div>
+      <div class="ai-candidates">
+        <div><b>1着候補</b> </div>
+        <div><b>2着候補</b> </div>
+        <div><b>3着候補</b> </div>
+      </div>
+      <div class="ai-combos">AI予測はまだ生成されていません。</div>
+      <details>
+        <summary>着順別AIスコアを見る</summary>
+        <div class="ai-table-wrap">
+          <table class="ai-table">
+            <thead><tr><th>艇</th><th>1着</th><th>2着</th><th>3着</th></tr></thead>
+            <tbody></tbody>
+          </table>
+        </div>
+      </details>
+      <div class="ai-note">検証版。現行フォーメーション／BOXとは独立して記録・評価します。</div>
+    </article>
+    
+    <article class="race-card">
+      <div class="race-head">
+        <div class="race-order">22</div>
+        <div class="race-main">
+          <div class="deadline">14:23</div>
+          <div class="race-name">戸田 8R</div>
+        </div>
+        <div class="badge live">AIスコア</div>
+      </div>
+      <div class="formation-title">AIスコア予測・推奨 0点</div>
+      <div class="ai-candidates">
+        <div><b>1着候補</b> </div>
+        <div><b>2着候補</b> </div>
+        <div><b>3着候補</b> </div>
+      </div>
+      <div class="ai-combos">AI予測はまだ生成されていません。</div>
+      <details>
+        <summary>着順別AIスコアを見る</summary>
+        <div class="ai-table-wrap">
+          <table class="ai-table">
+            <thead><tr><th>艇</th><th>1着</th><th>2着</th><th>3着</th></tr></thead>
+            <tbody></tbody>
+          </table>
+        </div>
+      </details>
+      <div class="ai-note">検証版。現行フォーメーション／BOXとは独立して記録・評価します。</div>
+    </article>
+    
+    <article class="race-card">
+      <div class="race-head">
+        <div class="race-order">23</div>
+        <div class="race-main">
+          <div class="deadline">14:24</div>
+          <div class="race-name">津 9R</div>
+        </div>
+        <div class="badge live">AIスコア</div>
+      </div>
+      <div class="formation-title">AIスコア予測・推奨 0点</div>
+      <div class="ai-candidates">
+        <div><b>1着候補</b> </div>
+        <div><b>2着候補</b> </div>
+        <div><b>3着候補</b> </div>
+      </div>
+      <div class="ai-combos">AI予測はまだ生成されていません。</div>
+      <details>
+        <summary>着順別AIスコアを見る</summary>
+        <div class="ai-table-wrap">
+          <table class="ai-table">
+            <thead><tr><th>艇</th><th>1着</th><th>2着</th><th>3着</th></tr></thead>
+            <tbody></tbody>
+          </table>
+        </div>
+      </details>
+      <div class="ai-note">検証版。現行フォーメーション／BOXとは独立して記録・評価します。</div>
+    </article>
+    
+    <article class="race-card">
+      <div class="race-head">
+        <div class="race-order">24</div>
+        <div class="race-main">
+          <div class="deadline">14:30</div>
+          <div class="race-name">徳山 12R</div>
+        </div>
+        <div class="badge live">AIスコア</div>
+      </div>
+      <div class="formation-title">AIスコア予測・推奨 0点</div>
+      <div class="ai-candidates">
+        <div><b>1着候補</b> </div>
+        <div><b>2着候補</b> </div>
+        <div><b>3着候補</b> </div>
+      </div>
+      <div class="ai-combos">AI予測はまだ生成されていません。</div>
+      <details>
+        <summary>着順別AIスコアを見る</summary>
+        <div class="ai-table-wrap">
+          <table class="ai-table">
+            <thead><tr><th>艇</th><th>1着</th><th>2着</th><th>3着</th></tr></thead>
+            <tbody></tbody>
+          </table>
+        </div>
+      </details>
+      <div class="ai-note">検証版。現行フォーメーション／BOXとは独立して記録・評価します。</div>
+    </article>
+    
+    <article class="race-card">
+      <div class="race-head">
+        <div class="race-order">25</div>
+        <div class="race-main">
+          <div class="deadline">14:33</div>
+          <div class="race-name">三国 9R</div>
+        </div>
+        <div class="badge live">AIスコア</div>
+      </div>
+      <div class="formation-title">AIスコア予測・推奨 0点</div>
+      <div class="ai-candidates">
+        <div><b>1着候補</b> </div>
+        <div><b>2着候補</b> </div>
+        <div><b>3着候補</b> </div>
+      </div>
+      <div class="ai-combos">AI予測はまだ生成されていません。</div>
+      <details>
+        <summary>着順別AIスコアを見る</summary>
+        <div class="ai-table-wrap">
+          <table class="ai-table">
+            <thead><tr><th>艇</th><th>1着</th><th>2着</th><th>3着</th></tr></thead>
+            <tbody></tbody>
+          </table>
+        </div>
+      </details>
+      <div class="ai-note">検証版。現行フォーメーション／BOXとは独立して記録・評価します。</div>
+    </article>
+    
+    <article class="race-card">
+      <div class="race-head">
+        <div class="race-order">26</div>
+        <div class="race-main">
+          <div class="deadline">14:38</div>
+          <div class="race-name">福岡 8R</div>
+        </div>
+        <div class="badge live">AIスコア</div>
+      </div>
+      <div class="formation-title">AIスコア予測・推奨 0点</div>
+      <div class="ai-candidates">
+        <div><b>1着候補</b> </div>
+        <div><b>2着候補</b> </div>
+        <div><b>3着候補</b> </div>
+      </div>
+      <div class="ai-combos">AI予測はまだ生成されていません。</div>
+      <details>
+        <summary>着順別AIスコアを見る</summary>
+        <div class="ai-table-wrap">
+          <table class="ai-table">
+            <thead><tr><th>艇</th><th>1着</th><th>2着</th><th>3着</th></tr></thead>
+            <tbody></tbody>
+          </table>
+        </div>
+      </details>
+      <div class="ai-note">検証版。現行フォーメーション／BOXとは独立して記録・評価します。</div>
+    </article>
+    
+    <article class="race-card">
+      <div class="race-head">
+        <div class="race-order">27</div>
+        <div class="race-main">
+          <div class="deadline">14:47</div>
+          <div class="race-name">尼崎 9R</div>
+        </div>
+        <div class="badge live">AIスコア</div>
+      </div>
+      <div class="formation-title">AIスコア予測・推奨 0点</div>
+      <div class="ai-candidates">
+        <div><b>1着候補</b> </div>
+        <div><b>2着候補</b> </div>
+        <div><b>3着候補</b> </div>
+      </div>
+      <div class="ai-combos">AI予測はまだ生成されていません。</div>
+      <details>
+        <summary>着順別AIスコアを見る</summary>
+        <div class="ai-table-wrap">
+          <table class="ai-table">
+            <thead><tr><th>艇</th><th>1着</th><th>2着</th><th>3着</th></tr></thead>
+            <tbody></tbody>
+          </table>
+        </div>
+      </details>
+      <div class="ai-note">検証版。現行フォーメーション／BOXとは独立して記録・評価します。</div>
+    </article>
+    
+    <article class="race-card">
+      <div class="race-head">
+        <div class="race-order">28</div>
+        <div class="race-main">
+          <div class="deadline">14:49</div>
+          <div class="race-name">多摩川 9R</div>
+        </div>
+        <div class="badge live">AIスコア</div>
+      </div>
+      <div class="formation-title">AIスコア予測・推奨 0点</div>
+      <div class="ai-candidates">
+        <div><b>1着候補</b> </div>
+        <div><b>2着候補</b> </div>
+        <div><b>3着候補</b> </div>
+      </div>
+      <div class="ai-combos">AI予測はまだ生成されていません。</div>
+      <details>
+        <summary>着順別AIスコアを見る</summary>
+        <div class="ai-table-wrap">
+          <table class="ai-table">
+            <thead><tr><th>艇</th><th>1着</th><th>2着</th><th>3着</th></tr></thead>
+            <tbody></tbody>
+          </table>
+        </div>
+      </details>
+      <div class="ai-note">検証版。現行フォーメーション／BOXとは独立して記録・評価します。</div>
+    </article>
+    
+    <article class="race-card">
+      <div class="race-head">
+        <div class="race-order">29</div>
+        <div class="race-main">
+          <div class="deadline">14:54</div>
+          <div class="race-name">戸田 9R</div>
+        </div>
+        <div class="badge live">AIスコア</div>
+      </div>
+      <div class="formation-title">AIスコア予測・推奨 0点</div>
+      <div class="ai-candidates">
+        <div><b>1着候補</b> </div>
+        <div><b>2着候補</b> </div>
+        <div><b>3着候補</b> </div>
+      </div>
+      <div class="ai-combos">AI予測はまだ生成されていません。</div>
+      <details>
+        <summary>着順別AIスコアを見る</summary>
+        <div class="ai-table-wrap">
+          <table class="ai-table">
+            <thead><tr><th>艇</th><th>1着</th><th>2着</th><th>3着</th></tr></thead>
+            <tbody></tbody>
+          </table>
+        </div>
+      </details>
+      <div class="ai-note">検証版。現行フォーメーション／BOXとは独立して記録・評価します。</div>
+    </article>
+    
+    <article class="race-card">
+      <div class="race-head">
+        <div class="race-order">30</div>
+        <div class="race-main">
+          <div class="deadline">14:57</div>
+          <div class="race-name">びわこ 10R</div>
+        </div>
+        <div class="badge live">AIスコア</div>
+      </div>
+      <div class="formation-title">AIスコア予測・推奨 0点</div>
+      <div class="ai-candidates">
+        <div><b>1着候補</b> </div>
+        <div><b>2着候補</b> </div>
+        <div><b>3着候補</b> </div>
+      </div>
+      <div class="ai-combos">AI予測はまだ生成されていません。</div>
+      <details>
+        <summary>着順別AIスコアを見る</summary>
+        <div class="ai-table-wrap">
+          <table class="ai-table">
+            <thead><tr><th>艇</th><th>1着</th><th>2着</th><th>3着</th></tr></thead>
+            <tbody></tbody>
+          </table>
+        </div>
+      </details>
+      <div class="ai-note">検証版。現行フォーメーション／BOXとは独立して記録・評価します。</div>
+    </article>
+    
+    <article class="race-card">
+      <div class="race-head">
+        <div class="race-order">31</div>
+        <div class="race-main">
+          <div class="deadline">14:59</div>
+          <div class="race-name">津 10R</div>
+        </div>
+        <div class="badge live">AIスコア</div>
+      </div>
+      <div class="formation-title">AIスコア予測・推奨 0点</div>
+      <div class="ai-candidates">
+        <div><b>1着候補</b> </div>
+        <div><b>2着候補</b> </div>
+        <div><b>3着候補</b> </div>
+      </div>
+      <div class="ai-combos">AI予測はまだ生成されていません。</div>
+      <details>
+        <summary>着順別AIスコアを見る</summary>
+        <div class="ai-table-wrap">
+          <table class="ai-table">
+            <thead><tr><th>艇</th><th>1着</th><th>2着</th><th>3着</th></tr></thead>
+            <tbody></tbody>
+          </table>
+        </div>
+      </details>
+      <div class="ai-note">検証版。現行フォーメーション／BOXとは独立して記録・評価します。</div>
+    </article>
+    
+    <article class="race-card">
+      <div class="race-head">
+        <div class="race-order">32</div>
+        <div class="race-main">
+          <div class="deadline">15:05</div>
+          <div class="race-name">福岡 9R</div>
+        </div>
+        <div class="badge live">AIスコア</div>
+      </div>
+      <div class="formation-title">AIスコア予測・推奨 0点</div>
+      <div class="ai-candidates">
+        <div><b>1着候補</b> </div>
+        <div><b>2着候補</b> </div>
+        <div><b>3着候補</b> </div>
+      </div>
+      <div class="ai-combos">AI予測はまだ生成されていません。</div>
+      <details>
+        <summary>着順別AIスコアを見る</summary>
+        <div class="ai-table-wrap">
+          <table class="ai-table">
+            <thead><tr><th>艇</th><th>1着</th><th>2着</th><th>3着</th></tr></thead>
+            <tbody></tbody>
+          </table>
+        </div>
+      </details>
+      <div class="ai-note">検証版。現行フォーメーション／BOXとは独立して記録・評価します。</div>
+    </article>
+    
+    <article class="race-card">
+      <div class="race-head">
+        <div class="race-order">33</div>
+        <div class="race-main">
+          <div class="deadline">15:08</div>
+          <div class="race-name">三国 10R</div>
+        </div>
+        <div class="badge live">AIスコア</div>
+      </div>
+      <div class="formation-title">AIスコア予測・推奨 0点</div>
+      <div class="ai-candidates">
+        <div><b>1着候補</b> </div>
+        <div><b>2着候補</b> </div>
+        <div><b>3着候補</b> </div>
+      </div>
+      <div class="ai-combos">AI予測はまだ生成されていません。</div>
+      <details>
+        <summary>着順別AIスコアを見る</summary>
+        <div class="ai-table-wrap">
+          <table class="ai-table">
+            <thead><tr><th>艇</th><th>1着</th><th>2着</th><th>3着</th></tr></thead>
+            <tbody></tbody>
+          </table>
+        </div>
+      </details>
+      <div class="ai-note">検証版。現行フォーメーション／BOXとは独立して記録・評価します。</div>
+    </article>
+    
+    <article class="race-card">
+      <div class="race-head">
+        <div class="race-order">34</div>
+        <div class="race-main">
+          <div class="deadline">15:15</div>
+          <div class="race-name">尼崎 10R</div>
+        </div>
+        <div class="badge live">AIスコア</div>
+      </div>
+      <div class="formation-title">AIスコア予測・推奨 0点</div>
+      <div class="ai-candidates">
+        <div><b>1着候補</b> </div>
+        <div><b>2着候補</b> </div>
+        <div><b>3着候補</b> </div>
+      </div>
+      <div class="ai-combos">AI予測はまだ生成されていません。</div>
+      <details>
+        <summary>着順別AIスコアを見る</summary>
+        <div class="ai-table-wrap">
+          <table class="ai-table">
+            <thead><tr><th>艇</th><th>1着</th><th>2着</th><th>3着</th></tr></thead>
+            <tbody></tbody>
+          </table>
+        </div>
+      </details>
+      <div class="ai-note">検証版。現行フォーメーション／BOXとは独立して記録・評価します。</div>
+    </article>
+    
+    <article class="race-card">
+      <div class="race-head">
+        <div class="race-order">35</div>
+        <div class="race-main">
+          <div class="deadline">15:17</div>
+          <div class="race-name">住之江 1R</div>
+        </div>
+        <div class="badge live">AIスコア</div>
+      </div>
+      <div class="formation-title">AIスコア予測・推奨 0点</div>
+      <div class="ai-candidates">
+        <div><b>1着候補</b> </div>
+        <div><b>2着候補</b> </div>
+        <div><b>3着候補</b> </div>
+      </div>
+      <div class="ai-combos">AI予測はまだ生成されていません。</div>
+      <details>
+        <summary>着順別AIスコアを見る</summary>
+        <div class="ai-table-wrap">
+          <table class="ai-table">
+            <thead><tr><th>艇</th><th>1着</th><th>2着</th><th>3着</th></tr></thead>
+            <tbody></tbody>
+          </table>
+        </div>
+      </details>
+      <div class="ai-note">検証版。現行フォーメーション／BOXとは独立して記録・評価します。</div>
+    </article>
+    
+    <article class="race-card">
+      <div class="race-head">
+        <div class="race-order">36</div>
+        <div class="race-main">
+          <div class="deadline">15:20</div>
+          <div class="race-name">多摩川 10R</div>
+        </div>
+        <div class="badge live">AIスコア</div>
+      </div>
+      <div class="formation-title">AIスコア予測・推奨 0点</div>
+      <div class="ai-candidates">
+        <div><b>1着候補</b> </div>
+        <div><b>2着候補</b> </div>
+        <div><b>3着候補</b> </div>
+      </div>
+      <div class="ai-combos">AI予測はまだ生成されていません。</div>
+      <details>
+        <summary>着順別AIスコアを見る</summary>
+        <div class="ai-table-wrap">
+          <table class="ai-table">
+            <thead><tr><th>艇</th><th>1着</th><th>2着</th><th>3着</th></tr></thead>
+            <tbody></tbody>
+          </table>
+        </div>
+      </details>
+      <div class="ai-note">検証版。現行フォーメーション／BOXとは独立して記録・評価します。</div>
+    </article>
+    
+    <article class="race-card">
+      <div class="race-head">
+        <div class="race-order">37</div>
+        <div class="race-main">
+          <div class="deadline">15:21</div>
+          <div class="race-name">下関 1R</div>
+        </div>
+        <div class="badge live">AIスコア</div>
+      </div>
+      <div class="formation-title">AIスコア予測・推奨 0点</div>
+      <div class="ai-candidates">
+        <div><b>1着候補</b> </div>
+        <div><b>2着候補</b> </div>
+        <div><b>3着候補</b> </div>
+      </div>
+      <div class="ai-combos">AI予測はまだ生成されていません。</div>
+      <details>
+        <summary>着順別AIスコアを見る</summary>
+        <div class="ai-table-wrap">
+          <table class="ai-table">
+            <thead><tr><th>艇</th><th>1着</th><th>2着</th><th>3着</th></tr></thead>
+            <tbody></tbody>
+          </table>
+        </div>
+      </details>
+      <div class="ai-note">検証版。現行フォーメーション／BOXとは独立して記録・評価します。</div>
+    </article>
+    
+    <article class="race-card">
+      <div class="race-head">
+        <div class="race-order">38</div>
+        <div class="race-main">
+          <div class="deadline">15:25</div>
+          <div class="race-name">戸田 10R</div>
+        </div>
+        <div class="badge live">AIスコア</div>
+      </div>
+      <div class="formation-title">AIスコア予測・推奨 0点</div>
+      <div class="ai-candidates">
+        <div><b>1着候補</b> </div>
+        <div><b>2着候補</b> </div>
+        <div><b>3着候補</b> </div>
+      </div>
+      <div class="ai-combos">AI予測はまだ生成されていません。</div>
+      <details>
+        <summary>着順別AIスコアを見る</summary>
+        <div class="ai-table-wrap">
+          <table class="ai-table">
+            <thead><tr><th>艇</th><th>1着</th><th>2着</th><th>3着</th></tr></thead>
+            <tbody></tbody>
+          </table>
+        </div>
+      </details>
+      <div class="ai-note">検証版。現行フォーメーション／BOXとは独立して記録・評価します。</div>
+    </article>
+    
+    <article class="race-card">
+      <div class="race-head">
+        <div class="race-order">39</div>
+        <div class="race-main">
+          <div class="deadline">15:32</div>
+          <div class="race-name">びわこ 11R</div>
+        </div>
+        <div class="badge live">AIスコア</div>
+      </div>
+      <div class="formation-title">AIスコア予測・推奨 0点</div>
+      <div class="ai-candidates">
+        <div><b>1着候補</b> </div>
+        <div><b>2着候補</b> </div>
+        <div><b>3着候補</b> </div>
+      </div>
+      <div class="ai-combos">AI予測はまだ生成されていません。</div>
+      <details>
+        <summary>着順別AIスコアを見る</summary>
+        <div class="ai-table-wrap">
+          <table class="ai-table">
+            <thead><tr><th>艇</th><th>1着</th><th>2着</th><th>3着</th></tr></thead>
+            <tbody></tbody>
+          </table>
+        </div>
+      </details>
+      <div class="ai-note">検証版。現行フォーメーション／BOXとは独立して記録・評価します。</div>
+    </article>
+    
+    <article class="race-card">
+      <div class="race-head">
+        <div class="race-order">40</div>
+        <div class="race-main">
+          <div class="deadline">15:35</div>
+          <div class="race-name">津 11R</div>
+        </div>
+        <div class="badge live">AIスコア</div>
+      </div>
+      <div class="formation-title">AIスコア予測・推奨 0点</div>
+      <div class="ai-candidates">
+        <div><b>1着候補</b> </div>
+        <div><b>2着候補</b> </div>
+        <div><b>3着候補</b> </div>
+      </div>
+      <div class="ai-combos">AI予測はまだ生成されていません。</div>
+      <details>
+        <summary>着順別AIスコアを見る</summary>
+        <div class="ai-table-wrap">
+          <table class="ai-table">
+            <thead><tr><th>艇</th><th>1着</th><th>2着</th><th>3着</th></tr></thead>
+            <tbody></tbody>
+          </table>
+        </div>
+      </details>
+      <div class="ai-note">検証版。現行フォーメーション／BOXとは独立して記録・評価します。</div>
+    </article>
+    
+    <article class="race-card">
+      <div class="race-head">
+        <div class="race-order">41</div>
+        <div class="race-main">
+          <div class="deadline">15:38</div>
+          <div class="race-name">福岡 10R</div>
+        </div>
+        <div class="badge live">AIスコア</div>
+      </div>
+      <div class="formation-title">AIスコア予測・推奨 0点</div>
+      <div class="ai-candidates">
+        <div><b>1着候補</b> </div>
+        <div><b>2着候補</b> </div>
+        <div><b>3着候補</b> </div>
+      </div>
+      <div class="ai-combos">AI予測はまだ生成されていません。</div>
+      <details>
+        <summary>着順別AIスコアを見る</summary>
+        <div class="ai-table-wrap">
+          <table class="ai-table">
+            <thead><tr><th>艇</th><th>1着</th><th>2着</th><th>3着</th></tr></thead>
+            <tbody></tbody>
+          </table>
+        </div>
+      </details>
+      <div class="ai-note">検証版。現行フォーメーション／BOXとは独立して記録・評価します。</div>
+    </article>
+    
+    <article class="race-card">
+      <div class="race-head">
+        <div class="race-order">42</div>
+        <div class="race-main">
+          <div class="deadline">15:41</div>
+          <div class="race-name">住之江 2R</div>
+        </div>
+        <div class="badge live">AIスコア</div>
+      </div>
+      <div class="formation-title">AIスコア予測・推奨 0点</div>
+      <div class="ai-candidates">
+        <div><b>1着候補</b> </div>
+        <div><b>2着候補</b> </div>
+        <div><b>3着候補</b> </div>
+      </div>
+      <div class="ai-combos">AI予測はまだ生成されていません。</div>
+      <details>
+        <summary>着順別AIスコアを見る</summary>
+        <div class="ai-table-wrap">
+          <table class="ai-table">
+            <thead><tr><th>艇</th><th>1着</th><th>2着</th><th>3着</th></tr></thead>
+            <tbody></tbody>
+          </table>
+        </div>
+      </details>
+      <div class="ai-note">検証版。現行フォーメーション／BOXとは独立して記録・評価します。</div>
+    </article>
+    
+    <article class="race-card">
+      <div class="race-head">
+        <div class="race-order">43</div>
+        <div class="race-main">
+          <div class="deadline">15:43</div>
+          <div class="race-name">三国 11R</div>
+        </div>
+        <div class="badge live">AIスコア</div>
+      </div>
+      <div class="formation-title">AIスコア予測・推奨 0点</div>
+      <div class="ai-candidates">
+        <div><b>1着候補</b> </div>
+        <div><b>2着候補</b> </div>
+        <div><b>3着候補</b> </div>
+      </div>
+      <div class="ai-combos">AI予測はまだ生成されていません。</div>
+      <details>
+        <summary>着順別AIスコアを見る</summary>
+        <div class="ai-table-wrap">
+          <table class="ai-table">
+            <thead><tr><th>艇</th><th>1着</th><th>2着</th><th>3着</th></tr></thead>
+            <tbody></tbody>
+          </table>
+        </div>
+      </details>
+      <div class="ai-note">検証版。現行フォーメーション／BOXとは独立して記録・評価します。</div>
+    </article>
+    
+    <article class="race-card">
+      <div class="race-head">
+        <div class="race-order">44</div>
+        <div class="race-main">
+          <div class="deadline">15:47</div>
+          <div class="race-name">多摩川 11R</div>
+        </div>
+        <div class="badge live">AIスコア</div>
+      </div>
+      <div class="formation-title">AIスコア予測・推奨 0点</div>
+      <div class="ai-candidates">
+        <div><b>1着候補</b> </div>
+        <div><b>2着候補</b> </div>
+        <div><b>3着候補</b> </div>
+      </div>
+      <div class="ai-combos">AI予測はまだ生成されていません。</div>
+      <details>
+        <summary>着順別AIスコアを見る</summary>
+        <div class="ai-table-wrap">
+          <table class="ai-table">
+            <thead><tr><th>艇</th><th>1着</th><th>2着</th><th>3着</th></tr></thead>
+            <tbody></tbody>
+          </table>
+        </div>
+      </details>
+      <div class="ai-note">検証版。現行フォーメーション／BOXとは独立して記録・評価します。</div>
+    </article>
+    
+    <article class="race-card">
+      <div class="race-head">
+        <div class="race-order">45</div>
+        <div class="race-main">
+          <div class="deadline">15:50</div>
+          <div class="race-name">下関 2R</div>
+        </div>
+        <div class="badge live">AIスコア</div>
+      </div>
+      <div class="formation-title">AIスコア予測・推奨 0点</div>
+      <div class="ai-candidates">
+        <div><b>1着候補</b> </div>
+        <div><b>2着候補</b> </div>
+        <div><b>3着候補</b> </div>
+      </div>
+      <div class="ai-combos">AI予測はまだ生成されていません。</div>
+      <details>
+        <summary>着順別AIスコアを見る</summary>
+        <div class="ai-table-wrap">
+          <table class="ai-table">
+            <thead><tr><th>艇</th><th>1着</th><th>2着</th><th>3着</th></tr></thead>
+            <tbody></tbody>
+          </table>
+        </div>
+      </details>
+      <div class="ai-note">検証版。現行フォーメーション／BOXとは独立して記録・評価します。</div>
+    </article>
+    
+    <article class="race-card">
+      <div class="race-head">
+        <div class="race-order">46</div>
+        <div class="race-main">
+          <div class="deadline">15:54</div>
+          <div class="race-name">尼崎 11R</div>
+        </div>
+        <div class="badge live">AIスコア</div>
+      </div>
+      <div class="formation-title">AIスコア予測・推奨 0点</div>
+      <div class="ai-candidates">
+        <div><b>1着候補</b> </div>
+        <div><b>2着候補</b> </div>
+        <div><b>3着候補</b> </div>
+      </div>
+      <div class="ai-combos">AI予測はまだ生成されていません。</div>
+      <details>
+        <summary>着順別AIスコアを見る</summary>
+        <div class="ai-table-wrap">
+          <table class="ai-table">
+            <thead><tr><th>艇</th><th>1着</th><th>2着</th><th>3着</th></tr></thead>
+            <tbody></tbody>
+          </table>
+        </div>
+      </details>
+      <div class="ai-note">検証版。現行フォーメーション／BOXとは独立して記録・評価します。</div>
+    </article>
+    
+    <article class="race-card">
+      <div class="race-head">
+        <div class="race-order">47</div>
+        <div class="race-main">
+          <div class="deadline">15:56</div>
+          <div class="race-name">戸田 11R</div>
+        </div>
+        <div class="badge live">AIスコア</div>
+      </div>
+      <div class="formation-title">AIスコア予測・推奨 0点</div>
+      <div class="ai-candidates">
+        <div><b>1着候補</b> </div>
+        <div><b>2着候補</b> </div>
+        <div><b>3着候補</b> </div>
+      </div>
+      <div class="ai-combos">AI予測はまだ生成されていません。</div>
+      <details>
+        <summary>着順別AIスコアを見る</summary>
+        <div class="ai-table-wrap">
+          <table class="ai-table">
+            <thead><tr><th>艇</th><th>1着</th><th>2着</th><th>3着</th></tr></thead>
+            <tbody></tbody>
+          </table>
+        </div>
+      </details>
+      <div class="ai-note">検証版。現行フォーメーション／BOXとは独立して記録・評価します。</div>
+    </article>
+    
+    <article class="race-card">
+      <div class="race-head">
+        <div class="race-order">48</div>
+        <div class="race-main">
+          <div class="deadline">16:05</div>
+          <div class="race-name">福岡 11R</div>
+        </div>
+        <div class="badge live">AIスコア</div>
+      </div>
+      <div class="formation-title">AIスコア予測・推奨 0点</div>
+      <div class="ai-candidates">
+        <div><b>1着候補</b> </div>
+        <div><b>2着候補</b> </div>
+        <div><b>3着候補</b> </div>
+      </div>
+      <div class="ai-combos">AI予測はまだ生成されていません。</div>
+      <details>
+        <summary>着順別AIスコアを見る</summary>
+        <div class="ai-table-wrap">
+          <table class="ai-table">
+            <thead><tr><th>艇</th><th>1着</th><th>2着</th><th>3着</th></tr></thead>
+            <tbody></tbody>
+          </table>
+        </div>
+      </details>
+      <div class="ai-note">検証版。現行フォーメーション／BOXとは独立して記録・評価します。</div>
+    </article>
+    
+    <article class="race-card">
+      <div class="race-head">
+        <div class="race-order">49</div>
+        <div class="race-main">
+          <div class="deadline">16:08</div>
+          <div class="race-name">住之江 3R</div>
+        </div>
+        <div class="badge live">AIスコア</div>
+      </div>
+      <div class="formation-title">AIスコア予測・推奨 0点</div>
+      <div class="ai-candidates">
+        <div><b>1着候補</b> </div>
+        <div><b>2着候補</b> </div>
+        <div><b>3着候補</b> </div>
+      </div>
+      <div class="ai-combos">AI予測はまだ生成されていません。</div>
+      <details>
+        <summary>着順別AIスコアを見る</summary>
+        <div class="ai-table-wrap">
+          <table class="ai-table">
+            <thead><tr><th>艇</th><th>1着</th><th>2着</th><th>3着</th></tr></thead>
+            <tbody></tbody>
+          </table>
+        </div>
+      </details>
+      <div class="ai-note">検証版。現行フォーメーション／BOXとは独立して記録・評価します。</div>
+    </article>
+    
+    <article class="race-card">
+      <div class="race-head">
+        <div class="race-order">50</div>
+        <div class="race-main">
+          <div class="deadline">16:11</div>
+          <div class="race-name">びわこ 12R</div>
+        </div>
+        <div class="badge live">AIスコア</div>
+      </div>
+      <div class="formation-title">AIスコア予測・推奨 0点</div>
+      <div class="ai-candidates">
+        <div><b>1着候補</b> </div>
+        <div><b>2着候補</b> </div>
+        <div><b>3着候補</b> </div>
+      </div>
+      <div class="ai-combos">AI予測はまだ生成されていません。</div>
+      <details>
+        <summary>着順別AIスコアを見る</summary>
+        <div class="ai-table-wrap">
+          <table class="ai-table">
+            <thead><tr><th>艇</th><th>1着</th><th>2着</th><th>3着</th></tr></thead>
+            <tbody></tbody>
+          </table>
+        </div>
+      </details>
+      <div class="ai-note">検証版。現行フォーメーション／BOXとは独立して記録・評価します。</div>
+    </article>
+    
+    <article class="race-card">
+      <div class="race-head">
+        <div class="race-order">51</div>
+        <div class="race-main">
+          <div class="deadline">16:14</div>
+          <div class="race-name">津 12R</div>
+        </div>
+        <div class="badge live">AIスコア</div>
+      </div>
+      <div class="formation-title">AIスコア予測・推奨 0点</div>
+      <div class="ai-candidates">
+        <div><b>1着候補</b> </div>
+        <div><b>2着候補</b> </div>
+        <div><b>3着候補</b> </div>
+      </div>
+      <div class="ai-combos">AI予測はまだ生成されていません。</div>
+      <details>
+        <summary>着順別AIスコアを見る</summary>
+        <div class="ai-table-wrap">
+          <table class="ai-table">
+            <thead><tr><th>艇</th><th>1着</th><th>2着</th><th>3着</th></tr></thead>
+            <tbody></tbody>
+          </table>
+        </div>
+      </details>
+      <div class="ai-note">検証版。現行フォーメーション／BOXとは独立して記録・評価します。</div>
+    </article>
+    
+    <article class="race-card">
+      <div class="race-head">
+        <div class="race-order">52</div>
+        <div class="race-main">
+          <div class="deadline">16:17</div>
+          <div class="race-name">下関 3R</div>
+        </div>
+        <div class="badge live">AIスコア</div>
+      </div>
+      <div class="formation-title">AIスコア予測・推奨 0点</div>
+      <div class="ai-candidates">
+        <div><b>1着候補</b> </div>
+        <div><b>2着候補</b> </div>
+        <div><b>3着候補</b> </div>
+      </div>
+      <div class="ai-combos">AI予測はまだ生成されていません。</div>
+      <details>
+        <summary>着順別AIスコアを見る</summary>
+        <div class="ai-table-wrap">
+          <table class="ai-table">
+            <thead><tr><th>艇</th><th>1着</th><th>2着</th><th>3着</th></tr></thead>
+            <tbody></tbody>
+          </table>
+        </div>
+      </details>
+      <div class="ai-note">検証版。現行フォーメーション／BOXとは独立して記録・評価します。</div>
+    </article>
+    
+    <article class="race-card">
+      <div class="race-head">
+        <div class="race-order">53</div>
+        <div class="race-main">
+          <div class="deadline">16:20</div>
+          <div class="race-name">三国 12R</div>
+        </div>
+        <div class="badge live">AIスコア</div>
+      </div>
+      <div class="formation-title">AIスコア予測・推奨 0点</div>
+      <div class="ai-candidates">
+        <div><b>1着候補</b> </div>
+        <div><b>2着候補</b> </div>
+        <div><b>3着候補</b> </div>
+      </div>
+      <div class="ai-combos">AI予測はまだ生成されていません。</div>
+      <details>
+        <summary>着順別AIスコアを見る</summary>
+        <div class="ai-table-wrap">
+          <table class="ai-table">
+            <thead><tr><th>艇</th><th>1着</th><th>2着</th><th>3着</th></tr></thead>
+            <tbody></tbody>
+          </table>
+        </div>
+      </details>
+      <div class="ai-note">検証版。現行フォーメーション／BOXとは独立して記録・評価します。</div>
+    </article>
+    
+    <article class="race-card">
+      <div class="race-head">
+        <div class="race-order">54</div>
+        <div class="race-main">
+          <div class="deadline">16:25</div>
+          <div class="race-name">尼崎 12R</div>
+        </div>
+        <div class="badge live">AIスコア</div>
+      </div>
+      <div class="formation-title">AIスコア予測・推奨 0点</div>
+      <div class="ai-candidates">
+        <div><b>1着候補</b> </div>
+        <div><b>2着候補</b> </div>
+        <div><b>3着候補</b> </div>
+      </div>
+      <div class="ai-combos">AI予測はまだ生成されていません。</div>
+      <details>
+        <summary>着順別AIスコアを見る</summary>
+        <div class="ai-table-wrap">
+          <table class="ai-table">
+            <thead><tr><th>艇</th><th>1着</th><th>2着</th><th>3着</th></tr></thead>
+            <tbody></tbody>
+          </table>
+        </div>
+      </details>
+      <div class="ai-note">検証版。現行フォーメーション／BOXとは独立して記録・評価します。</div>
+    </article>
+    
+    <article class="race-card">
+      <div class="race-head">
+        <div class="race-order">55</div>
+        <div class="race-main">
+          <div class="deadline">16:28</div>
+          <div class="race-name">多摩川 12R</div>
+        </div>
+        <div class="badge live">AIスコア</div>
+      </div>
+      <div class="formation-title">AIスコア予測・推奨 0点</div>
+      <div class="ai-candidates">
+        <div><b>1着候補</b> </div>
+        <div><b>2着候補</b> </div>
+        <div><b>3着候補</b> </div>
+      </div>
+      <div class="ai-combos">AI予測はまだ生成されていません。</div>
+      <details>
+        <summary>着順別AIスコアを見る</summary>
+        <div class="ai-table-wrap">
+          <table class="ai-table">
+            <thead><tr><th>艇</th><th>1着</th><th>2着</th><th>3着</th></tr></thead>
+            <tbody></tbody>
+          </table>
+        </div>
+      </details>
+      <div class="ai-note">検証版。現行フォーメーション／BOXとは独立して記録・評価します。</div>
+    </article>
+    
+    <article class="race-card">
+      <div class="race-head">
+        <div class="race-order">56</div>
+        <div class="race-main">
+          <div class="deadline">16:30</div>
+          <div class="race-name">戸田 12R</div>
+        </div>
+        <div class="badge live">AIスコア</div>
+      </div>
+      <div class="formation-title">AIスコア予測・推奨 0点</div>
+      <div class="ai-candidates">
+        <div><b>1着候補</b> </div>
+        <div><b>2着候補</b> </div>
+        <div><b>3着候補</b> </div>
+      </div>
+      <div class="ai-combos">AI予測はまだ生成されていません。</div>
+      <details>
+        <summary>着順別AIスコアを見る</summary>
+        <div class="ai-table-wrap">
+          <table class="ai-table">
+            <thead><tr><th>艇</th><th>1着</th><th>2着</th><th>3着</th></tr></thead>
+            <tbody></tbody>
+          </table>
+        </div>
+      </details>
+      <div class="ai-note">検証版。現行フォーメーション／BOXとは独立して記録・評価します。</div>
+    </article>
+    
+    <article class="race-card">
+      <div class="race-head">
+        <div class="race-order">57</div>
+        <div class="race-main">
+          <div class="deadline">16:37</div>
+          <div class="race-name">住之江 4R</div>
+        </div>
+        <div class="badge live">AIスコア</div>
+      </div>
+      <div class="formation-title">AIスコア予測・推奨 0点</div>
+      <div class="ai-candidates">
+        <div><b>1着候補</b> </div>
+        <div><b>2着候補</b> </div>
+        <div><b>3着候補</b> </div>
+      </div>
+      <div class="ai-combos">AI予測はまだ生成されていません。</div>
+      <details>
+        <summary>着順別AIスコアを見る</summary>
+        <div class="ai-table-wrap">
+          <table class="ai-table">
+            <thead><tr><th>艇</th><th>1着</th><th>2着</th><th>3着</th></tr></thead>
+            <tbody></tbody>
+          </table>
+        </div>
+      </details>
+      <div class="ai-note">検証版。現行フォーメーション／BOXとは独立して記録・評価します。</div>
+    </article>
+    
+    <article class="race-card">
+      <div class="race-head">
+        <div class="race-order">58</div>
+        <div class="race-main">
+          <div class="deadline">16:41</div>
+          <div class="race-name">福岡 12R</div>
+        </div>
+        <div class="badge live">AIスコア</div>
+      </div>
+      <div class="formation-title">AIスコア予測・推奨 0点</div>
+      <div class="ai-candidates">
+        <div><b>1着候補</b> </div>
+        <div><b>2着候補</b> </div>
+        <div><b>3着候補</b> </div>
+      </div>
+      <div class="ai-combos">AI予測はまだ生成されていません。</div>
+      <details>
+        <summary>着順別AIスコアを見る</summary>
+        <div class="ai-table-wrap">
+          <table class="ai-table">
+            <thead><tr><th>艇</th><th>1着</th><th>2着</th><th>3着</th></tr></thead>
+            <tbody></tbody>
+          </table>
+        </div>
+      </details>
+      <div class="ai-note">検証版。現行フォーメーション／BOXとは独立して記録・評価します。</div>
+    </article>
+    
+    <article class="race-card">
+      <div class="race-head">
+        <div class="race-order">59</div>
+        <div class="race-main">
+          <div class="deadline">16:44</div>
+          <div class="race-name">下関 4R</div>
+        </div>
+        <div class="badge live">AIスコア</div>
+      </div>
+      <div class="formation-title">AIスコア予測・推奨 0点</div>
+      <div class="ai-candidates">
+        <div><b>1着候補</b> </div>
+        <div><b>2着候補</b> </div>
+        <div><b>3着候補</b> </div>
+      </div>
+      <div class="ai-combos">AI予測はまだ生成されていません。</div>
+      <details>
+        <summary>着順別AIスコアを見る</summary>
+        <div class="ai-table-wrap">
+          <table class="ai-table">
+            <thead><tr><th>艇</th><th>1着</th><th>2着</th><th>3着</th></tr></thead>
+            <tbody></tbody>
+          </table>
+        </div>
+      </details>
+      <div class="ai-note">検証版。現行フォーメーション／BOXとは独立して記録・評価します。</div>
+    </article>
+    
+    <article class="race-card">
+      <div class="race-head">
+        <div class="race-order">60</div>
+        <div class="race-main">
+          <div class="deadline">17:01</div>
+          <div class="race-name">住之江 5R</div>
+        </div>
+        <div class="badge live">AIスコア</div>
+      </div>
+      <div class="formation-title">AIスコア予測・推奨 0点</div>
+      <div class="ai-candidates">
+        <div><b>1着候補</b> </div>
+        <div><b>2着候補</b> </div>
+        <div><b>3着候補</b> </div>
+      </div>
+      <div class="ai-combos">AI予測はまだ生成されていません。</div>
+      <details>
+        <summary>着順別AIスコアを見る</summary>
+        <div class="ai-table-wrap">
+          <table class="ai-table">
+            <thead><tr><th>艇</th><th>1着</th><th>2着</th><th>3着</th></tr></thead>
+            <tbody></tbody>
+          </table>
+        </div>
+      </details>
+      <div class="ai-note">検証版。現行フォーメーション／BOXとは独立して記録・評価します。</div>
+    </article>
+    
+    <article class="race-card">
+      <div class="race-head">
+        <div class="race-order">61</div>
+        <div class="race-main">
+          <div class="deadline">17:15</div>
+          <div class="race-name">下関 5R</div>
+        </div>
+        <div class="badge live">AIスコア</div>
+      </div>
+      <div class="formation-title">AIスコア予測・推奨 0点</div>
+      <div class="ai-candidates">
+        <div><b>1着候補</b> </div>
+        <div><b>2着候補</b> </div>
+        <div><b>3着候補</b> </div>
+      </div>
+      <div class="ai-combos">AI予測はまだ生成されていません。</div>
+      <details>
+        <summary>着順別AIスコアを見る</summary>
+        <div class="ai-table-wrap">
+          <table class="ai-table">
+            <thead><tr><th>艇</th><th>1着</th><th>2着</th><th>3着</th></tr></thead>
+            <tbody></tbody>
+          </table>
+        </div>
+      </details>
+      <div class="ai-note">検証版。現行フォーメーション／BOXとは独立して記録・評価します。</div>
+    </article>
+    
+    <article class="race-card">
+      <div class="race-head">
+        <div class="race-order">62</div>
+        <div class="race-main">
+          <div class="deadline">17:29</div>
+          <div class="race-name">住之江 6R</div>
+        </div>
+        <div class="badge live">AIスコア</div>
+      </div>
+      <div class="formation-title">AIスコア予測・推奨 0点</div>
+      <div class="ai-candidates">
+        <div><b>1着候補</b> </div>
+        <div><b>2着候補</b> </div>
+        <div><b>3着候補</b> </div>
+      </div>
+      <div class="ai-combos">AI予測はまだ生成されていません。</div>
+      <details>
+        <summary>着順別AIスコアを見る</summary>
+        <div class="ai-table-wrap">
+          <table class="ai-table">
+            <thead><tr><th>艇</th><th>1着</th><th>2着</th><th>3着</th></tr></thead>
+            <tbody></tbody>
+          </table>
+        </div>
+      </details>
+      <div class="ai-note">検証版。現行フォーメーション／BOXとは独立して記録・評価します。</div>
+    </article>
+    
+    <article class="race-card">
+      <div class="race-head">
+        <div class="race-order">63</div>
+        <div class="race-main">
+          <div class="deadline">17:50</div>
+          <div class="race-name">下関 6R</div>
+        </div>
+        <div class="badge live">AIスコア</div>
+      </div>
+      <div class="formation-title">AIスコア予測・推奨 0点</div>
+      <div class="ai-candidates">
+        <div><b>1着候補</b> </div>
+        <div><b>2着候補</b> </div>
+        <div><b>3着候補</b> </div>
+      </div>
+      <div class="ai-combos">AI予測はまだ生成されていません。</div>
+      <details>
+        <summary>着順別AIスコアを見る</summary>
+        <div class="ai-table-wrap">
+          <table class="ai-table">
+            <thead><tr><th>艇</th><th>1着</th><th>2着</th><th>3着</th></tr></thead>
+            <tbody></tbody>
+          </table>
+        </div>
+      </details>
+      <div class="ai-note">検証版。現行フォーメーション／BOXとは独立して記録・評価します。</div>
+    </article>
+    
+    <article class="race-card">
+      <div class="race-head">
+        <div class="race-order">64</div>
+        <div class="race-main">
+          <div class="deadline">17:59</div>
+          <div class="race-name">住之江 7R</div>
+        </div>
+        <div class="badge live">AIスコア</div>
+      </div>
+      <div class="formation-title">AIスコア予測・推奨 0点</div>
+      <div class="ai-candidates">
+        <div><b>1着候補</b> </div>
+        <div><b>2着候補</b> </div>
+        <div><b>3着候補</b> </div>
+      </div>
+      <div class="ai-combos">AI予測はまだ生成されていません。</div>
+      <details>
+        <summary>着順別AIスコアを見る</summary>
+        <div class="ai-table-wrap">
+          <table class="ai-table">
+            <thead><tr><th>艇</th><th>1着</th><th>2着</th><th>3着</th></tr></thead>
+            <tbody></tbody>
+          </table>
+        </div>
+      </details>
+      <div class="ai-note">検証版。現行フォーメーション／BOXとは独立して記録・評価します。</div>
+    </article>
+    
+    <article class="race-card">
+      <div class="race-head">
+        <div class="race-order">65</div>
+        <div class="race-main">
+          <div class="deadline">18:08</div>
+          <div class="race-name">若松 1R</div>
+        </div>
+        <div class="badge live">AIスコア</div>
+      </div>
+      <div class="formation-title">AIスコア予測・推奨 0点</div>
+      <div class="ai-candidates">
+        <div><b>1着候補</b> </div>
+        <div><b>2着候補</b> </div>
+        <div><b>3着候補</b> </div>
+      </div>
+      <div class="ai-combos">AI予測はまだ生成されていません。</div>
+      <details>
+        <summary>着順別AIスコアを見る</summary>
+        <div class="ai-table-wrap">
+          <table class="ai-table">
+            <thead><tr><th>艇</th><th>1着</th><th>2着</th><th>3着</th></tr></thead>
+            <tbody></tbody>
+          </table>
+        </div>
+      </details>
+      <div class="ai-note">検証版。現行フォーメーション／BOXとは独立して記録・評価します。</div>
+    </article>
+    
+    <article class="race-card">
+      <div class="race-head">
+        <div class="race-order">66</div>
+        <div class="race-main">
+          <div class="deadline">18:17</div>
+          <div class="race-name">下関 7R</div>
+        </div>
+        <div class="badge live">AIスコア</div>
+      </div>
+      <div class="formation-title">AIスコア予測・推奨 0点</div>
+      <div class="ai-candidates">
+        <div><b>1着候補</b> </div>
+        <div><b>2着候補</b> </div>
+        <div><b>3着候補</b> </div>
+      </div>
+      <div class="ai-combos">AI予測はまだ生成されていません。</div>
+      <details>
+        <summary>着順別AIスコアを見る</summary>
+        <div class="ai-table-wrap">
+          <table class="ai-table">
+            <thead><tr><th>艇</th><th>1着</th><th>2着</th><th>3着</th></tr></thead>
+            <tbody></tbody>
+          </table>
+        </div>
+      </details>
+      <div class="ai-note">検証版。現行フォーメーション／BOXとは独立して記録・評価します。</div>
+    </article>
+    
+    <article class="race-card">
+      <div class="race-head">
+        <div class="race-order">67</div>
+        <div class="race-main">
+          <div class="deadline">18:26</div>
+          <div class="race-name">住之江 8R</div>
+        </div>
+        <div class="badge live">AIスコア</div>
+      </div>
+      <div class="formation-title">AIスコア予測・推奨 0点</div>
+      <div class="ai-candidates">
+        <div><b>1着候補</b> </div>
+        <div><b>2着候補</b> </div>
+        <div><b>3着候補</b> </div>
+      </div>
+      <div class="ai-combos">AI予測はまだ生成されていません。</div>
+      <details>
+        <summary>着順別AIスコアを見る</summary>
+        <div class="ai-table-wrap">
+          <table class="ai-table">
+            <thead><tr><th>艇</th><th>1着</th><th>2着</th><th>3着</th></tr></thead>
+            <tbody></tbody>
+          </table>
+        </div>
+      </details>
+      <div class="ai-note">検証版。現行フォーメーション／BOXとは独立して記録・評価します。</div>
+    </article>
+    
+    <article class="race-card">
+      <div class="race-head">
+        <div class="race-order">68</div>
+        <div class="race-main">
+          <div class="deadline">18:34</div>
+          <div class="race-name">若松 2R</div>
+        </div>
+        <div class="badge live">AIスコア</div>
+      </div>
+      <div class="formation-title">AIスコア予測・推奨 0点</div>
+      <div class="ai-candidates">
+        <div><b>1着候補</b> </div>
+        <div><b>2着候補</b> </div>
+        <div><b>3着候補</b> </div>
+      </div>
+      <div class="ai-combos">AI予測はまだ生成されていません。</div>
+      <details>
+        <summary>着順別AIスコアを見る</summary>
+        <div class="ai-table-wrap">
+          <table class="ai-table">
+            <thead><tr><th>艇</th><th>1着</th><th>2着</th><th>3着</th></tr></thead>
+            <tbody></tbody>
+          </table>
+        </div>
+      </details>
+      <div class="ai-note">検証版。現行フォーメーション／BOXとは独立して記録・評価します。</div>
+    </article>
+    
+    <article class="race-card">
+      <div class="race-head">
+        <div class="race-order">69</div>
+        <div class="race-main">
+          <div class="deadline">18:45</div>
+          <div class="race-name">下関 8R</div>
+        </div>
+        <div class="badge live">AIスコア</div>
+      </div>
+      <div class="formation-title">AIスコア予測・推奨 0点</div>
+      <div class="ai-candidates">
+        <div><b>1着候補</b> </div>
+        <div><b>2着候補</b> </div>
+        <div><b>3着候補</b> </div>
+      </div>
+      <div class="ai-combos">AI予測はまだ生成されていません。</div>
+      <details>
+        <summary>着順別AIスコアを見る</summary>
+        <div class="ai-table-wrap">
+          <table class="ai-table">
+            <thead><tr><th>艇</th><th>1着</th><th>2着</th><th>3着</th></tr></thead>
+            <tbody></tbody>
+          </table>
+        </div>
+      </details>
+      <div class="ai-note">検証版。現行フォーメーション／BOXとは独立して記録・評価します。</div>
+    </article>
+    
+    <article class="race-card">
+      <div class="race-head">
+        <div class="race-order">70</div>
+        <div class="race-main">
+          <div class="deadline">18:55</div>
+          <div class="race-name">住之江 9R</div>
+        </div>
+        <div class="badge live">AIスコア</div>
+      </div>
+      <div class="formation-title">AIスコア予測・推奨 0点</div>
+      <div class="ai-candidates">
+        <div><b>1着候補</b> </div>
+        <div><b>2着候補</b> </div>
+        <div><b>3着候補</b> </div>
+      </div>
+      <div class="ai-combos">AI予測はまだ生成されていません。</div>
+      <details>
+        <summary>着順別AIスコアを見る</summary>
+        <div class="ai-table-wrap">
+          <table class="ai-table">
+            <thead><tr><th>艇</th><th>1着</th><th>2着</th><th>3着</th></tr></thead>
+            <tbody></tbody>
+          </table>
+        </div>
+      </details>
+      <div class="ai-note">検証版。現行フォーメーション／BOXとは独立して記録・評価します。</div>
+    </article>
+    
+    <article class="race-card">
+      <div class="race-head">
+        <div class="race-order">71</div>
+        <div class="race-main">
+          <div class="deadline">19:03</div>
+          <div class="race-name">若松 3R</div>
+        </div>
+        <div class="badge live">AIスコア</div>
+      </div>
+      <div class="formation-title">AIスコア予測・推奨 0点</div>
+      <div class="ai-candidates">
+        <div><b>1着候補</b> </div>
+        <div><b>2着候補</b> </div>
+        <div><b>3着候補</b> </div>
+      </div>
+      <div class="ai-combos">AI予測はまだ生成されていません。</div>
+      <details>
+        <summary>着順別AIスコアを見る</summary>
+        <div class="ai-table-wrap">
+          <table class="ai-table">
+            <thead><tr><th>艇</th><th>1着</th><th>2着</th><th>3着</th></tr></thead>
+            <tbody></tbody>
+          </table>
+        </div>
+      </details>
+      <div class="ai-note">検証版。現行フォーメーション／BOXとは独立して記録・評価します。</div>
+    </article>
+    
+    <article class="race-card">
+      <div class="race-head">
+        <div class="race-order">72</div>
+        <div class="race-main">
+          <div class="deadline">19:17</div>
+          <div class="race-name">下関 9R</div>
+        </div>
+        <div class="badge live">AIスコア</div>
+      </div>
+      <div class="formation-title">AIスコア予測・推奨 0点</div>
+      <div class="ai-candidates">
+        <div><b>1着候補</b> </div>
+        <div><b>2着候補</b> </div>
+        <div><b>3着候補</b> </div>
+      </div>
+      <div class="ai-combos">AI予測はまだ生成されていません。</div>
+      <details>
+        <summary>着順別AIスコアを見る</summary>
+        <div class="ai-table-wrap">
+          <table class="ai-table">
+            <thead><tr><th>艇</th><th>1着</th><th>2着</th><th>3着</th></tr></thead>
+            <tbody></tbody>
+          </table>
+        </div>
+      </details>
+      <div class="ai-note">検証版。現行フォーメーション／BOXとは独立して記録・評価します。</div>
+    </article>
+    
+    <article class="race-card">
+      <div class="race-head">
+        <div class="race-order">73</div>
+        <div class="race-main">
+          <div class="deadline">19:30</div>
+          <div class="race-name">若松 4R</div>
+        </div>
+        <div class="badge live">AIスコア</div>
+      </div>
+      <div class="formation-title">AIスコア予測・推奨 0点</div>
+      <div class="ai-candidates">
+        <div><b>1着候補</b> </div>
+        <div><b>2着候補</b> </div>
+        <div><b>3着候補</b> </div>
+      </div>
+      <div class="ai-combos">AI予測はまだ生成されていません。</div>
+      <details>
+        <summary>着順別AIスコアを見る</summary>
+        <div class="ai-table-wrap">
+          <table class="ai-table">
+            <thead><tr><th>艇</th><th>1着</th><th>2着</th><th>3着</th></tr></thead>
+            <tbody></tbody>
+          </table>
+        </div>
+      </details>
+      <div class="ai-note">検証版。現行フォーメーション／BOXとは独立して記録・評価します。</div>
+    </article>
+    
+    <article class="race-card">
+      <div class="race-head">
+        <div class="race-order">74</div>
+        <div class="race-main">
+          <div class="deadline">19:38</div>
+          <div class="race-name">住之江 10R</div>
+        </div>
+        <div class="badge live">AIスコア</div>
+      </div>
+      <div class="formation-title">AIスコア予測・推奨 0点</div>
+      <div class="ai-candidates">
+        <div><b>1着候補</b> </div>
+        <div><b>2着候補</b> </div>
+        <div><b>3着候補</b> </div>
+      </div>
+      <div class="ai-combos">AI予測はまだ生成されていません。</div>
+      <details>
+        <summary>着順別AIスコアを見る</summary>
+        <div class="ai-table-wrap">
+          <table class="ai-table">
+            <thead><tr><th>艇</th><th>1着</th><th>2着</th><th>3着</th></tr></thead>
+            <tbody></tbody>
+          </table>
+        </div>
+      </details>
+      <div class="ai-note">検証版。現行フォーメーション／BOXとは独立して記録・評価します。</div>
+    </article>
+    
+    <article class="race-card">
+      <div class="race-head">
+        <div class="race-order">75</div>
+        <div class="race-main">
+          <div class="deadline">19:47</div>
+          <div class="race-name">下関 10R</div>
+        </div>
+        <div class="badge live">AIスコア</div>
+      </div>
+      <div class="formation-title">AIスコア予測・推奨 0点</div>
+      <div class="ai-candidates">
+        <div><b>1着候補</b> </div>
+        <div><b>2着候補</b> </div>
+        <div><b>3着候補</b> </div>
+      </div>
+      <div class="ai-combos">AI予測はまだ生成されていません。</div>
+      <details>
+        <summary>着順別AIスコアを見る</summary>
+        <div class="ai-table-wrap">
+          <table class="ai-table">
+            <thead><tr><th>艇</th><th>1着</th><th>2着</th><th>3着</th></tr></thead>
+            <tbody></tbody>
+          </table>
+        </div>
+      </details>
+      <div class="ai-note">検証版。現行フォーメーション／BOXとは独立して記録・評価します。</div>
+    </article>
+    
+    <article class="race-card">
+      <div class="race-head">
+        <div class="race-order">76</div>
+        <div class="race-main">
+          <div class="deadline">19:56</div>
+          <div class="race-name">若松 5R</div>
+        </div>
+        <div class="badge live">AIスコア</div>
+      </div>
+      <div class="formation-title">AIスコア予測・推奨 0点</div>
+      <div class="ai-candidates">
+        <div><b>1着候補</b> </div>
+        <div><b>2着候補</b> </div>
+        <div><b>3着候補</b> </div>
+      </div>
+      <div class="ai-combos">AI予測はまだ生成されていません。</div>
+      <details>
+        <summary>着順別AIスコアを見る</summary>
+        <div class="ai-table-wrap">
+          <table class="ai-table">
+            <thead><tr><th>艇</th><th>1着</th><th>2着</th><th>3着</th></tr></thead>
+            <tbody></tbody>
+          </table>
+        </div>
+      </details>
+      <div class="ai-note">検証版。現行フォーメーション／BOXとは独立して記録・評価します。</div>
+    </article>
+    
+    <article class="race-card">
+      <div class="race-head">
+        <div class="race-order">77</div>
+        <div class="race-main">
+          <div class="deadline">20:06</div>
+          <div class="race-name">住之江 11R</div>
+        </div>
+        <div class="badge live">AIスコア</div>
+      </div>
+      <div class="formation-title">AIスコア予測・推奨 0点</div>
+      <div class="ai-candidates">
+        <div><b>1着候補</b> </div>
+        <div><b>2着候補</b> </div>
+        <div><b>3着候補</b> </div>
+      </div>
+      <div class="ai-combos">AI予測はまだ生成されていません。</div>
+      <details>
+        <summary>着順別AIスコアを見る</summary>
+        <div class="ai-table-wrap">
+          <table class="ai-table">
+            <thead><tr><th>艇</th><th>1着</th><th>2着</th><th>3着</th></tr></thead>
+            <tbody></tbody>
+          </table>
+        </div>
+      </details>
+      <div class="ai-note">検証版。現行フォーメーション／BOXとは独立して記録・評価します。</div>
+    </article>
+    
+    <article class="race-card">
+      <div class="race-head">
+        <div class="race-order">78</div>
+        <div class="race-main">
+          <div class="deadline">20:15</div>
+          <div class="race-name">下関 11R</div>
+        </div>
+        <div class="badge live">AIスコア</div>
+      </div>
+      <div class="formation-title">AIスコア予測・推奨 0点</div>
+      <div class="ai-candidates">
+        <div><b>1着候補</b> </div>
+        <div><b>2着候補</b> </div>
+        <div><b>3着候補</b> </div>
+      </div>
+      <div class="ai-combos">AI予測はまだ生成されていません。</div>
+      <details>
+        <summary>着順別AIスコアを見る</summary>
+        <div class="ai-table-wrap">
+          <table class="ai-table">
+            <thead><tr><th>艇</th><th>1着</th><th>2着</th><th>3着</th></tr></thead>
+            <tbody></tbody>
+          </table>
+        </div>
+      </details>
+      <div class="ai-note">検証版。現行フォーメーション／BOXとは独立して記録・評価します。</div>
+    </article>
+    
+    <article class="race-card">
+      <div class="race-head">
+        <div class="race-order">79</div>
+        <div class="race-main">
+          <div class="deadline">20:25</div>
+          <div class="race-name">若松 6R</div>
+        </div>
+        <div class="badge live">AIスコア</div>
+      </div>
+      <div class="formation-title">AIスコア予測・推奨 0点</div>
+      <div class="ai-candidates">
+        <div><b>1着候補</b> </div>
+        <div><b>2着候補</b> </div>
+        <div><b>3着候補</b> </div>
+      </div>
+      <div class="ai-combos">AI予測はまだ生成されていません。</div>
+      <details>
+        <summary>着順別AIスコアを見る</summary>
+        <div class="ai-table-wrap">
+          <table class="ai-table">
+            <thead><tr><th>艇</th><th>1着</th><th>2着</th><th>3着</th></tr></thead>
+            <tbody></tbody>
+          </table>
+        </div>
+      </details>
+      <div class="ai-note">検証版。現行フォーメーション／BOXとは独立して記録・評価します。</div>
+    </article>
+    
+    <article class="race-card">
+      <div class="race-head">
+        <div class="race-order">80</div>
+        <div class="race-main">
+          <div class="deadline">20:36</div>
+          <div class="race-name">住之江 12R</div>
+        </div>
+        <div class="badge live">AIスコア</div>
+      </div>
+      <div class="formation-title">AIスコア予測・推奨 0点</div>
+      <div class="ai-candidates">
+        <div><b>1着候補</b> </div>
+        <div><b>2着候補</b> </div>
+        <div><b>3着候補</b> </div>
+      </div>
+      <div class="ai-combos">AI予測はまだ生成されていません。</div>
+      <details>
+        <summary>着順別AIスコアを見る</summary>
+        <div class="ai-table-wrap">
+          <table class="ai-table">
+            <thead><tr><th>艇</th><th>1着</th><th>2着</th><th>3着</th></tr></thead>
+            <tbody></tbody>
+          </table>
+        </div>
+      </details>
+      <div class="ai-note">検証版。現行フォーメーション／BOXとは独立して記録・評価します。</div>
+    </article>
+    
+    <article class="race-card">
+      <div class="race-head">
+        <div class="race-order">81</div>
+        <div class="race-main">
+          <div class="deadline">20:45</div>
+          <div class="race-name">下関 12R</div>
+        </div>
+        <div class="badge live">AIスコア</div>
+      </div>
+      <div class="formation-title">AIスコア予測・推奨 0点</div>
+      <div class="ai-candidates">
+        <div><b>1着候補</b> </div>
+        <div><b>2着候補</b> </div>
+        <div><b>3着候補</b> </div>
+      </div>
+      <div class="ai-combos">AI予測はまだ生成されていません。</div>
+      <details>
+        <summary>着順別AIスコアを見る</summary>
+        <div class="ai-table-wrap">
+          <table class="ai-table">
+            <thead><tr><th>艇</th><th>1着</th><th>2着</th><th>3着</th></tr></thead>
+            <tbody></tbody>
+          </table>
+        </div>
+      </details>
+      <div class="ai-note">検証版。現行フォーメーション／BOXとは独立して記録・評価します。</div>
+    </article>
+    
+    <article class="race-card">
+      <div class="race-head">
+        <div class="race-order">82</div>
+        <div class="race-main">
+          <div class="deadline">20:53</div>
+          <div class="race-name">若松 7R</div>
+        </div>
+        <div class="badge live">AIスコア</div>
+      </div>
+      <div class="formation-title">AIスコア予測・推奨 0点</div>
+      <div class="ai-candidates">
+        <div><b>1着候補</b> </div>
+        <div><b>2着候補</b> </div>
+        <div><b>3着候補</b> </div>
+      </div>
+      <div class="ai-combos">AI予測はまだ生成されていません。</div>
+      <details>
+        <summary>着順別AIスコアを見る</summary>
+        <div class="ai-table-wrap">
+          <table class="ai-table">
+            <thead><tr><th>艇</th><th>1着</th><th>2着</th><th>3着</th></tr></thead>
+            <tbody></tbody>
+          </table>
+        </div>
+      </details>
+      <div class="ai-note">検証版。現行フォーメーション／BOXとは独立して記録・評価します。</div>
+    </article>
+    
+    <article class="race-card">
+      <div class="race-head">
+        <div class="race-order">83</div>
+        <div class="race-main">
+          <div class="deadline">21:17</div>
+          <div class="race-name">若松 8R</div>
+        </div>
+        <div class="badge live">AIスコア</div>
+      </div>
+      <div class="formation-title">AIスコア予測・推奨 0点</div>
+      <div class="ai-candidates">
+        <div><b>1着候補</b> </div>
+        <div><b>2着候補</b> </div>
+        <div><b>3着候補</b> </div>
+      </div>
+      <div class="ai-combos">AI予測はまだ生成されていません。</div>
+      <details>
+        <summary>着順別AIスコアを見る</summary>
+        <div class="ai-table-wrap">
+          <table class="ai-table">
+            <thead><tr><th>艇</th><th>1着</th><th>2着</th><th>3着</th></tr></thead>
+            <tbody></tbody>
+          </table>
+        </div>
+      </details>
+      <div class="ai-note">検証版。現行フォーメーション／BOXとは独立して記録・評価します。</div>
+    </article>
+    
+    <article class="race-card">
+      <div class="race-head">
+        <div class="race-order">84</div>
+        <div class="race-main">
+          <div class="deadline">21:41</div>
+          <div class="race-name">若松 9R</div>
+        </div>
+        <div class="badge live">AIスコア</div>
+      </div>
+      <div class="formation-title">AIスコア予測・推奨 0点</div>
+      <div class="ai-candidates">
+        <div><b>1着候補</b> </div>
+        <div><b>2着候補</b> </div>
+        <div><b>3着候補</b> </div>
+      </div>
+      <div class="ai-combos">AI予測はまだ生成されていません。</div>
+      <details>
+        <summary>着順別AIスコアを見る</summary>
+        <div class="ai-table-wrap">
+          <table class="ai-table">
+            <thead><tr><th>艇</th><th>1着</th><th>2着</th><th>3着</th></tr></thead>
+            <tbody></tbody>
+          </table>
+        </div>
+      </details>
+      <div class="ai-note">検証版。現行フォーメーション／BOXとは独立して記録・評価します。</div>
+    </article>
+    
+    <article class="race-card">
+      <div class="race-head">
+        <div class="race-order">85</div>
+        <div class="race-main">
+          <div class="deadline">22:05</div>
+          <div class="race-name">若松 10R</div>
+        </div>
+        <div class="badge live">AIスコア</div>
+      </div>
+      <div class="formation-title">AIスコア予測・推奨 0点</div>
+      <div class="ai-candidates">
+        <div><b>1着候補</b> </div>
+        <div><b>2着候補</b> </div>
+        <div><b>3着候補</b> </div>
+      </div>
+      <div class="ai-combos">AI予測はまだ生成されていません。</div>
+      <details>
+        <summary>着順別AIスコアを見る</summary>
+        <div class="ai-table-wrap">
+          <table class="ai-table">
+            <thead><tr><th>艇</th><th>1着</th><th>2着</th><th>3着</th></tr></thead>
+            <tbody></tbody>
+          </table>
+        </div>
+      </details>
+      <div class="ai-note">検証版。現行フォーメーション／BOXとは独立して記録・評価します。</div>
+    </article>
+    
+    <article class="race-card">
+      <div class="race-head">
+        <div class="race-order">86</div>
+        <div class="race-main">
+          <div class="deadline">22:30</div>
+          <div class="race-name">若松 11R</div>
+        </div>
+        <div class="badge live">AIスコア</div>
+      </div>
+      <div class="formation-title">AIスコア予測・推奨 0点</div>
+      <div class="ai-candidates">
+        <div><b>1着候補</b> </div>
+        <div><b>2着候補</b> </div>
+        <div><b>3着候補</b> </div>
+      </div>
+      <div class="ai-combos">AI予測はまだ生成されていません。</div>
+      <details>
+        <summary>着順別AIスコアを見る</summary>
+        <div class="ai-table-wrap">
+          <table class="ai-table">
+            <thead><tr><th>艇</th><th>1着</th><th>2着</th><th>3着</th></tr></thead>
+            <tbody></tbody>
+          </table>
+        </div>
+      </details>
+      <div class="ai-note">検証版。現行フォーメーション／BOXとは独立して記録・評価します。</div>
+    </article>
+    
+    <article class="race-card">
+      <div class="race-head">
+        <div class="race-order">87</div>
+        <div class="race-main">
+          <div class="deadline">22:54</div>
+          <div class="race-name">若松 12R</div>
+        </div>
+        <div class="badge live">AIスコア</div>
+      </div>
+      <div class="formation-title">AIスコア予測・推奨 0点</div>
+      <div class="ai-candidates">
+        <div><b>1着候補</b> </div>
+        <div><b>2着候補</b> </div>
+        <div><b>3着候補</b> </div>
+      </div>
+      <div class="ai-combos">AI予測はまだ生成されていません。</div>
+      <details>
+        <summary>着順別AIスコアを見る</summary>
+        <div class="ai-table-wrap">
+          <table class="ai-table">
+            <thead><tr><th>艇</th><th>1着</th><th>2着</th><th>3着</th></tr></thead>
+            <tbody></tbody>
+          </table>
+        </div>
+      </details>
+      <div class="ai-note">検証版。現行フォーメーション／BOXとは独立して記録・評価します。</div>
+    </article>
+    
+    </div>
 
     <footer>
 
@@ -6086,6 +8513,16 @@ header .meta {
 
   <script>
     (() => {
+      const tabs = document.querySelectorAll(".prediction-tab");
+      const normalPanel = document.getElementById("normalPredictionPanel");
+      const aiPanel = document.getElementById("aiPredictionPanel");
+      tabs.forEach(tab => tab.addEventListener("click", () => {
+        const ai = tab.dataset.tab === "ai";
+        tabs.forEach(x => x.classList.toggle("active", x === tab));
+        if (normalPanel) normalPanel.classList.toggle("active", !ai);
+        if (aiPanel) aiPanel.classList.toggle("active", ai);
+      }));
+
       const button = document.getElementById("refreshPredictionButton");
       const status = document.getElementById("refreshStatus");
       const endpoint = "https://boatrace-family-trigger.onrender.com/trigger";
