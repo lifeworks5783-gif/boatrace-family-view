@@ -712,6 +712,50 @@ header .meta {
 
 }
 
+:root {
+  color-scheme: light dark;
+  --bg: #bfd2e1;
+  --surface: #e8f1f6;
+  --card: #eaf2f7;
+  --card-strong: #f3f7fa;
+  --panel: #d8e6ef;
+  --score-row: #cfdfeb;
+  --chip: #d8e6ef;
+  --text: #172033;
+  --muted: #60758a;
+  --line: #aec4d4;
+  --primary: #174f7a;
+  --primary-strong: #123d60;
+  --primary-soft: #d2e3ef;
+  --action: #167c68;
+  --action-strong: #116353;
+  --analysis-action: #704286;
+  --live-bg: #cceae3;
+  --live-text: #0e6659;
+  --live-accent: #168477;
+  --morning-bg: #d4e5f6;
+  --morning-text: #285a91;
+  --morning-accent: #3976b8;
+  --good-bg: #dcefe6;
+  --good-text: #17603f;
+  --warn-bg: #f5e5cf;
+  --warn-text: #8a5317;
+  --warning: #a94646;
+}
+body { background: var(--bg) !important; color: var(--text) !important; }
+.family-nav, .nav { background: var(--surface) !important; border-color: var(--line) !important; }
+.family-nav a.active, .family-nav a.active:link, .family-nav a.active:visited,
+.nav a.active, .nav a.active:link, .nav a.active:visited {
+  background: var(--primary) !important; color:#fff !important;
+}
+.notice, .race-card, .card, .metric-card, .summary-card, .panel, .section, .analysis-section {
+  background: var(--card) !important;
+  border-color: var(--line) !important;
+}
+.pick, .chip, .result-box, .bet-box, .metric, .stat, .score-row {
+  background: var(--score-row) !important;
+}
+
 </style>
 
 </head>
@@ -728,9 +772,9 @@ header .meta {
 <div class="meta">
   2026/10/06
   ・確定
-  31R
+  33R
   ・更新
-  2026/10/06 11:59
+  2026/10/06 12:03
   JST
 </div>
 
@@ -772,7 +816,7 @@ TOP3整合率は、
   </span>
 
   <strong>
-    31R
+    33R
   </strong>
 
 </div>
@@ -785,15 +829,15 @@ TOP3整合率は、
   </span>
 
   <strong>
-    35.5%
+    36.4%
     /
-    9.7%
+    9.1%
     /
-    35.5%
+    36.4%
   </strong>
 
   <span>
-    31R
+    33R
   </span>
 
 </div>
@@ -806,15 +850,15 @@ TOP3整合率は、
   </span>
 
   <strong>
-    29.0%
+    27.3%
     /
-    6.5%
+    6.1%
     /
-    32.3%
+    30.3%
   </strong>
 
   <span>
-    31R
+    33R
   </span>
 
 </div>
@@ -827,15 +871,15 @@ TOP3整合率は、
   </span>
 
   <strong>
-    32.3%
+    33.3%
     /
-    6.5%
+    6.1%
     /
-    35.5%
+    33.3%
   </strong>
 
   <span>
-    31R
+    33R
   </span>
 
 </div>
@@ -843,6 +887,154 @@ TOP3整合率は、
 
 </section>
 
+
+<article class="race-card">
+
+  <div class="race-head">
+
+    <div>
+
+      <div class="race-title">
+        多摩川
+        3R
+      </div>
+
+      <div class="sub">
+        締切
+        11:41
+        ／
+        結果
+        1145
+        ／
+        逃　げ
+      </div>
+
+    </div>
+
+    <div class="combo">
+      1-2-3
+    </div>
+
+  </div>
+
+
+  <div class="actual">
+
+    <div class="label">
+      実結果
+    </div>
+
+    <div>
+      <span class="boat"><b>1</b>号艇 牟田  奨太</span><span class="arrow"> → </span><span class="boat"><b>2</b>号艇 乃村  康友</span><span class="arrow"> → </span><span class="boat"><b>3</b>号艇 梅木  敬太</span>
+    </div>
+
+  </div>
+
+
+  <div class="prediction-row">
+
+    <div class="label">
+      朝予測
+    </div>
+
+    <div>
+      <span class="boat"><b>5</b>号艇 </span><span class="arrow"> → </span><span class="boat"><b>1</b>号艇 </span><span class="arrow"> → </span><span class="boat"><b>2</b>号艇 </span>
+      <details class="all-scores"><summary>朝予測・6艇すべてのスコア</summary><div class="score-chips"><span class="score-chip">5号艇 68.8</span> <span class="score-chip">1号艇 65.2</span> <span class="score-chip">2号艇 54.0</span> <span class="score-chip">4号艇 47.6</span> <span class="score-chip">3号艇 41.8</span> <span class="score-chip">6号艇 22.6</span></div></details>
+    </div>
+
+    <div class="metrics">
+      <span class="tag">TOP3整合 ×</span><span class="tag">完全一致 ×</span><span class="tag">1着一致 ×</span>
+    </div>
+
+  </div>
+
+
+  <div class="prediction-row">
+
+    <div class="label">
+      直前予測
+    </div>
+
+    <div>
+      <span class="boat"><b>5</b>号艇 和田拓也<small>75.0</small></span><span class="arrow"> → </span><span class="boat"><b>2</b>号艇 乃村康友<small>62.0</small></span><span class="arrow"> → </span><span class="boat"><b>1</b>号艇 牟田奨太<small>57.8</small></span>
+      <details class="all-scores"><summary>直前予測・6艇すべてのスコア</summary><div class="score-chips"><span class="score-chip">5号艇 75.0</span> <span class="score-chip">2号艇 62.0</span> <span class="score-chip">1号艇 57.8</span> <span class="score-chip">3号艇 49.8</span> <span class="score-chip">4号艇 45.9</span> <span class="score-chip">6号艇 35.7</span></div></details>
+    </div>
+
+    <div class="metrics">
+      <span class="tag">TOP3整合 ×</span><span class="tag">完全一致 ×</span><span class="tag">1着一致 ×</span>
+    </div>
+
+  </div>
+
+
+  <div class="label simulation-label">最終予測の買い目・100円/点シミュレーション</div>
+  
+    <div class="simulation-grid">
+      <div class="simulation-box">
+        <div class="simulation-title">3連単フォーメーション</div>
+        <div class="simulation-meta">1着固定＋相手流し ／ 12点 ／ 投資 1,200円 ／ <span class="miss-status">不的中</span></div>
+        <div class="simulation-combos"><span class="combo-pick">5-2-1</span> / <span class="combo-pick">5-1-2</span> / <span class="combo-pick">5-2-3</span> / <span class="combo-pick">5-2-4</span> / <span class="combo-pick">5-3-2</span> / <span class="combo-pick">5-1-3</span> / <span class="combo-pick">5-3-1</span> / <span class="combo-pick">5-1-4</span> / <span class="combo-pick">5-4-2</span> / <span class="combo-pick">5-2-6</span> / <span class="combo-pick">5-4-1</span> / <span class="combo-pick">5-1-6</span></div>
+        <div class="simulation-money">払戻 <b>0円</b> ／ 収支 <b>-1,200円</b></div>
+      </div>
+      <div class="simulation-box">
+        <div class="simulation-title">AI上位3艇・3連単BOX</div>
+        <div class="simulation-meta">5-2-1 ／ 6点 ／ 投資 600円 ／ <span class="miss-status">不的中</span></div>
+        <div class="simulation-combos"><span class="combo-pick">5-2-1</span> / <span class="combo-pick">5-1-2</span> / <span class="combo-pick">2-5-1</span> / <span class="combo-pick">2-1-5</span> / <span class="combo-pick">1-5-2</span> / <span class="combo-pick">1-2-5</span></div>
+        <div class="simulation-money">払戻 <b>0円</b> ／ 収支 <b>-600円</b></div>
+      </div>
+    </div>
+    
+  <div class="label simulation-label">AIスコア予測・保存済み上位12点</div>
+  <div class="simulation-meta">AI独自スコアによる組み合わせ評価</div>
+  
+    <details class="simulation-box ai-result-box">
+      <summary class="ai-result-summary">
+        <span class="simulation-title">AIスコア予測を見る</span>
+        <span class="ai-result-summary-meta">
+          上位12点 ／ <span class="miss-status">不的中</span> ／ 投資 <b>800円</b> ／ 払戻 <b>0円</b> ／ 収支 <b>-800円</b>
+        </span>
+      </summary>
+      <div class="ai-result-body">
+        <div class="simulation-meta">表示12点 ／ 収支検証は上位8点・各100円</div>
+        <div class="ai-result-list"><div class="ai-result-pick ai-bought"><b>1位 2-5-1</b><span>AI評価 67.1点 ／ 購入</span></div><div class="ai-result-pick ai-bought"><b>2位 5-2-1</b><span>AI評価 66.5点 ／ 購入</span></div><div class="ai-result-pick ai-bought"><b>3位 2-1-5</b><span>AI評価 65.4点 ／ 購入</span></div><div class="ai-result-pick ai-bought"><b>4位 3-2-5</b><span>AI評価 64.4点 ／ 購入</span></div><div class="ai-result-pick ai-bought"><b>5位 5-1-2</b><span>AI評価 64.4点 ／ 購入</span></div><div class="ai-result-pick ai-bought"><b>6位 2-3-5</b><span>AI評価 63.9点 ／ 購入</span></div><div class="ai-result-pick ai-bought"><b>7位 3-5-2</b><span>AI評価 63.9点 ／ 購入</span></div><div class="ai-result-pick ai-bought"><b>8位 5-3-2</b><span>AI評価 63.0点 ／ 購入</span></div><div class="ai-result-pick"><b>9位 2-5-3</b><span>AI評価 62.9点 ／ 参考</span></div><div class="ai-result-pick"><b>10位 3-5-1</b><span>AI評価 62.8点 ／ 参考</span></div><div class="ai-result-pick"><b>11位 1-2-5</b><span>AI評価 62.7点 ／ 参考</span></div><div class="ai-result-pick"><b>12位 5-2-3</b><span>AI評価 62.4点 ／ 参考</span></div></div>
+      </div>
+    </details>
+    
+
+  <div class="money-grid">
+
+    <div class="money-box">
+
+      <span>
+        3連単払戻
+      </span>
+
+      <strong>
+        1,720円
+      </strong>
+
+    </div>
+
+
+    <div class="money-box">
+
+      <span>
+        結果3連単の締切前オッズ
+      </span>
+
+      <strong>
+        35.9倍
+      </strong>
+
+      <small>
+        締切5.5分前
+      </small>
+
+    </div>
+
+  </div>
+
+</article>
 
 <article class="race-card">
 
@@ -984,6 +1176,154 @@ TOP3整合率は、
 
       <small>
         締切8.5分前
+      </small>
+
+    </div>
+
+  </div>
+
+</article>
+
+<article class="race-card">
+
+  <div class="race-head">
+
+    <div>
+
+      <div class="race-title">
+        徳山
+        7R
+      </div>
+
+      <div class="sub">
+        締切
+        11:37
+        ／
+        結果
+        1140
+        ／
+        逃　げ
+      </div>
+
+    </div>
+
+    <div class="combo">
+      1-4-2
+    </div>
+
+  </div>
+
+
+  <div class="actual">
+
+    <div class="label">
+      実結果
+    </div>
+
+    <div>
+      <span class="boat"><b>1</b>号艇 田中  宏典</span><span class="arrow"> → </span><span class="boat"><b>4</b>号艇 木山  大聖</span><span class="arrow"> → </span><span class="boat"><b>2</b>号艇 成貞  琳平</span>
+    </div>
+
+  </div>
+
+
+  <div class="prediction-row">
+
+    <div class="label">
+      朝予測
+    </div>
+
+    <div>
+      <span class="boat"><b>1</b>号艇 </span><span class="arrow"> → </span><span class="boat"><b>2</b>号艇 </span><span class="arrow"> → </span><span class="boat"><b>4</b>号艇 </span>
+      <details class="all-scores"><summary>朝予測・6艇すべてのスコア</summary><div class="score-chips"><span class="score-chip">1号艇 89.6</span> <span class="score-chip">2号艇 61.4</span> <span class="score-chip">4号艇 54.6</span> <span class="score-chip">3号艇 43.0</span> <span class="score-chip">5号艇 39.0</span> <span class="score-chip">6号艇 12.4</span></div></details>
+    </div>
+
+    <div class="metrics">
+      <span class="tag">TOP3整合 ○</span><span class="tag">完全一致 ×</span><span class="tag">1着一致 ○</span>
+    </div>
+
+  </div>
+
+
+  <div class="prediction-row">
+
+    <div class="label">
+      直前予測
+    </div>
+
+    <div>
+      <span class="boat"><b>1</b>号艇 田中宏典<small>91.7</small></span><span class="arrow"> → </span><span class="boat"><b>2</b>号艇 成貞琳平<small>64.3</small></span><span class="arrow"> → </span><span class="boat"><b>5</b>号艇 上野拓馬<small>48.8</small></span>
+      <details class="all-scores"><summary>直前予測・6艇すべてのスコア</summary><div class="score-chips"><span class="score-chip">1号艇 91.7</span> <span class="score-chip">2号艇 64.3</span> <span class="score-chip">5号艇 48.8</span> <span class="score-chip">3号艇 48.4</span> <span class="score-chip">4号艇 46.1</span> <span class="score-chip">6号艇 25.1</span></div></details>
+    </div>
+
+    <div class="metrics">
+      <span class="tag">TOP3整合 ×</span><span class="tag">完全一致 ×</span><span class="tag">1着一致 ○</span>
+    </div>
+
+  </div>
+
+
+  <div class="label simulation-label">最終予測の買い目・100円/点シミュレーション</div>
+  
+    <div class="simulation-grid">
+      <div class="simulation-box">
+        <div class="simulation-title">3連単フォーメーション</div>
+        <div class="simulation-meta">1・2着固定＋3着流し ／ 4点 ／ 投資 400円 ／ <span class="miss-status">不的中</span></div>
+        <div class="simulation-combos"><span class="combo-pick">1-2-5</span> / <span class="combo-pick">1-2-3</span> / <span class="combo-pick">1-2-4</span> / <span class="combo-pick">1-2-6</span></div>
+        <div class="simulation-money">払戻 <b>0円</b> ／ 収支 <b>-400円</b></div>
+      </div>
+      <div class="simulation-box">
+        <div class="simulation-title">AI上位3艇・3連単BOX</div>
+        <div class="simulation-meta">1-2-5 ／ 6点 ／ 投資 600円 ／ <span class="miss-status">不的中</span></div>
+        <div class="simulation-combos"><span class="combo-pick">1-2-5</span> / <span class="combo-pick">1-5-2</span> / <span class="combo-pick">2-1-5</span> / <span class="combo-pick">2-5-1</span> / <span class="combo-pick">5-1-2</span> / <span class="combo-pick">5-2-1</span></div>
+        <div class="simulation-money">払戻 <b>0円</b> ／ 収支 <b>-600円</b></div>
+      </div>
+    </div>
+    
+  <div class="label simulation-label">AIスコア予測・保存済み上位12点</div>
+  <div class="simulation-meta">AI独自スコアによる組み合わせ評価</div>
+  
+    <details class="simulation-box ai-result-box">
+      <summary class="ai-result-summary">
+        <span class="simulation-title">AIスコア予測を見る</span>
+        <span class="ai-result-summary-meta">
+          上位12点 ／ <span class="miss-status">不的中</span> ／ 投資 <b>800円</b> ／ 払戻 <b>0円</b> ／ 収支 <b>-800円</b>
+        </span>
+      </summary>
+      <div class="ai-result-body">
+        <div class="simulation-meta">表示12点 ／ 収支検証は上位8点・各100円</div>
+        <div class="ai-result-list"><div class="ai-result-pick ai-bought"><b>1位 5-2-1</b><span>AI評価 69.6点 ／ 購入</span></div><div class="ai-result-pick ai-bought"><b>2位 5-1-2</b><span>AI評価 69.4点 ／ 購入</span></div><div class="ai-result-pick ai-bought"><b>3位 3-2-1</b><span>AI評価 67.8点 ／ 購入</span></div><div class="ai-result-pick ai-bought"><b>4位 2-5-1</b><span>AI評価 67.8点 ／ 購入</span></div><div class="ai-result-pick ai-bought"><b>5位 3-1-2</b><span>AI評価 67.7点 ／ 購入</span></div><div class="ai-result-pick ai-bought"><b>6位 1-5-2</b><span>AI評価 67.4点 ／ 購入</span></div><div class="ai-result-pick ai-bought"><b>7位 2-3-1</b><span>AI評価 66.7点 ／ 購入</span></div><div class="ai-result-pick ai-bought"><b>8位 2-1-4</b><span>AI評価 66.6点 ／ 購入</span></div><div class="ai-result-pick"><b>9位 1-2-4</b><span>AI評価 66.4点 ／ 参考</span></div><div class="ai-result-pick"><b>10位 1-3-2</b><span>AI評価 66.3点 ／ 参考</span></div><div class="ai-result-pick"><b>11位 2-1-5</b><span>AI評価 66.0点 ／ 参考</span></div><div class="ai-result-pick"><b>12位 1-2-5</b><span>AI評価 65.8点 ／ 参考</span></div></div>
+      </div>
+    </details>
+    
+
+  <div class="money-grid">
+
+    <div class="money-box">
+
+      <span>
+        3連単払戻
+      </span>
+
+      <strong>
+        1,910円
+      </strong>
+
+    </div>
+
+
+    <div class="money-box">
+
+      <span>
+        結果3連単の締切前オッズ
+      </span>
+
+      <strong>
+        19.8倍
+      </strong>
+
+      <small>
+        締切6.5分前
       </small>
 
     </div>
