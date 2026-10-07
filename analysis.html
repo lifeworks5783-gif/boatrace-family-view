@@ -198,7 +198,7 @@ body { background: var(--bg) !important; color: var(--text) !important; }\n.refr
 </style>
 </head>
 <body><div class="wrap">
-<header><h1>風神雷神 AI分析</h1><div class="meta">第一段階：シグナル発動レース限定・全120通り順位付け</div></header>
+<header><h1>風神雷神 AI分析</h1><div class="meta">現行シグナルAI補正・買い/見送り判定・6〜24点最適化を累積検証</div></header>
 
 <nav class="family-nav">
 <a href="index.html">最新予想</a>
@@ -212,14 +212,21 @@ body { background: var(--bg) !important; color: var(--text) !important; }\n.refr
 <h2>第一段階の固定ルール</h2>
 <div class="rule">
 <div>風神0・雷神0<b>買わない（0点）</b><span class="note">通常予想が良くてもAI分析側では見送り</span></div>
-<div>どちらか発動<b>購入対象</b><span class="note">風神のみ・雷神のみ・同時発動を分けて検証</span></div>
+<div>どちらか発動<b>AI評価対象</b><span class="note">現時点は全シグナルで24候補を保存。買い/見送りは蓄積後に判定</span></div>
 <div>計算対象<b>3連単120通り</b><span class="note">補正後の艇スコアから全順列を順位付け</span></div>
-<div>購入点数<b>6〜24点</b><span class="note">合算強度に応じて上位N点を採用</span></div>
+<div>現在の保存点数<b>上位24点</b><span class="note">今後6/8/10/12/18/24点へ最適化</span></div>
 </div>
 <p class="note" style="margin-bottom:0">6点は「120通りの上位6点」です。同一3艇の6順列が上位を占めた場合は結果として3艇BOXと同じ形になります。</p>
 </section>
 
 <section class="card"><h2>現在の検証母数</h2><div class="metrics"><div class="metric"><div class="label">検証レース</div><div class="value">934</div><div class="sub">8日分</div></div><div class="metric"><div class="label">シグナル発動</div><div class="value">446</div><div class="sub">発動率 47.75%</div></div><div class="metric"><div class="label">未発動＝見送り</div><div class="value">488</div><div class="sub">購入0点</div></div><div class="metric"><div class="label">発動時5千円以上率</div><div class="value">29.37%</div><div class="sub">131R</div></div><div class="metric"><div class="label">5千円以上捕捉率</div><div class="value">43.96%</div><div class="sub">全5千円以上Rのうちシグナル発動</div></div></div></section>
+
+<section class="card">
+<h2>採用中・シグナルAI補正 Ver.1</h2>
+<p class="note">通常の朝・直前スコアは変更せず、各F×Rに対応する採用中のバフ/デバフで6艇を再評価した実成績です。ROIは現時点では該当シグナルをすべて24点購入した場合の比較値で、買い/見送りルール確定前の学習指標です。</p>
+<div class="metrics"><div class="metric"><div class="label">現行補正の評価R</div><div class="value">—</div><div class="sub">—日分</div></div><div class="metric"><div class="label">上位24点的中率</div><div class="value">—</div><div class="sub">—的中</div></div><div class="metric"><div class="label">5千円以上的中率</div><div class="value">—</div><div class="sub">—/—</div></div><div class="metric"><div class="label">万舟的中率</div><div class="value">—</div><div class="sub">—/—</div></div><div class="metric"><div class="label">全シグナル24点ROI</div><div class="value">—</div><div class="sub">全シグナルを仮に購入した比較値</div></div><div class="metric"><div class="label">買い/見送り</div><div class="value">学習中</div><div class="sub">現時点は全シグナル24候補を保存</div></div></div>
+<div class="empty">現行シグナルAI補正の累積結果はまだありません。</div>
+</section>
 
 <section class="card">
 <h2>風神 × 雷神 組み合わせ別</h2>
@@ -228,14 +235,14 @@ body { background: var(--bg) !important; color: var(--text) !important; }\n.refr
 </section>
 
 <section class="card">
-<h2>バフ・デバフ候補</h2>
-<p class="note">本番通常予測は変更せず、風神デバフ・雷神バフを仮適用して「救えた的中」と「壊した的中」を比較します。</p>
+<h2>次回補正候補の探索</h2>
+<p class="note">上の採用中補正とは別枠です。保存データを使い、次の補正値候補として風神デバフ・雷神バフを探索し、「救えた的中」と「壊した的中」を比較します。</p>
 <div class="table-wrap"><table><thead><tr><th>#</th><th>風神対象</th><th>風神補正</th><th>雷神倍率</th><th>探索的中率</th><th>救済/損失</th><th>検証的中率</th><th>検証ROI</th></tr></thead><tbody><tr><td>1</td><td>top3</td><td>fixed / 4</td><td>0.75</td><td>41.35%</td><td>8 / 0</td><td>32.9%</td><td>67.6%</td></tr><tr><td>2</td><td>top3</td><td>fixed / 4</td><td>0.75</td><td>41.35%</td><td>8 / 0</td><td>33.55%</td><td>71.71%</td></tr><tr><td>3</td><td>top3</td><td>fixed / 4</td><td>1</td><td>41.35%</td><td>8 / 0</td><td>32.9%</td><td>66.22%</td></tr><tr><td>4</td><td>top3</td><td>fixed / 4</td><td>1</td><td>41.35%</td><td>8 / 0</td><td>32.26%</td><td>65.61%</td></tr><tr><td>5</td><td>top3</td><td>fixed / 2</td><td>1</td><td>41.19%</td><td>7 / 0</td><td>32.9%</td><td>66.22%</td></tr><tr><td>6</td><td>top3</td><td>fixed / 2</td><td>1</td><td>41.19%</td><td>7 / 0</td><td>32.26%</td><td>65.61%</td></tr><tr><td>7</td><td>top3</td><td>fixed / 2</td><td>1</td><td>41.19%</td><td>7 / 0</td><td>32.9%</td><td>66.22%</td></tr><tr><td>8</td><td>top3</td><td>fixed / 2</td><td>1</td><td>41.19%</td><td>7 / 0</td><td>32.26%</td><td>65.61%</td></tr><tr><td>9</td><td>top3</td><td>fixed / 2</td><td>1.25</td><td>41.19%</td><td>7 / 0</td><td>33.55%</td><td>70.27%</td></tr><tr><td>10</td><td>top3</td><td>fixed / 2</td><td>0.75</td><td>41.19%</td><td>7 / 0</td><td>32.9%</td><td>67.6%</td></tr></tbody></table></div>
 </section>
 
 <section class="card">
-<h2>合算強度 × 6〜24点</h2>
-<p class="note">合算強度＝風神Lv＋雷神Lv。強度0は0点で見送り。強度1〜6だけ6/8/10/12/14/16/18/20/22/24点を探索します。</p>
+<h2>買い/見送り・6〜24点候補</h2>
+<p class="note">現行補正で24候補を保存しながら、シグナル別に「買う/見送る」と購入点数6〜24点を探索します。最終的には買い判定レースだけの的中率・回収率・万舟捕捉率を本指標にします。</p>
 <p class="note">バフ/デバフ候補 20 × 強度別点数配分 5,005 ＝ 100,100通り</p>
 <div class="table-wrap"><table><thead><tr><th>#</th><th>強1</th><th>強2</th><th>強3</th><th>強4</th><th>強5</th><th>強6</th><th>購入率</th><th>購入R的中率</th><th>平均点数</th><th>検証ROI</th><th>補正純増的中</th><th>最新購入R的中率</th></tr></thead><tbody><tr><td>1</td><td>24</td><td>24</td><td>24</td><td>24</td><td>24</td><td>24</td><td>85.16%</td><td>60.61%</td><td>24</td><td>65.78%</td><td>0</td><td>66.4%</td></tr><tr><td>2</td><td>24</td><td>24</td><td>24</td><td>24</td><td>24</td><td>24</td><td>85.16%</td><td>60.61%</td><td>24</td><td>65.78%</td><td>0</td><td>67.2%</td></tr><tr><td>3</td><td>24</td><td>24</td><td>24</td><td>24</td><td>24</td><td>24</td><td>85.16%</td><td>59.85%</td><td>24</td><td>64.61%</td><td>-1</td><td>65.6%</td></tr><tr><td>4</td><td>24</td><td>24</td><td>24</td><td>24</td><td>24</td><td>24</td><td>85.16%</td><td>59.85%</td><td>24</td><td>64.61%</td><td>-1</td><td>65.6%</td></tr><tr><td>5</td><td>24</td><td>24</td><td>24</td><td>24</td><td>24</td><td>24</td><td>85.16%</td><td>59.85%</td><td>24</td><td>64.61%</td><td>-1</td><td>66.4%</td></tr><tr><td>6</td><td>24</td><td>24</td><td>24</td><td>24</td><td>24</td><td>24</td><td>85.16%</td><td>59.85%</td><td>24</td><td>64.61%</td><td>-1</td><td>66.4%</td></tr><tr><td>7</td><td>24</td><td>24</td><td>24</td><td>24</td><td>24</td><td>24</td><td>85.16%</td><td>59.85%</td><td>24</td><td>62.97%</td><td>-1</td><td>66.4%</td></tr><tr><td>8</td><td>24</td><td>24</td><td>24</td><td>24</td><td>24</td><td>24</td><td>85.16%</td><td>59.85%</td><td>24</td><td>62.97%</td><td>-1</td><td>65.6%</td></tr><tr><td>9</td><td>24</td><td>24</td><td>24</td><td>24</td><td>24</td><td>24</td><td>85.16%</td><td>59.85%</td><td>24</td><td>62.97%</td><td>-1</td><td>65.6%</td></tr><tr><td>10</td><td>24</td><td>24</td><td>24</td><td>24</td><td>24</td><td>24</td><td>85.16%</td><td>59.09%</td><td>24</td><td>60.5%</td><td>-2</td><td>69.6%</td></tr><tr><td>11</td><td>22</td><td>24</td><td>24</td><td>24</td><td>24</td><td>24</td><td>85.16%</td><td>58.33%</td><td>23.65</td><td>60.72%</td><td>0</td><td>65.6%</td></tr><tr><td>12</td><td>22</td><td>24</td><td>24</td><td>24</td><td>24</td><td>24</td><td>85.16%</td><td>58.33%</td><td>23.65</td><td>60.72%</td><td>0</td><td>65.6%</td></tr><tr><td>13</td><td>22</td><td>24</td><td>24</td><td>24</td><td>24</td><td>24</td><td>85.16%</td><td>58.33%</td><td>23.65</td><td>60.72%</td><td>0</td><td>66.4%</td></tr><tr><td>14</td><td>22</td><td>24</td><td>24</td><td>24</td><td>24</td><td>24</td><td>85.16%</td><td>58.33%</td><td>23.65</td><td>60.72%</td><td>0</td><td>66.4%</td></tr><tr><td>15</td><td>22</td><td>24</td><td>24</td><td>24</td><td>24</td><td>24</td><td>85.16%</td><td>58.33%</td><td>23.65</td><td>60.72%</td><td>0</td><td>68.8%</td></tr></tbody></table></div>
 </section>
