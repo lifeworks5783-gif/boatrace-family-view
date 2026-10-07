@@ -264,6 +264,10 @@ details.all-scores summary {
 }
 
 .race-title {
+  display:flex;
+  align-items:center;
+  gap:2px;
+  flex-wrap:wrap;
   font-size:18px;
 
   font-weight:900;
@@ -395,10 +399,32 @@ details.all-scores summary {
   white-space:nowrap;
 }
 
-.down-signal {
-  display:inline-block;
-  margin-left:2px;
-  font-weight:800;
+.fujin-raijin-stack {
+  display:inline-grid;
+  grid-template-rows:auto auto;
+  align-items:center;
+  justify-items:start;
+  gap:0;
+  margin-left:5px;
+  vertical-align:middle;
+  line-height:1;
+}
+.signal-row {
+  display:block;
+  min-height:13px;
+  font-size:12px;
+  font-weight:900;
+  letter-spacing:-1px;
+  white-space:nowrap;
+}
+.signal-row.raijin {
+  color:#9a6500;
+}
+.signal-row.fujin {
+  color:#176b7a;
+}
+.signal-row.empty-signal {
+  visibility:hidden;
 }
 
 .result-flash {
@@ -824,7 +850,7 @@ body { background: var(--bg) !important; color: var(--text) !important; }\n.refr
   ・確定
   112R
   ・更新
-  2026/10/07 17:37
+  2026/10/07 17:38
   JST
 </div>
 
@@ -946,7 +972,7 @@ TOP3整合率は、
 
       <div class="race-title">
         蒲郡
-        6R ⚡  <span class="result-flash">払戻速報</span>
+        6R<span class="fujin-raijin-stack" title="風神雷神シグナル"><span class="signal-row raijin" title="雷神シグナル 3/3｜最大上昇 +12.8｜2号艇 +11.5 / 5号艇 +12.8｜表示・分析のみ（予測計算には未反映）">⚡⚡⚡</span><span class="signal-row fujin empty-signal">&nbsp;</span></span>  <span class="result-flash">払戻速報</span>
       </div>
 
       <div class="sub">
@@ -1094,7 +1120,7 @@ TOP3整合率は、
 
       <div class="race-title">
         桐生
-        5R ⚡ 
+        5R<span class="fujin-raijin-stack" title="風神雷神シグナル"><span class="signal-row raijin" title="雷神シグナル 2/3｜最大上昇 +10.1｜5号艇 +10.1｜表示・分析のみ（予測計算には未反映）">⚡⚡</span><span class="signal-row fujin empty-signal">&nbsp;</span></span> 
       </div>
 
       <div class="sub">
@@ -1242,7 +1268,7 @@ TOP3整合率は、
 
       <div class="race-title">
         大村
-        5R 
+        5R<span class="fujin-raijin-stack" title="風神雷神シグナル"><span class="signal-row raijin" title="雷神シグナル 1/3｜最大上昇 +8.3｜5号艇 +8.3｜表示・分析のみ（予測計算には未反映）">⚡</span><span class="signal-row fujin empty-signal">&nbsp;</span></span> 
       </div>
 
       <div class="sub">
@@ -1538,7 +1564,7 @@ TOP3整合率は、
 
       <div class="race-title">
         児島
-        12R ⚡ <span class="down-signal" title="暫定下落シグナル 2/3｜1位朝比 -11.2｜TOP3合計 -13.0｜1-2位差 16.9｜表示・分析のみ（AI買い目には未反映）">🔻🔻</span> 
+        12R<span class="fujin-raijin-stack" title="風神雷神シグナル"><span class="signal-row raijin" title="雷神シグナル 2/3｜最大上昇 +12.1｜5号艇 +9.5 / 4号艇 +8.1 / 6号艇 +12.1｜表示・分析のみ（予測計算には未反映）">⚡⚡</span><span class="signal-row fujin" title="風神シグナル 2/3｜1位朝比 -11.2｜TOP3合計 -13.0｜1-2位差 16.9｜表示・分析のみ（予測計算には未反映）">💨💨</span></span> 
       </div>
 
       <div class="sub">
@@ -1686,7 +1712,7 @@ TOP3整合率は、
 
       <div class="race-title">
         桐生
-        4R ⚡ 
+        4R<span class="fujin-raijin-stack" title="風神雷神シグナル"><span class="signal-row raijin" title="雷神シグナル 2/3｜最大上昇 +12.4｜3号艇 +12.4 / 5号艇 +10.1｜表示・分析のみ（予測計算には未反映）">⚡⚡</span><span class="signal-row fujin empty-signal">&nbsp;</span></span> 
       </div>
 
       <div class="sub">
@@ -1834,7 +1860,7 @@ TOP3整合率は、
 
       <div class="race-title">
         大村
-        4R ⚡ <span class="down-signal" title="暫定下落シグナル 1/3｜1位朝比 0.9｜TOP3合計 -12.7｜1-2位差 1.3｜表示・分析のみ（AI買い目には未反映）">🔻</span> 
+        4R<span class="fujin-raijin-stack" title="風神雷神シグナル"><span class="signal-row raijin" title="雷神シグナル 3/3｜最大上昇 +18.5｜3号艇 +8.9 / 5号艇 +18.5｜表示・分析のみ（予測計算には未反映）">⚡⚡⚡</span><span class="signal-row fujin" title="風神シグナル 1/3｜1位朝比 0.9｜TOP3合計 -12.7｜1-2位差 1.3｜表示・分析のみ（予測計算には未反映）">💨</span></span> 
       </div>
 
       <div class="sub">
@@ -1982,7 +2008,7 @@ TOP3整合率は、
 
       <div class="race-title">
         蒲郡
-        4R ⚡ 
+        4R<span class="fujin-raijin-stack" title="風神雷神シグナル"><span class="signal-row raijin" title="雷神シグナル 2/3｜最大上昇 +11.8｜4号艇 +9.2 / 6号艇 +11.8｜表示・分析のみ（予測計算には未反映）">⚡⚡</span><span class="signal-row fujin empty-signal">&nbsp;</span></span> 
       </div>
 
       <div class="sub">
@@ -2130,7 +2156,7 @@ TOP3整合率は、
 
       <div class="race-title">
         多摩川
-        12R ⚡ 
+        12R<span class="fujin-raijin-stack" title="風神雷神シグナル"><span class="signal-row raijin" title="雷神シグナル 2/3｜最大上昇 +10.8｜3号艇 +10.8｜表示・分析のみ（予測計算には未反映）">⚡⚡</span><span class="signal-row fujin empty-signal">&nbsp;</span></span> 
       </div>
 
       <div class="sub">
@@ -2278,7 +2304,7 @@ TOP3整合率は、
 
       <div class="race-title">
         江戸川
-        12R ⚡ <span class="down-signal" title="暫定下落シグナル 1/3｜1位朝比 -6.5｜TOP3合計 -3.8｜1-2位差 29.8｜表示・分析のみ（AI買い目には未反映）">🔻</span> 
+        12R<span class="fujin-raijin-stack" title="風神雷神シグナル"><span class="signal-row raijin" title="雷神シグナル 3/3｜最大上昇 +12.7｜5号艇 +12.7｜表示・分析のみ（予測計算には未反映）">⚡⚡⚡</span><span class="signal-row fujin" title="風神シグナル 1/3｜1位朝比 -6.5｜TOP3合計 -3.8｜1-2位差 29.8｜表示・分析のみ（予測計算には未反映）">💨</span></span> 
       </div>
 
       <div class="sub">
@@ -2574,7 +2600,7 @@ TOP3整合率は、
 
       <div class="race-title">
         三国
-        12R <span class="down-signal" title="暫定下落シグナル 2/3｜1位朝比 -10.4｜TOP3合計 -20.6｜1-2位差 12.0｜表示・分析のみ（AI買い目には未反映）">🔻🔻</span> 
+        12R<span class="fujin-raijin-stack" title="風神雷神シグナル"><span class="signal-row raijin" title="雷神シグナル 1/3｜最大上昇 +9.5｜5号艇 +9.5｜表示・分析のみ（予測計算には未反映）">⚡</span><span class="signal-row fujin" title="風神シグナル 2/3｜1位朝比 -10.4｜TOP3合計 -20.6｜1-2位差 12.0｜表示・分析のみ（予測計算には未反映）">💨💨</span></span> 
       </div>
 
       <div class="sub">
@@ -2722,7 +2748,7 @@ TOP3整合率は、
 
       <div class="race-title">
         児島
-        11R ⚡ 
+        11R<span class="fujin-raijin-stack" title="風神雷神シグナル"><span class="signal-row raijin" title="雷神シグナル 2/3｜最大上昇 +10.3｜5号艇 +10.3｜表示・分析のみ（予測計算には未反映）">⚡⚡</span><span class="signal-row fujin empty-signal">&nbsp;</span></span> 
       </div>
 
       <div class="sub">
@@ -2870,7 +2896,7 @@ TOP3整合率は、
 
       <div class="race-title">
         大村
-        3R ⚡ 
+        3R<span class="fujin-raijin-stack" title="風神雷神シグナル"><span class="signal-row raijin" title="雷神シグナル 3/3｜最大上昇 +12.6｜2号艇 +8.4 / 5号艇 +12.6｜表示・分析のみ（予測計算には未反映）">⚡⚡⚡</span><span class="signal-row fujin empty-signal">&nbsp;</span></span> 
       </div>
 
       <div class="sub">
@@ -3018,7 +3044,7 @@ TOP3整合率は、
 
       <div class="race-title">
         蒲郡
-        3R ⚡ 
+        3R<span class="fujin-raijin-stack" title="風神雷神シグナル"><span class="signal-row raijin" title="雷神シグナル 2/3｜最大上昇 +12.2｜5号艇 +12.2｜表示・分析のみ（予測計算には未反映）">⚡⚡</span><span class="signal-row fujin empty-signal">&nbsp;</span></span> 
       </div>
 
       <div class="sub">
@@ -3166,7 +3192,7 @@ TOP3整合率は、
 
       <div class="race-title">
         びわこ
-        12R <span class="down-signal" title="暫定下落シグナル 1/3｜1位朝比 -4.0｜TOP3合計 -3.4｜1-2位差 1.4｜表示・分析のみ（AI買い目には未反映）">🔻</span> 
+        12R<span class="fujin-raijin-stack" title="風神雷神シグナル"><span class="signal-row raijin empty-signal">&nbsp;</span><span class="signal-row fujin" title="風神シグナル 1/3｜1位朝比 -4.0｜TOP3合計 -3.4｜1-2位差 1.4｜表示・分析のみ（予測計算には未反映）">💨</span></span> 
       </div>
 
       <div class="sub">
@@ -3314,7 +3340,7 @@ TOP3整合率は、
 
       <div class="race-title">
         常滑
-        12R ⚡ 
+        12R<span class="fujin-raijin-stack" title="風神雷神シグナル"><span class="signal-row raijin" title="雷神シグナル 3/3｜最大上昇 +18.3｜6号艇 +18.3｜表示・分析のみ（予測計算には未反映）">⚡⚡⚡</span><span class="signal-row fujin empty-signal">&nbsp;</span></span> 
       </div>
 
       <div class="sub">
@@ -3462,7 +3488,7 @@ TOP3整合率は、
 
       <div class="race-title">
         桐生
-        2R ⚡ 
+        2R<span class="fujin-raijin-stack" title="風神雷神シグナル"><span class="signal-row raijin" title="雷神シグナル 3/3｜最大上昇 +13.5｜4号艇 +11.9 / 6号艇 +13.5｜表示・分析のみ（予測計算には未反映）">⚡⚡⚡</span><span class="signal-row fujin empty-signal">&nbsp;</span></span> 
       </div>
 
       <div class="sub">
@@ -3610,7 +3636,7 @@ TOP3整合率は、
 
       <div class="race-title">
         江戸川
-        11R <span class="down-signal" title="暫定下落シグナル 3/3｜1位朝比 -6.2｜TOP3合計 -22.2｜1-2位差 3.8｜表示・分析のみ（AI買い目には未反映）">🔻🔻🔻</span> 
+        11R<span class="fujin-raijin-stack" title="風神雷神シグナル"><span class="signal-row raijin empty-signal">&nbsp;</span><span class="signal-row fujin" title="風神シグナル 3/3｜1位朝比 -6.2｜TOP3合計 -22.2｜1-2位差 3.8｜表示・分析のみ（予測計算には未反映）">💨💨💨</span></span> 
       </div>
 
       <div class="sub">
@@ -3758,7 +3784,7 @@ TOP3整合率は、
 
       <div class="race-title">
         多摩川
-        11R <span class="down-signal" title="暫定下落シグナル 1/3｜1位朝比 -6.1｜TOP3合計 1.1｜1-2位差 14.8｜表示・分析のみ（AI買い目には未反映）">🔻</span> 
+        11R<span class="fujin-raijin-stack" title="風神雷神シグナル"><span class="signal-row raijin" title="雷神シグナル 1/3｜最大上昇 +9.0｜2号艇 +7.8 / 6号艇 +9.0｜表示・分析のみ（予測計算には未反映）">⚡</span><span class="signal-row fujin" title="風神シグナル 1/3｜1位朝比 -6.1｜TOP3合計 1.1｜1-2位差 14.8｜表示・分析のみ（予測計算には未反映）">💨</span></span> 
       </div>
 
       <div class="sub">
@@ -3906,7 +3932,7 @@ TOP3整合率は、
 
       <div class="race-title">
         大村
-        2R ⚡ <span class="down-signal" title="暫定下落シグナル 1/3｜1位朝比 -11.8｜TOP3合計 -2.2｜1-2位差 5.8｜表示・分析のみ（AI買い目には未反映）">🔻</span> 
+        2R<span class="fujin-raijin-stack" title="風神雷神シグナル"><span class="signal-row raijin" title="雷神シグナル 3/3｜最大上昇 +14.4｜2号艇 +14.4｜表示・分析のみ（予測計算には未反映）">⚡⚡⚡</span><span class="signal-row fujin" title="風神シグナル 1/3｜1位朝比 -11.8｜TOP3合計 -2.2｜1-2位差 5.8｜表示・分析のみ（予測計算には未反映）">💨</span></span> 
       </div>
 
       <div class="sub">
@@ -4350,7 +4376,7 @@ TOP3整合率は、
 
       <div class="race-title">
         児島
-        10R ⚡ 
+        10R<span class="fujin-raijin-stack" title="風神雷神シグナル"><span class="signal-row raijin" title="雷神シグナル 2/3｜最大上昇 +11.1｜6号艇 +11.1｜表示・分析のみ（予測計算には未反映）">⚡⚡</span><span class="signal-row fujin empty-signal">&nbsp;</span></span> 
       </div>
 
       <div class="sub">
@@ -4498,7 +4524,7 @@ TOP3整合率は、
 
       <div class="race-title">
         常滑
-        11R <span class="down-signal" title="暫定下落シグナル 1/3｜1位朝比 1.9｜TOP3合計 -16.8｜1-2位差 23.3｜表示・分析のみ（AI買い目には未反映）">🔻</span> 
+        11R<span class="fujin-raijin-stack" title="風神雷神シグナル"><span class="signal-row raijin empty-signal">&nbsp;</span><span class="signal-row fujin" title="風神シグナル 1/3｜1位朝比 1.9｜TOP3合計 -16.8｜1-2位差 23.3｜表示・分析のみ（予測計算には未反映）">💨</span></span> 
       </div>
 
       <div class="sub">
@@ -4646,7 +4672,7 @@ TOP3整合率は、
 
       <div class="race-title">
         びわこ
-        11R ⚡ 
+        11R<span class="fujin-raijin-stack" title="風神雷神シグナル"><span class="signal-row raijin" title="雷神シグナル 3/3｜最大上昇 +15.6｜6号艇 +15.6｜表示・分析のみ（予測計算には未反映）">⚡⚡⚡</span><span class="signal-row fujin empty-signal">&nbsp;</span></span> 
       </div>
 
       <div class="sub">
@@ -4794,7 +4820,7 @@ TOP3整合率は、
 
       <div class="race-title">
         桐生
-        1R 
+        1R<span class="fujin-raijin-stack" title="風神雷神シグナル"><span class="signal-row raijin" title="雷神シグナル 1/3｜最大上昇 +9.0｜4号艇 +9.0｜表示・分析のみ（予測計算には未反映）">⚡</span><span class="signal-row fujin empty-signal">&nbsp;</span></span> 
       </div>
 
       <div class="sub">
@@ -4942,7 +4968,7 @@ TOP3整合率は、
 
       <div class="race-title">
         江戸川
-        10R <span class="down-signal" title="暫定下落シグナル 2/3｜1位朝比 -8.9｜TOP3合計 -22.1｜1-2位差 16.1｜表示・分析のみ（AI買い目には未反映）">🔻🔻</span> 
+        10R<span class="fujin-raijin-stack" title="風神雷神シグナル"><span class="signal-row raijin" title="雷神シグナル 1/3｜最大上昇 +8.7｜6号艇 +8.7｜表示・分析のみ（予測計算には未反映）">⚡</span><span class="signal-row fujin" title="風神シグナル 2/3｜1位朝比 -8.9｜TOP3合計 -22.1｜1-2位差 16.1｜表示・分析のみ（予測計算には未反映）">💨💨</span></span> 
       </div>
 
       <div class="sub">
@@ -5090,7 +5116,7 @@ TOP3整合率は、
 
       <div class="race-title">
         大村
-        1R ⚡ 
+        1R<span class="fujin-raijin-stack" title="風神雷神シグナル"><span class="signal-row raijin" title="雷神シグナル 3/3｜最大上昇 +14.8｜6号艇 +14.8｜表示・分析のみ（予測計算には未反映）">⚡⚡⚡</span><span class="signal-row fujin empty-signal">&nbsp;</span></span> 
       </div>
 
       <div class="sub">
@@ -5238,7 +5264,7 @@ TOP3整合率は、
 
       <div class="race-title">
         蒲郡
-        1R ⚡ 
+        1R<span class="fujin-raijin-stack" title="風神雷神シグナル"><span class="signal-row raijin" title="雷神シグナル 2/3｜最大上昇 +10.5｜3号艇 +10.5｜表示・分析のみ（予測計算には未反映）">⚡⚡</span><span class="signal-row fujin empty-signal">&nbsp;</span></span> 
       </div>
 
       <div class="sub">
@@ -5534,7 +5560,7 @@ TOP3整合率は、
 
       <div class="race-title">
         三国
-        10R ⚡ 
+        10R<span class="fujin-raijin-stack" title="風神雷神シグナル"><span class="signal-row raijin" title="雷神シグナル 3/3｜最大上昇 +16.3｜6号艇 +16.3｜表示・分析のみ（予測計算には未反映）">⚡⚡⚡</span><span class="signal-row fujin empty-signal">&nbsp;</span></span> 
       </div>
 
       <div class="sub">
@@ -5682,7 +5708,7 @@ TOP3整合率は、
 
       <div class="race-title">
         児島
-        9R <span class="down-signal" title="暫定下落シグナル 2/3｜1位朝比 -7.3｜TOP3合計 -8.4｜1-2位差 0.4｜表示・分析のみ（AI買い目には未反映）">🔻🔻</span> 
+        9R<span class="fujin-raijin-stack" title="風神雷神シグナル"><span class="signal-row raijin empty-signal">&nbsp;</span><span class="signal-row fujin" title="風神シグナル 2/3｜1位朝比 -7.3｜TOP3合計 -8.4｜1-2位差 0.4｜表示・分析のみ（予測計算には未反映）">💨💨</span></span> 
       </div>
 
       <div class="sub">
@@ -5830,7 +5856,7 @@ TOP3整合率は、
 
       <div class="race-title">
         びわこ
-        10R ⚡ <span class="down-signal" title="暫定下落シグナル 1/3｜1位朝比 -5.9｜TOP3合計 -0.3｜1-2位差 15.4｜表示・分析のみ（AI買い目には未反映）">🔻</span> 
+        10R<span class="fujin-raijin-stack" title="風神雷神シグナル"><span class="signal-row raijin" title="雷神シグナル 3/3｜最大上昇 +13.8｜6号艇 +11.4 / 3号艇 +13.8｜表示・分析のみ（予測計算には未反映）">⚡⚡⚡</span><span class="signal-row fujin" title="風神シグナル 1/3｜1位朝比 -5.9｜TOP3合計 -0.3｜1-2位差 15.4｜表示・分析のみ（予測計算には未反映）">💨</span></span> 
       </div>
 
       <div class="sub">
@@ -6126,7 +6152,7 @@ TOP3整合率は、
 
       <div class="race-title">
         江戸川
-        9R ⚡ <span class="down-signal" title="暫定下落シグナル 2/3｜1位朝比 -6.0｜TOP3合計 -16.6｜1-2位差 23.5｜表示・分析のみ（AI買い目には未反映）">🔻🔻</span> 
+        9R<span class="fujin-raijin-stack" title="風神雷神シグナル"><span class="signal-row raijin" title="雷神シグナル 3/3｜最大上昇 +13.6｜5号艇 +9.1 / 6号艇 +13.6｜表示・分析のみ（予測計算には未反映）">⚡⚡⚡</span><span class="signal-row fujin" title="風神シグナル 2/3｜1位朝比 -6.0｜TOP3合計 -16.6｜1-2位差 23.5｜表示・分析のみ（予測計算には未反映）">💨💨</span></span> 
       </div>
 
       <div class="sub">
@@ -6274,7 +6300,7 @@ TOP3整合率は、
 
       <div class="race-title">
         多摩川
-        9R ⚡ 
+        9R<span class="fujin-raijin-stack" title="風神雷神シグナル"><span class="signal-row raijin" title="雷神シグナル 2/3｜最大上昇 +12.2｜5号艇 +12.2｜表示・分析のみ（予測計算には未反映）">⚡⚡</span><span class="signal-row fujin empty-signal">&nbsp;</span></span> 
       </div>
 
       <div class="sub">
@@ -6422,7 +6448,7 @@ TOP3整合率は、
 
       <div class="race-title">
         児島
-        8R ⚡ 
+        8R<span class="fujin-raijin-stack" title="風神雷神シグナル"><span class="signal-row raijin" title="雷神シグナル 3/3｜最大上昇 +15.6｜6号艇 +15.6｜表示・分析のみ（予測計算には未反映）">⚡⚡⚡</span><span class="signal-row fujin empty-signal">&nbsp;</span></span> 
       </div>
 
       <div class="sub">
@@ -6570,7 +6596,7 @@ TOP3整合率は、
 
       <div class="race-title">
         三国
-        9R ⚡ 
+        9R<span class="fujin-raijin-stack" title="風神雷神シグナル"><span class="signal-row raijin" title="雷神シグナル 3/3｜最大上昇 +15.8｜6号艇 +15.8｜表示・分析のみ（予測計算には未反映）">⚡⚡⚡</span><span class="signal-row fujin empty-signal">&nbsp;</span></span> 
       </div>
 
       <div class="sub">
@@ -6718,7 +6744,7 @@ TOP3整合率は、
 
       <div class="race-title">
         徳山
-        12R <span class="down-signal" title="暫定下落シグナル 2/3｜1位朝比 -6.3｜TOP3合計 -12.8｜1-2位差 25.2｜表示・分析のみ（AI買い目には未反映）">🔻🔻</span> 
+        12R<span class="fujin-raijin-stack" title="風神雷神シグナル"><span class="signal-row raijin empty-signal">&nbsp;</span><span class="signal-row fujin" title="風神シグナル 2/3｜1位朝比 -6.3｜TOP3合計 -12.8｜1-2位差 25.2｜表示・分析のみ（予測計算には未反映）">💨💨</span></span> 
       </div>
 
       <div class="sub">
@@ -6866,7 +6892,7 @@ TOP3整合率は、
 
       <div class="race-title">
         常滑
-        9R ⚡ <span class="down-signal" title="暫定下落シグナル 3/3｜1位朝比 -13.4｜TOP3合計 -21.3｜1-2位差 4.5｜表示・分析のみ（AI買い目には未反映）">🔻🔻🔻</span> 
+        9R<span class="fujin-raijin-stack" title="風神雷神シグナル"><span class="signal-row raijin" title="雷神シグナル 2/3｜最大上昇 +10.3｜6号艇 +10.3｜表示・分析のみ（予測計算には未反映）">⚡⚡</span><span class="signal-row fujin" title="風神シグナル 3/3｜1位朝比 -13.4｜TOP3合計 -21.3｜1-2位差 4.5｜表示・分析のみ（予測計算には未反映）">💨💨💨</span></span> 
       </div>
 
       <div class="sub">
@@ -7162,7 +7188,7 @@ TOP3整合率は、
 
       <div class="race-title">
         びわこ
-        9R ⚡ 
+        9R<span class="fujin-raijin-stack" title="風神雷神シグナル"><span class="signal-row raijin" title="雷神シグナル 2/3｜最大上昇 +11.1｜6号艇 +11.1｜表示・分析のみ（予測計算には未反映）">⚡⚡</span><span class="signal-row fujin empty-signal">&nbsp;</span></span> 
       </div>
 
       <div class="sub">
@@ -7310,7 +7336,7 @@ TOP3整合率は、
 
       <div class="race-title">
         多摩川
-        8R ⚡ 
+        8R<span class="fujin-raijin-stack" title="風神雷神シグナル"><span class="signal-row raijin" title="雷神シグナル 2/3｜最大上昇 +11.2｜5号艇 +7.5 / 6号艇 +11.2｜表示・分析のみ（予測計算には未反映）">⚡⚡</span><span class="signal-row fujin empty-signal">&nbsp;</span></span> 
       </div>
 
       <div class="sub">
@@ -7458,7 +7484,7 @@ TOP3整合率は、
 
       <div class="race-title">
         鳴門
-        12R 
+        12R<span class="fujin-raijin-stack" title="風神雷神シグナル"><span class="signal-row raijin" title="雷神シグナル 1/3｜最大上昇 +8.6｜6号艇 +8.6｜表示・分析のみ（予測計算には未反映）">⚡</span><span class="signal-row fujin empty-signal">&nbsp;</span></span> 
       </div>
 
       <div class="sub">
@@ -7606,7 +7632,7 @@ TOP3整合率は、
 
       <div class="race-title">
         児島
-        7R ⚡ 
+        7R<span class="fujin-raijin-stack" title="風神雷神シグナル"><span class="signal-row raijin" title="雷神シグナル 2/3｜最大上昇 +11.5｜2号艇 +11.5 / 6号艇 +9.2｜表示・分析のみ（予測計算には未反映）">⚡⚡</span><span class="signal-row fujin empty-signal">&nbsp;</span></span> 
       </div>
 
       <div class="sub">
@@ -7754,7 +7780,7 @@ TOP3整合率は、
 
       <div class="race-title">
         三国
-        8R ⚡ <span class="down-signal" title="暫定下落シグナル 1/3｜1位朝比 -9.4｜TOP3合計 -9.3｜1-2位差 7.7｜表示・分析のみ（AI買い目には未反映）">🔻</span> 
+        8R<span class="fujin-raijin-stack" title="風神雷神シグナル"><span class="signal-row raijin" title="雷神シグナル 3/3｜最大上昇 +15.7｜4号艇 +8.7 / 6号艇 +15.7｜表示・分析のみ（予測計算には未反映）">⚡⚡⚡</span><span class="signal-row fujin" title="風神シグナル 1/3｜1位朝比 -9.4｜TOP3合計 -9.3｜1-2位差 7.7｜表示・分析のみ（予測計算には未反映）">💨</span></span> 
       </div>
 
       <div class="sub">
@@ -7902,7 +7928,7 @@ TOP3整合率は、
 
       <div class="race-title">
         江戸川
-        7R <span class="down-signal" title="暫定下落シグナル 2/3｜1位朝比 -5.5｜TOP3合計 -7.5｜1-2位差 3.2｜表示・分析のみ（AI買い目には未反映）">🔻🔻</span> 
+        7R<span class="fujin-raijin-stack" title="風神雷神シグナル"><span class="signal-row raijin empty-signal">&nbsp;</span><span class="signal-row fujin" title="風神シグナル 2/3｜1位朝比 -5.5｜TOP3合計 -7.5｜1-2位差 3.2｜表示・分析のみ（予測計算には未反映）">💨💨</span></span> 
       </div>
 
       <div class="sub">
@@ -8050,7 +8076,7 @@ TOP3整合率は、
 
       <div class="race-title">
         常滑
-        8R ⚡ <span class="down-signal" title="暫定下落シグナル 2/3｜1位朝比 -8.2｜TOP3合計 0.6｜1-2位差 2.0｜表示・分析のみ（AI買い目には未反映）">🔻🔻</span> 
+        8R<span class="fujin-raijin-stack" title="風神雷神シグナル"><span class="signal-row raijin" title="雷神シグナル 3/3｜最大上昇 +13.0｜6号艇 +13.0｜表示・分析のみ（予測計算には未反映）">⚡⚡⚡</span><span class="signal-row fujin" title="風神シグナル 2/3｜1位朝比 -8.2｜TOP3合計 0.6｜1-2位差 2.0｜表示・分析のみ（予測計算には未反映）">💨💨</span></span> 
       </div>
 
       <div class="sub">
@@ -8198,7 +8224,7 @@ TOP3整合率は、
 
       <div class="race-title">
         徳山
-        11R <span class="down-signal" title="暫定下落シグナル 2/3｜1位朝比 -3.4｜TOP3合計 -10.8｜1-2位差 1.7｜表示・分析のみ（AI買い目には未反映）">🔻🔻</span> 
+        11R<span class="fujin-raijin-stack" title="風神雷神シグナル"><span class="signal-row raijin" title="雷神シグナル 1/3｜最大上昇 +9.5｜3号艇 +9.5｜表示・分析のみ（予測計算には未反映）">⚡</span><span class="signal-row fujin" title="風神シグナル 2/3｜1位朝比 -3.4｜TOP3合計 -10.8｜1-2位差 1.7｜表示・分析のみ（予測計算には未反映）">💨💨</span></span> 
       </div>
 
       <div class="sub">
@@ -8346,7 +8372,7 @@ TOP3整合率は、
 
       <div class="race-title">
         びわこ
-        8R ⚡ 
+        8R<span class="fujin-raijin-stack" title="風神雷神シグナル"><span class="signal-row raijin" title="雷神シグナル 3/3｜最大上昇 +13.6｜4号艇 +9.0 / 5号艇 +9.5 / 6号艇 +13.6｜表示・分析のみ（予測計算には未反映）">⚡⚡⚡</span><span class="signal-row fujin empty-signal">&nbsp;</span></span> 
       </div>
 
       <div class="sub">
@@ -8494,7 +8520,7 @@ TOP3整合率は、
 
       <div class="race-title">
         多摩川
-        7R ⚡ <span class="down-signal" title="暫定下落シグナル 2/3｜1位朝比 -5.6｜TOP3合計 -13.1｜1-2位差 10.8｜表示・分析のみ（AI買い目には未反映）">🔻🔻</span> 
+        7R<span class="fujin-raijin-stack" title="風神雷神シグナル"><span class="signal-row raijin" title="雷神シグナル 2/3｜最大上昇 +12.0｜4号艇 +9.6 / 6号艇 +12.0 / 5号艇 +10.7｜表示・分析のみ（予測計算には未反映）">⚡⚡</span><span class="signal-row fujin" title="風神シグナル 2/3｜1位朝比 -5.6｜TOP3合計 -13.1｜1-2位差 10.8｜表示・分析のみ（予測計算には未反映）">💨💨</span></span> 
       </div>
 
       <div class="sub">
@@ -8790,7 +8816,7 @@ TOP3整合率は、
 
       <div class="race-title">
         三国
-        7R ⚡ 
+        7R<span class="fujin-raijin-stack" title="風神雷神シグナル"><span class="signal-row raijin" title="雷神シグナル 2/3｜最大上昇 +10.9｜6号艇 +10.9｜表示・分析のみ（予測計算には未反映）">⚡⚡</span><span class="signal-row fujin empty-signal">&nbsp;</span></span> 
       </div>
 
       <div class="sub">
@@ -8938,7 +8964,7 @@ TOP3整合率は、
 
       <div class="race-title">
         江戸川
-        6R <span class="down-signal" title="暫定下落シグナル 2/3｜1位朝比 -3.7｜TOP3合計 -18.5｜1-2位差 1.5｜表示・分析のみ（AI買い目には未反映）">🔻🔻</span> 
+        6R<span class="fujin-raijin-stack" title="風神雷神シグナル"><span class="signal-row raijin empty-signal">&nbsp;</span><span class="signal-row fujin" title="風神シグナル 2/3｜1位朝比 -3.7｜TOP3合計 -18.5｜1-2位差 1.5｜表示・分析のみ（予測計算には未反映）">💨💨</span></span> 
       </div>
 
       <div class="sub">
@@ -9086,7 +9112,7 @@ TOP3整合率は、
 
       <div class="race-title">
         児島
-        6R ⚡ 
+        6R<span class="fujin-raijin-stack" title="風神雷神シグナル"><span class="signal-row raijin" title="雷神シグナル 3/3｜最大上昇 +12.6｜4号艇 +9.6 / 5号艇 +12.6 / 6号艇 +10.1｜表示・分析のみ（予測計算には未反映）">⚡⚡⚡</span><span class="signal-row fujin empty-signal">&nbsp;</span></span> 
       </div>
 
       <div class="sub">
@@ -9234,7 +9260,7 @@ TOP3整合率は、
 
       <div class="race-title">
         常滑
-        7R ⚡ 
+        7R<span class="fujin-raijin-stack" title="風神雷神シグナル"><span class="signal-row raijin" title="雷神シグナル 3/3｜最大上昇 +13.6｜5号艇 +13.2 / 6号艇 +13.6｜表示・分析のみ（予測計算には未反映）">⚡⚡⚡</span><span class="signal-row fujin empty-signal">&nbsp;</span></span> 
       </div>
 
       <div class="sub">
@@ -9382,7 +9408,7 @@ TOP3整合率は、
 
       <div class="race-title">
         びわこ
-        7R ⚡ 
+        7R<span class="fujin-raijin-stack" title="風神雷神シグナル"><span class="signal-row raijin" title="雷神シグナル 3/3｜最大上昇 +12.9｜5号艇 +12.9｜表示・分析のみ（予測計算には未反映）">⚡⚡⚡</span><span class="signal-row fujin empty-signal">&nbsp;</span></span> 
       </div>
 
       <div class="sub">
@@ -9530,7 +9556,7 @@ TOP3整合率は、
 
       <div class="race-title">
         徳山
-        10R <span class="down-signal" title="暫定下落シグナル 2/3｜1位朝比 -9.5｜TOP3合計 -14.3｜1-2位差 9.7｜表示・分析のみ（AI買い目には未反映）">🔻🔻</span> 
+        10R<span class="fujin-raijin-stack" title="風神雷神シグナル"><span class="signal-row raijin empty-signal">&nbsp;</span><span class="signal-row fujin" title="風神シグナル 2/3｜1位朝比 -9.5｜TOP3合計 -14.3｜1-2位差 9.7｜表示・分析のみ（予測計算には未反映）">💨💨</span></span> 
       </div>
 
       <div class="sub">
@@ -9678,7 +9704,7 @@ TOP3整合率は、
 
       <div class="race-title">
         多摩川
-        6R ⚡ 
+        6R<span class="fujin-raijin-stack" title="風神雷神シグナル"><span class="signal-row raijin" title="雷神シグナル 3/3｜最大上昇 +15.4｜3号艇 +9.1 / 6号艇 +15.4｜表示・分析のみ（予測計算には未反映）">⚡⚡⚡</span><span class="signal-row fujin empty-signal">&nbsp;</span></span> 
       </div>
 
       <div class="sub">
@@ -9826,7 +9852,7 @@ TOP3整合率は、
 
       <div class="race-title">
         鳴門
-        10R ⚡ 
+        10R<span class="fujin-raijin-stack" title="風神雷神シグナル"><span class="signal-row raijin" title="雷神シグナル 3/3｜最大上昇 +13.3｜6号艇 +7.9 / 3号艇 +13.3｜表示・分析のみ（予測計算には未反映）">⚡⚡⚡</span><span class="signal-row fujin empty-signal">&nbsp;</span></span> 
       </div>
 
       <div class="sub">
@@ -9974,7 +10000,7 @@ TOP3整合率は、
 
       <div class="race-title">
         江戸川
-        5R 
+        5R<span class="fujin-raijin-stack" title="風神雷神シグナル"><span class="signal-row raijin" title="雷神シグナル 1/3｜最大上昇 +7.9｜6号艇 +7.9｜表示・分析のみ（予測計算には未反映）">⚡</span><span class="signal-row fujin empty-signal">&nbsp;</span></span> 
       </div>
 
       <div class="sub">
@@ -10122,7 +10148,7 @@ TOP3整合率は、
 
       <div class="race-title">
         三国
-        6R ⚡ 
+        6R<span class="fujin-raijin-stack" title="風神雷神シグナル"><span class="signal-row raijin" title="雷神シグナル 3/3｜最大上昇 +12.5｜4号艇 +12.5｜表示・分析のみ（予測計算には未反映）">⚡⚡⚡</span><span class="signal-row fujin empty-signal">&nbsp;</span></span> 
       </div>
 
       <div class="sub">
@@ -10270,7 +10296,7 @@ TOP3整合率は、
 
       <div class="race-title">
         児島
-        5R ⚡ 
+        5R<span class="fujin-raijin-stack" title="風神雷神シグナル"><span class="signal-row raijin" title="雷神シグナル 3/3｜最大上昇 +12.5｜5号艇 +12.5 / 4号艇 +11.3｜表示・分析のみ（予測計算には未反映）">⚡⚡⚡</span><span class="signal-row fujin empty-signal">&nbsp;</span></span> 
       </div>
 
       <div class="sub">
@@ -10418,7 +10444,7 @@ TOP3整合率は、
 
       <div class="race-title">
         常滑
-        6R ⚡ 
+        6R<span class="fujin-raijin-stack" title="風神雷神シグナル"><span class="signal-row raijin" title="雷神シグナル 2/3｜最大上昇 +11.7｜4号艇 +11.7 / 6号艇 +11.7｜表示・分析のみ（予測計算には未反映）">⚡⚡</span><span class="signal-row fujin empty-signal">&nbsp;</span></span> 
       </div>
 
       <div class="sub">
@@ -10566,7 +10592,7 @@ TOP3整合率は、
 
       <div class="race-title">
         びわこ
-        6R ⚡ <span class="down-signal" title="暫定下落シグナル 2/3｜1位朝比 -12.3｜TOP3合計 -12.0｜1-2位差 9.3｜表示・分析のみ（AI買い目には未反映）">🔻🔻</span> 
+        6R<span class="fujin-raijin-stack" title="風神雷神シグナル"><span class="signal-row raijin" title="雷神シグナル 3/3｜最大上昇 +14.1｜3号艇 +14.1｜表示・分析のみ（予測計算には未反映）">⚡⚡⚡</span><span class="signal-row fujin" title="風神シグナル 2/3｜1位朝比 -12.3｜TOP3合計 -12.0｜1-2位差 9.3｜表示・分析のみ（予測計算には未反映）">💨💨</span></span> 
       </div>
 
       <div class="sub">
@@ -10714,7 +10740,7 @@ TOP3整合率は、
 
       <div class="race-title">
         徳山
-        9R 
+        9R<span class="fujin-raijin-stack" title="風神雷神シグナル"><span class="signal-row raijin" title="雷神シグナル 1/3｜最大上昇 +8.9｜6号艇 +8.9｜表示・分析のみ（予測計算には未反映）">⚡</span><span class="signal-row fujin empty-signal">&nbsp;</span></span> 
       </div>
 
       <div class="sub">
@@ -10862,7 +10888,7 @@ TOP3整合率は、
 
       <div class="race-title">
         多摩川
-        5R 
+        5R<span class="fujin-raijin-stack" title="風神雷神シグナル"><span class="signal-row raijin" title="雷神シグナル 1/3｜最大上昇 +8.6｜6号艇 +8.6｜表示・分析のみ（予測計算には未反映）">⚡</span><span class="signal-row fujin empty-signal">&nbsp;</span></span> 
       </div>
 
       <div class="sub">
@@ -11158,7 +11184,7 @@ TOP3整合率は、
 
       <div class="race-title">
         三国
-        5R <span class="down-signal" title="暫定下落シグナル 2/3｜1位朝比 -5.0｜TOP3合計 -13.0｜1-2位差 10.2｜表示・分析のみ（AI買い目には未反映）">🔻🔻</span> 
+        5R<span class="fujin-raijin-stack" title="風神雷神シグナル"><span class="signal-row raijin empty-signal">&nbsp;</span><span class="signal-row fujin" title="風神シグナル 2/3｜1位朝比 -5.0｜TOP3合計 -13.0｜1-2位差 10.2｜表示・分析のみ（予測計算には未反映）">💨💨</span></span> 
       </div>
 
       <div class="sub">
@@ -11306,7 +11332,7 @@ TOP3整合率は、
 
       <div class="race-title">
         鳴門
-        9R ⚡ 
+        9R<span class="fujin-raijin-stack" title="風神雷神シグナル"><span class="signal-row raijin" title="雷神シグナル 3/3｜最大上昇 +15.0｜6号艇 +15.0｜表示・分析のみ（予測計算には未反映）">⚡⚡⚡</span><span class="signal-row fujin empty-signal">&nbsp;</span></span> 
       </div>
 
       <div class="sub">
@@ -11602,7 +11628,7 @@ TOP3整合率は、
 
       <div class="race-title">
         常滑
-        5R ⚡ 
+        5R<span class="fujin-raijin-stack" title="風神雷神シグナル"><span class="signal-row raijin" title="雷神シグナル 2/3｜最大上昇 +12.3｜5号艇 +9.8 / 3号艇 +12.3｜表示・分析のみ（予測計算には未反映）">⚡⚡</span><span class="signal-row fujin empty-signal">&nbsp;</span></span> 
       </div>
 
       <div class="sub">
@@ -11750,7 +11776,7 @@ TOP3整合率は、
 
       <div class="race-title">
         児島
-        4R ⚡ 
+        4R<span class="fujin-raijin-stack" title="風神雷神シグナル"><span class="signal-row raijin" title="雷神シグナル 2/3｜最大上昇 +12.1｜5号艇 +12.1｜表示・分析のみ（予測計算には未反映）">⚡⚡</span><span class="signal-row fujin empty-signal">&nbsp;</span></span> 
       </div>
 
       <div class="sub">
@@ -11898,7 +11924,7 @@ TOP3整合率は、
 
       <div class="race-title">
         多摩川
-        4R ⚡ 
+        4R<span class="fujin-raijin-stack" title="風神雷神シグナル"><span class="signal-row raijin" title="雷神シグナル 2/3｜最大上昇 +12.3｜2号艇 +9.1 / 6号艇 +12.3｜表示・分析のみ（予測計算には未反映）">⚡⚡</span><span class="signal-row fujin empty-signal">&nbsp;</span></span> 
       </div>
 
       <div class="sub">
@@ -12342,7 +12368,7 @@ TOP3整合率は、
 
       <div class="race-title">
         三国
-        4R ⚡ <span class="down-signal" title="暫定下落シグナル 2/3｜1位朝比 -6.5｜TOP3合計 -10.8｜1-2位差 24.8｜表示・分析のみ（AI買い目には未反映）">🔻🔻</span> 
+        4R<span class="fujin-raijin-stack" title="風神雷神シグナル"><span class="signal-row raijin" title="雷神シグナル 3/3｜最大上昇 +13.7｜5号艇 +10.8 / 6号艇 +13.7｜表示・分析のみ（予測計算には未反映）">⚡⚡⚡</span><span class="signal-row fujin" title="風神シグナル 2/3｜1位朝比 -6.5｜TOP3合計 -10.8｜1-2位差 24.8｜表示・分析のみ（予測計算には未反映）">💨💨</span></span> 
       </div>
 
       <div class="sub">
@@ -12490,7 +12516,7 @@ TOP3整合率は、
 
       <div class="race-title">
         びわこ
-        4R ⚡ 
+        4R<span class="fujin-raijin-stack" title="風神雷神シグナル"><span class="signal-row raijin" title="雷神シグナル 2/3｜最大上昇 +12.4｜2号艇 +7.8 / 4号艇 +10.9 / 3号艇 +12.4｜表示・分析のみ（予測計算には未反映）">⚡⚡</span><span class="signal-row fujin empty-signal">&nbsp;</span></span> 
       </div>
 
       <div class="sub">
@@ -12638,7 +12664,7 @@ TOP3整合率は、
 
       <div class="race-title">
         鳴門
-        8R ⚡ <span class="down-signal" title="暫定下落シグナル 2/3｜1位朝比 -4.2｜TOP3合計 -15.2｜1-2位差 0.2｜表示・分析のみ（AI買い目には未反映）">🔻🔻</span> 
+        8R<span class="fujin-raijin-stack" title="風神雷神シグナル"><span class="signal-row raijin" title="雷神シグナル 3/3｜最大上昇 +13.3｜6号艇 +13.3｜表示・分析のみ（予測計算には未反映）">⚡⚡⚡</span><span class="signal-row fujin" title="風神シグナル 2/3｜1位朝比 -4.2｜TOP3合計 -15.2｜1-2位差 0.2｜表示・分析のみ（予測計算には未反映）">💨💨</span></span> 
       </div>
 
       <div class="sub">
@@ -12786,7 +12812,7 @@ TOP3整合率は、
 
       <div class="race-title">
         児島
-        3R ⚡ <span class="down-signal" title="暫定下落シグナル 1/3｜1位朝比 6.3｜TOP3合計 -13.0｜1-2位差 5.9｜表示・分析のみ（AI買い目には未反映）">🔻</span> 
+        3R<span class="fujin-raijin-stack" title="風神雷神シグナル"><span class="signal-row raijin" title="雷神シグナル 3/3｜最大上昇 +13.7｜4号艇 +13.7 / 5号艇 +12.5｜表示・分析のみ（予測計算には未反映）">⚡⚡⚡</span><span class="signal-row fujin" title="風神シグナル 1/3｜1位朝比 6.3｜TOP3合計 -13.0｜1-2位差 5.9｜表示・分析のみ（予測計算には未反映）">💨</span></span> 
       </div>
 
       <div class="sub">
@@ -12934,7 +12960,7 @@ TOP3整合率は、
 
       <div class="race-title">
         常滑
-        4R ⚡ 
+        4R<span class="fujin-raijin-stack" title="風神雷神シグナル"><span class="signal-row raijin" title="雷神シグナル 2/3｜最大上昇 +11.1｜6号艇 +11.1 / 3号艇 +10.5｜表示・分析のみ（予測計算には未反映）">⚡⚡</span><span class="signal-row fujin empty-signal">&nbsp;</span></span> 
       </div>
 
       <div class="sub">
@@ -13230,7 +13256,7 @@ TOP3整合率は、
 
       <div class="race-title">
         多摩川
-        3R 
+        3R<span class="fujin-raijin-stack" title="風神雷神シグナル"><span class="signal-row raijin" title="雷神シグナル 1/3｜最大上昇 +7.8｜5号艇 +7.8｜表示・分析のみ（予測計算には未反映）">⚡</span><span class="signal-row fujin empty-signal">&nbsp;</span></span> 
       </div>
 
       <div class="sub">
@@ -13378,7 +13404,7 @@ TOP3整合率は、
 
       <div class="race-title">
         徳山
-        7R <span class="down-signal" title="暫定下落シグナル 2/3｜1位朝比 -7.7｜TOP3合計 4.0｜1-2位差 4.9｜表示・分析のみ（AI買い目には未反映）">🔻🔻</span> 
+        7R<span class="fujin-raijin-stack" title="風神雷神シグナル"><span class="signal-row raijin empty-signal">&nbsp;</span><span class="signal-row fujin" title="風神シグナル 2/3｜1位朝比 -7.7｜TOP3合計 4.0｜1-2位差 4.9｜表示・分析のみ（予測計算には未反映）">💨💨</span></span> 
       </div>
 
       <div class="sub">
@@ -13674,7 +13700,7 @@ TOP3整合率は、
 
       <div class="race-title">
         びわこ
-        3R ⚡ 
+        3R<span class="fujin-raijin-stack" title="風神雷神シグナル"><span class="signal-row raijin" title="雷神シグナル 3/3｜最大上昇 +15.5｜5号艇 +15.5｜表示・分析のみ（予測計算には未反映）">⚡⚡⚡</span><span class="signal-row fujin empty-signal">&nbsp;</span></span> 
       </div>
 
       <div class="sub">
@@ -13822,7 +13848,7 @@ TOP3整合率は、
 
       <div class="race-title">
         鳴門
-        7R ⚡ 
+        7R<span class="fujin-raijin-stack" title="風神雷神シグナル"><span class="signal-row raijin" title="雷神シグナル 2/3｜最大上昇 +12.3｜6号艇 +12.3 / 4号艇 +7.8｜表示・分析のみ（予測計算には未反映）">⚡⚡</span><span class="signal-row fujin empty-signal">&nbsp;</span></span> 
       </div>
 
       <div class="sub">
@@ -14118,7 +14144,7 @@ TOP3整合率は、
 
       <div class="race-title">
         常滑
-        3R <span class="down-signal" title="暫定下落シグナル 1/3｜1位朝比 6.5｜TOP3合計 -10.5｜1-2位差 24.0｜表示・分析のみ（AI買い目には未反映）">🔻</span> 
+        3R<span class="fujin-raijin-stack" title="風神雷神シグナル"><span class="signal-row raijin empty-signal">&nbsp;</span><span class="signal-row fujin" title="風神シグナル 1/3｜1位朝比 6.5｜TOP3合計 -10.5｜1-2位差 24.0｜表示・分析のみ（予測計算には未反映）">💨</span></span> 
       </div>
 
       <div class="sub">
@@ -14266,7 +14292,7 @@ TOP3整合率は、
 
       <div class="race-title">
         江戸川
-        1R ⚡ <span class="down-signal" title="暫定下落シグナル 2/3｜1位朝比 -5.1｜TOP3合計 6.5｜1-2位差 2.8｜表示・分析のみ（AI買い目には未反映）">🔻🔻</span> 
+        1R<span class="fujin-raijin-stack" title="風神雷神シグナル"><span class="signal-row raijin" title="雷神シグナル 3/3｜最大上昇 +13.2｜6号艇 +13.2｜表示・分析のみ（予測計算には未反映）">⚡⚡⚡</span><span class="signal-row fujin" title="風神シグナル 2/3｜1位朝比 -5.1｜TOP3合計 6.5｜1-2位差 2.8｜表示・分析のみ（予測計算には未反映）">💨💨</span></span> 
       </div>
 
       <div class="sub">
@@ -14710,7 +14736,7 @@ TOP3整合率は、
 
       <div class="race-title">
         徳山
-        6R ⚡ 
+        6R<span class="fujin-raijin-stack" title="風神雷神シグナル"><span class="signal-row raijin" title="雷神シグナル 3/3｜最大上昇 +14.8｜5号艇 +14.8｜表示・分析のみ（予測計算には未反映）">⚡⚡⚡</span><span class="signal-row fujin empty-signal">&nbsp;</span></span> 
       </div>
 
       <div class="sub">
@@ -15006,7 +15032,7 @@ TOP3整合率は、
 
       <div class="race-title">
         鳴門
-        6R ⚡ 
+        6R<span class="fujin-raijin-stack" title="風神雷神シグナル"><span class="signal-row raijin" title="雷神シグナル 2/3｜最大上昇 +10.2｜6号艇 +10.2｜表示・分析のみ（予測計算には未反映）">⚡⚡</span><span class="signal-row fujin empty-signal">&nbsp;</span></span> 
       </div>
 
       <div class="sub">
@@ -15154,7 +15180,7 @@ TOP3整合率は、
 
       <div class="race-title">
         児島
-        1R ⚡ 
+        1R<span class="fujin-raijin-stack" title="風神雷神シグナル"><span class="signal-row raijin" title="雷神シグナル 3/3｜最大上昇 +14.4｜5号艇 +11.0 / 6号艇 +14.4｜表示・分析のみ（予測計算には未反映）">⚡⚡⚡</span><span class="signal-row fujin empty-signal">&nbsp;</span></span> 
       </div>
 
       <div class="sub">
@@ -15302,7 +15328,7 @@ TOP3整合率は、
 
       <div class="race-title">
         常滑
-        2R 
+        2R<span class="fujin-raijin-stack" title="風神雷神シグナル"><span class="signal-row raijin" title="雷神シグナル 1/3｜最大上昇 +8.0｜5号艇 +8.0｜表示・分析のみ（予測計算には未反映）">⚡</span><span class="signal-row fujin empty-signal">&nbsp;</span></span> 
       </div>
 
       <div class="sub">
@@ -15598,7 +15624,7 @@ TOP3整合率は、
 
       <div class="race-title">
         三国
-        1R <span class="down-signal" title="暫定下落シグナル 1/3｜1位朝比 -3.9｜TOP3合計 -10.2｜1-2位差 5.1｜表示・分析のみ（AI買い目には未反映）">🔻</span> 
+        1R<span class="fujin-raijin-stack" title="風神雷神シグナル"><span class="signal-row raijin empty-signal">&nbsp;</span><span class="signal-row fujin" title="風神シグナル 1/3｜1位朝比 -3.9｜TOP3合計 -10.2｜1-2位差 5.1｜表示・分析のみ（予測計算には未反映）">💨</span></span> 
       </div>
 
       <div class="sub">
@@ -15894,7 +15920,7 @@ TOP3整合率は、
 
       <div class="race-title">
         びわこ
-        1R ⚡ 
+        1R<span class="fujin-raijin-stack" title="風神雷神シグナル"><span class="signal-row raijin" title="雷神シグナル 2/3｜最大上昇 +11.5｜5号艇 +10.5 / 6号艇 +11.5｜表示・分析のみ（予測計算には未反映）">⚡⚡</span><span class="signal-row fujin empty-signal">&nbsp;</span></span> 
       </div>
 
       <div class="sub">
@@ -16042,7 +16068,7 @@ TOP3整合率は、
 
       <div class="race-title">
         鳴門
-        5R ⚡ 
+        5R<span class="fujin-raijin-stack" title="風神雷神シグナル"><span class="signal-row raijin" title="雷神シグナル 3/3｜最大上昇 +17.2｜6号艇 +17.2｜表示・分析のみ（予測計算には未反映）">⚡⚡⚡</span><span class="signal-row fujin empty-signal">&nbsp;</span></span> 
       </div>
 
       <div class="sub">
@@ -16338,7 +16364,7 @@ TOP3整合率は、
 
       <div class="race-title">
         徳山
-        4R ⚡ 
+        4R<span class="fujin-raijin-stack" title="風神雷神シグナル"><span class="signal-row raijin" title="雷神シグナル 2/3｜最大上昇 +11.0｜5号艇 +11.0 / 4号艇 +9.9｜表示・分析のみ（予測計算には未反映）">⚡⚡</span><span class="signal-row fujin empty-signal">&nbsp;</span></span> 
       </div>
 
       <div class="sub">
@@ -16782,7 +16808,7 @@ TOP3整合率は、
 
       <div class="race-title">
         鳴門
-        3R ⚡ 
+        3R<span class="fujin-raijin-stack" title="風神雷神シグナル"><span class="signal-row raijin" title="雷神シグナル 2/3｜最大上昇 +11.0｜5号艇 +11.0｜表示・分析のみ（予測計算には未反映）">⚡⚡</span><span class="signal-row fujin empty-signal">&nbsp;</span></span> 
       </div>
 
       <div class="sub">
@@ -17078,7 +17104,7 @@ TOP3整合率は、
 
       <div class="race-title">
         鳴門
-        2R 
+        2R<span class="fujin-raijin-stack" title="風神雷神シグナル"><span class="signal-row raijin" title="雷神シグナル 1/3｜最大上昇 +9.2｜5号艇 +9.2｜表示・分析のみ（予測計算には未反映）">⚡</span><span class="signal-row fujin empty-signal">&nbsp;</span></span> 
       </div>
 
       <div class="sub">
@@ -17226,7 +17252,7 @@ TOP3整合率は、
 
       <div class="race-title">
         徳山
-        1R ⚡ <span class="down-signal" title="暫定下落シグナル 2/3｜1位朝比 -7.9｜TOP3合計 -13.5｜1-2位差 19.5｜表示・分析のみ（AI買い目には未反映）">🔻🔻</span> 
+        1R<span class="fujin-raijin-stack" title="風神雷神シグナル"><span class="signal-row raijin" title="雷神シグナル 2/3｜最大上昇 +11.5｜6号艇 +11.5｜表示・分析のみ（予測計算には未反映）">⚡⚡</span><span class="signal-row fujin" title="風神シグナル 2/3｜1位朝比 -7.9｜TOP3合計 -13.5｜1-2位差 19.5｜表示・分析のみ（予測計算には未反映）">💨💨</span></span> 
       </div>
 
       <div class="sub">
@@ -17374,7 +17400,7 @@ TOP3整合率は、
 
       <div class="race-title">
         鳴門
-        1R ⚡ <span class="down-signal" title="暫定下落シグナル 1/3｜1位朝比 -4.9｜TOP3合計 -11.6｜1-2位差 25.8｜表示・分析のみ（AI買い目には未反映）">🔻</span> 
+        1R<span class="fujin-raijin-stack" title="風神雷神シグナル"><span class="signal-row raijin" title="雷神シグナル 3/3｜最大上昇 +14.9｜6号艇 +14.9｜表示・分析のみ（予測計算には未反映）">⚡⚡⚡</span><span class="signal-row fujin" title="風神シグナル 1/3｜1位朝比 -4.9｜TOP3合計 -11.6｜1-2位差 25.8｜表示・分析のみ（予測計算には未反映）">💨</span></span> 
       </div>
 
       <div class="sub">
