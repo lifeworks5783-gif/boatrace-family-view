@@ -1,0 +1,12 @@
+{
+  "schema_version": 1,
+  "date": "20261010",
+  "published_at_jst": "2026-10-10T14:24:26.948801+09:00",
+  "manual_refresh_completed": true,
+  "research_mode": "manual_research",
+  "automatic_collection_enabled": false,
+  "result_races_saved": 74,
+  "research_audit_status": "PASS",
+  "publisher_run_id": "38027342411",
+  "source_commit": "8d0d0a942fe2bf1e62ad0bf5bb3ec27622907cd9"
+}
