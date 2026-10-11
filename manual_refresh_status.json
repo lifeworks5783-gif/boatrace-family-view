@@ -1,12 +1,12 @@
 {
   "schema_version": 1,
   "date": "20261012",
-  "published_at_jst": "2026-10-12T06:16:54.558122+09:00",
+  "published_at_jst": "2026-10-12T06:33:38.624938+09:00",
   "manual_refresh_completed": true,
   "research_mode": "manual_research",
   "automatic_collection_enabled": false,
   "result_races_saved": 0,
   "research_audit_status": null,
-  "publisher_run_id": "38175625593",
+  "publisher_run_id": "38176799234",
   "source_commit": "cfe5971d92bb1d0ec30f19d600363f18bc17b9d9"
 }
