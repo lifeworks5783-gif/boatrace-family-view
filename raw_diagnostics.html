@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>研究版・保存データ診断（2026年10月12日）</title>
+<style>
+:root{color-scheme:light dark}*{box-sizing:border-box}body{margin:0;font:14px/1.65 -apple-system,BlinkMacSystemFont,"Noto Sans JP",sans-serif;color:#19283b;background:#f4f6fa}
+.wrap{max-width:960px;margin:auto;padding:18px 12px 50px}header,.card,.notice{padding:15px;border-radius:14px;background:#fff;border:1px solid #d9e2ec}
+header{margin-bottom:13px}h1{font-size:23px;margin:4px 0}h2{font-size:17px}a{color:#12619b} .muted{color:#566579;font-size:12px}.notice{border-left:4px solid #bc8816;margin:12px 0}
+.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin:12px 0}.card span{display:block;font-size:12px;color:#566579}.card strong{font-size:27px;font-variant-numeric:tabular-nums}
+table{border-collapse:collapse;width:100%}td,th{padding:10px;border-bottom:1px solid #d9e2ec;text-align:left}td:last-child{text-align:right;font-weight:700}
+section{margin:15px 0}footer{margin:24px 0;font-size:12px;color:#566579}
+@media(max-width:420px){.grid{gap:6px}.card{padding:10px}.card strong{font-size:23px}}
+@media(prefers-color-scheme:dark){body{background:#101820;color:#eaf2fc}header,.card,.notice{background:#172638;border-color:#425065}.muted,.card span,footer{color:#bdcddd}a{color:#8bc8ff}td,th{border-color:#425065}}
+</style></head>
+<body><div class="wrap">
+<header><a href="analysis.html">← 風神雷神 AI分析に戻る</a>
+<h1>研究版・保存データ診断</h1><div class="muted">対象日：2026年10月12日 ／ 集計時点：19:49 JST ／ GitHub Actions #38238648073</div></header>
+<div class="notice"><strong>これは保存済み研究データの診断結果です。</strong> 公式HTML原本のGoogle Driveへの保存・読戻しは未確認です。時刻が整合しても締切前取得の独立証明ではありません。結果後に復旧した情報は当時の予測実績に含めません。</div>
+<div class="grid">
+<div class="card"><span>保存済み番組の対象レース</span><strong>168 R</strong></div>
+<div class="card"><span>朝番組6艇の照合</span><strong>168 / 168</strong></div>
+<div class="card"><span>通常直前予測の保存</span><strong>124 R</strong></div>
+<div class="card"><span>共通予測正本の保存</span><strong>168 R</strong></div>
+</div>
+<section class="card"><h2>直前情報の保存区分</h2><table><thead><tr><th>保存状態</th><th>レース数</th></tr></thead><tbody>
+<tr><td>原版用フォルダに保存記録あり</td><td>124 R</td></tr>
+<tr><td>うち取得開始・受信・フォルダ時刻と締切が整合 <span class="muted">（独立証明は未了）</span></td><td>112 R</td></tr>
+<tr><td>結果後の復旧データのみ</td><td>31 R</td></tr>
+<tr><td>保存済み直前情報が確認できない</td><td>13 R</td></tr>
+</tbody></table>
+<p class="muted">124 + 31 + 13 = 168レース。時刻整合112レースは124レースに含まれます。集計はその時点で保存されたファイルに基づき、以後更新される場合があります。</p></section>
+<section class="card"><h2>読み取り時刻について</h2><p>CSV内の requested_at・collected_at、保存フォルダの記録時刻、公式レース締切を突合しています。同じ取得情報を後の保存フォルダへ複写した例があるため、フォルダ名だけで締切前取得と断定しません。</p>
+<p>原本取得経路の監査が済むまで、計算に使ったデータの由来を「原版記録・時刻整合」「時刻未検証」「結果後復旧」「記録なし」に分けます。</p></section>
+<section class="card"><h2>今後の更新</h2><p>研究版の生成処理には、対象日の保存ファイルからレース別詳細・不足項目を再計算し、このページを更新する仕組みを追加しています。詳細の自動公開が確認できるまでは、このページは上記時点の集計スナップショットです。</p>
+<p>通常予測・風神雷神・専用24点のロジックは、この診断ページの追加によって変更していません。</p></section>
+<footer>研究データ検証用 ／ 予測・購入を推奨する情報ではありません</footer></div></body></html>
