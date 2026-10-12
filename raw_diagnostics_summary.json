@@ -1,0 +1,23 @@
+{
+  "schema": "boatrace-saved-diagnostics-v1-static-snapshot",
+  "date": "20261012",
+  "snapshot_at_jst": "2026-10-12T19:49:19+09:00",
+  "source": "GitHub Actions Research quality page regression run 38238648073",
+  "purpose": "research saved-file provenance audit, not official raw HTML verification",
+  "counts": {
+    "program_races": 168,
+    "morning_6_boat": 168,
+    "morning_prediction_saved": 168,
+    "normal_live_prediction_saved": 124,
+    "canonical_prediction_saved": 168,
+    "original_folder_records": 124,
+    "three_clock_consistent_not_independently_attested": 112,
+    "post_result_recovery_only": 31,
+    "no_saved_beforeinfo": 13,
+    "independently_proven_predeadline": 0
+  },
+  "original_html_archive_verified": false,
+  "drive_transfer_verified": false,
+  "provisional": true,
+  "disclaimer": "Clock consistency is not independent evidence of a genuine predeadline prediction. No post-result replay counted as real-time prediction."
+}
