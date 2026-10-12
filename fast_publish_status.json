@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "target_date": "20261012",
+  "canonical_blob_sha": "7e931e00698c7bc34b0b66a9c07046d6058c4f44",
+  "canonical_path": "predictions/2026/10/12/live/formation_predictions_final_20261012.json",
+  "prediction_commit_at_utc": "2026-10-12T13:58:23+00:00",
+  "published_commit_prepared_at_utc": "2026-10-12T14:14:38.618858+00:00",
+  "prediction_commit_to_publication_seconds": 976,
+  "publisher_run_id": "38261331649",
+  "published_at_jst": "2026-10-12T23:14:38.618858+09:00",
+  "scope": "latest_prediction_index_only",
+  "other_tabs_untouched": true,
+  "pages_deployment_verified": false
+}
