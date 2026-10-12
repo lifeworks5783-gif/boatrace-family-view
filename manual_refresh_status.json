@@ -1,12 +1,12 @@
 {
   "schema_version": 1,
   "date": "20261012",
-  "published_at_jst": "2026-10-12T11:54:05.011552+09:00",
+  "published_at_jst": "2026-10-12T12:10:26.845291+09:00",
   "manual_refresh_completed": true,
   "research_mode": "manual_research",
   "automatic_collection_enabled": false,
-  "result_races_saved": 37,
+  "result_races_saved": 43,
   "research_audit_status": "PASS",
-  "publisher_run_id": "38197539190",
-  "source_commit": "aeb89e299ea7935b954904ed3b2256957d47a8f2"
+  "publisher_run_id": "38198647406",
+  "source_commit": "94942828a457c541401f3edcdb767fefe4aecfc0"
 }
