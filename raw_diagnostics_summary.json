@@ -147,16 +147,16 @@
       "saved_predeadline_boats": 0,
       "clock_consistent_snapshot_count": 0,
       "clock_consistent_earliest": null,
-      "reconstructed_after_result_boats": 0,
+      "reconstructed_after_result_boats": 6,
       "legacy_time_unverified_boats": 6,
-      "beforeinfo_state": "historical_capture_time_unverified",
+      "beforeinfo_state": "post_result_recovery_only",
       "morning_prediction_saved": true,
       "live_prediction_saved": true,
       "canonical_prediction_saved": true,
       "official_html_original_archived": false,
       "issues": [
         {
-          "code": "predeadline_capture_not_confirmed",
+          "code": "only_reconstructed_after_result",
           "field": "provenance"
         }
       ]
@@ -707,16 +707,16 @@
       "saved_predeadline_boats": 0,
       "clock_consistent_snapshot_count": 0,
       "clock_consistent_earliest": null,
-      "reconstructed_after_result_boats": 0,
+      "reconstructed_after_result_boats": 6,
       "legacy_time_unverified_boats": 6,
-      "beforeinfo_state": "historical_capture_time_unverified",
+      "beforeinfo_state": "post_result_recovery_only",
       "morning_prediction_saved": true,
       "live_prediction_saved": true,
       "canonical_prediction_saved": true,
       "official_html_original_archived": false,
       "issues": [
         {
-          "code": "predeadline_capture_not_confirmed",
+          "code": "only_reconstructed_after_result",
           "field": "provenance"
         }
       ]
@@ -1181,16 +1181,16 @@
       "saved_predeadline_boats": 0,
       "clock_consistent_snapshot_count": 0,
       "clock_consistent_earliest": null,
-      "reconstructed_after_result_boats": 0,
+      "reconstructed_after_result_boats": 6,
       "legacy_time_unverified_boats": 6,
-      "beforeinfo_state": "historical_capture_time_unverified",
+      "beforeinfo_state": "post_result_recovery_only",
       "morning_prediction_saved": true,
       "live_prediction_saved": true,
       "canonical_prediction_saved": true,
       "official_html_original_archived": false,
       "issues": [
         {
-          "code": "predeadline_capture_not_confirmed",
+          "code": "only_reconstructed_after_result",
           "field": "provenance"
         }
       ]
@@ -2473,16 +2473,16 @@
       "saved_predeadline_boats": 0,
       "clock_consistent_snapshot_count": 0,
       "clock_consistent_earliest": null,
-      "reconstructed_after_result_boats": 0,
+      "reconstructed_after_result_boats": 6,
       "legacy_time_unverified_boats": 6,
-      "beforeinfo_state": "historical_capture_time_unverified",
+      "beforeinfo_state": "post_result_recovery_only",
       "morning_prediction_saved": true,
       "live_prediction_saved": true,
       "canonical_prediction_saved": true,
       "official_html_original_archived": false,
       "issues": [
         {
-          "code": "predeadline_capture_not_confirmed",
+          "code": "only_reconstructed_after_result",
           "field": "provenance"
         }
       ]
@@ -3246,9 +3246,9 @@
     "predeadline_live_six": 0,
     "original_folder_six": 46,
     "clock_consistent_not_proven": 41,
-    "recovered_only": 20,
+    "recovered_only": 24,
     "no_live_saved": 0,
-    "unknown_time": 66,
+    "unknown_time": 62,
     "morning_prediction_saved": 132,
     "live_prediction_saved": 112,
     "canonical_prediction_saved": 132
