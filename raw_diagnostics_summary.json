@@ -30,7 +30,7 @@
           "field": "provenance"
         },
         {
-          "code": "live_prediction_file_unreadable_or_missing",
+          "code": "live_prediction_not_saved_for_race",
           "field": "live_prediction"
         }
       ]
@@ -56,7 +56,7 @@
           "field": "provenance"
         },
         {
-          "code": "live_prediction_file_unreadable_or_missing",
+          "code": "live_prediction_not_saved_for_race",
           "field": "live_prediction"
         }
       ]
@@ -82,7 +82,7 @@
           "field": "provenance"
         },
         {
-          "code": "live_prediction_file_unreadable_or_missing",
+          "code": "live_prediction_not_saved_for_race",
           "field": "live_prediction"
         }
       ]
@@ -108,7 +108,7 @@
           "field": "provenance"
         },
         {
-          "code": "live_prediction_file_unreadable_or_missing",
+          "code": "live_prediction_not_saved_for_race",
           "field": "live_prediction"
         }
       ]
@@ -134,7 +134,7 @@
           "field": "provenance"
         },
         {
-          "code": "live_prediction_file_unreadable_or_missing",
+          "code": "live_prediction_not_saved_for_race",
           "field": "live_prediction"
         }
       ]
@@ -160,7 +160,7 @@
           "field": "provenance"
         },
         {
-          "code": "live_prediction_file_unreadable_or_missing",
+          "code": "live_prediction_not_saved_for_race",
           "field": "live_prediction"
         }
       ]
@@ -186,7 +186,7 @@
           "field": "provenance"
         },
         {
-          "code": "live_prediction_file_unreadable_or_missing",
+          "code": "live_prediction_not_saved_for_race",
           "field": "live_prediction"
         }
       ]
@@ -212,7 +212,7 @@
           "field": "provenance"
         },
         {
-          "code": "live_prediction_file_unreadable_or_missing",
+          "code": "live_prediction_not_saved_for_race",
           "field": "live_prediction"
         }
       ]
@@ -238,7 +238,7 @@
           "field": "provenance"
         },
         {
-          "code": "live_prediction_file_unreadable_or_missing",
+          "code": "live_prediction_not_saved_for_race",
           "field": "live_prediction"
         }
       ]
@@ -264,7 +264,7 @@
           "field": "provenance"
         },
         {
-          "code": "live_prediction_file_unreadable_or_missing",
+          "code": "live_prediction_not_saved_for_race",
           "field": "live_prediction"
         }
       ]
@@ -290,7 +290,7 @@
           "field": "provenance"
         },
         {
-          "code": "live_prediction_file_unreadable_or_missing",
+          "code": "live_prediction_not_saved_for_race",
           "field": "live_prediction"
         }
       ]
@@ -316,7 +316,7 @@
           "field": "provenance"
         },
         {
-          "code": "live_prediction_file_unreadable_or_missing",
+          "code": "live_prediction_not_saved_for_race",
           "field": "live_prediction"
         }
       ]
@@ -342,7 +342,7 @@
           "field": "provenance"
         },
         {
-          "code": "live_prediction_file_unreadable_or_missing",
+          "code": "live_prediction_not_saved_for_race",
           "field": "live_prediction"
         }
       ]
@@ -368,7 +368,7 @@
           "field": "provenance"
         },
         {
-          "code": "live_prediction_file_unreadable_or_missing",
+          "code": "live_prediction_not_saved_for_race",
           "field": "live_prediction"
         }
       ]
@@ -394,7 +394,7 @@
           "field": "provenance"
         },
         {
-          "code": "live_prediction_file_unreadable_or_missing",
+          "code": "live_prediction_not_saved_for_race",
           "field": "live_prediction"
         }
       ]
@@ -420,7 +420,7 @@
           "field": "provenance"
         },
         {
-          "code": "live_prediction_file_unreadable_or_missing",
+          "code": "live_prediction_not_saved_for_race",
           "field": "live_prediction"
         }
       ]
@@ -446,7 +446,7 @@
           "field": "provenance"
         },
         {
-          "code": "live_prediction_file_unreadable_or_missing",
+          "code": "live_prediction_not_saved_for_race",
           "field": "live_prediction"
         }
       ]
@@ -472,7 +472,7 @@
           "field": "provenance"
         },
         {
-          "code": "live_prediction_file_unreadable_or_missing",
+          "code": "live_prediction_not_saved_for_race",
           "field": "live_prediction"
         }
       ]
@@ -498,7 +498,7 @@
           "field": "provenance"
         },
         {
-          "code": "live_prediction_file_unreadable_or_missing",
+          "code": "live_prediction_not_saved_for_race",
           "field": "live_prediction"
         }
       ]
@@ -524,7 +524,7 @@
           "field": "provenance"
         },
         {
-          "code": "live_prediction_file_unreadable_or_missing",
+          "code": "live_prediction_not_saved_for_race",
           "field": "live_prediction"
         }
       ]
@@ -550,7 +550,7 @@
           "field": "provenance"
         },
         {
-          "code": "live_prediction_file_unreadable_or_missing",
+          "code": "live_prediction_not_saved_for_race",
           "field": "live_prediction"
         }
       ]
@@ -576,7 +576,7 @@
           "field": "provenance"
         },
         {
-          "code": "live_prediction_file_unreadable_or_missing",
+          "code": "live_prediction_not_saved_for_race",
           "field": "live_prediction"
         }
       ]
@@ -602,7 +602,7 @@
           "field": "provenance"
         },
         {
-          "code": "live_prediction_file_unreadable_or_missing",
+          "code": "live_prediction_not_saved_for_race",
           "field": "live_prediction"
         }
       ]
@@ -628,7 +628,7 @@
           "field": "provenance"
         },
         {
-          "code": "live_prediction_file_unreadable_or_missing",
+          "code": "live_prediction_not_saved_for_race",
           "field": "live_prediction"
         }
       ]
@@ -654,7 +654,7 @@
           "field": "provenance"
         },
         {
-          "code": "live_prediction_file_unreadable_or_missing",
+          "code": "live_prediction_not_saved_for_race",
           "field": "live_prediction"
         }
       ]
@@ -680,7 +680,7 @@
           "field": "provenance"
         },
         {
-          "code": "live_prediction_file_unreadable_or_missing",
+          "code": "live_prediction_not_saved_for_race",
           "field": "live_prediction"
         }
       ]
@@ -706,7 +706,7 @@
           "field": "provenance"
         },
         {
-          "code": "live_prediction_file_unreadable_or_missing",
+          "code": "live_prediction_not_saved_for_race",
           "field": "live_prediction"
         }
       ]
@@ -732,7 +732,7 @@
           "field": "provenance"
         },
         {
-          "code": "live_prediction_file_unreadable_or_missing",
+          "code": "live_prediction_not_saved_for_race",
           "field": "live_prediction"
         }
       ]
@@ -758,7 +758,7 @@
           "field": "provenance"
         },
         {
-          "code": "live_prediction_file_unreadable_or_missing",
+          "code": "live_prediction_not_saved_for_race",
           "field": "live_prediction"
         }
       ]
@@ -784,7 +784,7 @@
           "field": "provenance"
         },
         {
-          "code": "live_prediction_file_unreadable_or_missing",
+          "code": "live_prediction_not_saved_for_race",
           "field": "live_prediction"
         }
       ]
@@ -810,7 +810,7 @@
           "field": "provenance"
         },
         {
-          "code": "live_prediction_file_unreadable_or_missing",
+          "code": "live_prediction_not_saved_for_race",
           "field": "live_prediction"
         }
       ]
@@ -836,7 +836,7 @@
           "field": "provenance"
         },
         {
-          "code": "live_prediction_file_unreadable_or_missing",
+          "code": "live_prediction_not_saved_for_race",
           "field": "live_prediction"
         }
       ]
@@ -862,7 +862,7 @@
           "field": "provenance"
         },
         {
-          "code": "live_prediction_file_unreadable_or_missing",
+          "code": "live_prediction_not_saved_for_race",
           "field": "live_prediction"
         }
       ]
@@ -888,7 +888,7 @@
           "field": "provenance"
         },
         {
-          "code": "live_prediction_file_unreadable_or_missing",
+          "code": "live_prediction_not_saved_for_race",
           "field": "live_prediction"
         }
       ]
@@ -914,7 +914,7 @@
           "field": "provenance"
         },
         {
-          "code": "live_prediction_file_unreadable_or_missing",
+          "code": "live_prediction_not_saved_for_race",
           "field": "live_prediction"
         }
       ]
@@ -940,7 +940,7 @@
           "field": "provenance"
         },
         {
-          "code": "live_prediction_file_unreadable_or_missing",
+          "code": "live_prediction_not_saved_for_race",
           "field": "live_prediction"
         }
       ]
@@ -966,7 +966,7 @@
           "field": "provenance"
         },
         {
-          "code": "live_prediction_file_unreadable_or_missing",
+          "code": "live_prediction_not_saved_for_race",
           "field": "live_prediction"
         }
       ]
@@ -992,7 +992,7 @@
           "field": "provenance"
         },
         {
-          "code": "live_prediction_file_unreadable_or_missing",
+          "code": "live_prediction_not_saved_for_race",
           "field": "live_prediction"
         }
       ]
@@ -1018,7 +1018,7 @@
           "field": "provenance"
         },
         {
-          "code": "live_prediction_file_unreadable_or_missing",
+          "code": "live_prediction_not_saved_for_race",
           "field": "live_prediction"
         }
       ]
@@ -1044,7 +1044,7 @@
           "field": "provenance"
         },
         {
-          "code": "live_prediction_file_unreadable_or_missing",
+          "code": "live_prediction_not_saved_for_race",
           "field": "live_prediction"
         }
       ]
@@ -1070,7 +1070,7 @@
           "field": "provenance"
         },
         {
-          "code": "live_prediction_file_unreadable_or_missing",
+          "code": "live_prediction_not_saved_for_race",
           "field": "live_prediction"
         }
       ]
@@ -1096,7 +1096,7 @@
           "field": "provenance"
         },
         {
-          "code": "live_prediction_file_unreadable_or_missing",
+          "code": "live_prediction_not_saved_for_race",
           "field": "live_prediction"
         }
       ]
@@ -1122,7 +1122,7 @@
           "field": "provenance"
         },
         {
-          "code": "live_prediction_file_unreadable_or_missing",
+          "code": "live_prediction_not_saved_for_race",
           "field": "live_prediction"
         }
       ]
@@ -1148,7 +1148,7 @@
           "field": "provenance"
         },
         {
-          "code": "live_prediction_file_unreadable_or_missing",
+          "code": "live_prediction_not_saved_for_race",
           "field": "live_prediction"
         }
       ]
@@ -1174,7 +1174,7 @@
           "field": "provenance"
         },
         {
-          "code": "live_prediction_file_unreadable_or_missing",
+          "code": "live_prediction_not_saved_for_race",
           "field": "live_prediction"
         }
       ]
@@ -1200,7 +1200,7 @@
           "field": "provenance"
         },
         {
-          "code": "live_prediction_file_unreadable_or_missing",
+          "code": "live_prediction_not_saved_for_race",
           "field": "live_prediction"
         }
       ]
@@ -1226,7 +1226,7 @@
           "field": "provenance"
         },
         {
-          "code": "live_prediction_file_unreadable_or_missing",
+          "code": "live_prediction_not_saved_for_race",
           "field": "live_prediction"
         }
       ]
@@ -1252,7 +1252,7 @@
           "field": "provenance"
         },
         {
-          "code": "live_prediction_file_unreadable_or_missing",
+          "code": "live_prediction_not_saved_for_race",
           "field": "live_prediction"
         }
       ]
@@ -1278,7 +1278,7 @@
           "field": "provenance"
         },
         {
-          "code": "live_prediction_file_unreadable_or_missing",
+          "code": "live_prediction_not_saved_for_race",
           "field": "live_prediction"
         }
       ]
@@ -1304,7 +1304,7 @@
           "field": "provenance"
         },
         {
-          "code": "live_prediction_file_unreadable_or_missing",
+          "code": "live_prediction_not_saved_for_race",
           "field": "live_prediction"
         }
       ]
@@ -1330,7 +1330,7 @@
           "field": "provenance"
         },
         {
-          "code": "live_prediction_file_unreadable_or_missing",
+          "code": "live_prediction_not_saved_for_race",
           "field": "live_prediction"
         }
       ]
@@ -1356,7 +1356,7 @@
           "field": "provenance"
         },
         {
-          "code": "live_prediction_file_unreadable_or_missing",
+          "code": "live_prediction_not_saved_for_race",
           "field": "live_prediction"
         }
       ]
@@ -1382,7 +1382,7 @@
           "field": "provenance"
         },
         {
-          "code": "live_prediction_file_unreadable_or_missing",
+          "code": "live_prediction_not_saved_for_race",
           "field": "live_prediction"
         }
       ]
@@ -1408,7 +1408,7 @@
           "field": "provenance"
         },
         {
-          "code": "live_prediction_file_unreadable_or_missing",
+          "code": "live_prediction_not_saved_for_race",
           "field": "live_prediction"
         }
       ]
@@ -1434,7 +1434,7 @@
           "field": "provenance"
         },
         {
-          "code": "live_prediction_file_unreadable_or_missing",
+          "code": "live_prediction_not_saved_for_race",
           "field": "live_prediction"
         }
       ]
@@ -1460,7 +1460,7 @@
           "field": "provenance"
         },
         {
-          "code": "live_prediction_file_unreadable_or_missing",
+          "code": "live_prediction_not_saved_for_race",
           "field": "live_prediction"
         }
       ]
@@ -1486,7 +1486,7 @@
           "field": "provenance"
         },
         {
-          "code": "live_prediction_file_unreadable_or_missing",
+          "code": "live_prediction_not_saved_for_race",
           "field": "live_prediction"
         }
       ]
@@ -1512,7 +1512,7 @@
           "field": "provenance"
         },
         {
-          "code": "live_prediction_file_unreadable_or_missing",
+          "code": "live_prediction_not_saved_for_race",
           "field": "live_prediction"
         }
       ]
@@ -1538,7 +1538,7 @@
           "field": "provenance"
         },
         {
-          "code": "live_prediction_file_unreadable_or_missing",
+          "code": "live_prediction_not_saved_for_race",
           "field": "live_prediction"
         }
       ]
@@ -1564,7 +1564,7 @@
           "field": "provenance"
         },
         {
-          "code": "live_prediction_file_unreadable_or_missing",
+          "code": "live_prediction_not_saved_for_race",
           "field": "live_prediction"
         }
       ]
@@ -1577,20 +1577,20 @@
       "saved_predeadline_boats": 0,
       "clock_consistent_snapshot_count": 0,
       "clock_consistent_earliest": null,
-      "reconstructed_after_result_boats": 0,
+      "reconstructed_after_result_boats": 6,
       "legacy_time_unverified_boats": 0,
-      "beforeinfo_state": "no_saved_beforeinfo",
+      "beforeinfo_state": "post_result_recovery_only",
       "morning_prediction_saved": true,
       "live_prediction_saved": false,
       "canonical_prediction_saved": true,
       "official_html_original_archived": false,
       "issues": [
         {
-          "code": "predeadline_capture_not_confirmed",
+          "code": "only_reconstructed_after_result",
           "field": "provenance"
         },
         {
-          "code": "live_prediction_file_unreadable_or_missing",
+          "code": "live_prediction_not_saved_for_race",
           "field": "live_prediction"
         }
       ]
@@ -1616,7 +1616,7 @@
           "field": "provenance"
         },
         {
-          "code": "live_prediction_file_unreadable_or_missing",
+          "code": "live_prediction_not_saved_for_race",
           "field": "live_prediction"
         }
       ]
@@ -1642,7 +1642,7 @@
           "field": "provenance"
         },
         {
-          "code": "live_prediction_file_unreadable_or_missing",
+          "code": "live_prediction_not_saved_for_race",
           "field": "live_prediction"
         }
       ]
@@ -1668,7 +1668,7 @@
           "field": "provenance"
         },
         {
-          "code": "live_prediction_file_unreadable_or_missing",
+          "code": "live_prediction_not_saved_for_race",
           "field": "live_prediction"
         }
       ]
@@ -1694,7 +1694,7 @@
           "field": "provenance"
         },
         {
-          "code": "live_prediction_file_unreadable_or_missing",
+          "code": "live_prediction_not_saved_for_race",
           "field": "live_prediction"
         }
       ]
@@ -1720,7 +1720,7 @@
           "field": "provenance"
         },
         {
-          "code": "live_prediction_file_unreadable_or_missing",
+          "code": "live_prediction_not_saved_for_race",
           "field": "live_prediction"
         }
       ]
@@ -1746,7 +1746,7 @@
           "field": "provenance"
         },
         {
-          "code": "live_prediction_file_unreadable_or_missing",
+          "code": "live_prediction_not_saved_for_race",
           "field": "live_prediction"
         }
       ]
@@ -1772,7 +1772,7 @@
           "field": "provenance"
         },
         {
-          "code": "live_prediction_file_unreadable_or_missing",
+          "code": "live_prediction_not_saved_for_race",
           "field": "live_prediction"
         }
       ]
@@ -1798,7 +1798,7 @@
           "field": "provenance"
         },
         {
-          "code": "live_prediction_file_unreadable_or_missing",
+          "code": "live_prediction_not_saved_for_race",
           "field": "live_prediction"
         }
       ]
@@ -1824,7 +1824,7 @@
           "field": "provenance"
         },
         {
-          "code": "live_prediction_file_unreadable_or_missing",
+          "code": "live_prediction_not_saved_for_race",
           "field": "live_prediction"
         }
       ]
@@ -1850,7 +1850,7 @@
           "field": "provenance"
         },
         {
-          "code": "live_prediction_file_unreadable_or_missing",
+          "code": "live_prediction_not_saved_for_race",
           "field": "live_prediction"
         }
       ]
@@ -1876,7 +1876,7 @@
           "field": "provenance"
         },
         {
-          "code": "live_prediction_file_unreadable_or_missing",
+          "code": "live_prediction_not_saved_for_race",
           "field": "live_prediction"
         }
       ]
@@ -1902,7 +1902,7 @@
           "field": "provenance"
         },
         {
-          "code": "live_prediction_file_unreadable_or_missing",
+          "code": "live_prediction_not_saved_for_race",
           "field": "live_prediction"
         }
       ]
@@ -1928,7 +1928,7 @@
           "field": "provenance"
         },
         {
-          "code": "live_prediction_file_unreadable_or_missing",
+          "code": "live_prediction_not_saved_for_race",
           "field": "live_prediction"
         }
       ]
@@ -1954,7 +1954,7 @@
           "field": "provenance"
         },
         {
-          "code": "live_prediction_file_unreadable_or_missing",
+          "code": "live_prediction_not_saved_for_race",
           "field": "live_prediction"
         }
       ]
@@ -1980,7 +1980,7 @@
           "field": "provenance"
         },
         {
-          "code": "live_prediction_file_unreadable_or_missing",
+          "code": "live_prediction_not_saved_for_race",
           "field": "live_prediction"
         }
       ]
@@ -2006,7 +2006,7 @@
           "field": "provenance"
         },
         {
-          "code": "live_prediction_file_unreadable_or_missing",
+          "code": "live_prediction_not_saved_for_race",
           "field": "live_prediction"
         }
       ]
@@ -2032,7 +2032,7 @@
           "field": "provenance"
         },
         {
-          "code": "live_prediction_file_unreadable_or_missing",
+          "code": "live_prediction_not_saved_for_race",
           "field": "live_prediction"
         }
       ]
@@ -2058,7 +2058,7 @@
           "field": "provenance"
         },
         {
-          "code": "live_prediction_file_unreadable_or_missing",
+          "code": "live_prediction_not_saved_for_race",
           "field": "live_prediction"
         }
       ]
@@ -2084,7 +2084,7 @@
           "field": "provenance"
         },
         {
-          "code": "live_prediction_file_unreadable_or_missing",
+          "code": "live_prediction_not_saved_for_race",
           "field": "live_prediction"
         }
       ]
@@ -2110,7 +2110,7 @@
           "field": "provenance"
         },
         {
-          "code": "live_prediction_file_unreadable_or_missing",
+          "code": "live_prediction_not_saved_for_race",
           "field": "live_prediction"
         }
       ]
@@ -2136,7 +2136,7 @@
           "field": "provenance"
         },
         {
-          "code": "live_prediction_file_unreadable_or_missing",
+          "code": "live_prediction_not_saved_for_race",
           "field": "live_prediction"
         }
       ]
@@ -2162,7 +2162,7 @@
           "field": "provenance"
         },
         {
-          "code": "live_prediction_file_unreadable_or_missing",
+          "code": "live_prediction_not_saved_for_race",
           "field": "live_prediction"
         }
       ]
@@ -2188,7 +2188,7 @@
           "field": "provenance"
         },
         {
-          "code": "live_prediction_file_unreadable_or_missing",
+          "code": "live_prediction_not_saved_for_race",
           "field": "live_prediction"
         }
       ]
@@ -2197,25 +2197,27 @@
       "race_id": "20261014-18-01",
       "morning_entry_count": 6,
       "morning_six_identity_verified": true,
-      "original_folder_boats": 0,
+      "original_folder_boats": 6,
       "saved_predeadline_boats": 0,
-      "clock_consistent_snapshot_count": 0,
-      "clock_consistent_earliest": null,
+      "clock_consistent_snapshot_count": 2,
+      "clock_consistent_earliest": {
+        "collected_at": "2026-10-14T08:39:01.776028+09:00",
+        "saved_folder_clock": "2026-10-14T08:41:14+09:00",
+        "deadline": "2026-10-14T08:43:00+09:00",
+        "seconds_before_deadline": 238,
+        "evidence_level": "three_clock_consistent_not_independently_attested"
+      },
       "reconstructed_after_result_boats": 0,
-      "legacy_time_unverified_boats": 0,
-      "beforeinfo_state": "no_saved_beforeinfo",
+      "legacy_time_unverified_boats": 6,
+      "beforeinfo_state": "original_folder_time_consistent_not_proven",
       "morning_prediction_saved": true,
-      "live_prediction_saved": false,
+      "live_prediction_saved": true,
       "canonical_prediction_saved": true,
       "official_html_original_archived": false,
       "issues": [
         {
-          "code": "predeadline_capture_not_confirmed",
+          "code": "predeadline_capture_not_independently_attested",
           "field": "provenance"
-        },
-        {
-          "code": "live_prediction_file_unreadable_or_missing",
-          "field": "live_prediction"
         }
       ]
     },
@@ -2240,7 +2242,7 @@
           "field": "provenance"
         },
         {
-          "code": "live_prediction_file_unreadable_or_missing",
+          "code": "live_prediction_not_saved_for_race",
           "field": "live_prediction"
         }
       ]
@@ -2266,7 +2268,7 @@
           "field": "provenance"
         },
         {
-          "code": "live_prediction_file_unreadable_or_missing",
+          "code": "live_prediction_not_saved_for_race",
           "field": "live_prediction"
         }
       ]
@@ -2292,7 +2294,7 @@
           "field": "provenance"
         },
         {
-          "code": "live_prediction_file_unreadable_or_missing",
+          "code": "live_prediction_not_saved_for_race",
           "field": "live_prediction"
         }
       ]
@@ -2318,7 +2320,7 @@
           "field": "provenance"
         },
         {
-          "code": "live_prediction_file_unreadable_or_missing",
+          "code": "live_prediction_not_saved_for_race",
           "field": "live_prediction"
         }
       ]
@@ -2344,7 +2346,7 @@
           "field": "provenance"
         },
         {
-          "code": "live_prediction_file_unreadable_or_missing",
+          "code": "live_prediction_not_saved_for_race",
           "field": "live_prediction"
         }
       ]
@@ -2370,7 +2372,7 @@
           "field": "provenance"
         },
         {
-          "code": "live_prediction_file_unreadable_or_missing",
+          "code": "live_prediction_not_saved_for_race",
           "field": "live_prediction"
         }
       ]
@@ -2396,7 +2398,7 @@
           "field": "provenance"
         },
         {
-          "code": "live_prediction_file_unreadable_or_missing",
+          "code": "live_prediction_not_saved_for_race",
           "field": "live_prediction"
         }
       ]
@@ -2422,7 +2424,7 @@
           "field": "provenance"
         },
         {
-          "code": "live_prediction_file_unreadable_or_missing",
+          "code": "live_prediction_not_saved_for_race",
           "field": "live_prediction"
         }
       ]
@@ -2448,7 +2450,7 @@
           "field": "provenance"
         },
         {
-          "code": "live_prediction_file_unreadable_or_missing",
+          "code": "live_prediction_not_saved_for_race",
           "field": "live_prediction"
         }
       ]
@@ -2474,7 +2476,7 @@
           "field": "provenance"
         },
         {
-          "code": "live_prediction_file_unreadable_or_missing",
+          "code": "live_prediction_not_saved_for_race",
           "field": "live_prediction"
         }
       ]
@@ -2500,7 +2502,7 @@
           "field": "provenance"
         },
         {
-          "code": "live_prediction_file_unreadable_or_missing",
+          "code": "live_prediction_not_saved_for_race",
           "field": "live_prediction"
         }
       ]
@@ -2526,7 +2528,7 @@
           "field": "provenance"
         },
         {
-          "code": "live_prediction_file_unreadable_or_missing",
+          "code": "live_prediction_not_saved_for_race",
           "field": "live_prediction"
         }
       ]
@@ -2552,7 +2554,7 @@
           "field": "provenance"
         },
         {
-          "code": "live_prediction_file_unreadable_or_missing",
+          "code": "live_prediction_not_saved_for_race",
           "field": "live_prediction"
         }
       ]
@@ -2578,7 +2580,7 @@
           "field": "provenance"
         },
         {
-          "code": "live_prediction_file_unreadable_or_missing",
+          "code": "live_prediction_not_saved_for_race",
           "field": "live_prediction"
         }
       ]
@@ -2604,7 +2606,7 @@
           "field": "provenance"
         },
         {
-          "code": "live_prediction_file_unreadable_or_missing",
+          "code": "live_prediction_not_saved_for_race",
           "field": "live_prediction"
         }
       ]
@@ -2630,7 +2632,7 @@
           "field": "provenance"
         },
         {
-          "code": "live_prediction_file_unreadable_or_missing",
+          "code": "live_prediction_not_saved_for_race",
           "field": "live_prediction"
         }
       ]
@@ -2656,7 +2658,7 @@
           "field": "provenance"
         },
         {
-          "code": "live_prediction_file_unreadable_or_missing",
+          "code": "live_prediction_not_saved_for_race",
           "field": "live_prediction"
         }
       ]
@@ -2682,7 +2684,7 @@
           "field": "provenance"
         },
         {
-          "code": "live_prediction_file_unreadable_or_missing",
+          "code": "live_prediction_not_saved_for_race",
           "field": "live_prediction"
         }
       ]
@@ -2708,7 +2710,7 @@
           "field": "provenance"
         },
         {
-          "code": "live_prediction_file_unreadable_or_missing",
+          "code": "live_prediction_not_saved_for_race",
           "field": "live_prediction"
         }
       ]
@@ -2734,7 +2736,7 @@
           "field": "provenance"
         },
         {
-          "code": "live_prediction_file_unreadable_or_missing",
+          "code": "live_prediction_not_saved_for_race",
           "field": "live_prediction"
         }
       ]
@@ -2760,7 +2762,7 @@
           "field": "provenance"
         },
         {
-          "code": "live_prediction_file_unreadable_or_missing",
+          "code": "live_prediction_not_saved_for_race",
           "field": "live_prediction"
         }
       ]
@@ -2786,7 +2788,7 @@
           "field": "provenance"
         },
         {
-          "code": "live_prediction_file_unreadable_or_missing",
+          "code": "live_prediction_not_saved_for_race",
           "field": "live_prediction"
         }
       ]
@@ -2812,7 +2814,7 @@
           "field": "provenance"
         },
         {
-          "code": "live_prediction_file_unreadable_or_missing",
+          "code": "live_prediction_not_saved_for_race",
           "field": "live_prediction"
         }
       ]
@@ -2838,7 +2840,7 @@
           "field": "provenance"
         },
         {
-          "code": "live_prediction_file_unreadable_or_missing",
+          "code": "live_prediction_not_saved_for_race",
           "field": "live_prediction"
         }
       ]
@@ -2864,7 +2866,7 @@
           "field": "provenance"
         },
         {
-          "code": "live_prediction_file_unreadable_or_missing",
+          "code": "live_prediction_not_saved_for_race",
           "field": "live_prediction"
         }
       ]
@@ -2890,7 +2892,7 @@
           "field": "provenance"
         },
         {
-          "code": "live_prediction_file_unreadable_or_missing",
+          "code": "live_prediction_not_saved_for_race",
           "field": "live_prediction"
         }
       ]
@@ -2916,7 +2918,7 @@
           "field": "provenance"
         },
         {
-          "code": "live_prediction_file_unreadable_or_missing",
+          "code": "live_prediction_not_saved_for_race",
           "field": "live_prediction"
         }
       ]
@@ -2942,7 +2944,7 @@
           "field": "provenance"
         },
         {
-          "code": "live_prediction_file_unreadable_or_missing",
+          "code": "live_prediction_not_saved_for_race",
           "field": "live_prediction"
         }
       ]
@@ -2968,7 +2970,7 @@
           "field": "provenance"
         },
         {
-          "code": "live_prediction_file_unreadable_or_missing",
+          "code": "live_prediction_not_saved_for_race",
           "field": "live_prediction"
         }
       ]
@@ -2994,7 +2996,7 @@
           "field": "provenance"
         },
         {
-          "code": "live_prediction_file_unreadable_or_missing",
+          "code": "live_prediction_not_saved_for_race",
           "field": "live_prediction"
         }
       ]
@@ -3020,7 +3022,7 @@
           "field": "provenance"
         },
         {
-          "code": "live_prediction_file_unreadable_or_missing",
+          "code": "live_prediction_not_saved_for_race",
           "field": "live_prediction"
         }
       ]
@@ -3046,7 +3048,7 @@
           "field": "provenance"
         },
         {
-          "code": "live_prediction_file_unreadable_or_missing",
+          "code": "live_prediction_not_saved_for_race",
           "field": "live_prediction"
         }
       ]
@@ -3072,7 +3074,7 @@
           "field": "provenance"
         },
         {
-          "code": "live_prediction_file_unreadable_or_missing",
+          "code": "live_prediction_not_saved_for_race",
           "field": "live_prediction"
         }
       ]
@@ -3098,7 +3100,7 @@
           "field": "provenance"
         },
         {
-          "code": "live_prediction_file_unreadable_or_missing",
+          "code": "live_prediction_not_saved_for_race",
           "field": "live_prediction"
         }
       ]
@@ -3124,7 +3126,7 @@
           "field": "provenance"
         },
         {
-          "code": "live_prediction_file_unreadable_or_missing",
+          "code": "live_prediction_not_saved_for_race",
           "field": "live_prediction"
         }
       ]
@@ -3133,25 +3135,27 @@
       "race_id": "20261014-21-01",
       "morning_entry_count": 6,
       "morning_six_identity_verified": true,
-      "original_folder_boats": 0,
+      "original_folder_boats": 6,
       "saved_predeadline_boats": 0,
-      "clock_consistent_snapshot_count": 0,
-      "clock_consistent_earliest": null,
+      "clock_consistent_snapshot_count": 2,
+      "clock_consistent_earliest": {
+        "collected_at": "2026-10-14T08:38:59.744354+09:00",
+        "saved_folder_clock": "2026-10-14T08:41:14+09:00",
+        "deadline": "2026-10-14T08:51:00+09:00",
+        "seconds_before_deadline": 720,
+        "evidence_level": "three_clock_consistent_not_independently_attested"
+      },
       "reconstructed_after_result_boats": 0,
-      "legacy_time_unverified_boats": 0,
-      "beforeinfo_state": "no_saved_beforeinfo",
+      "legacy_time_unverified_boats": 6,
+      "beforeinfo_state": "original_folder_time_consistent_not_proven",
       "morning_prediction_saved": true,
-      "live_prediction_saved": false,
+      "live_prediction_saved": true,
       "canonical_prediction_saved": true,
       "official_html_original_archived": false,
       "issues": [
         {
-          "code": "predeadline_capture_not_confirmed",
+          "code": "predeadline_capture_not_independently_attested",
           "field": "provenance"
-        },
-        {
-          "code": "live_prediction_file_unreadable_or_missing",
-          "field": "live_prediction"
         }
       ]
     },
@@ -3176,7 +3180,7 @@
           "field": "provenance"
         },
         {
-          "code": "live_prediction_file_unreadable_or_missing",
+          "code": "live_prediction_not_saved_for_race",
           "field": "live_prediction"
         }
       ]
@@ -3202,7 +3206,7 @@
           "field": "provenance"
         },
         {
-          "code": "live_prediction_file_unreadable_or_missing",
+          "code": "live_prediction_not_saved_for_race",
           "field": "live_prediction"
         }
       ]
@@ -3228,7 +3232,7 @@
           "field": "provenance"
         },
         {
-          "code": "live_prediction_file_unreadable_or_missing",
+          "code": "live_prediction_not_saved_for_race",
           "field": "live_prediction"
         }
       ]
@@ -3254,7 +3258,7 @@
           "field": "provenance"
         },
         {
-          "code": "live_prediction_file_unreadable_or_missing",
+          "code": "live_prediction_not_saved_for_race",
           "field": "live_prediction"
         }
       ]
@@ -3280,7 +3284,7 @@
           "field": "provenance"
         },
         {
-          "code": "live_prediction_file_unreadable_or_missing",
+          "code": "live_prediction_not_saved_for_race",
           "field": "live_prediction"
         }
       ]
@@ -3306,7 +3310,7 @@
           "field": "provenance"
         },
         {
-          "code": "live_prediction_file_unreadable_or_missing",
+          "code": "live_prediction_not_saved_for_race",
           "field": "live_prediction"
         }
       ]
@@ -3332,7 +3336,7 @@
           "field": "provenance"
         },
         {
-          "code": "live_prediction_file_unreadable_or_missing",
+          "code": "live_prediction_not_saved_for_race",
           "field": "live_prediction"
         }
       ]
@@ -3358,7 +3362,7 @@
           "field": "provenance"
         },
         {
-          "code": "live_prediction_file_unreadable_or_missing",
+          "code": "live_prediction_not_saved_for_race",
           "field": "live_prediction"
         }
       ]
@@ -3384,7 +3388,7 @@
           "field": "provenance"
         },
         {
-          "code": "live_prediction_file_unreadable_or_missing",
+          "code": "live_prediction_not_saved_for_race",
           "field": "live_prediction"
         }
       ]
@@ -3410,7 +3414,7 @@
           "field": "provenance"
         },
         {
-          "code": "live_prediction_file_unreadable_or_missing",
+          "code": "live_prediction_not_saved_for_race",
           "field": "live_prediction"
         }
       ]
@@ -3436,7 +3440,7 @@
           "field": "provenance"
         },
         {
-          "code": "live_prediction_file_unreadable_or_missing",
+          "code": "live_prediction_not_saved_for_race",
           "field": "live_prediction"
         }
       ]
@@ -3462,7 +3466,7 @@
           "field": "provenance"
         },
         {
-          "code": "live_prediction_file_unreadable_or_missing",
+          "code": "live_prediction_not_saved_for_race",
           "field": "live_prediction"
         }
       ]
@@ -3488,7 +3492,7 @@
           "field": "provenance"
         },
         {
-          "code": "live_prediction_file_unreadable_or_missing",
+          "code": "live_prediction_not_saved_for_race",
           "field": "live_prediction"
         }
       ]
@@ -3514,7 +3518,7 @@
           "field": "provenance"
         },
         {
-          "code": "live_prediction_file_unreadable_or_missing",
+          "code": "live_prediction_not_saved_for_race",
           "field": "live_prediction"
         }
       ]
@@ -3540,7 +3544,7 @@
           "field": "provenance"
         },
         {
-          "code": "live_prediction_file_unreadable_or_missing",
+          "code": "live_prediction_not_saved_for_race",
           "field": "live_prediction"
         }
       ]
@@ -3566,7 +3570,7 @@
           "field": "provenance"
         },
         {
-          "code": "live_prediction_file_unreadable_or_missing",
+          "code": "live_prediction_not_saved_for_race",
           "field": "live_prediction"
         }
       ]
@@ -3592,7 +3596,7 @@
           "field": "provenance"
         },
         {
-          "code": "live_prediction_file_unreadable_or_missing",
+          "code": "live_prediction_not_saved_for_race",
           "field": "live_prediction"
         }
       ]
@@ -3618,7 +3622,7 @@
           "field": "provenance"
         },
         {
-          "code": "live_prediction_file_unreadable_or_missing",
+          "code": "live_prediction_not_saved_for_race",
           "field": "live_prediction"
         }
       ]
@@ -3644,7 +3648,7 @@
           "field": "provenance"
         },
         {
-          "code": "live_prediction_file_unreadable_or_missing",
+          "code": "live_prediction_not_saved_for_race",
           "field": "live_prediction"
         }
       ]
@@ -3670,7 +3674,7 @@
           "field": "provenance"
         },
         {
-          "code": "live_prediction_file_unreadable_or_missing",
+          "code": "live_prediction_not_saved_for_race",
           "field": "live_prediction"
         }
       ]
@@ -3696,7 +3700,7 @@
           "field": "provenance"
         },
         {
-          "code": "live_prediction_file_unreadable_or_missing",
+          "code": "live_prediction_not_saved_for_race",
           "field": "live_prediction"
         }
       ]
@@ -3722,7 +3726,7 @@
           "field": "provenance"
         },
         {
-          "code": "live_prediction_file_unreadable_or_missing",
+          "code": "live_prediction_not_saved_for_race",
           "field": "live_prediction"
         }
       ]
@@ -3748,7 +3752,7 @@
           "field": "provenance"
         },
         {
-          "code": "live_prediction_file_unreadable_or_missing",
+          "code": "live_prediction_not_saved_for_race",
           "field": "live_prediction"
         }
       ]
@@ -3774,7 +3778,7 @@
           "field": "provenance"
         },
         {
-          "code": "live_prediction_file_unreadable_or_missing",
+          "code": "live_prediction_not_saved_for_race",
           "field": "live_prediction"
         }
       ]
@@ -3800,7 +3804,7 @@
           "field": "provenance"
         },
         {
-          "code": "live_prediction_file_unreadable_or_missing",
+          "code": "live_prediction_not_saved_for_race",
           "field": "live_prediction"
         }
       ]
@@ -3826,7 +3830,7 @@
           "field": "provenance"
         },
         {
-          "code": "live_prediction_file_unreadable_or_missing",
+          "code": "live_prediction_not_saved_for_race",
           "field": "live_prediction"
         }
       ]
@@ -3852,7 +3856,7 @@
           "field": "provenance"
         },
         {
-          "code": "live_prediction_file_unreadable_or_missing",
+          "code": "live_prediction_not_saved_for_race",
           "field": "live_prediction"
         }
       ]
@@ -3878,7 +3882,7 @@
           "field": "provenance"
         },
         {
-          "code": "live_prediction_file_unreadable_or_missing",
+          "code": "live_prediction_not_saved_for_race",
           "field": "live_prediction"
         }
       ]
@@ -3904,7 +3908,7 @@
           "field": "provenance"
         },
         {
-          "code": "live_prediction_file_unreadable_or_missing",
+          "code": "live_prediction_not_saved_for_race",
           "field": "live_prediction"
         }
       ]
@@ -3930,7 +3934,7 @@
           "field": "provenance"
         },
         {
-          "code": "live_prediction_file_unreadable_or_missing",
+          "code": "live_prediction_not_saved_for_race",
           "field": "live_prediction"
         }
       ]
@@ -3956,7 +3960,7 @@
           "field": "provenance"
         },
         {
-          "code": "live_prediction_file_unreadable_or_missing",
+          "code": "live_prediction_not_saved_for_race",
           "field": "live_prediction"
         }
       ]
@@ -3982,7 +3986,7 @@
           "field": "provenance"
         },
         {
-          "code": "live_prediction_file_unreadable_or_missing",
+          "code": "live_prediction_not_saved_for_race",
           "field": "live_prediction"
         }
       ]
@@ -4008,7 +4012,7 @@
           "field": "provenance"
         },
         {
-          "code": "live_prediction_file_unreadable_or_missing",
+          "code": "live_prediction_not_saved_for_race",
           "field": "live_prediction"
         }
       ]
@@ -4034,7 +4038,7 @@
           "field": "provenance"
         },
         {
-          "code": "live_prediction_file_unreadable_or_missing",
+          "code": "live_prediction_not_saved_for_race",
           "field": "live_prediction"
         }
       ]
@@ -4060,7 +4064,7 @@
           "field": "provenance"
         },
         {
-          "code": "live_prediction_file_unreadable_or_missing",
+          "code": "live_prediction_not_saved_for_race",
           "field": "live_prediction"
         }
       ]
@@ -4070,13 +4074,13 @@
     "total": 156,
     "morning_six": 156,
     "predeadline_live_six": 0,
-    "original_folder_six": 0,
-    "clock_consistent_not_proven": 0,
-    "recovered_only": 0,
-    "no_live_saved": 156,
+    "original_folder_six": 2,
+    "clock_consistent_not_proven": 2,
+    "recovered_only": 1,
+    "no_live_saved": 153,
     "unknown_time": 0,
     "morning_prediction_saved": 156,
-    "live_prediction_saved": 0,
+    "live_prediction_saved": 2,
     "canonical_prediction_saved": 156
   }
 }
