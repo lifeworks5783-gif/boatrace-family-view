@@ -1607,17 +1607,13 @@
       "legacy_time_unverified_boats": 6,
       "beforeinfo_state": "historical_capture_time_unverified",
       "morning_prediction_saved": true,
-      "live_prediction_saved": false,
+      "live_prediction_saved": true,
       "canonical_prediction_saved": true,
       "official_html_original_archived": false,
       "issues": [
         {
           "code": "predeadline_capture_not_confirmed",
           "field": "provenance"
-        },
-        {
-          "code": "live_prediction_not_saved_for_race",
-          "field": "live_prediction"
         }
       ]
     },
@@ -2224,8 +2220,8 @@
       "clock_consistent_snapshot_count": 0,
       "clock_consistent_earliest": null,
       "reconstructed_after_result_boats": 0,
-      "legacy_time_unverified_boats": 0,
-      "beforeinfo_state": "no_saved_beforeinfo",
+      "legacy_time_unverified_boats": 6,
+      "beforeinfo_state": "historical_capture_time_unverified",
       "morning_prediction_saved": true,
       "live_prediction_saved": false,
       "canonical_prediction_saved": true,
@@ -3445,10 +3441,10 @@
     "original_folder_six": 0,
     "clock_consistent_not_proven": 0,
     "recovered_only": 1,
-    "no_live_saved": 129,
-    "unknown_time": 2,
+    "no_live_saved": 128,
+    "unknown_time": 3,
     "morning_prediction_saved": 132,
-    "live_prediction_saved": 1,
+    "live_prediction_saved": 2,
     "canonical_prediction_saved": 132
   }
 }
