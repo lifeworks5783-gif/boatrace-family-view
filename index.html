@@ -165,6 +165,15 @@
       margin-top: 4px;
     }
 
+    .race-pair { margin-bottom: 14px; }
+    .race-local-tabs { display:grid; grid-template-columns:1fr 1fr; gap:6px; margin-bottom:6px; }
+    .race-local-tab {
+      min-height:44px; border:1px solid var(--line); border-radius:10px;
+      background:var(--card); color:var(--text); font-size:14px; font-weight:800; cursor:pointer;
+    }
+    .race-local-tab.active { background:var(--primary); color:#fff; border-color:var(--primary); }
+    .race-local-normal[hidden], .race-local-ai[hidden] { display:none !important; }
+    .race-local-normal > .race-card, .race-local-ai > .race-card { margin-bottom:0; }
     .prediction-tabs {
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -205,6 +214,11 @@
     .ai-combos { display: grid; gap: 6px; }
     .signal-ai-purchase-title { margin-top: 16px; padding-top: 12px; border-top: 1px solid var(--line); }
     .signal-ai-purchase-list { margin-top: 10px; }
+    .signal-ai-purchase-details > summary, .signal-ai-reference-details > summary {
+      display:list-item; padding:9px 7px; min-height:40px;
+      border-radius:8px; background:var(--score-row);
+    }
+    .signal-ai-reference-details { margin-top:12px; }
     .signal-ai-purchase-list .ai-combo { border-left: 3px solid var(--live-accent); }
     .ai-combo {
       display: flex;
@@ -776,7 +790,7 @@ body { background: var(--bg) !important; color: var(--text) !important; }\n.refr
         </span>
 
         <span>
-          締切前 57レース
+          締切前 53レース
         </span>
 
       </div>
@@ -803,11 +817,6 @@ body { background: var(--bg) !important; color: var(--text) !important; }\n.refr
       </div>
     </div>
 
-    <div class="prediction-tabs">
-      <button class="prediction-tab active" data-tab="normal" type="button">通常予測</button>
-      <button class="prediction-tab" data-tab="ai" type="button">AIスコア予測</button>
-    </div>
-
     <div class="notice">
 
       最新予想には締切前レースだけを表示します。終了済みレースの予測データはPDCA・結果検証用として保存しています。
@@ -825,57 +834,15 @@ body { background: var(--bg) !important; color: var(--text) !important; }\n.refr
 
     <div id="normalPredictionPanel" class="prediction-panel active">
       
+    <div class="race-pair" data-race-id="20261013-04-11">
+      <div class="race-local-tabs" role="group" aria-label="平和島 11Rの予測切替">
+        <button type="button" class="race-local-tab active" data-local-view="normal" aria-pressed="true">通常予測</button>
+        <button type="button" class="race-local-tab" data-local-view="ai" aria-pressed="false">AI予測</button>
+      </div>
+      <div class="race-local-normal">
     <article class="race-card">
       <div class="race-head">
         <div class="race-order">1</div>
-        <div class="race-main"><div class="deadline">15:25</div><div class="race-name">若松 1R<span class="fujin-raijin-stack" title="風神雷神シグナル"><span class="signal-row raijin" title="雷神シグナル 2/3｜最大上昇 +14.3｜2号艇 +8.1 / 4号艇 +14.3｜通常予測には未反映・シグナルAI再評価に使用">⚡⚡</span><span class="signal-row fujin empty-signal">&nbsp;</span></span></div></div>
-        <div class="race-status upcoming">締切前</div>
-        <div class="badge-wrap"><span class="data-ok" title="必須データ取得済み・全採用要素が計算ロジックへ反映済み">●</span><div class="badge live">直前</div></div>
-      </div>
-      <div class="race-view-tabs"><button type="button" class="race-view-tab" data-race-view="朝">朝予想</button><button type="button" class="race-view-tab active" data-race-view="直前">直前予想</button></div>
-      <div class="race-prediction-view hidden" data-view="朝"><div class="top-picks"><div class="pick"><span class="mark">◎</span><span class="pick-name-wrap"><span class="pick-name">1号艇 間庭菜摘</span></span><span class="score">79.2</span></div><div class="pick"><span class="mark">○</span><span class="pick-name-wrap"><span class="pick-name">3号艇 樋口由加</span></span><span class="score">69.4</span></div><div class="pick"><span class="mark">▲</span><span class="pick-name-wrap"><span class="pick-name">5号艇 大久保佑</span></span><span class="score">66.0</span></div></div><details><summary>6艇すべてのスコア</summary><div class="scores"><span class="chip">1号艇 間庭菜摘 79.2</span><span class="chip">3号艇 樋口由加 69.4</span><span class="chip">5号艇 大久保佑 66.0</span><span class="chip">2号艇 山川波乙 41.6</span><span class="chip">6号艇 南彩寧 27.5</span><span class="chip">4号艇 野田亜湖 16.3</span></div></details><div class="formation"><div class="formation-title">3連単 準軸・8点・800円</div><div class="formation-grid"><div><b>1着</b> 1・3</div><div><b>2着</b> 1・3・5</div><div><b>3着</b> 1・3・5・2</div></div><div class="combos">1-3-5 / 1-5-3 / 3-1-5 / 3-5-1 / 1-3-2 / 1-5-2 / 3-1-2 / 3-5-2</div></div></div>
-      <div class="race-prediction-view" data-view="直前"><div class="top-picks"><div class="pick"><span class="mark">◎</span><span class="pick-name-wrap"><span class="pick-name">1号艇 間庭菜摘</span><span class="score-delta up">▲ +3.0</span></span><span class="score">82.2</span></div><div class="pick"><span class="mark">○</span><span class="pick-name-wrap"><span class="pick-name">3号艇 樋口由加</span><span class="score-delta up">▲ +1.3</span></span><span class="score">70.7</span></div><div class="pick"><span class="mark">▲</span><span class="pick-name-wrap"><span class="pick-name">5号艇 大久保佑</span><span class="score-delta down">▼ -7.6</span></span><span class="score">58.4</span></div></div><details><summary>6艇すべてのスコア</summary><div class="scores"><span class="chip">1号艇 間庭菜摘 82.2<span class="score-delta up">▲ +3.0</span></span><span class="chip">3号艇 樋口由加 70.7<span class="score-delta up">▲ +1.3</span></span><span class="chip">5号艇 大久保佑 58.4<span class="score-delta down">▼ -7.6</span></span><span class="chip">2号艇 山川波乙 49.7<span class="score-delta up">▲ +8.1</span></span><span class="chip">6号艇 南彩寧 33.6<span class="score-delta up">▲ +6.1</span></span><span class="chip">4号艇 野田亜湖 30.6<span class="score-delta up">▲ +14.3</span></span></div></details><div class="formation"><div class="formation-title">3連単 1・2着固定＋3着流し・4点・400円</div><div class="formation-grid"><div><b>1着</b> 1</div><div><b>2着</b> 3</div><div><b>3着</b> 5・2・6・4</div></div><div class="combos">1-3-5 / 1-3-2 / 1-3-6 / 1-3-4</div></div></div>
-    </article>
-    
-    <article class="race-card">
-      <div class="race-head">
-        <div class="race-order">2</div>
-        <div class="race-main"><div class="deadline">15:30</div><div class="race-name">びわこ 11R<span class="fujin-raijin-stack" title="風神雷神シグナル"><span class="signal-row raijin" title="雷神シグナル 3/3｜最大上昇 +13.2｜6号艇 +10.3 / 4号艇 +13.2｜通常予測には未反映・シグナルAI再評価に使用">⚡⚡⚡</span><span class="signal-row fujin" title="風神シグナル 1/3｜1位朝比 -6.5｜TOP3合計 3.8｜1-2位差 10.7｜通常予測には未反映・シグナルAI再評価に使用">💨</span></span></div></div>
-        <div class="race-status upcoming">締切前</div>
-        <div class="badge-wrap"><span class="data-ok" title="必須データ取得済み・全採用要素が計算ロジックへ反映済み">●</span><div class="badge live">直前</div></div>
-      </div>
-      <div class="race-view-tabs"><button type="button" class="race-view-tab" data-race-view="朝">朝予想</button><button type="button" class="race-view-tab active" data-race-view="直前">直前予想</button></div>
-      <div class="race-prediction-view hidden" data-view="朝"><div class="top-picks"><div class="pick"><span class="mark">◎</span><span class="pick-name-wrap"><span class="pick-name">1号艇 外崎悟</span></span><span class="score">78.3</span></div><div class="pick"><span class="mark">○</span><span class="pick-name-wrap"><span class="pick-name">2号艇 廣瀬将亨</span></span><span class="score">61.2</span></div><div class="pick"><span class="mark">▲</span><span class="pick-name-wrap"><span class="pick-name">6号艇 浜先真範</span></span><span class="score">48.3</span></div></div><details><summary>6艇すべてのスコア</summary><div class="scores"><span class="chip">1号艇 外崎悟 78.3</span><span class="chip">2号艇 廣瀬将亨 61.2</span><span class="chip">6号艇 浜先真範 48.3</span><span class="chip">3号艇 石原光 46.8</span><span class="chip">5号艇 佐藤旭 37.4</span><span class="chip">4号艇 柘植政浩 28.0</span></div></details><div class="formation"><div class="formation-title">3連単 1・2着固定＋3着流し・4点・400円</div><div class="formation-grid"><div><b>1着</b> 1</div><div><b>2着</b> 2</div><div><b>3着</b> 6・3・5・4</div></div><div class="combos">1-2-6 / 1-2-3 / 1-2-5 / 1-2-4</div></div></div>
-      <div class="race-prediction-view" data-view="直前"><div class="top-picks"><div class="pick"><span class="mark">◎</span><span class="pick-name-wrap"><span class="pick-name">1号艇 外崎悟</span><span class="score-delta down">▼ -6.5</span></span><span class="score">71.8</span></div><div class="pick"><span class="mark">○</span><span class="pick-name-wrap"><span class="pick-name">2号艇 廣瀬将亨</span><span class="score-delta down">▼ -0.1</span></span><span class="score">61.1</span></div><div class="pick"><span class="mark">▲</span><span class="pick-name-wrap"><span class="pick-name">6号艇 浜先真範</span><span class="score-delta up">▲ +10.3</span></span><span class="score">58.6</span></div></div><details><summary>6艇すべてのスコア</summary><div class="scores"><span class="chip">1号艇 外崎悟 71.8<span class="score-delta down">▼ -6.5</span></span><span class="chip">2号艇 廣瀬将亨 61.1<span class="score-delta down">▼ -0.1</span></span><span class="chip">6号艇 浜先真範 58.6<span class="score-delta up">▲ +10.3</span></span><span class="chip">3号艇 石原光 45.4<span class="score-delta down">▼ -1.4</span></span><span class="chip">4号艇 柘植政浩 41.2<span class="score-delta up">▲ +13.2</span></span><span class="chip">5号艇 佐藤旭 36.3<span class="score-delta down">▼ -1.1</span></span></div></details><div class="formation"><div class="formation-title">3連単 1着固定＋相手流し・12点・1,200円</div><div class="formation-grid"><div><b>1着</b> 1</div><div><b>2着</b> 2・6・3・4・5</div><div><b>3着</b> 2・6・3・4・5</div></div><div class="combos">1-2-6 / 1-6-2 / 1-2-3 / 1-6-3 / 1-2-4 / 1-3-2 / 1-6-4 / 1-2-5 / 1-3-6 / 1-6-5 / 1-4-2 / 1-4-6</div></div></div>
-    </article>
-    
-    <article class="race-card">
-      <div class="race-head">
-        <div class="race-order">3</div>
-        <div class="race-main"><div class="deadline">15:35</div><div class="race-name">尼崎 11R</div></div>
-        <div class="race-status upcoming">締切前</div>
-        <div class="badge-wrap"><div class="badge morning">朝</div></div>
-      </div>
-      
-      
-      <div class="race-prediction-view" data-view="朝"><div class="top-picks"><div class="pick"><span class="mark">◎</span><span class="pick-name-wrap"><span class="pick-name">1号艇 片橋幸貴</span></span><span class="score">78.2</span></div><div class="pick"><span class="mark">○</span><span class="pick-name-wrap"><span class="pick-name">2号艇 永井源</span></span><span class="score">64.6</span></div><div class="pick"><span class="mark">▲</span><span class="pick-name-wrap"><span class="pick-name">4号艇 石原翼</span></span><span class="score">47.3</span></div></div><details><summary>6艇すべてのスコア</summary><div class="scores"><span class="chip">1号艇 片橋幸貴 78.2</span><span class="chip">2号艇 永井源 64.6</span><span class="chip">4号艇 石原翼 47.3</span><span class="chip">5号艇 向井美鈴 43.5</span><span class="chip">3号艇 多羅尾達 39.9</span><span class="chip">6号艇 大野芳顕 26.5</span></div></details><div class="formation"><div class="formation-title">3連単 1・2着固定＋3着流し・4点・400円</div><div class="formation-grid"><div><b>1着</b> 1</div><div><b>2着</b> 2</div><div><b>3着</b> 4・5・3・6</div></div><div class="combos">1-2-4 / 1-2-5 / 1-2-3 / 1-2-6</div></div></div>
-    </article>
-    
-    <article class="race-card">
-      <div class="race-head">
-        <div class="race-order">4</div>
-        <div class="race-main"><div class="deadline">15:37</div><div class="race-name">福岡 10R</div></div>
-        <div class="race-status upcoming">締切前</div>
-        <div class="badge-wrap"><div class="badge morning">朝</div></div>
-      </div>
-      
-      
-      <div class="race-prediction-view" data-view="朝"><div class="top-picks"><div class="pick"><span class="mark">◎</span><span class="pick-name-wrap"><span class="pick-name">1号艇 平山智加</span></span><span class="score">80.0</span></div><div class="pick"><span class="mark">○</span><span class="pick-name-wrap"><span class="pick-name">2号艇 山下和彦</span></span><span class="score">66.8</span></div><div class="pick"><span class="mark">▲</span><span class="pick-name-wrap"><span class="pick-name">5号艇 北中元樹</span></span><span class="score">57.4</span></div></div><details><summary>6艇すべてのスコア</summary><div class="scores"><span class="chip">1号艇 平山智加 80.0</span><span class="chip">2号艇 山下和彦 66.8</span><span class="chip">5号艇 北中元樹 57.4</span><span class="chip">4号艇 前川守嗣 41.4</span><span class="chip">3号艇 佐藤駿介 34.6</span><span class="chip">6号艇 佐藤謙史 19.8</span></div></details><div class="formation"><div class="formation-title">3連単 1着固定＋相手流し・12点・1,200円</div><div class="formation-grid"><div><b>1着</b> 1</div><div><b>2着</b> 2・5・4・3・6</div><div><b>3着</b> 2・5・4・3・6</div></div><div class="combos">1-2-5 / 1-5-2 / 1-2-4 / 1-2-3 / 1-4-2 / 1-5-4 / 1-5-3 / 1-2-6 / 1-4-5 / 1-3-2 / 1-3-5 / 1-5-6</div></div></div>
-    </article>
-    
-    <article class="race-card">
-      <div class="race-head">
-        <div class="race-order">5</div>
         <div class="race-main"><div class="deadline">15:40</div><div class="race-name">平和島 11R</div></div>
         <div class="race-status upcoming">締切前</div>
         <div class="badge-wrap"><div class="badge morning">朝</div></div>
@@ -884,10 +851,19 @@ body { background: var(--bg) !important; color: var(--text) !important; }\n.refr
       
       <div class="race-prediction-view" data-view="朝"><div class="top-picks"><div class="pick"><span class="mark">◎</span><span class="pick-name-wrap"><span class="pick-name">3号艇 萩原秀人</span></span><span class="score">81.9</span></div><div class="pick"><span class="mark">○</span><span class="pick-name-wrap"><span class="pick-name">1号艇 井口佳典</span></span><span class="score">70.1</span></div><div class="pick"><span class="mark">▲</span><span class="pick-name-wrap"><span class="pick-name">2号艇 湯川浩司</span></span><span class="score">52.8</span></div></div><details><summary>6艇すべてのスコア</summary><div class="scores"><span class="chip">3号艇 萩原秀人 81.9</span><span class="chip">1号艇 井口佳典 70.1</span><span class="chip">2号艇 湯川浩司 52.8</span><span class="chip">5号艇 松田大志 37.4</span><span class="chip">6号艇 宮之原輝 33.1</span><span class="chip">4号艇 海野康志 24.7</span></div></details><div class="formation"><div class="formation-title">3連単 1・2着固定＋3着流し・4点・400円</div><div class="formation-grid"><div><b>1着</b> 3</div><div><b>2着</b> 1</div><div><b>3着</b> 2・5・6・4</div></div><div class="combos">3-1-2 / 3-1-5 / 3-1-6 / 3-1-4</div></div></div>
     </article>
+    </div>
+      <div class="race-local-ai" hidden></div>
+    </div>
     
+    <div class="race-pair" data-race-id="20261013-15-02">
+      <div class="race-local-tabs" role="group" aria-label="丸亀 2Rの予測切替">
+        <button type="button" class="race-local-tab active" data-local-view="normal" aria-pressed="true">通常予測</button>
+        <button type="button" class="race-local-tab" data-local-view="ai" aria-pressed="false">AI予測</button>
+      </div>
+      <div class="race-local-normal">
     <article class="race-card">
       <div class="race-head">
-        <div class="race-order">6</div>
+        <div class="race-order">2</div>
         <div class="race-main"><div class="deadline">15:45</div><div class="race-name">丸亀 2R</div></div>
         <div class="race-status upcoming">締切前</div>
         <div class="badge-wrap"><div class="badge morning">朝</div></div>
@@ -896,10 +872,19 @@ body { background: var(--bg) !important; color: var(--text) !important; }\n.refr
       
       <div class="race-prediction-view" data-view="朝"><div class="top-picks"><div class="pick"><span class="mark">◎</span><span class="pick-name-wrap"><span class="pick-name">1号艇 土屋太朗</span></span><span class="score">83.6</span></div><div class="pick"><span class="mark">○</span><span class="pick-name-wrap"><span class="pick-name">3号艇 村田修次</span></span><span class="score">78.6</span></div><div class="pick"><span class="mark">▲</span><span class="pick-name-wrap"><span class="pick-name">5号艇 藤田俊祐</span></span><span class="score">52.2</span></div></div><details><summary>6艇すべてのスコア</summary><div class="scores"><span class="chip">1号艇 土屋太朗 83.6</span><span class="chip">3号艇 村田修次 78.6</span><span class="chip">5号艇 藤田俊祐 52.2</span><span class="chip">4号艇 飯島誠 43.0</span><span class="chip">2号艇 川田正人 23.5</span><span class="chip">6号艇 柴田大輔 19.1</span></div></details><div class="formation"><div class="formation-title">3連単 準軸・8点・800円</div><div class="formation-grid"><div><b>1着</b> 1・3</div><div><b>2着</b> 1・3・5</div><div><b>3着</b> 1・3・5・4</div></div><div class="combos">1-3-5 / 3-1-5 / 1-3-4 / 1-5-3 / 3-1-4 / 3-5-1 / 1-5-4 / 3-5-4</div></div></div>
     </article>
+    </div>
+      <div class="race-local-ai" hidden></div>
+    </div>
     
+    <div class="race-pair" data-race-id="20261013-12-02">
+      <div class="race-local-tabs" role="group" aria-label="住之江 2Rの予測切替">
+        <button type="button" class="race-local-tab active" data-local-view="normal" aria-pressed="true">通常予測</button>
+        <button type="button" class="race-local-tab" data-local-view="ai" aria-pressed="false">AI予測</button>
+      </div>
+      <div class="race-local-normal">
     <article class="race-card">
       <div class="race-head">
-        <div class="race-order">7</div>
+        <div class="race-order">3</div>
         <div class="race-main"><div class="deadline">15:47</div><div class="race-name">住之江 2R</div></div>
         <div class="race-status upcoming">締切前</div>
         <div class="badge-wrap"><div class="badge morning">朝</div></div>
@@ -908,10 +893,19 @@ body { background: var(--bg) !important; color: var(--text) !important; }\n.refr
       
       <div class="race-prediction-view" data-view="朝"><div class="top-picks"><div class="pick"><span class="mark">◎</span><span class="pick-name-wrap"><span class="pick-name">2号艇 森智也</span></span><span class="score">80.2</span></div><div class="pick"><span class="mark">○</span><span class="pick-name-wrap"><span class="pick-name">1号艇 梶原正</span></span><span class="score">78.0</span></div><div class="pick"><span class="mark">▲</span><span class="pick-name-wrap"><span class="pick-name">4号艇 今泉徹</span></span><span class="score">49.0</span></div></div><details><summary>6艇すべてのスコア</summary><div class="scores"><span class="chip">2号艇 森智也 80.2</span><span class="chip">1号艇 梶原正 78.0</span><span class="chip">4号艇 今泉徹 49.0</span><span class="chip">3号艇 山本兼士 48.7</span><span class="chip">5号艇 大澤大夢 38.2</span><span class="chip">6号艇 村岡賢 5.9</span></div></details><div class="formation"><div class="formation-title">3連単 1・2着折返し＋3着流し・8点・800円</div><div class="formation-grid"><div><b>1着</b> 2・1</div><div><b>2着</b> 2・1</div><div><b>3着</b> 4・3・5・6</div></div><div class="combos">2-1-4 / 2-1-3 / 2-1-5 / 2-1-6 / 1-2-4 / 1-2-3 / 1-2-5 / 1-2-6</div></div></div>
     </article>
+    </div>
+      <div class="race-local-ai" hidden></div>
+    </div>
     
+    <div class="race-pair" data-race-id="20261013-06-11">
+      <div class="race-local-tabs" role="group" aria-label="浜名湖 11Rの予測切替">
+        <button type="button" class="race-local-tab active" data-local-view="normal" aria-pressed="true">通常予測</button>
+        <button type="button" class="race-local-tab" data-local-view="ai" aria-pressed="false">AI予測</button>
+      </div>
+      <div class="race-local-normal">
     <article class="race-card">
       <div class="race-head">
-        <div class="race-order">8</div>
+        <div class="race-order">4</div>
         <div class="race-main"><div class="deadline">15:51</div><div class="race-name">浜名湖 11R</div></div>
         <div class="race-status upcoming">締切前</div>
         <div class="badge-wrap"><div class="badge morning">朝</div></div>
@@ -920,10 +914,19 @@ body { background: var(--bg) !important; color: var(--text) !important; }\n.refr
       
       <div class="race-prediction-view" data-view="朝"><div class="top-picks"><div class="pick"><span class="mark">◎</span><span class="pick-name-wrap"><span class="pick-name">1号艇 平田忠則</span></span><span class="score">87.8</span></div><div class="pick"><span class="mark">○</span><span class="pick-name-wrap"><span class="pick-name">2号艇 渡邉俊介</span></span><span class="score">61.4</span></div><div class="pick"><span class="mark">▲</span><span class="pick-name-wrap"><span class="pick-name">4号艇 竹之内極</span></span><span class="score">59.9</span></div></div><details><summary>6艇すべてのスコア</summary><div class="scores"><span class="chip">1号艇 平田忠則 87.8</span><span class="chip">2号艇 渡邉俊介 61.4</span><span class="chip">4号艇 竹之内極 59.9</span><span class="chip">6号艇 谷津幸宏 30.8</span><span class="chip">3号艇 阪本勇介 30.7</span><span class="chip">5号艇 古場輝義 29.4</span></div></details><div class="formation"><div class="formation-title">3連単 1着固定＋相手流し・12点・1,200円</div><div class="formation-grid"><div><b>1着</b> 1</div><div><b>2着</b> 2・4・6・3・5</div><div><b>3着</b> 2・4・6・3・5</div></div><div class="combos">1-2-4 / 1-4-2 / 1-2-6 / 1-2-3 / 1-2-5 / 1-4-6 / 1-4-3 / 1-4-5 / 1-6-2 / 1-3-2 / 1-6-4 / 1-3-4</div></div></div>
     </article>
+    </div>
+      <div class="race-local-ai" hidden></div>
+    </div>
     
+    <div class="race-pair" data-race-id="20261013-20-02">
+      <div class="race-local-tabs" role="group" aria-label="若松 2Rの予測切替">
+        <button type="button" class="race-local-tab active" data-local-view="normal" aria-pressed="true">通常予測</button>
+        <button type="button" class="race-local-tab" data-local-view="ai" aria-pressed="false">AI予測</button>
+      </div>
+      <div class="race-local-normal">
     <article class="race-card">
       <div class="race-head">
-        <div class="race-order">9</div>
+        <div class="race-order">5</div>
         <div class="race-main"><div class="deadline">15:54</div><div class="race-name">若松 2R</div></div>
         <div class="race-status upcoming">締切前</div>
         <div class="badge-wrap"><div class="badge morning">朝</div></div>
@@ -932,10 +935,19 @@ body { background: var(--bg) !important; color: var(--text) !important; }\n.refr
       
       <div class="race-prediction-view" data-view="朝"><div class="top-picks"><div class="pick"><span class="mark">◎</span><span class="pick-name-wrap"><span class="pick-name">1号艇 根岸真優</span></span><span class="score">81.0</span></div><div class="pick"><span class="mark">○</span><span class="pick-name-wrap"><span class="pick-name">3号艇 奥村明日</span></span><span class="score">77.8</span></div><div class="pick"><span class="mark">▲</span><span class="pick-name-wrap"><span class="pick-name">4号艇 中田夕貴</span></span><span class="score">52.5</span></div></div><details><summary>6艇すべてのスコア</summary><div class="scores"><span class="chip">1号艇 根岸真優 81.0</span><span class="chip">3号艇 奥村明日 77.8</span><span class="chip">4号艇 中田夕貴 52.5</span><span class="chip">6号艇 高木茉白 37.5</span><span class="chip">2号艇 森田梨湖 33.4</span><span class="chip">5号艇 宮城那菜 17.8</span></div></details><div class="formation"><div class="formation-title">3連単 1・2着折返し＋3着流し・8点・800円</div><div class="formation-grid"><div><b>1着</b> 1・3</div><div><b>2着</b> 1・3</div><div><b>3着</b> 4・6・2・5</div></div><div class="combos">1-3-4 / 1-3-6 / 1-3-2 / 1-3-5 / 3-1-4 / 3-1-6 / 3-1-2 / 3-1-5</div></div></div>
     </article>
+    </div>
+      <div class="race-local-ai" hidden></div>
+    </div>
     
+    <div class="race-pair" data-race-id="20261013-11-12">
+      <div class="race-local-tabs" role="group" aria-label="びわこ 12Rの予測切替">
+        <button type="button" class="race-local-tab active" data-local-view="normal" aria-pressed="true">通常予測</button>
+        <button type="button" class="race-local-tab" data-local-view="ai" aria-pressed="false">AI予測</button>
+      </div>
+      <div class="race-local-normal">
     <article class="race-card">
       <div class="race-head">
-        <div class="race-order">10</div>
+        <div class="race-order">6</div>
         <div class="race-main"><div class="deadline">15:59</div><div class="race-name">びわこ 12R</div></div>
         <div class="race-status upcoming">締切前</div>
         <div class="badge-wrap"><div class="badge morning">朝</div></div>
@@ -944,10 +956,19 @@ body { background: var(--bg) !important; color: var(--text) !important; }\n.refr
       
       <div class="race-prediction-view" data-view="朝"><div class="top-picks"><div class="pick"><span class="mark">◎</span><span class="pick-name-wrap"><span class="pick-name">4号艇 小林泰</span></span><span class="score">80.0</span></div><div class="pick"><span class="mark">○</span><span class="pick-name-wrap"><span class="pick-name">1号艇 鈴谷一平</span></span><span class="score">75.5</span></div><div class="pick"><span class="mark">▲</span><span class="pick-name-wrap"><span class="pick-name">2号艇 山一鉄也</span></span><span class="score">56.8</span></div></div><details><summary>6艇すべてのスコア</summary><div class="scores"><span class="chip">4号艇 小林泰 80.0</span><span class="chip">1号艇 鈴谷一平 75.5</span><span class="chip">2号艇 山一鉄也 56.8</span><span class="chip">3号艇 栗原直也 32.1</span><span class="chip">5号艇 梶山涼斗 28.2</span><span class="chip">6号艇 藤山雅弘 27.4</span></div></details><div class="formation"><div class="formation-title">3連単 1・2着折返し＋3着流し・8点・800円</div><div class="formation-grid"><div><b>1着</b> 4・1</div><div><b>2着</b> 4・1</div><div><b>3着</b> 2・3・5・6</div></div><div class="combos">4-1-2 / 4-1-3 / 4-1-5 / 4-1-6 / 1-4-2 / 1-4-3 / 1-4-5 / 1-4-6</div></div></div>
     </article>
+    </div>
+      <div class="race-local-ai" hidden></div>
+    </div>
     
+    <div class="race-pair" data-race-id="20261013-13-12">
+      <div class="race-local-tabs" role="group" aria-label="尼崎 12Rの予測切替">
+        <button type="button" class="race-local-tab active" data-local-view="normal" aria-pressed="true">通常予測</button>
+        <button type="button" class="race-local-tab" data-local-view="ai" aria-pressed="false">AI予測</button>
+      </div>
+      <div class="race-local-normal">
     <article class="race-card">
       <div class="race-head">
-        <div class="race-order">11</div>
+        <div class="race-order">7</div>
         <div class="race-main"><div class="deadline">16:04</div><div class="race-name">尼崎 12R</div></div>
         <div class="race-status upcoming">締切前</div>
         <div class="badge-wrap"><div class="badge morning">朝</div></div>
@@ -956,10 +977,19 @@ body { background: var(--bg) !important; color: var(--text) !important; }\n.refr
       
       <div class="race-prediction-view" data-view="朝"><div class="top-picks"><div class="pick"><span class="mark">◎</span><span class="pick-name-wrap"><span class="pick-name">1号艇 山下大輝</span></span><span class="score">93.0</span></div><div class="pick"><span class="mark">○</span><span class="pick-name-wrap"><span class="pick-name">2号艇 原田篤志</span></span><span class="score">70.4</span></div><div class="pick"><span class="mark">▲</span><span class="pick-name-wrap"><span class="pick-name">3号艇 林美憲</span></span><span class="score">50.5</span></div></div><details><summary>6艇すべてのスコア</summary><div class="scores"><span class="chip">1号艇 山下大輝 93.0</span><span class="chip">2号艇 原田篤志 70.4</span><span class="chip">3号艇 林美憲 50.5</span><span class="chip">4号艇 大澤普司 37.5</span><span class="chip">5号艇 丸尾義孝 36.0</span><span class="chip">6号艇 岡村仁 12.6</span></div></details><div class="formation"><div class="formation-title">3連単 1・2着固定＋3着流し・4点・400円</div><div class="formation-grid"><div><b>1着</b> 1</div><div><b>2着</b> 2</div><div><b>3着</b> 3・4・5・6</div></div><div class="combos">1-2-3 / 1-2-4 / 1-2-5 / 1-2-6</div></div></div>
     </article>
+    </div>
+      <div class="race-local-ai" hidden></div>
+    </div>
     
+    <div class="race-pair" data-race-id="20261013-22-11">
+      <div class="race-local-tabs" role="group" aria-label="福岡 11Rの予測切替">
+        <button type="button" class="race-local-tab active" data-local-view="normal" aria-pressed="true">通常予測</button>
+        <button type="button" class="race-local-tab" data-local-view="ai" aria-pressed="false">AI予測</button>
+      </div>
+      <div class="race-local-normal">
     <article class="race-card">
       <div class="race-head">
-        <div class="race-order">12</div>
+        <div class="race-order">8</div>
         <div class="race-main"><div class="deadline">16:06</div><div class="race-name">福岡 11R</div></div>
         <div class="race-status upcoming">締切前</div>
         <div class="badge-wrap"><div class="badge morning">朝</div></div>
@@ -968,10 +998,19 @@ body { background: var(--bg) !important; color: var(--text) !important; }\n.refr
       
       <div class="race-prediction-view" data-view="朝"><div class="top-picks"><div class="pick"><span class="mark">◎</span><span class="pick-name-wrap"><span class="pick-name">1号艇 福島勇樹</span></span><span class="score">93.8</span></div><div class="pick"><span class="mark">○</span><span class="pick-name-wrap"><span class="pick-name">2号艇 島川光男</span></span><span class="score">70.0</span></div><div class="pick"><span class="mark">▲</span><span class="pick-name-wrap"><span class="pick-name">3号艇 齊藤仁</span></span><span class="score">58.3</span></div></div><details><summary>6艇すべてのスコア</summary><div class="scores"><span class="chip">1号艇 福島勇樹 93.8</span><span class="chip">2号艇 島川光男 70.0</span><span class="chip">3号艇 齊藤仁 58.3</span><span class="chip">4号艇 堂原洋史 32.0</span><span class="chip">6号艇 荒川健太 25.8</span><span class="chip">5号艇 細川明人 20.1</span></div></details><div class="formation"><div class="formation-title">3連単 1・2着固定＋3着流し・4点・400円</div><div class="formation-grid"><div><b>1着</b> 1</div><div><b>2着</b> 2</div><div><b>3着</b> 3・4・6・5</div></div><div class="combos">1-2-3 / 1-2-4 / 1-2-6 / 1-2-5</div></div></div>
     </article>
+    </div>
+      <div class="race-local-ai" hidden></div>
+    </div>
     
+    <div class="race-pair" data-race-id="20261013-12-03">
+      <div class="race-local-tabs" role="group" aria-label="住之江 3Rの予測切替">
+        <button type="button" class="race-local-tab active" data-local-view="normal" aria-pressed="true">通常予測</button>
+        <button type="button" class="race-local-tab" data-local-view="ai" aria-pressed="false">AI予測</button>
+      </div>
+      <div class="race-local-normal">
     <article class="race-card">
       <div class="race-head">
-        <div class="race-order">13</div>
+        <div class="race-order">9</div>
         <div class="race-main"><div class="deadline">16:09</div><div class="race-name">住之江 3R</div></div>
         <div class="race-status upcoming">締切前</div>
         <div class="badge-wrap"><div class="badge morning">朝</div></div>
@@ -980,10 +1019,19 @@ body { background: var(--bg) !important; color: var(--text) !important; }\n.refr
       
       <div class="race-prediction-view" data-view="朝"><div class="top-picks"><div class="pick"><span class="mark">◎</span><span class="pick-name-wrap"><span class="pick-name">4号艇 河村了</span></span><span class="score">81.7</span></div><div class="pick"><span class="mark">○</span><span class="pick-name-wrap"><span class="pick-name">1号艇 星野太郎</span></span><span class="score">81.0</span></div><div class="pick"><span class="mark">▲</span><span class="pick-name-wrap"><span class="pick-name">5号艇 三好勇人</span></span><span class="score">47.9</span></div></div><details><summary>6艇すべてのスコア</summary><div class="scores"><span class="chip">4号艇 河村了 81.7</span><span class="chip">1号艇 星野太郎 81.0</span><span class="chip">5号艇 三好勇人 47.9</span><span class="chip">2号艇 鈴木唯央 43.2</span><span class="chip">6号艇 安田吉宏 23.5</span><span class="chip">3号艇 村田浩司 22.7</span></div></details><div class="formation"><div class="formation-title">3連単 1・2着折返し＋3着流し・8点・800円</div><div class="formation-grid"><div><b>1着</b> 4・1</div><div><b>2着</b> 4・1</div><div><b>3着</b> 5・2・6・3</div></div><div class="combos">4-1-5 / 4-1-2 / 4-1-6 / 4-1-3 / 1-4-5 / 1-4-2 / 1-4-6 / 1-4-3</div></div></div>
     </article>
+    </div>
+      <div class="race-local-ai" hidden></div>
+    </div>
     
+    <div class="race-pair" data-race-id="20261013-15-03">
+      <div class="race-local-tabs" role="group" aria-label="丸亀 3Rの予測切替">
+        <button type="button" class="race-local-tab active" data-local-view="normal" aria-pressed="true">通常予測</button>
+        <button type="button" class="race-local-tab" data-local-view="ai" aria-pressed="false">AI予測</button>
+      </div>
+      <div class="race-local-normal">
     <article class="race-card">
       <div class="race-head">
-        <div class="race-order">14</div>
+        <div class="race-order">10</div>
         <div class="race-main"><div class="deadline">16:15</div><div class="race-name">丸亀 3R</div></div>
         <div class="race-status upcoming">締切前</div>
         <div class="badge-wrap"><div class="badge morning">朝</div></div>
@@ -992,10 +1040,19 @@ body { background: var(--bg) !important; color: var(--text) !important; }\n.refr
       
       <div class="race-prediction-view" data-view="朝"><div class="top-picks"><div class="pick"><span class="mark">◎</span><span class="pick-name-wrap"><span class="pick-name">2号艇 高濱芳久</span></span><span class="score">66.8</span></div><div class="pick"><span class="mark">○</span><span class="pick-name-wrap"><span class="pick-name">3号艇 桑島和宏</span></span><span class="score">62.4</span></div><div class="pick"><span class="mark">▲</span><span class="pick-name-wrap"><span class="pick-name">1号艇 伊藤紘章</span></span><span class="score">59.9</span></div></div><details><summary>6艇すべてのスコア</summary><div class="scores"><span class="chip">2号艇 高濱芳久 66.8</span><span class="chip">3号艇 桑島和宏 62.4</span><span class="chip">1号艇 伊藤紘章 59.9</span><span class="chip">6号艇 平見真彦 43.1</span><span class="chip">4号艇 新田智彰 36.6</span><span class="chip">5号艇 杉山太陽 31.2</span></div></details><div class="formation"><div class="formation-title">3連単 混戦・12点・1,200円</div><div class="formation-grid"><div><b>1着</b> 2・3</div><div><b>2着</b> 2・3・1・6</div><div><b>3着</b> 2・3・1・6・4</div></div><div class="combos">2-3-1 / 2-1-3 / 3-2-1 / 3-1-2 / 2-3-6 / 2-1-6 / 3-2-6 / 2-3-4 / 2-6-3 / 2-1-4 / 3-2-4 / 2-6-1</div></div></div>
     </article>
+    </div>
+      <div class="race-local-ai" hidden></div>
+    </div>
     
+    <div class="race-pair" data-race-id="20261013-04-12">
+      <div class="race-local-tabs" role="group" aria-label="平和島 12Rの予測切替">
+        <button type="button" class="race-local-tab active" data-local-view="normal" aria-pressed="true">通常予測</button>
+        <button type="button" class="race-local-tab" data-local-view="ai" aria-pressed="false">AI予測</button>
+      </div>
+      <div class="race-local-normal">
     <article class="race-card">
       <div class="race-head">
-        <div class="race-order">15</div>
+        <div class="race-order">11</div>
         <div class="race-main"><div class="deadline">16:20</div><div class="race-name">平和島 12R</div></div>
         <div class="race-status upcoming">締切前</div>
         <div class="badge-wrap"><div class="badge morning">朝</div></div>
@@ -1004,10 +1061,19 @@ body { background: var(--bg) !important; color: var(--text) !important; }\n.refr
       
       <div class="race-prediction-view" data-view="朝"><div class="top-picks"><div class="pick"><span class="mark">◎</span><span class="pick-name-wrap"><span class="pick-name">3号艇 白井英治</span></span><span class="score">73.9</span></div><div class="pick"><span class="mark">○</span><span class="pick-name-wrap"><span class="pick-name">1号艇 濱野谷憲</span></span><span class="score">70.8</span></div><div class="pick"><span class="mark">▲</span><span class="pick-name-wrap"><span class="pick-name">5号艇 馬場貴也</span></span><span class="score">57.3</span></div></div><details><summary>6艇すべてのスコア</summary><div class="scores"><span class="chip">3号艇 白井英治 73.9</span><span class="chip">1号艇 濱野谷憲 70.8</span><span class="chip">5号艇 馬場貴也 57.3</span><span class="chip">2号艇 平本真之 44.5</span><span class="chip">4号艇 瓜生正義 37.0</span><span class="chip">6号艇 関浩哉 16.5</span></div></details><div class="formation"><div class="formation-title">3連単 1・2着折返し＋3着流し・8点・800円</div><div class="formation-grid"><div><b>1着</b> 3・1</div><div><b>2着</b> 3・1</div><div><b>3着</b> 5・2・4・6</div></div><div class="combos">3-1-5 / 3-1-2 / 3-1-4 / 3-1-6 / 1-3-5 / 1-3-2 / 1-3-4 / 1-3-6</div></div></div>
     </article>
+    </div>
+      <div class="race-local-ai" hidden></div>
+    </div>
     
+    <div class="race-pair" data-race-id="20261013-20-03">
+      <div class="race-local-tabs" role="group" aria-label="若松 3Rの予測切替">
+        <button type="button" class="race-local-tab active" data-local-view="normal" aria-pressed="true">通常予測</button>
+        <button type="button" class="race-local-tab" data-local-view="ai" aria-pressed="false">AI予測</button>
+      </div>
+      <div class="race-local-normal">
     <article class="race-card">
       <div class="race-head">
-        <div class="race-order">16</div>
+        <div class="race-order">12</div>
         <div class="race-main"><div class="deadline">16:27</div><div class="race-name">若松 3R</div></div>
         <div class="race-status upcoming">締切前</div>
         <div class="badge-wrap"><div class="badge morning">朝</div></div>
@@ -1016,10 +1082,19 @@ body { background: var(--bg) !important; color: var(--text) !important; }\n.refr
       
       <div class="race-prediction-view" data-view="朝"><div class="top-picks"><div class="pick"><span class="mark">◎</span><span class="pick-name-wrap"><span class="pick-name">5号艇 守屋美穂</span></span><span class="score">66.0</span></div><div class="pick"><span class="mark">○</span><span class="pick-name-wrap"><span class="pick-name">1号艇 大石真央</span></span><span class="score">62.8</span></div><div class="pick"><span class="mark">▲</span><span class="pick-name-wrap"><span class="pick-name">3号艇 三嶌さら</span></span><span class="score">56.7</span></div></div><details><summary>6艇すべてのスコア</summary><div class="scores"><span class="chip">5号艇 守屋美穂 66.0</span><span class="chip">1号艇 大石真央 62.8</span><span class="chip">3号艇 三嶌さら 56.7</span><span class="chip">4号艇 野田彩加 51.1</span><span class="chip">2号艇 羽田妃希 47.5</span><span class="chip">6号艇 龍田真白 15.9</span></div></details><div class="formation"><div class="formation-title">3連単 混戦・12点・1,200円</div><div class="formation-grid"><div><b>1着</b> 5・1</div><div><b>2着</b> 5・1・3・4</div><div><b>3着</b> 5・1・3・4・2</div></div><div class="combos">5-1-3 / 5-3-1 / 1-5-3 / 5-1-4 / 1-3-5 / 1-5-4 / 5-1-2 / 5-4-1 / 1-5-2 / 5-3-4 / 1-4-5 / 5-4-3</div></div></div>
     </article>
+    </div>
+      <div class="race-local-ai" hidden></div>
+    </div>
     
+    <div class="race-pair" data-race-id="20261013-06-12">
+      <div class="race-local-tabs" role="group" aria-label="浜名湖 12Rの予測切替">
+        <button type="button" class="race-local-tab active" data-local-view="normal" aria-pressed="true">通常予測</button>
+        <button type="button" class="race-local-tab" data-local-view="ai" aria-pressed="false">AI予測</button>
+      </div>
+      <div class="race-local-normal">
     <article class="race-card">
       <div class="race-head">
-        <div class="race-order">17</div>
+        <div class="race-order">13</div>
         <div class="race-main"><div class="deadline">16:32</div><div class="race-name">浜名湖 12R</div></div>
         <div class="race-status upcoming">締切前</div>
         <div class="badge-wrap"><div class="badge morning">朝</div></div>
@@ -1028,10 +1103,19 @@ body { background: var(--bg) !important; color: var(--text) !important; }\n.refr
       
       <div class="race-prediction-view" data-view="朝"><div class="top-picks"><div class="pick"><span class="mark">◎</span><span class="pick-name-wrap"><span class="pick-name">1号艇 小池修平</span></span><span class="score">85.0</span></div><div class="pick"><span class="mark">○</span><span class="pick-name-wrap"><span class="pick-name">3号艇 益田啓司</span></span><span class="score">65.1</span></div><div class="pick"><span class="mark">▲</span><span class="pick-name-wrap"><span class="pick-name">4号艇 服部幸男</span></span><span class="score">54.1</span></div></div><details><summary>6艇すべてのスコア</summary><div class="scores"><span class="chip">1号艇 小池修平 85.0</span><span class="chip">3号艇 益田啓司 65.1</span><span class="chip">4号艇 服部幸男 54.1</span><span class="chip">5号艇 久田武 40.2</span><span class="chip">6号艇 鈴木裕隆 36.7</span><span class="chip">2号艇 中岡健人 18.9</span></div></details><div class="formation"><div class="formation-title">3連単 1・2着固定＋3着流し・4点・400円</div><div class="formation-grid"><div><b>1着</b> 1</div><div><b>2着</b> 3</div><div><b>3着</b> 4・5・6・2</div></div><div class="combos">1-3-4 / 1-3-5 / 1-3-6 / 1-3-2</div></div></div>
     </article>
+    </div>
+      <div class="race-local-ai" hidden></div>
+    </div>
     
+    <div class="race-pair" data-race-id="20261013-12-04">
+      <div class="race-local-tabs" role="group" aria-label="住之江 4Rの予測切替">
+        <button type="button" class="race-local-tab active" data-local-view="normal" aria-pressed="true">通常予測</button>
+        <button type="button" class="race-local-tab" data-local-view="ai" aria-pressed="false">AI予測</button>
+      </div>
+      <div class="race-local-normal">
     <article class="race-card">
       <div class="race-head">
-        <div class="race-order">18</div>
+        <div class="race-order">14</div>
         <div class="race-main"><div class="deadline">16:36</div><div class="race-name">住之江 4R</div></div>
         <div class="race-status upcoming">締切前</div>
         <div class="badge-wrap"><div class="badge morning">朝</div></div>
@@ -1040,10 +1124,19 @@ body { background: var(--bg) !important; color: var(--text) !important; }\n.refr
       
       <div class="race-prediction-view" data-view="朝"><div class="top-picks"><div class="pick"><span class="mark">◎</span><span class="pick-name-wrap"><span class="pick-name">4号艇 飯山泰</span></span><span class="score">89.5</span></div><div class="pick"><span class="mark">○</span><span class="pick-name-wrap"><span class="pick-name">2号艇 重野哲之</span></span><span class="score">50.8</span></div><div class="pick"><span class="mark">▲</span><span class="pick-name-wrap"><span class="pick-name">5号艇 松井賢治</span></span><span class="score">50.6</span></div></div><details><summary>6艇すべてのスコア</summary><div class="scores"><span class="chip">4号艇 飯山泰 89.5</span><span class="chip">2号艇 重野哲之 50.8</span><span class="chip">5号艇 松井賢治 50.6</span><span class="chip">1号艇 西田靖 47.0</span><span class="chip">6号艇 松竹大輔 43.9</span><span class="chip">3号艇 松尾基成 18.2</span></div></details><div class="formation"><div class="formation-title">3連単 1着固定＋相手流し・12点・1,200円</div><div class="formation-grid"><div><b>1着</b> 4</div><div><b>2着</b> 2・5・1・6・3</div><div><b>3着</b> 2・5・1・6・3</div></div><div class="combos">4-2-5 / 4-5-2 / 4-2-1 / 4-5-1 / 4-1-2 / 4-1-5 / 4-2-6 / 4-5-6 / 4-6-2 / 4-6-5 / 4-1-6 / 4-6-1</div></div></div>
     </article>
+    </div>
+      <div class="race-local-ai" hidden></div>
+    </div>
     
+    <div class="race-pair" data-race-id="20261013-22-12">
+      <div class="race-local-tabs" role="group" aria-label="福岡 12Rの予測切替">
+        <button type="button" class="race-local-tab active" data-local-view="normal" aria-pressed="true">通常予測</button>
+        <button type="button" class="race-local-tab" data-local-view="ai" aria-pressed="false">AI予測</button>
+      </div>
+      <div class="race-local-normal">
     <article class="race-card">
       <div class="race-head">
-        <div class="race-order">19</div>
+        <div class="race-order">15</div>
         <div class="race-main"><div class="deadline">16:40</div><div class="race-name">福岡 12R</div></div>
         <div class="race-status upcoming">締切前</div>
         <div class="badge-wrap"><div class="badge morning">朝</div></div>
@@ -1052,10 +1145,19 @@ body { background: var(--bg) !important; color: var(--text) !important; }\n.refr
       
       <div class="race-prediction-view" data-view="朝"><div class="top-picks"><div class="pick"><span class="mark">◎</span><span class="pick-name-wrap"><span class="pick-name">1号艇 池永太</span></span><span class="score">96.3</span></div><div class="pick"><span class="mark">○</span><span class="pick-name-wrap"><span class="pick-name">2号艇 鈴木博</span></span><span class="score">60.2</span></div><div class="pick"><span class="mark">▲</span><span class="pick-name-wrap"><span class="pick-name">5号艇 青木蓮</span></span><span class="score">48.9</span></div></div><details><summary>6艇すべてのスコア</summary><div class="scores"><span class="chip">1号艇 池永太 96.3</span><span class="chip">2号艇 鈴木博 60.2</span><span class="chip">5号艇 青木蓮 48.9</span><span class="chip">3号艇 岡田憲行 41.5</span><span class="chip">6号艇 小野寺智 27.6</span><span class="chip">4号艇 福嶋智之 25.5</span></div></details><div class="formation"><div class="formation-title">3連単 1・2着固定＋3着流し・4点・400円</div><div class="formation-grid"><div><b>1着</b> 1</div><div><b>2着</b> 2</div><div><b>3着</b> 5・3・6・4</div></div><div class="combos">1-2-5 / 1-2-3 / 1-2-6 / 1-2-4</div></div></div>
     </article>
+    </div>
+      <div class="race-local-ai" hidden></div>
+    </div>
     
+    <div class="race-pair" data-race-id="20261013-15-04">
+      <div class="race-local-tabs" role="group" aria-label="丸亀 4Rの予測切替">
+        <button type="button" class="race-local-tab active" data-local-view="normal" aria-pressed="true">通常予測</button>
+        <button type="button" class="race-local-tab" data-local-view="ai" aria-pressed="false">AI予測</button>
+      </div>
+      <div class="race-local-normal">
     <article class="race-card">
       <div class="race-head">
-        <div class="race-order">20</div>
+        <div class="race-order">16</div>
         <div class="race-main"><div class="deadline">16:43</div><div class="race-name">丸亀 4R</div></div>
         <div class="race-status upcoming">締切前</div>
         <div class="badge-wrap"><div class="badge morning">朝</div></div>
@@ -1064,10 +1166,19 @@ body { background: var(--bg) !important; color: var(--text) !important; }\n.refr
       
       <div class="race-prediction-view" data-view="朝"><div class="top-picks"><div class="pick"><span class="mark">◎</span><span class="pick-name-wrap"><span class="pick-name">1号艇 夏山亮平</span></span><span class="score">71.7</span></div><div class="pick"><span class="mark">○</span><span class="pick-name-wrap"><span class="pick-name">3号艇 服部達哉</span></span><span class="score">65.5</span></div><div class="pick"><span class="mark">▲</span><span class="pick-name-wrap"><span class="pick-name">2号艇 谷川祐一</span></span><span class="score">63.8</span></div></div><details><summary>6艇すべてのスコア</summary><div class="scores"><span class="chip">1号艇 夏山亮平 71.7</span><span class="chip">3号艇 服部達哉 65.5</span><span class="chip">2号艇 谷川祐一 63.8</span><span class="chip">5号艇 金田諭 59.0</span><span class="chip">4号艇 正木聖賢 39.5</span><span class="chip">6号艇 高山秀雄 0.5</span></div></details><div class="formation"><div class="formation-title">3連単 準軸・8点・800円</div><div class="formation-grid"><div><b>1着</b> 1・3</div><div><b>2着</b> 1・3・2</div><div><b>3着</b> 1・3・2・5</div></div><div class="combos">1-3-2 / 1-2-3 / 1-3-5 / 3-1-2 / 1-2-5 / 3-2-1 / 3-1-5 / 3-2-5</div></div></div>
     </article>
+    </div>
+      <div class="race-local-ai" hidden></div>
+    </div>
     
+    <div class="race-pair" data-race-id="20261013-20-04">
+      <div class="race-local-tabs" role="group" aria-label="若松 4Rの予測切替">
+        <button type="button" class="race-local-tab active" data-local-view="normal" aria-pressed="true">通常予測</button>
+        <button type="button" class="race-local-tab" data-local-view="ai" aria-pressed="false">AI予測</button>
+      </div>
+      <div class="race-local-normal">
     <article class="race-card">
       <div class="race-head">
-        <div class="race-order">21</div>
+        <div class="race-order">17</div>
         <div class="race-main"><div class="deadline">16:52</div><div class="race-name">若松 4R</div></div>
         <div class="race-status upcoming">締切前</div>
         <div class="badge-wrap"><div class="badge morning">朝</div></div>
@@ -1076,10 +1187,19 @@ body { background: var(--bg) !important; color: var(--text) !important; }\n.refr
       
       <div class="race-prediction-view" data-view="朝"><div class="top-picks"><div class="pick"><span class="mark">◎</span><span class="pick-name-wrap"><span class="pick-name">6号艇 堀之内紀</span></span><span class="score">80.5</span></div><div class="pick"><span class="mark">○</span><span class="pick-name-wrap"><span class="pick-name">4号艇 渡邉優美</span></span><span class="score">62.4</span></div><div class="pick"><span class="mark">▲</span><span class="pick-name-wrap"><span class="pick-name">2号艇 赤井星璃</span></span><span class="score">50.8</span></div></div><details><summary>6艇すべてのスコア</summary><div class="scores"><span class="chip">6号艇 堀之内紀 80.5</span><span class="chip">4号艇 渡邉優美 62.4</span><span class="chip">2号艇 赤井星璃 50.8</span><span class="chip">3号艇 藤本紗弥 47.2</span><span class="chip">1号艇 畑田希咲 47.1</span><span class="chip">5号艇 吉田彩乃 12.0</span></div></details><div class="formation"><div class="formation-title">3連単 1・2着固定＋3着流し・4点・400円</div><div class="formation-grid"><div><b>1着</b> 6</div><div><b>2着</b> 4</div><div><b>3着</b> 2・3・1・5</div></div><div class="combos">6-4-2 / 6-4-3 / 6-4-1 / 6-4-5</div></div></div>
     </article>
+    </div>
+      <div class="race-local-ai" hidden></div>
+    </div>
     
+    <div class="race-pair" data-race-id="20261013-12-05">
+      <div class="race-local-tabs" role="group" aria-label="住之江 5Rの予測切替">
+        <button type="button" class="race-local-tab active" data-local-view="normal" aria-pressed="true">通常予測</button>
+        <button type="button" class="race-local-tab" data-local-view="ai" aria-pressed="false">AI予測</button>
+      </div>
+      <div class="race-local-normal">
     <article class="race-card">
       <div class="race-head">
-        <div class="race-order">22</div>
+        <div class="race-order">18</div>
         <div class="race-main"><div class="deadline">17:01</div><div class="race-name">住之江 5R</div></div>
         <div class="race-status upcoming">締切前</div>
         <div class="badge-wrap"><div class="badge morning">朝</div></div>
@@ -1088,10 +1208,19 @@ body { background: var(--bg) !important; color: var(--text) !important; }\n.refr
       
       <div class="race-prediction-view" data-view="朝"><div class="top-picks"><div class="pick"><span class="mark">◎</span><span class="pick-name-wrap"><span class="pick-name">1号艇 野長瀬正</span></span><span class="score">68.7</span></div><div class="pick"><span class="mark">○</span><span class="pick-name-wrap"><span class="pick-name">5号艇 金子猛志</span></span><span class="score">59.7</span></div><div class="pick"><span class="mark">▲</span><span class="pick-name-wrap"><span class="pick-name">6号艇 渋谷明憲</span></span><span class="score">54.8</span></div></div><details><summary>6艇すべてのスコア</summary><div class="scores"><span class="chip">1号艇 野長瀬正 68.7</span><span class="chip">5号艇 金子猛志 59.7</span><span class="chip">6号艇 渋谷明憲 54.8</span><span class="chip">2号艇 中村真 44.7</span><span class="chip">4号艇 角浜修 38.3</span><span class="chip">3号艇 土性雅也 33.8</span></div></details><div class="formation"><div class="formation-title">3連単 準軸・8点・800円</div><div class="formation-grid"><div><b>1着</b> 1・5</div><div><b>2着</b> 1・5・6</div><div><b>3着</b> 1・5・6・2</div></div><div class="combos">1-5-6 / 1-6-5 / 5-1-6 / 1-5-2 / 5-6-1 / 1-6-2 / 5-1-2 / 5-6-2</div></div></div>
     </article>
+    </div>
+      <div class="race-local-ai" hidden></div>
+    </div>
     
+    <div class="race-pair" data-race-id="20261013-15-05">
+      <div class="race-local-tabs" role="group" aria-label="丸亀 5Rの予測切替">
+        <button type="button" class="race-local-tab active" data-local-view="normal" aria-pressed="true">通常予測</button>
+        <button type="button" class="race-local-tab" data-local-view="ai" aria-pressed="false">AI予測</button>
+      </div>
+      <div class="race-local-normal">
     <article class="race-card">
       <div class="race-head">
-        <div class="race-order">23</div>
+        <div class="race-order">19</div>
         <div class="race-main"><div class="deadline">17:09</div><div class="race-name">丸亀 5R</div></div>
         <div class="race-status upcoming">締切前</div>
         <div class="badge-wrap"><div class="badge morning">朝</div></div>
@@ -1100,10 +1229,19 @@ body { background: var(--bg) !important; color: var(--text) !important; }\n.refr
       
       <div class="race-prediction-view" data-view="朝"><div class="top-picks"><div class="pick"><span class="mark">◎</span><span class="pick-name-wrap"><span class="pick-name">4号艇 中澤和志</span></span><span class="score">75.4</span></div><div class="pick"><span class="mark">○</span><span class="pick-name-wrap"><span class="pick-name">1号艇 尾形栄治</span></span><span class="score">58.1</span></div><div class="pick"><span class="mark">▲</span><span class="pick-name-wrap"><span class="pick-name">2号艇 上田隆章</span></span><span class="score">55.3</span></div></div><details><summary>6艇すべてのスコア</summary><div class="scores"><span class="chip">4号艇 中澤和志 75.4</span><span class="chip">1号艇 尾形栄治 58.1</span><span class="chip">2号艇 上田隆章 55.3</span><span class="chip">3号艇 白井友晴 50.7</span><span class="chip">5号艇 古川誠之 38.0</span><span class="chip">6号艇 一宮稔弘 22.5</span></div></details><div class="formation"><div class="formation-title">3連単 1着固定＋相手流し・12点・1,200円</div><div class="formation-grid"><div><b>1着</b> 4</div><div><b>2着</b> 1・2・3・5・6</div><div><b>3着</b> 1・2・3・5・6</div></div><div class="combos">4-1-2 / 4-2-1 / 4-1-3 / 4-3-1 / 4-2-3 / 4-3-2 / 4-1-5 / 4-2-5 / 4-5-1 / 4-3-5 / 4-5-2 / 4-1-6</div></div></div>
     </article>
+    </div>
+      <div class="race-local-ai" hidden></div>
+    </div>
     
+    <div class="race-pair" data-race-id="20261013-20-05">
+      <div class="race-local-tabs" role="group" aria-label="若松 5Rの予測切替">
+        <button type="button" class="race-local-tab active" data-local-view="normal" aria-pressed="true">通常予測</button>
+        <button type="button" class="race-local-tab" data-local-view="ai" aria-pressed="false">AI予測</button>
+      </div>
+      <div class="race-local-normal">
     <article class="race-card">
       <div class="race-head">
-        <div class="race-order">24</div>
+        <div class="race-order">20</div>
         <div class="race-main"><div class="deadline">17:17</div><div class="race-name">若松 5R</div></div>
         <div class="race-status upcoming">締切前</div>
         <div class="badge-wrap"><div class="badge morning">朝</div></div>
@@ -1112,10 +1250,19 @@ body { background: var(--bg) !important; color: var(--text) !important; }\n.refr
       
       <div class="race-prediction-view" data-view="朝"><div class="top-picks"><div class="pick"><span class="mark">◎</span><span class="pick-name-wrap"><span class="pick-name">4号艇 大山千広</span></span><span class="score">80.8</span></div><div class="pick"><span class="mark">○</span><span class="pick-name-wrap"><span class="pick-name">2号艇 関野文</span></span><span class="score">64.0</span></div><div class="pick"><span class="mark">▲</span><span class="pick-name-wrap"><span class="pick-name">1号艇 村上奈穂</span></span><span class="score">60.7</span></div></div><details><summary>6艇すべてのスコア</summary><div class="scores"><span class="chip">4号艇 大山千広 80.8</span><span class="chip">2号艇 関野文 64.0</span><span class="chip">1号艇 村上奈穂 60.7</span><span class="chip">5号艇 向井田真 47.0</span><span class="chip">3号艇 大廣咲季 40.0</span><span class="chip">6号艇 野田亜湖 7.5</span></div></details><div class="formation"><div class="formation-title">3連単 1着固定＋相手流し・12点・1,200円</div><div class="formation-grid"><div><b>1着</b> 4</div><div><b>2着</b> 2・1・5・3・6</div><div><b>3着</b> 2・1・5・3・6</div></div><div class="combos">4-2-1 / 4-1-2 / 4-2-5 / 4-1-5 / 4-2-3 / 4-5-2 / 4-5-1 / 4-1-3 / 4-3-2 / 4-3-1 / 4-5-3 / 4-3-5</div></div></div>
     </article>
+    </div>
+      <div class="race-local-ai" hidden></div>
+    </div>
     
+    <div class="race-pair" data-race-id="20261013-12-06">
+      <div class="race-local-tabs" role="group" aria-label="住之江 6Rの予測切替">
+        <button type="button" class="race-local-tab active" data-local-view="normal" aria-pressed="true">通常予測</button>
+        <button type="button" class="race-local-tab" data-local-view="ai" aria-pressed="false">AI予測</button>
+      </div>
+      <div class="race-local-normal">
     <article class="race-card">
       <div class="race-head">
-        <div class="race-order">25</div>
+        <div class="race-order">21</div>
         <div class="race-main"><div class="deadline">17:27</div><div class="race-name">住之江 6R</div></div>
         <div class="race-status upcoming">締切前</div>
         <div class="badge-wrap"><div class="badge morning">朝</div></div>
@@ -1124,10 +1271,19 @@ body { background: var(--bg) !important; color: var(--text) !important; }\n.refr
       
       <div class="race-prediction-view" data-view="朝"><div class="top-picks"><div class="pick"><span class="mark">◎</span><span class="pick-name-wrap"><span class="pick-name">4号艇 杉山正樹</span></span><span class="score">72.9</span></div><div class="pick"><span class="mark">○</span><span class="pick-name-wrap"><span class="pick-name">3号艇 松尾充</span></span><span class="score">66.4</span></div><div class="pick"><span class="mark">▲</span><span class="pick-name-wrap"><span class="pick-name">1号艇 富永夏哉</span></span><span class="score">54.1</span></div></div><details><summary>6艇すべてのスコア</summary><div class="scores"><span class="chip">4号艇 杉山正樹 72.9</span><span class="chip">3号艇 松尾充 66.4</span><span class="chip">1号艇 富永夏哉 54.1</span><span class="chip">2号艇 今泉徹 38.1</span><span class="chip">6号艇 鶴本崇文 35.9</span><span class="chip">5号艇 小川時光 32.6</span></div></details><div class="formation"><div class="formation-title">3連単 準軸・8点・800円</div><div class="formation-grid"><div><b>1着</b> 4・3</div><div><b>2着</b> 4・3・1</div><div><b>3着</b> 4・3・1・2</div></div><div class="combos">4-3-1 / 4-1-3 / 3-4-1 / 3-1-4 / 4-3-2 / 3-4-2 / 4-1-2 / 3-1-2</div></div></div>
     </article>
+    </div>
+      <div class="race-local-ai" hidden></div>
+    </div>
     
+    <div class="race-pair" data-race-id="20261013-15-06">
+      <div class="race-local-tabs" role="group" aria-label="丸亀 6Rの予測切替">
+        <button type="button" class="race-local-tab active" data-local-view="normal" aria-pressed="true">通常予測</button>
+        <button type="button" class="race-local-tab" data-local-view="ai" aria-pressed="false">AI予測</button>
+      </div>
+      <div class="race-local-normal">
     <article class="race-card">
       <div class="race-head">
-        <div class="race-order">26</div>
+        <div class="race-order">22</div>
         <div class="race-main"><div class="deadline">17:34</div><div class="race-name">丸亀 6R</div></div>
         <div class="race-status upcoming">締切前</div>
         <div class="badge-wrap"><div class="badge morning">朝</div></div>
@@ -1136,10 +1292,19 @@ body { background: var(--bg) !important; color: var(--text) !important; }\n.refr
       
       <div class="race-prediction-view" data-view="朝"><div class="top-picks"><div class="pick"><span class="mark">◎</span><span class="pick-name-wrap"><span class="pick-name">1号艇 枝尾賢</span></span><span class="score">87.0</span></div><div class="pick"><span class="mark">○</span><span class="pick-name-wrap"><span class="pick-name">3号艇 深井利寿</span></span><span class="score">69.2</span></div><div class="pick"><span class="mark">▲</span><span class="pick-name-wrap"><span class="pick-name">2号艇 佐々木英</span></span><span class="score">44.8</span></div></div><details><summary>6艇すべてのスコア</summary><div class="scores"><span class="chip">1号艇 枝尾賢 87.0</span><span class="chip">3号艇 深井利寿 69.2</span><span class="chip">2号艇 佐々木英 44.8</span><span class="chip">5号艇 和田操拓 35.6</span><span class="chip">4号艇 相原利章 35.0</span><span class="chip">6号艇 久保翔耶 28.4</span></div></details><div class="formation"><div class="formation-title">3連単 1・2着固定＋3着流し・4点・400円</div><div class="formation-grid"><div><b>1着</b> 1</div><div><b>2着</b> 3</div><div><b>3着</b> 2・5・4・6</div></div><div class="combos">1-3-2 / 1-3-5 / 1-3-4 / 1-3-6</div></div></div>
     </article>
+    </div>
+      <div class="race-local-ai" hidden></div>
+    </div>
     
+    <div class="race-pair" data-race-id="20261013-19-01">
+      <div class="race-local-tabs" role="group" aria-label="下関 1Rの予測切替">
+        <button type="button" class="race-local-tab active" data-local-view="normal" aria-pressed="true">通常予測</button>
+        <button type="button" class="race-local-tab" data-local-view="ai" aria-pressed="false">AI予測</button>
+      </div>
+      <div class="race-local-normal">
     <article class="race-card">
       <div class="race-head">
-        <div class="race-order">27</div>
+        <div class="race-order">23</div>
         <div class="race-main"><div class="deadline">17:41</div><div class="race-name">下関 1R</div></div>
         <div class="race-status upcoming">締切前</div>
         <div class="badge-wrap"><div class="badge morning">朝</div></div>
@@ -1148,10 +1313,19 @@ body { background: var(--bg) !important; color: var(--text) !important; }\n.refr
       
       <div class="race-prediction-view" data-view="朝"><div class="top-picks"><div class="pick"><span class="mark">◎</span><span class="pick-name-wrap"><span class="pick-name">1号艇 中越博紀</span></span><span class="score">90.9</span></div><div class="pick"><span class="mark">○</span><span class="pick-name-wrap"><span class="pick-name">3号艇 木場悠介</span></span><span class="score">64.4</span></div><div class="pick"><span class="mark">▲</span><span class="pick-name-wrap"><span class="pick-name">2号艇 松田憲幸</span></span><span class="score">39.1</span></div></div><details><summary>6艇すべてのスコア</summary><div class="scores"><span class="chip">1号艇 中越博紀 90.9</span><span class="chip">3号艇 木場悠介 64.4</span><span class="chip">2号艇 松田憲幸 39.1</span><span class="chip">4号艇 藤丸光一 36.4</span><span class="chip">5号艇 北川敏弘 36.4</span><span class="chip">6号艇 黒柳浩孝 32.8</span></div></details><div class="formation"><div class="formation-title">3連単 1・2着固定＋3着流し・4点・400円</div><div class="formation-grid"><div><b>1着</b> 1</div><div><b>2着</b> 3</div><div><b>3着</b> 2・4・5・6</div></div><div class="combos">1-3-2 / 1-3-4 / 1-3-5 / 1-3-6</div></div></div>
     </article>
+    </div>
+      <div class="race-local-ai" hidden></div>
+    </div>
     
+    <div class="race-pair" data-race-id="20261013-20-06">
+      <div class="race-local-tabs" role="group" aria-label="若松 6Rの予測切替">
+        <button type="button" class="race-local-tab active" data-local-view="normal" aria-pressed="true">通常予測</button>
+        <button type="button" class="race-local-tab" data-local-view="ai" aria-pressed="false">AI予測</button>
+      </div>
+      <div class="race-local-normal">
     <article class="race-card">
       <div class="race-head">
-        <div class="race-order">28</div>
+        <div class="race-order">24</div>
         <div class="race-main"><div class="deadline">17:48</div><div class="race-name">若松 6R</div></div>
         <div class="race-status upcoming">締切前</div>
         <div class="badge-wrap"><div class="badge morning">朝</div></div>
@@ -1160,10 +1334,19 @@ body { background: var(--bg) !important; color: var(--text) !important; }\n.refr
       
       <div class="race-prediction-view" data-view="朝"><div class="top-picks"><div class="pick"><span class="mark">◎</span><span class="pick-name-wrap"><span class="pick-name">4号艇 川野芽唯</span></span><span class="score">84.8</span></div><div class="pick"><span class="mark">○</span><span class="pick-name-wrap"><span class="pick-name">1号艇 前原哉</span></span><span class="score">72.6</span></div><div class="pick"><span class="mark">▲</span><span class="pick-name-wrap"><span class="pick-name">3号艇 小林愛実</span></span><span class="score">58.4</span></div></div><details><summary>6艇すべてのスコア</summary><div class="scores"><span class="chip">4号艇 川野芽唯 84.8</span><span class="chip">1号艇 前原哉 72.6</span><span class="chip">3号艇 小林愛実 58.4</span><span class="chip">2号艇 南彩寧 38.3</span><span class="chip">5号艇 市川瑚幸 25.4</span><span class="chip">6号艇 川井萌 20.5</span></div></details><div class="formation"><div class="formation-title">3連単 1・2着固定＋3着流し・4点・400円</div><div class="formation-grid"><div><b>1着</b> 4</div><div><b>2着</b> 1</div><div><b>3着</b> 3・2・5・6</div></div><div class="combos">4-1-3 / 4-1-2 / 4-1-5 / 4-1-6</div></div></div>
     </article>
+    </div>
+      <div class="race-local-ai" hidden></div>
+    </div>
     
+    <div class="race-pair" data-race-id="20261013-12-07">
+      <div class="race-local-tabs" role="group" aria-label="住之江 7Rの予測切替">
+        <button type="button" class="race-local-tab active" data-local-view="normal" aria-pressed="true">通常予測</button>
+        <button type="button" class="race-local-tab" data-local-view="ai" aria-pressed="false">AI予測</button>
+      </div>
+      <div class="race-local-normal">
     <article class="race-card">
       <div class="race-head">
-        <div class="race-order">29</div>
+        <div class="race-order">25</div>
         <div class="race-main"><div class="deadline">17:55</div><div class="race-name">住之江 7R</div></div>
         <div class="race-status upcoming">締切前</div>
         <div class="badge-wrap"><div class="badge morning">朝</div></div>
@@ -1172,10 +1355,19 @@ body { background: var(--bg) !important; color: var(--text) !important; }\n.refr
       
       <div class="race-prediction-view" data-view="朝"><div class="top-picks"><div class="pick"><span class="mark">◎</span><span class="pick-name-wrap"><span class="pick-name">3号艇 谷村一哉</span></span><span class="score">76.5</span></div><div class="pick"><span class="mark">○</span><span class="pick-name-wrap"><span class="pick-name">5号艇 河村了</span></span><span class="score">68.8</span></div><div class="pick"><span class="mark">▲</span><span class="pick-name-wrap"><span class="pick-name">1号艇 長谷川充</span></span><span class="score">66.2</span></div></div><details><summary>6艇すべてのスコア</summary><div class="scores"><span class="chip">3号艇 谷村一哉 76.5</span><span class="chip">5号艇 河村了 68.8</span><span class="chip">1号艇 長谷川充 66.2</span><span class="chip">4号艇 木村浩士 38.2</span><span class="chip">2号艇 籾山佳岳 30.4</span><span class="chip">6号艇 山本兼士 19.9</span></div></details><div class="formation"><div class="formation-title">3連単 準軸・8点・800円</div><div class="formation-grid"><div><b>1着</b> 3・5</div><div><b>2着</b> 3・5・1</div><div><b>3着</b> 3・5・1・4</div></div><div class="combos">3-5-1 / 3-1-5 / 5-3-1 / 5-1-3 / 3-5-4 / 3-1-4 / 5-3-4 / 5-1-4</div></div></div>
     </article>
+    </div>
+      <div class="race-local-ai" hidden></div>
+    </div>
     
+    <div class="race-pair" data-race-id="20261013-15-07">
+      <div class="race-local-tabs" role="group" aria-label="丸亀 7Rの予測切替">
+        <button type="button" class="race-local-tab active" data-local-view="normal" aria-pressed="true">通常予測</button>
+        <button type="button" class="race-local-tab" data-local-view="ai" aria-pressed="false">AI予測</button>
+      </div>
+      <div class="race-local-normal">
     <article class="race-card">
       <div class="race-head">
-        <div class="race-order">30</div>
+        <div class="race-order">26</div>
         <div class="race-main"><div class="deadline">18:02</div><div class="race-name">丸亀 7R</div></div>
         <div class="race-status upcoming">締切前</div>
         <div class="badge-wrap"><div class="badge morning">朝</div></div>
@@ -1184,10 +1376,19 @@ body { background: var(--bg) !important; color: var(--text) !important; }\n.refr
       
       <div class="race-prediction-view" data-view="朝"><div class="top-picks"><div class="pick"><span class="mark">◎</span><span class="pick-name-wrap"><span class="pick-name">3号艇 佐藤大介</span></span><span class="score">86.5</span></div><div class="pick"><span class="mark">○</span><span class="pick-name-wrap"><span class="pick-name">2号艇 秋山広一</span></span><span class="score">66.2</span></div><div class="pick"><span class="mark">▲</span><span class="pick-name-wrap"><span class="pick-name">4号艇 村田修次</span></span><span class="score">57.4</span></div></div><details><summary>6艇すべてのスコア</summary><div class="scores"><span class="chip">3号艇 佐藤大介 86.5</span><span class="chip">2号艇 秋山広一 66.2</span><span class="chip">4号艇 村田修次 57.4</span><span class="chip">1号艇 酒見峻介 49.1</span><span class="chip">5号艇 新田智彰 22.4</span><span class="chip">6号艇 前田健太 18.4</span></div></details><div class="formation"><div class="formation-title">3連単 1着固定＋相手流し・12点・1,200円</div><div class="formation-grid"><div><b>1着</b> 3</div><div><b>2着</b> 2・4・1・5・6</div><div><b>3着</b> 2・4・1・5・6</div></div><div class="combos">3-2-4 / 3-4-2 / 3-2-1 / 3-1-2 / 3-4-1 / 3-1-4 / 3-2-5 / 3-2-6 / 3-4-5 / 3-4-6 / 3-5-2 / 3-1-5</div></div></div>
     </article>
+    </div>
+      <div class="race-local-ai" hidden></div>
+    </div>
     
+    <div class="race-pair" data-race-id="20261013-19-02">
+      <div class="race-local-tabs" role="group" aria-label="下関 2Rの予測切替">
+        <button type="button" class="race-local-tab active" data-local-view="normal" aria-pressed="true">通常予測</button>
+        <button type="button" class="race-local-tab" data-local-view="ai" aria-pressed="false">AI予測</button>
+      </div>
+      <div class="race-local-normal">
     <article class="race-card">
       <div class="race-head">
-        <div class="race-order">31</div>
+        <div class="race-order">27</div>
         <div class="race-main"><div class="deadline">18:08</div><div class="race-name">下関 2R</div></div>
         <div class="race-status upcoming">締切前</div>
         <div class="badge-wrap"><div class="badge morning">朝</div></div>
@@ -1196,10 +1397,19 @@ body { background: var(--bg) !important; color: var(--text) !important; }\n.refr
       
       <div class="race-prediction-view" data-view="朝"><div class="top-picks"><div class="pick"><span class="mark">◎</span><span class="pick-name-wrap"><span class="pick-name">3号艇 水谷理人</span></span><span class="score">74.1</span></div><div class="pick"><span class="mark">○</span><span class="pick-name-wrap"><span class="pick-name">1号艇 藤井徹</span></span><span class="score">66.3</span></div><div class="pick"><span class="mark">▲</span><span class="pick-name-wrap"><span class="pick-name">2号艇 澁川夏</span></span><span class="score">61.0</span></div></div><details><summary>6艇すべてのスコア</summary><div class="scores"><span class="chip">3号艇 水谷理人 74.1</span><span class="chip">1号艇 藤井徹 66.3</span><span class="chip">2号艇 澁川夏 61.0</span><span class="chip">4号艇 妻鳥晋也 54.2</span><span class="chip">5号艇 中村紋夕 24.3</span><span class="chip">6号艇 田中堅 20.1</span></div></details><div class="formation"><div class="formation-title">3連単 準軸・8点・800円</div><div class="formation-grid"><div><b>1着</b> 3・1</div><div><b>2着</b> 3・1・2</div><div><b>3着</b> 3・1・2・4</div></div><div class="combos">3-1-2 / 3-2-1 / 3-1-4 / 1-3-2 / 1-2-3 / 1-3-4 / 3-2-4 / 1-2-4</div></div></div>
     </article>
+    </div>
+      <div class="race-local-ai" hidden></div>
+    </div>
     
+    <div class="race-pair" data-race-id="20261013-20-07">
+      <div class="race-local-tabs" role="group" aria-label="若松 7Rの予測切替">
+        <button type="button" class="race-local-tab active" data-local-view="normal" aria-pressed="true">通常予測</button>
+        <button type="button" class="race-local-tab" data-local-view="ai" aria-pressed="false">AI予測</button>
+      </div>
+      <div class="race-local-normal">
     <article class="race-card">
       <div class="race-head">
-        <div class="race-order">32</div>
+        <div class="race-order">28</div>
         <div class="race-main"><div class="deadline">18:17</div><div class="race-name">若松 7R</div></div>
         <div class="race-status upcoming">締切前</div>
         <div class="badge-wrap"><div class="badge morning">朝</div></div>
@@ -1208,10 +1418,19 @@ body { background: var(--bg) !important; color: var(--text) !important; }\n.refr
       
       <div class="race-prediction-view" data-view="朝"><div class="top-picks"><div class="pick"><span class="mark">◎</span><span class="pick-name-wrap"><span class="pick-name">2号艇 渡邉真奈</span></span><span class="score">70.6</span></div><div class="pick"><span class="mark">○</span><span class="pick-name-wrap"><span class="pick-name">1号艇 内山七海</span></span><span class="score">68.7</span></div><div class="pick"><span class="mark">▲</span><span class="pick-name-wrap"><span class="pick-name">3号艇 倉田郁美</span></span><span class="score">46.4</span></div></div><details><summary>6艇すべてのスコア</summary><div class="scores"><span class="chip">2号艇 渡邉真奈 70.6</span><span class="chip">1号艇 内山七海 68.7</span><span class="chip">3号艇 倉田郁美 46.4</span><span class="chip">4号艇 間庭菜摘 41.8</span><span class="chip">6号艇 今井美亜 41.8</span><span class="chip">5号艇 中川海虹 30.7</span></div></details><div class="formation"><div class="formation-title">3連単 1・2着折返し＋3着流し・8点・800円</div><div class="formation-grid"><div><b>1着</b> 2・1</div><div><b>2着</b> 2・1</div><div><b>3着</b> 3・4・6・5</div></div><div class="combos">2-1-3 / 2-1-4 / 2-1-6 / 2-1-5 / 1-2-3 / 1-2-4 / 1-2-6 / 1-2-5</div></div></div>
     </article>
+    </div>
+      <div class="race-local-ai" hidden></div>
+    </div>
     
+    <div class="race-pair" data-race-id="20261013-12-08">
+      <div class="race-local-tabs" role="group" aria-label="住之江 8Rの予測切替">
+        <button type="button" class="race-local-tab active" data-local-view="normal" aria-pressed="true">通常予測</button>
+        <button type="button" class="race-local-tab" data-local-view="ai" aria-pressed="false">AI予測</button>
+      </div>
+      <div class="race-local-normal">
     <article class="race-card">
       <div class="race-head">
-        <div class="race-order">33</div>
+        <div class="race-order">29</div>
         <div class="race-main"><div class="deadline">18:25</div><div class="race-name">住之江 8R</div></div>
         <div class="race-status upcoming">締切前</div>
         <div class="badge-wrap"><div class="badge morning">朝</div></div>
@@ -1220,10 +1439,19 @@ body { background: var(--bg) !important; color: var(--text) !important; }\n.refr
       
       <div class="race-prediction-view" data-view="朝"><div class="top-picks"><div class="pick"><span class="mark">◎</span><span class="pick-name-wrap"><span class="pick-name">2号艇 竹田和哉</span></span><span class="score">92.5</span></div><div class="pick"><span class="mark">○</span><span class="pick-name-wrap"><span class="pick-name">1号艇 松尾基成</span></span><span class="score">49.4</span></div><div class="pick"><span class="mark">▲</span><span class="pick-name-wrap"><span class="pick-name">6号艇 繁野谷圭</span></span><span class="score">48.3</span></div></div><details><summary>6艇すべてのスコア</summary><div class="scores"><span class="chip">2号艇 竹田和哉 92.5</span><span class="chip">1号艇 松尾基成 49.4</span><span class="chip">6号艇 繁野谷圭 48.3</span><span class="chip">3号艇 安田吉宏 47.8</span><span class="chip">5号艇 高橋正男 33.4</span><span class="chip">4号艇 胡本悟志 28.6</span></div></details><div class="formation"><div class="formation-title">3連単 1着固定＋相手流し・12点・1,200円</div><div class="formation-grid"><div><b>1着</b> 2</div><div><b>2着</b> 1・6・3・5・4</div><div><b>3着</b> 1・6・3・5・4</div></div><div class="combos">2-1-6 / 2-1-3 / 2-6-1 / 2-3-1 / 2-6-3 / 2-3-6 / 2-1-5 / 2-6-5 / 2-3-5 / 2-1-4 / 2-6-4 / 2-3-4</div></div></div>
     </article>
+    </div>
+      <div class="race-local-ai" hidden></div>
+    </div>
     
+    <div class="race-pair" data-race-id="20261013-19-03">
+      <div class="race-local-tabs" role="group" aria-label="下関 3Rの予測切替">
+        <button type="button" class="race-local-tab active" data-local-view="normal" aria-pressed="true">通常予測</button>
+        <button type="button" class="race-local-tab" data-local-view="ai" aria-pressed="false">AI予測</button>
+      </div>
+      <div class="race-local-normal">
     <article class="race-card">
       <div class="race-head">
-        <div class="race-order">34</div>
+        <div class="race-order">30</div>
         <div class="race-main"><div class="deadline">18:34</div><div class="race-name">下関 3R</div></div>
         <div class="race-status upcoming">締切前</div>
         <div class="badge-wrap"><div class="badge morning">朝</div></div>
@@ -1232,10 +1460,19 @@ body { background: var(--bg) !important; color: var(--text) !important; }\n.refr
       
       <div class="race-prediction-view" data-view="朝"><div class="top-picks"><div class="pick"><span class="mark">◎</span><span class="pick-name-wrap"><span class="pick-name">4号艇 佐々木完</span></span><span class="score">78.7</span></div><div class="pick"><span class="mark">○</span><span class="pick-name-wrap"><span class="pick-name">1号艇 仲航太</span></span><span class="score">76.5</span></div><div class="pick"><span class="mark">▲</span><span class="pick-name-wrap"><span class="pick-name">5号艇 妹尾忠幸</span></span><span class="score">62.1</span></div></div><details><summary>6艇すべてのスコア</summary><div class="scores"><span class="chip">4号艇 佐々木完 78.7</span><span class="chip">1号艇 仲航太 76.5</span><span class="chip">5号艇 妹尾忠幸 62.1</span><span class="chip">6号艇 宮地元輝 39.6</span><span class="chip">2号艇 有山望 22.5</span><span class="chip">3号艇 川原愛未 20.6</span></div></details><div class="formation"><div class="formation-title">3連単 1・2着折返し＋3着流し・8点・800円</div><div class="formation-grid"><div><b>1着</b> 4・1</div><div><b>2着</b> 4・1</div><div><b>3着</b> 5・6・2・3</div></div><div class="combos">4-1-5 / 4-1-6 / 4-1-2 / 4-1-3 / 1-4-5 / 1-4-6 / 1-4-2 / 1-4-3</div></div></div>
     </article>
+    </div>
+      <div class="race-local-ai" hidden></div>
+    </div>
     
+    <div class="race-pair" data-race-id="20261013-15-08">
+      <div class="race-local-tabs" role="group" aria-label="丸亀 8Rの予測切替">
+        <button type="button" class="race-local-tab active" data-local-view="normal" aria-pressed="true">通常予測</button>
+        <button type="button" class="race-local-tab" data-local-view="ai" aria-pressed="false">AI予測</button>
+      </div>
+      <div class="race-local-normal">
     <article class="race-card">
       <div class="race-head">
-        <div class="race-order">35</div>
+        <div class="race-order">31</div>
         <div class="race-main"><div class="deadline">18:41</div><div class="race-name">丸亀 8R</div></div>
         <div class="race-status upcoming">締切前</div>
         <div class="badge-wrap"><div class="badge morning">朝</div></div>
@@ -1244,10 +1481,19 @@ body { background: var(--bg) !important; color: var(--text) !important; }\n.refr
       
       <div class="race-prediction-view" data-view="朝"><div class="top-picks"><div class="pick"><span class="mark">◎</span><span class="pick-name-wrap"><span class="pick-name">2号艇 太田和美</span></span><span class="score">78.2</span></div><div class="pick"><span class="mark">○</span><span class="pick-name-wrap"><span class="pick-name">1号艇 桑島和宏</span></span><span class="score">64.6</span></div><div class="pick"><span class="mark">▲</span><span class="pick-name-wrap"><span class="pick-name">4号艇 服部達哉</span></span><span class="score">59.9</span></div></div><details><summary>6艇すべてのスコア</summary><div class="scores"><span class="chip">2号艇 太田和美 78.2</span><span class="chip">1号艇 桑島和宏 64.6</span><span class="chip">4号艇 服部達哉 59.9</span><span class="chip">3号艇 森晋太郎 55.5</span><span class="chip">6号艇 平瀬城啓 21.2</span><span class="chip">5号艇 吉田和仁 20.6</span></div></details><div class="formation"><div class="formation-title">3連単 1着固定＋相手流し・12点・1,200円</div><div class="formation-grid"><div><b>1着</b> 2</div><div><b>2着</b> 1・4・3・6・5</div><div><b>3着</b> 1・4・3・6・5</div></div><div class="combos">2-1-4 / 2-4-1 / 2-1-3 / 2-3-1 / 2-4-3 / 2-3-4 / 2-1-6 / 2-1-5 / 2-4-6 / 2-4-5 / 2-3-6 / 2-3-5</div></div></div>
     </article>
+    </div>
+      <div class="race-local-ai" hidden></div>
+    </div>
     
+    <div class="race-pair" data-race-id="20261013-20-08">
+      <div class="race-local-tabs" role="group" aria-label="若松 8Rの予測切替">
+        <button type="button" class="race-local-tab active" data-local-view="normal" aria-pressed="true">通常予測</button>
+        <button type="button" class="race-local-tab" data-local-view="ai" aria-pressed="false">AI予測</button>
+      </div>
+      <div class="race-local-normal">
     <article class="race-card">
       <div class="race-head">
-        <div class="race-order">36</div>
+        <div class="race-order">32</div>
         <div class="race-main"><div class="deadline">18:48</div><div class="race-name">若松 8R</div></div>
         <div class="race-status upcoming">締切前</div>
         <div class="badge-wrap"><div class="badge morning">朝</div></div>
@@ -1256,10 +1502,19 @@ body { background: var(--bg) !important; color: var(--text) !important; }\n.refr
       
       <div class="race-prediction-view" data-view="朝"><div class="top-picks"><div class="pick"><span class="mark">◎</span><span class="pick-name-wrap"><span class="pick-name">1号艇 藤原早菜</span></span><span class="score">80.4</span></div><div class="pick"><span class="mark">○</span><span class="pick-name-wrap"><span class="pick-name">2号艇 米丸乃絵</span></span><span class="score">77.0</span></div><div class="pick"><span class="mark">▲</span><span class="pick-name-wrap"><span class="pick-name">3号艇 犬童千秋</span></span><span class="score">50.6</span></div></div><details><summary>6艇すべてのスコア</summary><div class="scores"><span class="chip">1号艇 藤原早菜 80.4</span><span class="chip">2号艇 米丸乃絵 77.0</span><span class="chip">3号艇 犬童千秋 50.6</span><span class="chip">4号艇 龍田真白 46.4</span><span class="chip">5号艇 藤本紗弥 34.0</span><span class="chip">6号艇 野田部宏 11.6</span></div></details><div class="formation"><div class="formation-title">3連単 1・2着折返し＋3着流し・8点・800円</div><div class="formation-grid"><div><b>1着</b> 1・2</div><div><b>2着</b> 1・2</div><div><b>3着</b> 3・4・5・6</div></div><div class="combos">1-2-3 / 1-2-4 / 1-2-5 / 1-2-6 / 2-1-3 / 2-1-4 / 2-1-5 / 2-1-6</div></div></div>
     </article>
+    </div>
+      <div class="race-local-ai" hidden></div>
+    </div>
     
+    <div class="race-pair" data-race-id="20261013-12-09">
+      <div class="race-local-tabs" role="group" aria-label="住之江 9Rの予測切替">
+        <button type="button" class="race-local-tab active" data-local-view="normal" aria-pressed="true">通常予測</button>
+        <button type="button" class="race-local-tab" data-local-view="ai" aria-pressed="false">AI予測</button>
+      </div>
+      <div class="race-local-normal">
     <article class="race-card">
       <div class="race-head">
-        <div class="race-order">37</div>
+        <div class="race-order">33</div>
         <div class="race-main"><div class="deadline">18:55</div><div class="race-name">住之江 9R</div></div>
         <div class="race-status upcoming">締切前</div>
         <div class="badge-wrap"><div class="badge morning">朝</div></div>
@@ -1268,10 +1523,19 @@ body { background: var(--bg) !important; color: var(--text) !important; }\n.refr
       
       <div class="race-prediction-view" data-view="朝"><div class="top-picks"><div class="pick"><span class="mark">◎</span><span class="pick-name-wrap"><span class="pick-name">2号艇 中島昂章</span></span><span class="score">72.8</span></div><div class="pick"><span class="mark">○</span><span class="pick-name-wrap"><span class="pick-name">1号艇 西島義則</span></span><span class="score">62.1</span></div><div class="pick"><span class="mark">▲</span><span class="pick-name-wrap"><span class="pick-name">5号艇 重成一人</span></span><span class="score">58.1</span></div></div><details><summary>6艇すべてのスコア</summary><div class="scores"><span class="chip">2号艇 中島昂章 72.8</span><span class="chip">1号艇 西島義則 62.1</span><span class="chip">5号艇 重成一人 58.1</span><span class="chip">3号艇 角浜修 50.9</span><span class="chip">4号艇 重野哲之 43.8</span><span class="chip">6号艇 村田浩司 12.3</span></div></details><div class="formation"><div class="formation-title">3連単 1着固定＋相手流し・12点・1,200円</div><div class="formation-grid"><div><b>1着</b> 2</div><div><b>2着</b> 1・5・3・4・6</div><div><b>3着</b> 1・5・3・4・6</div></div><div class="combos">2-1-5 / 2-5-1 / 2-1-3 / 2-3-1 / 2-5-3 / 2-1-4 / 2-3-5 / 2-5-4 / 2-4-1 / 2-4-5 / 2-3-4 / 2-4-3</div></div></div>
     </article>
+    </div>
+      <div class="race-local-ai" hidden></div>
+    </div>
     
+    <div class="race-pair" data-race-id="20261013-19-04">
+      <div class="race-local-tabs" role="group" aria-label="下関 4Rの予測切替">
+        <button type="button" class="race-local-tab active" data-local-view="normal" aria-pressed="true">通常予測</button>
+        <button type="button" class="race-local-tab" data-local-view="ai" aria-pressed="false">AI予測</button>
+      </div>
+      <div class="race-local-normal">
     <article class="race-card">
       <div class="race-head">
-        <div class="race-order">38</div>
+        <div class="race-order">34</div>
         <div class="race-main"><div class="deadline">19:03</div><div class="race-name">下関 4R</div></div>
         <div class="race-status upcoming">締切前</div>
         <div class="badge-wrap"><div class="badge morning">朝</div></div>
@@ -1280,10 +1544,19 @@ body { background: var(--bg) !important; color: var(--text) !important; }\n.refr
       
       <div class="race-prediction-view" data-view="朝"><div class="top-picks"><div class="pick"><span class="mark">◎</span><span class="pick-name-wrap"><span class="pick-name">2号艇 横川聖志</span></span><span class="score">77.6</span></div><div class="pick"><span class="mark">○</span><span class="pick-name-wrap"><span class="pick-name">5号艇 菊地孝平</span></span><span class="score">72.3</span></div><div class="pick"><span class="mark">▲</span><span class="pick-name-wrap"><span class="pick-name">3号艇 渡邉翼</span></span><span class="score">65.3</span></div></div><details><summary>6艇すべてのスコア</summary><div class="scores"><span class="chip">2号艇 横川聖志 77.6</span><span class="chip">5号艇 菊地孝平 72.3</span><span class="chip">3号艇 渡邉翼 65.3</span><span class="chip">4号艇 武田信一 32.8</span><span class="chip">1号艇 筒井美琴 29.8</span><span class="chip">6号艇 豊田結 22.2</span></div></details><div class="formation"><div class="formation-title">3連単 準軸・8点・800円</div><div class="formation-grid"><div><b>1着</b> 2・5</div><div><b>2着</b> 2・5・3</div><div><b>3着</b> 2・5・3・4</div></div><div class="combos">2-5-3 / 2-3-5 / 5-2-3 / 5-3-2 / 2-5-4 / 5-2-4 / 2-3-4 / 5-3-4</div></div></div>
     </article>
+    </div>
+      <div class="race-local-ai" hidden></div>
+    </div>
     
+    <div class="race-pair" data-race-id="20261013-15-09">
+      <div class="race-local-tabs" role="group" aria-label="丸亀 9Rの予測切替">
+        <button type="button" class="race-local-tab active" data-local-view="normal" aria-pressed="true">通常予測</button>
+        <button type="button" class="race-local-tab" data-local-view="ai" aria-pressed="false">AI予測</button>
+      </div>
+      <div class="race-local-normal">
     <article class="race-card">
       <div class="race-head">
-        <div class="race-order">39</div>
+        <div class="race-order">35</div>
         <div class="race-main"><div class="deadline">19:10</div><div class="race-name">丸亀 9R</div></div>
         <div class="race-status upcoming">締切前</div>
         <div class="badge-wrap"><div class="badge morning">朝</div></div>
@@ -1292,10 +1565,19 @@ body { background: var(--bg) !important; color: var(--text) !important; }\n.refr
       
       <div class="race-prediction-view" data-view="朝"><div class="top-picks"><div class="pick"><span class="mark">◎</span><span class="pick-name-wrap"><span class="pick-name">2号艇 一瀬明</span></span><span class="score">70.2</span></div><div class="pick"><span class="mark">○</span><span class="pick-name-wrap"><span class="pick-name">3号艇 松江秀徳</span></span><span class="score">54.4</span></div><div class="pick"><span class="mark">▲</span><span class="pick-name-wrap"><span class="pick-name">6号艇 高濱芳久</span></span><span class="score">53.6</span></div></div><details><summary>6艇すべてのスコア</summary><div class="scores"><span class="chip">2号艇 一瀬明 70.2</span><span class="chip">3号艇 松江秀徳 54.4</span><span class="chip">6号艇 高濱芳久 53.6</span><span class="chip">1号艇 川田正人 51.5</span><span class="chip">4号艇 尾形栄治 38.1</span><span class="chip">5号艇 高山秀雄 32.2</span></div></details><div class="formation"><div class="formation-title">3連単 1着固定＋相手流し・12点・1,200円</div><div class="formation-grid"><div><b>1着</b> 2</div><div><b>2着</b> 3・6・1・4・5</div><div><b>3着</b> 3・6・1・4・5</div></div><div class="combos">2-3-6 / 2-6-3 / 2-3-1 / 2-6-1 / 2-1-3 / 2-1-6 / 2-3-4 / 2-6-4 / 2-1-4 / 2-3-5 / 2-6-5 / 2-4-3</div></div></div>
     </article>
+    </div>
+      <div class="race-local-ai" hidden></div>
+    </div>
     
+    <div class="race-pair" data-race-id="20261013-20-09">
+      <div class="race-local-tabs" role="group" aria-label="若松 9Rの予測切替">
+        <button type="button" class="race-local-tab active" data-local-view="normal" aria-pressed="true">通常予測</button>
+        <button type="button" class="race-local-tab" data-local-view="ai" aria-pressed="false">AI予測</button>
+      </div>
+      <div class="race-local-normal">
     <article class="race-card">
       <div class="race-head">
-        <div class="race-order">40</div>
+        <div class="race-order">36</div>
         <div class="race-main"><div class="deadline">19:16</div><div class="race-name">若松 9R</div></div>
         <div class="race-status upcoming">締切前</div>
         <div class="badge-wrap"><div class="badge morning">朝</div></div>
@@ -1304,10 +1586,19 @@ body { background: var(--bg) !important; color: var(--text) !important; }\n.refr
       
       <div class="race-prediction-view" data-view="朝"><div class="top-picks"><div class="pick"><span class="mark">◎</span><span class="pick-name-wrap"><span class="pick-name">1号艇 奥村明日</span></span><span class="score">74.4</span></div><div class="pick"><span class="mark">○</span><span class="pick-name-wrap"><span class="pick-name">4号艇 向井田真</span></span><span class="score">55.8</span></div><div class="pick"><span class="mark">▲</span><span class="pick-name-wrap"><span class="pick-name">3号艇 大石真央</span></span><span class="score">52.9</span></div></div><details><summary>6艇すべてのスコア</summary><div class="scores"><span class="chip">1号艇 奥村明日 74.4</span><span class="chip">4号艇 向井田真 55.8</span><span class="chip">3号艇 大石真央 52.9</span><span class="chip">2号艇 吉田彩乃 52.3</span><span class="chip">6号艇 倉持莉々 45.1</span><span class="chip">5号艇 長嶺真李 19.5</span></div></details><div class="formation"><div class="formation-title">3連単 1着固定＋相手流し・12点・1,200円</div><div class="formation-grid"><div><b>1着</b> 1</div><div><b>2着</b> 4・3・2・6・5</div><div><b>3着</b> 4・3・2・6・5</div></div><div class="combos">1-4-3 / 1-4-2 / 1-3-4 / 1-2-4 / 1-3-2 / 1-2-3 / 1-4-6 / 1-3-6 / 1-2-6 / 1-6-4 / 1-6-3 / 1-6-2</div></div></div>
     </article>
+    </div>
+      <div class="race-local-ai" hidden></div>
+    </div>
     
+    <div class="race-pair" data-race-id="20261013-12-10">
+      <div class="race-local-tabs" role="group" aria-label="住之江 10Rの予測切替">
+        <button type="button" class="race-local-tab active" data-local-view="normal" aria-pressed="true">通常予測</button>
+        <button type="button" class="race-local-tab" data-local-view="ai" aria-pressed="false">AI予測</button>
+      </div>
+      <div class="race-local-normal">
     <article class="race-card">
       <div class="race-head">
-        <div class="race-order">41</div>
+        <div class="race-order">37</div>
         <div class="race-main"><div class="deadline">19:23</div><div class="race-name">住之江 10R</div></div>
         <div class="race-status upcoming">締切前</div>
         <div class="badge-wrap"><div class="badge morning">朝</div></div>
@@ -1316,10 +1607,19 @@ body { background: var(--bg) !important; color: var(--text) !important; }\n.refr
       
       <div class="race-prediction-view" data-view="朝"><div class="top-picks"><div class="pick"><span class="mark">◎</span><span class="pick-name-wrap"><span class="pick-name">1号艇 飯山泰</span></span><span class="score">78.2</span></div><div class="pick"><span class="mark">○</span><span class="pick-name-wrap"><span class="pick-name">5号艇 佐藤大佑</span></span><span class="score">68.4</span></div><div class="pick"><span class="mark">▲</span><span class="pick-name-wrap"><span class="pick-name">6号艇 飯島昌弘</span></span><span class="score">49.8</span></div></div><details><summary>6艇すべてのスコア</summary><div class="scores"><span class="chip">1号艇 飯山泰 78.2</span><span class="chip">5号艇 佐藤大佑 68.4</span><span class="chip">6号艇 飯島昌弘 49.8</span><span class="chip">3号艇 大澤大夢 49.4</span><span class="chip">2号艇 船岡洋一 36.6</span><span class="chip">4号艇 中村真 17.6</span></div></details><div class="formation"><div class="formation-title">3連単 準軸・8点・800円</div><div class="formation-grid"><div><b>1着</b> 1・5</div><div><b>2着</b> 1・5・6</div><div><b>3着</b> 1・5・6・3</div></div><div class="combos">1-5-6 / 1-5-3 / 1-6-5 / 5-1-6 / 5-1-3 / 5-6-1 / 1-6-3 / 5-6-3</div></div></div>
     </article>
+    </div>
+      <div class="race-local-ai" hidden></div>
+    </div>
     
+    <div class="race-pair" data-race-id="20261013-19-05">
+      <div class="race-local-tabs" role="group" aria-label="下関 5Rの予測切替">
+        <button type="button" class="race-local-tab active" data-local-view="normal" aria-pressed="true">通常予測</button>
+        <button type="button" class="race-local-tab" data-local-view="ai" aria-pressed="false">AI予測</button>
+      </div>
+      <div class="race-local-normal">
     <article class="race-card">
       <div class="race-head">
-        <div class="race-order">42</div>
+        <div class="race-order">38</div>
         <div class="race-main"><div class="deadline">19:30</div><div class="race-name">下関 5R</div></div>
         <div class="race-status upcoming">締切前</div>
         <div class="badge-wrap"><div class="badge morning">朝</div></div>
@@ -1328,10 +1628,19 @@ body { background: var(--bg) !important; color: var(--text) !important; }\n.refr
       
       <div class="race-prediction-view" data-view="朝"><div class="top-picks"><div class="pick"><span class="mark">◎</span><span class="pick-name-wrap"><span class="pick-name">1号艇 大瀧明日</span></span><span class="score">89.5</span></div><div class="pick"><span class="mark">○</span><span class="pick-name-wrap"><span class="pick-name">4号艇 富永修一</span></span><span class="score">65.3</span></div><div class="pick"><span class="mark">▲</span><span class="pick-name-wrap"><span class="pick-name">3号艇 長尾京志</span></span><span class="score">50.8</span></div></div><details><summary>6艇すべてのスコア</summary><div class="scores"><span class="chip">1号艇 大瀧明日 89.5</span><span class="chip">4号艇 富永修一 65.3</span><span class="chip">3号艇 長尾京志 50.8</span><span class="chip">6号艇 石渡翔一 38.7</span><span class="chip">2号艇 池千夏 34.1</span><span class="chip">5号艇 森雄利 21.6</span></div></details><div class="formation"><div class="formation-title">3連単 1・2着固定＋3着流し・4点・400円</div><div class="formation-grid"><div><b>1着</b> 1</div><div><b>2着</b> 4</div><div><b>3着</b> 3・6・2・5</div></div><div class="combos">1-4-3 / 1-4-6 / 1-4-2 / 1-4-5</div></div></div>
     </article>
+    </div>
+      <div class="race-local-ai" hidden></div>
+    </div>
     
+    <div class="race-pair" data-race-id="20261013-15-10">
+      <div class="race-local-tabs" role="group" aria-label="丸亀 10Rの予測切替">
+        <button type="button" class="race-local-tab active" data-local-view="normal" aria-pressed="true">通常予測</button>
+        <button type="button" class="race-local-tab" data-local-view="ai" aria-pressed="false">AI予測</button>
+      </div>
+      <div class="race-local-normal">
     <article class="race-card">
       <div class="race-head">
-        <div class="race-order">43</div>
+        <div class="race-order">39</div>
         <div class="race-main"><div class="deadline">19:39</div><div class="race-name">丸亀 10R</div></div>
         <div class="race-status upcoming">締切前</div>
         <div class="badge-wrap"><div class="badge morning">朝</div></div>
@@ -1340,10 +1649,19 @@ body { background: var(--bg) !important; color: var(--text) !important; }\n.refr
       
       <div class="race-prediction-view" data-view="朝"><div class="top-picks"><div class="pick"><span class="mark">◎</span><span class="pick-name-wrap"><span class="pick-name">2号艇 金田諭</span></span><span class="score">79.0</span></div><div class="pick"><span class="mark">○</span><span class="pick-name-wrap"><span class="pick-name">1号艇 相原利章</span></span><span class="score">61.3</span></div><div class="pick"><span class="mark">▲</span><span class="pick-name-wrap"><span class="pick-name">4号艇 濱本優一</span></span><span class="score">58.9</span></div></div><details><summary>6艇すべてのスコア</summary><div class="scores"><span class="chip">2号艇 金田諭 79.0</span><span class="chip">1号艇 相原利章 61.3</span><span class="chip">4号艇 濱本優一 58.9</span><span class="chip">5号艇 上田隆章 44.3</span><span class="chip">3号艇 近藤稔也 35.5</span><span class="chip">6号艇 杉山太陽 21.0</span></div></details><div class="formation"><div class="formation-title">3連単 1着固定＋相手流し・12点・1,200円</div><div class="formation-grid"><div><b>1着</b> 2</div><div><b>2着</b> 1・4・5・3・6</div><div><b>3着</b> 1・4・5・3・6</div></div><div class="combos">2-1-4 / 2-4-1 / 2-1-5 / 2-4-5 / 2-5-1 / 2-1-3 / 2-5-4 / 2-4-3 / 2-3-1 / 2-1-6 / 2-3-4 / 2-4-6</div></div></div>
     </article>
+    </div>
+      <div class="race-local-ai" hidden></div>
+    </div>
     
+    <div class="race-pair" data-race-id="20261013-20-10">
+      <div class="race-local-tabs" role="group" aria-label="若松 10Rの予測切替">
+        <button type="button" class="race-local-tab active" data-local-view="normal" aria-pressed="true">通常予測</button>
+        <button type="button" class="race-local-tab" data-local-view="ai" aria-pressed="false">AI予測</button>
+      </div>
+      <div class="race-local-normal">
     <article class="race-card">
       <div class="race-head">
-        <div class="race-order">44</div>
+        <div class="race-order">40</div>
         <div class="race-main"><div class="deadline">19:48</div><div class="race-name">若松 10R</div></div>
         <div class="race-status upcoming">締切前</div>
         <div class="badge-wrap"><div class="badge morning">朝</div></div>
@@ -1352,10 +1670,19 @@ body { background: var(--bg) !important; color: var(--text) !important; }\n.refr
       
       <div class="race-prediction-view" data-view="朝"><div class="top-picks"><div class="pick"><span class="mark">◎</span><span class="pick-name-wrap"><span class="pick-name">1号艇 渡邉優美</span></span><span class="score">79.2</span></div><div class="pick"><span class="mark">○</span><span class="pick-name-wrap"><span class="pick-name">2号艇 中田夕貴</span></span><span class="score">68.8</span></div><div class="pick"><span class="mark">▲</span><span class="pick-name-wrap"><span class="pick-name">3号艇 野田彩加</span></span><span class="score">63.6</span></div></div><details><summary>6艇すべてのスコア</summary><div class="scores"><span class="chip">1号艇 渡邉優美 79.2</span><span class="chip">2号艇 中田夕貴 68.8</span><span class="chip">3号艇 野田彩加 63.6</span><span class="chip">6号艇 小林愛実 39.8</span><span class="chip">5号艇 村上奈穂 27.0</span><span class="chip">4号艇 山川波乙 21.6</span></div></details><div class="formation"><div class="formation-title">3連単 1着固定＋相手流し・12点・1,200円</div><div class="formation-grid"><div><b>1着</b> 1</div><div><b>2着</b> 2・3・6・5・4</div><div><b>3着</b> 2・3・6・5・4</div></div><div class="combos">1-2-3 / 1-3-2 / 1-2-6 / 1-3-6 / 1-2-5 / 1-6-2 / 1-2-4 / 1-6-3 / 1-3-5 / 1-3-4 / 1-5-2 / 1-5-3</div></div></div>
     </article>
+    </div>
+      <div class="race-local-ai" hidden></div>
+    </div>
     
+    <div class="race-pair" data-race-id="20261013-19-06">
+      <div class="race-local-tabs" role="group" aria-label="下関 6Rの予測切替">
+        <button type="button" class="race-local-tab active" data-local-view="normal" aria-pressed="true">通常予測</button>
+        <button type="button" class="race-local-tab" data-local-view="ai" aria-pressed="false">AI予測</button>
+      </div>
+      <div class="race-local-normal">
     <article class="race-card">
       <div class="race-head">
-        <div class="race-order">45</div>
+        <div class="race-order">41</div>
         <div class="race-main"><div class="deadline">19:56</div><div class="race-name">下関 6R</div></div>
         <div class="race-status upcoming">締切前</div>
         <div class="badge-wrap"><div class="badge morning">朝</div></div>
@@ -1364,10 +1691,19 @@ body { background: var(--bg) !important; color: var(--text) !important; }\n.refr
       
       <div class="race-prediction-view" data-view="朝"><div class="top-picks"><div class="pick"><span class="mark">◎</span><span class="pick-name-wrap"><span class="pick-name">1号艇 横澤剛治</span></span><span class="score">78.3</span></div><div class="pick"><span class="mark">○</span><span class="pick-name-wrap"><span class="pick-name">5号艇 井上忠政</span></span><span class="score">77.3</span></div><div class="pick"><span class="mark">▲</span><span class="pick-name-wrap"><span class="pick-name">6号艇 前田翔</span></span><span class="score">52.1</span></div></div><details><summary>6艇すべてのスコア</summary><div class="scores"><span class="chip">1号艇 横澤剛治 78.3</span><span class="chip">5号艇 井上忠政 77.3</span><span class="chip">6号艇 前田翔 52.1</span><span class="chip">3号艇 守屋大地 47.1</span><span class="chip">2号艇 井上未都 41.6</span><span class="chip">4号艇 赤松咲香 3.6</span></div></details><div class="formation"><div class="formation-title">3連単 1・2着折返し＋3着流し・8点・800円</div><div class="formation-grid"><div><b>1着</b> 1・5</div><div><b>2着</b> 1・5</div><div><b>3着</b> 6・3・2・4</div></div><div class="combos">1-5-6 / 1-5-3 / 1-5-2 / 1-5-4 / 5-1-6 / 5-1-3 / 5-1-2 / 5-1-4</div></div></div>
     </article>
+    </div>
+      <div class="race-local-ai" hidden></div>
+    </div>
     
+    <div class="race-pair" data-race-id="20261013-12-11">
+      <div class="race-local-tabs" role="group" aria-label="住之江 11Rの予測切替">
+        <button type="button" class="race-local-tab active" data-local-view="normal" aria-pressed="true">通常予測</button>
+        <button type="button" class="race-local-tab" data-local-view="ai" aria-pressed="false">AI予測</button>
+      </div>
+      <div class="race-local-normal">
     <article class="race-card">
       <div class="race-head">
-        <div class="race-order">46</div>
+        <div class="race-order">42</div>
         <div class="race-main"><div class="deadline">20:03</div><div class="race-name">住之江 11R</div></div>
         <div class="race-status upcoming">締切前</div>
         <div class="badge-wrap"><div class="badge morning">朝</div></div>
@@ -1376,10 +1712,19 @@ body { background: var(--bg) !important; color: var(--text) !important; }\n.refr
       
       <div class="race-prediction-view" data-view="朝"><div class="top-picks"><div class="pick"><span class="mark">◎</span><span class="pick-name-wrap"><span class="pick-name">2号艇 高野哲史</span></span><span class="score">76.0</span></div><div class="pick"><span class="mark">○</span><span class="pick-name-wrap"><span class="pick-name">1号艇 鶴本崇文</span></span><span class="score">64.5</span></div><div class="pick"><span class="mark">▲</span><span class="pick-name-wrap"><span class="pick-name">5号艇 春園功太</span></span><span class="score">50.9</span></div></div><details><summary>6艇すべてのスコア</summary><div class="scores"><span class="chip">2号艇 高野哲史 76.0</span><span class="chip">1号艇 鶴本崇文 64.5</span><span class="chip">5号艇 春園功太 50.9</span><span class="chip">3号艇 鈴木唯央 38.1</span><span class="chip">6号艇 森智也 37.1</span><span class="chip">4号艇 野長瀬正 33.4</span></div></details><div class="formation"><div class="formation-title">3連単 1・2着固定＋3着流し・4点・400円</div><div class="formation-grid"><div><b>1着</b> 2</div><div><b>2着</b> 1</div><div><b>3着</b> 5・3・6・4</div></div><div class="combos">2-1-5 / 2-1-3 / 2-1-6 / 2-1-4</div></div></div>
     </article>
+    </div>
+      <div class="race-local-ai" hidden></div>
+    </div>
     
+    <div class="race-pair" data-race-id="20261013-15-11">
+      <div class="race-local-tabs" role="group" aria-label="丸亀 11Rの予測切替">
+        <button type="button" class="race-local-tab active" data-local-view="normal" aria-pressed="true">通常予測</button>
+        <button type="button" class="race-local-tab" data-local-view="ai" aria-pressed="false">AI予測</button>
+      </div>
+      <div class="race-local-normal">
     <article class="race-card">
       <div class="race-head">
-        <div class="race-order">47</div>
+        <div class="race-order">43</div>
         <div class="race-main"><div class="deadline">20:10</div><div class="race-name">丸亀 11R</div></div>
         <div class="race-status upcoming">締切前</div>
         <div class="badge-wrap"><div class="badge morning">朝</div></div>
@@ -1388,10 +1733,19 @@ body { background: var(--bg) !important; color: var(--text) !important; }\n.refr
       
       <div class="race-prediction-view" data-view="朝"><div class="top-picks"><div class="pick"><span class="mark">◎</span><span class="pick-name-wrap"><span class="pick-name">1号艇 佐藤大介</span></span><span class="score">86.3</span></div><div class="pick"><span class="mark">○</span><span class="pick-name-wrap"><span class="pick-name">2号艇 枝尾賢</span></span><span class="score">68.8</span></div><div class="pick"><span class="mark">▲</span><span class="pick-name-wrap"><span class="pick-name">6号艇 中澤和志</span></span><span class="score">58.2</span></div></div><details><summary>6艇すべてのスコア</summary><div class="scores"><span class="chip">1号艇 佐藤大介 86.3</span><span class="chip">2号艇 枝尾賢 68.8</span><span class="chip">6号艇 中澤和志 58.2</span><span class="chip">3号艇 平見真彦 43.6</span><span class="chip">4号艇 藤田俊祐 31.8</span><span class="chip">5号艇 正木聖賢 11.3</span></div></details><div class="formation"><div class="formation-title">3連単 1・2着固定＋3着流し・4点・400円</div><div class="formation-grid"><div><b>1着</b> 1</div><div><b>2着</b> 2</div><div><b>3着</b> 6・3・4・5</div></div><div class="combos">1-2-6 / 1-2-3 / 1-2-4 / 1-2-5</div></div></div>
     </article>
+    </div>
+      <div class="race-local-ai" hidden></div>
+    </div>
     
+    <div class="race-pair" data-race-id="20261013-20-11">
+      <div class="race-local-tabs" role="group" aria-label="若松 11Rの予測切替">
+        <button type="button" class="race-local-tab active" data-local-view="normal" aria-pressed="true">通常予測</button>
+        <button type="button" class="race-local-tab" data-local-view="ai" aria-pressed="false">AI予測</button>
+      </div>
+      <div class="race-local-normal">
     <article class="race-card">
       <div class="race-head">
-        <div class="race-order">48</div>
+        <div class="race-order">44</div>
         <div class="race-main"><div class="deadline">20:17</div><div class="race-name">若松 11R</div></div>
         <div class="race-status upcoming">締切前</div>
         <div class="badge-wrap"><div class="badge morning">朝</div></div>
@@ -1400,10 +1754,19 @@ body { background: var(--bg) !important; color: var(--text) !important; }\n.refr
       
       <div class="race-prediction-view" data-view="朝"><div class="top-picks"><div class="pick"><span class="mark">◎</span><span class="pick-name-wrap"><span class="pick-name">1号艇 大山千広</span></span><span class="score">89.2</span></div><div class="pick"><span class="mark">○</span><span class="pick-name-wrap"><span class="pick-name">3号艇 今井美亜</span></span><span class="score">68.4</span></div><div class="pick"><span class="mark">▲</span><span class="pick-name-wrap"><span class="pick-name">2号艇 三嶌さら</span></span><span class="score">48.1</span></div></div><details><summary>6艇すべてのスコア</summary><div class="scores"><span class="chip">1号艇 大山千広 89.2</span><span class="chip">3号艇 今井美亜 68.4</span><span class="chip">2号艇 三嶌さら 48.1</span><span class="chip">4号艇 川井萌 34.7</span><span class="chip">5号艇 赤井星璃 31.7</span><span class="chip">6号艇 樋口由加 27.9</span></div></details><div class="formation"><div class="formation-title">3連単 1・2着固定＋3着流し・4点・400円</div><div class="formation-grid"><div><b>1着</b> 1</div><div><b>2着</b> 3</div><div><b>3着</b> 2・4・5・6</div></div><div class="combos">1-3-2 / 1-3-4 / 1-3-5 / 1-3-6</div></div></div>
     </article>
+    </div>
+      <div class="race-local-ai" hidden></div>
+    </div>
     
+    <div class="race-pair" data-race-id="20261013-19-07">
+      <div class="race-local-tabs" role="group" aria-label="下関 7Rの予測切替">
+        <button type="button" class="race-local-tab active" data-local-view="normal" aria-pressed="true">通常予測</button>
+        <button type="button" class="race-local-tab" data-local-view="ai" aria-pressed="false">AI予測</button>
+      </div>
+      <div class="race-local-normal">
     <article class="race-card">
       <div class="race-head">
-        <div class="race-order">49</div>
+        <div class="race-order">45</div>
         <div class="race-main"><div class="deadline">20:25</div><div class="race-name">下関 7R</div></div>
         <div class="race-status upcoming">締切前</div>
         <div class="badge-wrap"><div class="badge morning">朝</div></div>
@@ -1412,10 +1775,19 @@ body { background: var(--bg) !important; color: var(--text) !important; }\n.refr
       
       <div class="race-prediction-view" data-view="朝"><div class="top-picks"><div class="pick"><span class="mark">◎</span><span class="pick-name-wrap"><span class="pick-name">1号艇 小林文彦</span></span><span class="score">78.2</span></div><div class="pick"><span class="mark">○</span><span class="pick-name-wrap"><span class="pick-name">3号艇 野間大樹</span></span><span class="score">56.2</span></div><div class="pick"><span class="mark">▲</span><span class="pick-name-wrap"><span class="pick-name">5号艇 峰重力也</span></span><span class="score">48.3</span></div></div><details><summary>6艇すべてのスコア</summary><div class="scores"><span class="chip">1号艇 小林文彦 78.2</span><span class="chip">3号艇 野間大樹 56.2</span><span class="chip">5号艇 峰重力也 48.3</span><span class="chip">4号艇 川崎誠志 47.5</span><span class="chip">6号艇 仲航太 46.7</span><span class="chip">2号艇 北川敏弘 23.1</span></div></details><div class="formation"><div class="formation-title">3連単 1着固定＋相手流し・12点・1,200円</div><div class="formation-grid"><div><b>1着</b> 1</div><div><b>2着</b> 3・5・4・6・2</div><div><b>3着</b> 3・5・4・6・2</div></div><div class="combos">1-3-5 / 1-3-4 / 1-3-6 / 1-5-3 / 1-4-3 / 1-6-3 / 1-5-4 / 1-4-5 / 1-5-6 / 1-6-5 / 1-4-6 / 1-6-4</div></div></div>
     </article>
+    </div>
+      <div class="race-local-ai" hidden></div>
+    </div>
     
+    <div class="race-pair" data-race-id="20261013-12-12">
+      <div class="race-local-tabs" role="group" aria-label="住之江 12Rの予測切替">
+        <button type="button" class="race-local-tab active" data-local-view="normal" aria-pressed="true">通常予測</button>
+        <button type="button" class="race-local-tab" data-local-view="ai" aria-pressed="false">AI予測</button>
+      </div>
+      <div class="race-local-normal">
     <article class="race-card">
       <div class="race-head">
-        <div class="race-order">50</div>
+        <div class="race-order">46</div>
         <div class="race-main"><div class="deadline">20:31</div><div class="race-name">住之江 12R</div></div>
         <div class="race-status upcoming">締切前</div>
         <div class="badge-wrap"><div class="badge morning">朝</div></div>
@@ -1424,10 +1796,19 @@ body { background: var(--bg) !important; color: var(--text) !important; }\n.refr
       
       <div class="race-prediction-view" data-view="朝"><div class="top-picks"><div class="pick"><span class="mark">◎</span><span class="pick-name-wrap"><span class="pick-name">1号艇 渋谷明憲</span></span><span class="score">88.1</span></div><div class="pick"><span class="mark">○</span><span class="pick-name-wrap"><span class="pick-name">4号艇 竹田和哉</span></span><span class="score">76.6</span></div><div class="pick"><span class="mark">▲</span><span class="pick-name-wrap"><span class="pick-name">2号艇 杉山正樹</span></span><span class="score">56.1</span></div></div><details><summary>6艇すべてのスコア</summary><div class="scores"><span class="chip">1号艇 渋谷明憲 88.1</span><span class="chip">4号艇 竹田和哉 76.6</span><span class="chip">2号艇 杉山正樹 56.1</span><span class="chip">5号艇 籾山佳岳 37.4</span><span class="chip">3号艇 村岡賢 26.8</span><span class="chip">6号艇 三好勇人 15.0</span></div></details><div class="formation"><div class="formation-title">3連単 1・2着固定＋3着流し・4点・400円</div><div class="formation-grid"><div><b>1着</b> 1</div><div><b>2着</b> 4</div><div><b>3着</b> 2・5・3・6</div></div><div class="combos">1-4-2 / 1-4-5 / 1-4-3 / 1-4-6</div></div></div>
     </article>
+    </div>
+      <div class="race-local-ai" hidden></div>
+    </div>
     
+    <div class="race-pair" data-race-id="20261013-15-12">
+      <div class="race-local-tabs" role="group" aria-label="丸亀 12Rの予測切替">
+        <button type="button" class="race-local-tab active" data-local-view="normal" aria-pressed="true">通常予測</button>
+        <button type="button" class="race-local-tab" data-local-view="ai" aria-pressed="false">AI予測</button>
+      </div>
+      <div class="race-local-normal">
     <article class="race-card">
       <div class="race-head">
-        <div class="race-order">51</div>
+        <div class="race-order">47</div>
         <div class="race-main"><div class="deadline">20:38</div><div class="race-name">丸亀 12R</div></div>
         <div class="race-status upcoming">締切前</div>
         <div class="badge-wrap"><div class="badge morning">朝</div></div>
@@ -1436,10 +1817,19 @@ body { background: var(--bg) !important; color: var(--text) !important; }\n.refr
       
       <div class="race-prediction-view" data-view="朝"><div class="top-picks"><div class="pick"><span class="mark">◎</span><span class="pick-name-wrap"><span class="pick-name">1号艇 深井利寿</span></span><span class="score">82.4</span></div><div class="pick"><span class="mark">○</span><span class="pick-name-wrap"><span class="pick-name">3号艇 谷川祐一</span></span><span class="score">54.3</span></div><div class="pick"><span class="mark">▲</span><span class="pick-name-wrap"><span class="pick-name">2号艇 古川誠之</span></span><span class="score">48.8</span></div></div><details><summary>6艇すべてのスコア</summary><div class="scores"><span class="chip">1号艇 深井利寿 82.4</span><span class="chip">3号艇 谷川祐一 54.3</span><span class="chip">2号艇 古川誠之 48.8</span><span class="chip">4号艇 柴田大輔 45.0</span><span class="chip">6号艇 太田和美 41.3</span><span class="chip">5号艇 秋山広一 28.2</span></div></details><div class="formation"><div class="formation-title">3連単 1着固定＋相手流し・12点・1,200円</div><div class="formation-grid"><div><b>1着</b> 1</div><div><b>2着</b> 3・2・4・6・5</div><div><b>3着</b> 3・2・4・6・5</div></div><div class="combos">1-3-2 / 1-2-3 / 1-3-4 / 1-3-6 / 1-4-3 / 1-2-4 / 1-4-2 / 1-6-3 / 1-2-6 / 1-6-2 / 1-3-5 / 1-4-6</div></div></div>
     </article>
+    </div>
+      <div class="race-local-ai" hidden></div>
+    </div>
     
+    <div class="race-pair" data-race-id="20261013-20-12">
+      <div class="race-local-tabs" role="group" aria-label="若松 12Rの予測切替">
+        <button type="button" class="race-local-tab active" data-local-view="normal" aria-pressed="true">通常予測</button>
+        <button type="button" class="race-local-tab" data-local-view="ai" aria-pressed="false">AI予測</button>
+      </div>
+      <div class="race-local-normal">
     <article class="race-card">
       <div class="race-head">
-        <div class="race-order">52</div>
+        <div class="race-order">48</div>
         <div class="race-main"><div class="deadline">20:45</div><div class="race-name">若松 12R</div></div>
         <div class="race-status upcoming">締切前</div>
         <div class="badge-wrap"><div class="badge morning">朝</div></div>
@@ -1448,10 +1838,19 @@ body { background: var(--bg) !important; color: var(--text) !important; }\n.refr
       
       <div class="race-prediction-view" data-view="朝"><div class="top-picks"><div class="pick"><span class="mark">◎</span><span class="pick-name-wrap"><span class="pick-name">1号艇 川野芽唯</span></span><span class="score">89.3</span></div><div class="pick"><span class="mark">○</span><span class="pick-name-wrap"><span class="pick-name">3号艇 米丸乃絵</span></span><span class="score">63.8</span></div><div class="pick"><span class="mark">▲</span><span class="pick-name-wrap"><span class="pick-name">2号艇 守屋美穂</span></span><span class="score">53.8</span></div></div><details><summary>6艇すべてのスコア</summary><div class="scores"><span class="chip">1号艇 川野芽唯 89.3</span><span class="chip">3号艇 米丸乃絵 63.8</span><span class="chip">2号艇 守屋美穂 53.8</span><span class="chip">4号艇 堀之内紀 45.1</span><span class="chip">5号艇 内山七海 24.9</span><span class="chip">6号艇 関野文 23.1</span></div></details><div class="formation"><div class="formation-title">3連単 1・2着固定＋3着流し・4点・400円</div><div class="formation-grid"><div><b>1着</b> 1</div><div><b>2着</b> 3</div><div><b>3着</b> 2・4・5・6</div></div><div class="combos">1-3-2 / 1-3-4 / 1-3-5 / 1-3-6</div></div></div>
     </article>
+    </div>
+      <div class="race-local-ai" hidden></div>
+    </div>
     
+    <div class="race-pair" data-race-id="20261013-19-08">
+      <div class="race-local-tabs" role="group" aria-label="下関 8Rの予測切替">
+        <button type="button" class="race-local-tab active" data-local-view="normal" aria-pressed="true">通常予測</button>
+        <button type="button" class="race-local-tab" data-local-view="ai" aria-pressed="false">AI予測</button>
+      </div>
+      <div class="race-local-normal">
     <article class="race-card">
       <div class="race-head">
-        <div class="race-order">53</div>
+        <div class="race-order">49</div>
         <div class="race-main"><div class="deadline">20:59</div><div class="race-name">下関 8R</div></div>
         <div class="race-status upcoming">締切前</div>
         <div class="badge-wrap"><div class="badge morning">朝</div></div>
@@ -1460,10 +1859,19 @@ body { background: var(--bg) !important; color: var(--text) !important; }\n.refr
       
       <div class="race-prediction-view" data-view="朝"><div class="top-picks"><div class="pick"><span class="mark">◎</span><span class="pick-name-wrap"><span class="pick-name">1号艇 黒柳浩孝</span></span><span class="score">70.6</span></div><div class="pick"><span class="mark">○</span><span class="pick-name-wrap"><span class="pick-name">2号艇 品田直樹</span></span><span class="score">66.2</span></div><div class="pick"><span class="mark">▲</span><span class="pick-name-wrap"><span class="pick-name">3号艇 上原健次</span></span><span class="score">66.0</span></div></div><details><summary>6艇すべてのスコア</summary><div class="scores"><span class="chip">1号艇 黒柳浩孝 70.6</span><span class="chip">2号艇 品田直樹 66.2</span><span class="chip">3号艇 上原健次 66.0</span><span class="chip">6号艇 中越博紀 34.6</span><span class="chip">5号艇 澁川夏 33.9</span><span class="chip">4号艇 鹿島敏弘 28.7</span></div></details><div class="formation"><div class="formation-title">3連単 混戦・12点・1,200円</div><div class="formation-grid"><div><b>1着</b> 1・2</div><div><b>2着</b> 1・2・3・6</div><div><b>3着</b> 1・2・3・6・5</div></div><div class="combos">1-2-3 / 1-3-2 / 2-1-3 / 2-3-1 / 1-2-6 / 1-3-6 / 1-2-5 / 1-3-5 / 2-1-6 / 2-1-5 / 2-3-6 / 2-3-5</div></div></div>
     </article>
+    </div>
+      <div class="race-local-ai" hidden></div>
+    </div>
     
+    <div class="race-pair" data-race-id="20261013-19-09">
+      <div class="race-local-tabs" role="group" aria-label="下関 9Rの予測切替">
+        <button type="button" class="race-local-tab active" data-local-view="normal" aria-pressed="true">通常予測</button>
+        <button type="button" class="race-local-tab" data-local-view="ai" aria-pressed="false">AI予測</button>
+      </div>
+      <div class="race-local-normal">
     <article class="race-card">
       <div class="race-head">
-        <div class="race-order">54</div>
+        <div class="race-order">50</div>
         <div class="race-main"><div class="deadline">21:25</div><div class="race-name">下関 9R</div></div>
         <div class="race-status upcoming">締切前</div>
         <div class="badge-wrap"><div class="badge morning">朝</div></div>
@@ -1472,10 +1880,19 @@ body { background: var(--bg) !important; color: var(--text) !important; }\n.refr
       
       <div class="race-prediction-view" data-view="朝"><div class="top-picks"><div class="pick"><span class="mark">◎</span><span class="pick-name-wrap"><span class="pick-name">3号艇 佐々木完</span></span><span class="score">78.4</span></div><div class="pick"><span class="mark">○</span><span class="pick-name-wrap"><span class="pick-name">2号艇 菊地孝平</span></span><span class="score">60.3</span></div><div class="pick"><span class="mark">▲</span><span class="pick-name-wrap"><span class="pick-name">4号艇 水谷理人</span></span><span class="score">51.5</span></div></div><details><summary>6艇すべてのスコア</summary><div class="scores"><span class="chip">3号艇 佐々木完 78.4</span><span class="chip">2号艇 菊地孝平 60.3</span><span class="chip">4号艇 水谷理人 51.5</span><span class="chip">1号艇 田中堅 43.3</span><span class="chip">6号艇 大瀧明日 37.5</span><span class="chip">5号艇 松田憲幸 29.0</span></div></details><div class="formation"><div class="formation-title">3連単 1着固定＋相手流し・12点・1,200円</div><div class="formation-grid"><div><b>1着</b> 3</div><div><b>2着</b> 2・4・1・6・5</div><div><b>3着</b> 2・4・1・6・5</div></div><div class="combos">3-2-4 / 3-4-2 / 3-2-1 / 3-2-6 / 3-1-2 / 3-4-1 / 3-2-5 / 3-6-2 / 3-1-4 / 3-4-6 / 3-6-4 / 3-4-5</div></div></div>
     </article>
+    </div>
+      <div class="race-local-ai" hidden></div>
+    </div>
     
+    <div class="race-pair" data-race-id="20261013-19-10">
+      <div class="race-local-tabs" role="group" aria-label="下関 10Rの予測切替">
+        <button type="button" class="race-local-tab active" data-local-view="normal" aria-pressed="true">通常予測</button>
+        <button type="button" class="race-local-tab" data-local-view="ai" aria-pressed="false">AI予測</button>
+      </div>
+      <div class="race-local-normal">
     <article class="race-card">
       <div class="race-head">
-        <div class="race-order">55</div>
+        <div class="race-order">51</div>
         <div class="race-main"><div class="deadline">21:51</div><div class="race-name">下関 10R</div></div>
         <div class="race-status upcoming">締切前</div>
         <div class="badge-wrap"><div class="badge morning">朝</div></div>
@@ -1484,10 +1901,19 @@ body { background: var(--bg) !important; color: var(--text) !important; }\n.refr
       
       <div class="race-prediction-view" data-view="朝"><div class="top-picks"><div class="pick"><span class="mark">◎</span><span class="pick-name-wrap"><span class="pick-name">1号艇 前田翔</span></span><span class="score">86.5</span></div><div class="pick"><span class="mark">○</span><span class="pick-name-wrap"><span class="pick-name">2号艇 井上忠政</span></span><span class="score">70.6</span></div><div class="pick"><span class="mark">▲</span><span class="pick-name-wrap"><span class="pick-name">4号艇 渡邉翼</span></span><span class="score">43.6</span></div></div><details><summary>6艇すべてのスコア</summary><div class="scores"><span class="chip">1号艇 前田翔 86.5</span><span class="chip">2号艇 井上忠政 70.6</span><span class="chip">4号艇 渡邉翼 43.6</span><span class="chip">5号艇 横川聖志 42.1</span><span class="chip">3号艇 藤丸光一 35.0</span><span class="chip">6号艇 藤井徹 22.2</span></div></details><div class="formation"><div class="formation-title">3連単 1・2着固定＋3着流し・4点・400円</div><div class="formation-grid"><div><b>1着</b> 1</div><div><b>2着</b> 2</div><div><b>3着</b> 4・5・3・6</div></div><div class="combos">1-2-4 / 1-2-5 / 1-2-3 / 1-2-6</div></div></div>
     </article>
+    </div>
+      <div class="race-local-ai" hidden></div>
+    </div>
     
+    <div class="race-pair" data-race-id="20261013-19-11">
+      <div class="race-local-tabs" role="group" aria-label="下関 11Rの予測切替">
+        <button type="button" class="race-local-tab active" data-local-view="normal" aria-pressed="true">通常予測</button>
+        <button type="button" class="race-local-tab" data-local-view="ai" aria-pressed="false">AI予測</button>
+      </div>
+      <div class="race-local-normal">
     <article class="race-card">
       <div class="race-head">
-        <div class="race-order">56</div>
+        <div class="race-order">52</div>
         <div class="race-main"><div class="deadline">22:20</div><div class="race-name">下関 11R</div></div>
         <div class="race-status upcoming">締切前</div>
         <div class="badge-wrap"><div class="badge morning">朝</div></div>
@@ -1496,10 +1922,19 @@ body { background: var(--bg) !important; color: var(--text) !important; }\n.refr
       
       <div class="race-prediction-view" data-view="朝"><div class="top-picks"><div class="pick"><span class="mark">◎</span><span class="pick-name-wrap"><span class="pick-name">1号艇 宮地元輝</span></span><span class="score">85.2</span></div><div class="pick"><span class="mark">○</span><span class="pick-name-wrap"><span class="pick-name">2号艇 妹尾忠幸</span></span><span class="score">70.2</span></div><div class="pick"><span class="mark">▲</span><span class="pick-name-wrap"><span class="pick-name">6号艇 横澤剛治</span></span><span class="score">59.6</span></div></div><details><summary>6艇すべてのスコア</summary><div class="scores"><span class="chip">1号艇 宮地元輝 85.2</span><span class="chip">2号艇 妹尾忠幸 70.2</span><span class="chip">6号艇 横澤剛治 59.6</span><span class="chip">4号艇 野間大樹 34.8</span><span class="chip">3号艇 妻鳥晋也 32.4</span><span class="chip">5号艇 井上未都 17.8</span></div></details><div class="formation"><div class="formation-title">3連単 1・2着固定＋3着流し・4点・400円</div><div class="formation-grid"><div><b>1着</b> 1</div><div><b>2着</b> 2</div><div><b>3着</b> 6・4・3・5</div></div><div class="combos">1-2-6 / 1-2-4 / 1-2-3 / 1-2-5</div></div></div>
     </article>
+    </div>
+      <div class="race-local-ai" hidden></div>
+    </div>
     
+    <div class="race-pair" data-race-id="20261013-19-12">
+      <div class="race-local-tabs" role="group" aria-label="下関 12Rの予測切替">
+        <button type="button" class="race-local-tab active" data-local-view="normal" aria-pressed="true">通常予測</button>
+        <button type="button" class="race-local-tab" data-local-view="ai" aria-pressed="false">AI予測</button>
+      </div>
+      <div class="race-local-normal">
     <article class="race-card">
       <div class="race-head">
-        <div class="race-order">57</div>
+        <div class="race-order">53</div>
         <div class="race-main"><div class="deadline">22:45</div><div class="race-name">下関 12R</div></div>
         <div class="race-status upcoming">締切前</div>
         <div class="badge-wrap"><div class="badge morning">朝</div></div>
@@ -1508,113 +1943,16 @@ body { background: var(--bg) !important; color: var(--text) !important; }\n.refr
       
       <div class="race-prediction-view" data-view="朝"><div class="top-picks"><div class="pick"><span class="mark">◎</span><span class="pick-name-wrap"><span class="pick-name">1号艇 富永修一</span></span><span class="score">79.8</span></div><div class="pick"><span class="mark">○</span><span class="pick-name-wrap"><span class="pick-name">3号艇 小林文彦</span></span><span class="score">55.4</span></div><div class="pick"><span class="mark">▲</span><span class="pick-name-wrap"><span class="pick-name">2号艇 峰重力也</span></span><span class="score">51.6</span></div></div><details><summary>6艇すべてのスコア</summary><div class="scores"><span class="chip">1号艇 富永修一 79.8</span><span class="chip">3号艇 小林文彦 55.4</span><span class="chip">2号艇 峰重力也 51.6</span><span class="chip">4号艇 木場悠介 41.6</span><span class="chip">5号艇 品田直樹 37.1</span><span class="chip">6号艇 上原健次 34.5</span></div></details><div class="formation"><div class="formation-title">3連単 1着固定＋相手流し・12点・1,200円</div><div class="formation-grid"><div><b>1着</b> 1</div><div><b>2着</b> 3・2・4・5・6</div><div><b>3着</b> 3・2・4・5・6</div></div><div class="combos">1-3-2 / 1-2-3 / 1-3-4 / 1-3-5 / 1-2-4 / 1-4-3 / 1-3-6 / 1-2-5 / 1-4-2 / 1-2-6 / 1-5-3 / 1-5-2</div></div></div>
     </article>
+    </div>
+      <div class="race-local-ai" hidden></div>
+    </div>
     
     </div>
-    <div id="aiPredictionPanel" class="prediction-panel">
+    <template id="aiPredictionTemplates">
       
-        <article class="race-card">
-          <div class="race-head">
-            <div class="race-order">1</div>
-            <div class="race-main">
-              <div class="deadline">15:25</div>
-              <div class="race-name">若松 1R<span class="fujin-raijin-stack" title="風神雷神シグナル"><span class="signal-row raijin" title="雷神シグナル 2/3｜最大上昇 +14.3｜2号艇 +8.1 / 4号艇 +14.3｜通常予測には未反映・シグナルAI再評価に使用">⚡⚡</span><span class="signal-row fujin empty-signal">&nbsp;</span></span></div>
-            </div>
-            <div class="badge live">シグナルAI</div>
-          </div>
-          <div class="formation-title">6艇のシグナルAI再評価</div>
-          <div class="ai-note">通常予測は変更せず、F0R2専用補正で6艇を再評価しています。</div>
-          <div class="ai-table-wrap">
-            <table class="ai-table signal-ai-table">
-              <thead><tr><th>艇</th><th>通常</th><th>補正</th><th>補正後</th><th>順位</th></tr></thead>
-              <tbody><tr><td>1号艇 間庭菜摘</td><td>82.2</td><td>0.0</td><td>82.2</td><td>1位</td></tr><tr><td>2号艇 山川波乙</td><td>49.7</td><td>14.1</td><td>63.8</td><td>3位</td></tr><tr><td>3号艇 樋口由加</td><td>70.7</td><td>0.0</td><td>70.7</td><td>2位</td></tr><tr><td>4号艇 野田亜湖</td><td>30.6</td><td>25.1</td><td>55.7</td><td>5位</td></tr><tr><td>5号艇 大久保佑</td><td>58.4</td><td>0.0</td><td>58.4</td><td>4位</td></tr><tr><td>6号艇 南彩寧</td><td>33.6</td><td>0.0</td><td>33.6</td><td>6位</td></tr></tbody>
-            </table>
-          </div>
-          <div class="formation-title signal-ai-purchase-title">シグナル専用3連単予測・上位24点（検証用・各100円／計2,400円）</div>
-          <div class="ai-note">風神雷神の補正後スコアで評価した24点です。通常予測の買い目とは別集計です。</div>
-          <div class="ai-combos signal-ai-purchase-list" aria-label="シグナル専用3連単上位24点"><div class="ai-combo"><b>1位 1-3-2</b><span>AI評価 75.1点</span></div><div class="ai-combo"><b>2位 1-2-3</b><span>AI評価 74.4点</span></div><div class="ai-combo"><b>3位 1-3-5</b><span>AI評価 74.0点</span></div><div class="ai-combo"><b>4位 1-3-4</b><span>AI評価 73.4点</span></div><div class="ai-combo"><b>5位 3-1-2</b><span>AI評価 72.8点</span></div><div class="ai-combo"><b>6位 1-5-3</b><span>AI評価 72.7点</span></div><div class="ai-combo"><b>7位 1-4-3</b><span>AI評価 71.9点</span></div><div class="ai-combo"><b>8位 1-2-5</b><span>AI評価 71.9点</span></div><div class="ai-combo"><b>9位 3-1-5</b><span>AI評価 71.7点</span></div><div class="ai-combo"><b>10位 1-2-4</b><span>AI評価 71.4点</span></div><div class="ai-combo"><b>11位 1-5-2</b><span>AI評価 71.4点</span></div><div class="ai-combo"><b>12位 3-1-4</b><span>AI評価 71.2点</span></div><div class="ai-combo"><b>13位 3-2-1</b><span>AI評価 70.9点</span></div><div class="ai-combo"><b>14位 2-1-3</b><span>AI評価 70.7点</span></div><div class="ai-combo"><b>15位 1-4-2</b><span>AI評価 70.6点</span></div><div class="ai-combo"><b>16位 1-5-4</b><span>AI評価 69.7点</span></div><div class="ai-combo"><b>17位 2-3-1</b><span>AI評価 69.6点</span></div><div class="ai-combo"><b>18位 1-4-5</b><span>AI評価 69.5点</span></div><div class="ai-combo"><b>19位 3-5-1</b><span>AI評価 69.3点</span></div><div class="ai-combo"><b>20位 1-3-6</b><span>AI評価 69.0点</span></div><div class="ai-combo"><b>21位 3-4-1</b><span>AI評価 68.5点</span></div><div class="ai-combo"><b>22位 2-1-5</b><span>AI評価 68.2点</span></div><div class="ai-combo"><b>23位 5-1-3</b><span>AI評価 68.0点</span></div><div class="ai-combo"><b>24位 2-1-4</b><span>AI評価 67.7点</span></div></div>
-          <details class="ai-combo-details">
-            <summary>参考順位25〜50位を見る（購入対象外）</summary>
-            <div class="ai-combos"><div class="ai-combo"><b>25位 1-2-6</b><span>AI評価 66.9点</span></div><div class="ai-combo"><b>26位 5-3-1</b><span>AI評価 66.8点</span></div><div class="ai-combo"><b>27位 3-1-6</b><span>AI評価 66.7点</span></div><div class="ai-combo"><b>28位 4-1-3</b><span>AI評価 66.7点</span></div><div class="ai-combo"><b>29位 5-1-2</b><span>AI評価 66.6点</span></div><div class="ai-combo"><b>30位 3-2-5</b><span>AI評価 66.2点</span></div><div class="ai-combo"><b>31位 2-5-1</b><span>AI評価 65.9点</span></div><div class="ai-combo"><b>32位 3-2-4</b><span>AI評価 65.7点</span></div><div class="ai-combo"><b>33位 3-5-2</b><span>AI評価 65.6点</span></div><div class="ai-combo"><b>34位 4-3-1</b><span>AI評価 65.5点</span></div><div class="ai-combo"><b>35位 1-5-6</b><span>AI評価 65.3点</span></div><div class="ai-combo"><b>36位 1-6-3</b><span>AI評価 65.3点</span></div><div class="ai-combo"><b>37位 4-1-2</b><span>AI評価 65.3点</span></div><div class="ai-combo"><b>38位 2-4-1</b><span>AI評価 65.1点</span></div><div class="ai-combo"><b>39位 5-1-4</b><span>AI評価 65.0点</span></div><div class="ai-combo"><b>40位 3-4-2</b><span>AI評価 64.8点</span></div><div class="ai-combo"><b>41位 2-3-5</b><span>AI評価 64.8点</span></div><div class="ai-combo"><b>42位 5-2-1</b><span>AI評価 64.8点</span></div><div class="ai-combo"><b>43位 1-4-6</b><span>AI評価 64.5点</span></div><div class="ai-combo"><b>44位 2-3-4</b><span>AI評価 64.3点</span></div><div class="ai-combo"><b>45位 4-1-5</b><span>AI評価 64.2点</span></div><div class="ai-combo"><b>46位 3-5-4</b><span>AI評価 64.0点</span></div><div class="ai-combo"><b>47位 1-6-2</b><span>AI評価 63.9点</span></div><div class="ai-combo"><b>48位 3-4-5</b><span>AI評価 63.8点</span></div><div class="ai-combo"><b>49位 2-5-3</b><span>AI評価 63.6点</span></div><div class="ai-combo"><b>50位 4-2-1</b><span>AI評価 63.4点</span></div></div>
-          </details>
-          <div class="ai-note">購入額・回収率は従来どおり上位24点で計算します。25〜50位は検証用の参考順位です。全120通りの順位データは保存済みです。</div>
-        </article>
-        
-        <article class="race-card">
-          <div class="race-head">
-            <div class="race-order">2</div>
-            <div class="race-main">
-              <div class="deadline">15:30</div>
-              <div class="race-name">びわこ 11R<span class="fujin-raijin-stack" title="風神雷神シグナル"><span class="signal-row raijin" title="雷神シグナル 3/3｜最大上昇 +13.2｜6号艇 +10.3 / 4号艇 +13.2｜通常予測には未反映・シグナルAI再評価に使用">⚡⚡⚡</span><span class="signal-row fujin" title="風神シグナル 1/3｜1位朝比 -6.5｜TOP3合計 3.8｜1-2位差 10.7｜通常予測には未反映・シグナルAI再評価に使用">💨</span></span></div>
-            </div>
-            <div class="badge live">シグナルAI</div>
-          </div>
-          <div class="formation-title">6艇のシグナルAI再評価</div>
-          <div class="ai-note">通常予測は変更せず、F1R3専用補正で6艇を再評価しています。</div>
-          <div class="ai-table-wrap">
-            <table class="ai-table signal-ai-table">
-              <thead><tr><th>艇</th><th>通常</th><th>補正</th><th>補正後</th><th>順位</th></tr></thead>
-              <tbody><tr><td>1号艇 外崎悟</td><td>71.8</td><td>-8.0</td><td>63.8</td><td>1位</td></tr><tr><td>2号艇 廣瀬将亨</td><td>61.1</td><td>0.0</td><td>61.1</td><td>3位</td></tr><tr><td>3号艇 石原光</td><td>45.4</td><td>0.0</td><td>45.4</td><td>4位</td></tr><tr><td>4号艇 柘植政浩</td><td>41.2</td><td>3.3</td><td>44.5</td><td>5位</td></tr><tr><td>5号艇 佐藤旭</td><td>36.3</td><td>0.0</td><td>36.3</td><td>6位</td></tr><tr><td>6号艇 浜先真範</td><td>58.6</td><td>2.6</td><td>61.2</td><td>2位</td></tr></tbody>
-            </table>
-          </div>
-          <div class="formation-title signal-ai-purchase-title">シグナル専用3連単予測・上位24点（検証用・各100円／計2,400円）</div>
-          <div class="ai-note">風神雷神の補正後スコアで評価した24点です。通常予測の買い目とは別集計です。</div>
-          <div class="ai-combos signal-ai-purchase-list" aria-label="シグナル専用3連単上位24点"><div class="ai-combo"><b>1位 1-6-2</b><span>AI評価 62.5点</span></div><div class="ai-combo"><b>2位 1-2-6</b><span>AI評価 62.5点</span></div><div class="ai-combo"><b>3位 6-1-2</b><span>AI評価 62.0点</span></div><div class="ai-combo"><b>4位 2-1-6</b><span>AI評価 62.0点</span></div><div class="ai-combo"><b>5位 6-2-1</b><span>AI評価 61.7点</span></div><div class="ai-combo"><b>6位 2-6-1</b><span>AI評価 61.7点</span></div><div class="ai-combo"><b>7位 1-6-3</b><span>AI評価 59.4点</span></div><div class="ai-combo"><b>8位 1-2-3</b><span>AI評価 59.4点</span></div><div class="ai-combo"><b>9位 1-6-4</b><span>AI評価 59.2点</span></div><div class="ai-combo"><b>10位 1-2-4</b><span>AI評価 59.2点</span></div><div class="ai-combo"><b>11位 6-1-3</b><span>AI評価 58.9点</span></div><div class="ai-combo"><b>12位 2-1-3</b><span>AI評価 58.8点</span></div><div class="ai-combo"><b>13位 6-1-4</b><span>AI評価 58.7点</span></div><div class="ai-combo"><b>14位 2-1-4</b><span>AI評価 58.6点</span></div><div class="ai-combo"><b>15位 6-2-3</b><span>AI評価 58.0点</span></div><div class="ai-combo"><b>16位 2-6-3</b><span>AI評価 58.0点</span></div><div class="ai-combo"><b>17位 6-2-4</b><span>AI評価 57.9点</span></div><div class="ai-combo"><b>18位 2-6-4</b><span>AI評価 57.8点</span></div><div class="ai-combo"><b>19位 1-3-6</b><span>AI評価 57.8点</span></div><div class="ai-combo"><b>20位 1-3-2</b><span>AI評価 57.8点</span></div><div class="ai-combo"><b>21位 1-6-5</b><span>AI評価 57.5点</span></div><div class="ai-combo"><b>22位 1-2-5</b><span>AI評価 57.5点</span></div><div class="ai-combo"><b>23位 1-4-6</b><span>AI評価 57.5点</span></div><div class="ai-combo"><b>24位 1-4-2</b><span>AI評価 57.5点</span></div></div>
-          <details class="ai-combo-details">
-            <summary>参考順位25〜50位を見る（購入対象外）</summary>
-            <div class="ai-combos"><div class="ai-combo"><b>25位 6-1-5</b><span>AI評価 57.0点</span></div><div class="ai-combo"><b>26位 6-3-1</b><span>AI評価 57.0点</span></div><div class="ai-combo"><b>27位 2-1-5</b><span>AI評価 57.0点</span></div><div class="ai-combo"><b>28位 2-3-1</b><span>AI評価 57.0点</span></div><div class="ai-combo"><b>29位 6-4-1</b><span>AI評価 56.7点</span></div><div class="ai-combo"><b>30位 2-4-1</b><span>AI評価 56.7点</span></div><div class="ai-combo"><b>31位 6-3-2</b><span>AI評価 56.5点</span></div><div class="ai-combo"><b>32位 2-3-6</b><span>AI評価 56.4点</span></div><div class="ai-combo"><b>33位 6-2-5</b><span>AI評価 56.2点</span></div><div class="ai-combo"><b>34位 2-6-5</b><span>AI評価 56.2点</span></div><div class="ai-combo"><b>35位 6-4-2</b><span>AI評価 56.2点</span></div><div class="ai-combo"><b>36位 2-4-6</b><span>AI評価 56.2点</span></div><div class="ai-combo"><b>37位 1-5-6</b><span>AI評価 55.1点</span></div><div class="ai-combo"><b>38位 1-5-2</b><span>AI評価 55.0点</span></div><div class="ai-combo"><b>39位 1-3-4</b><span>AI評価 54.5点</span></div><div class="ai-combo"><b>40位 1-4-3</b><span>AI評価 54.4点</span></div><div class="ai-combo"><b>41位 6-5-1</b><span>AI評価 54.3点</span></div><div class="ai-combo"><b>42位 2-5-1</b><span>AI評価 54.2点</span></div><div class="ai-combo"><b>43位 3-1-6</b><span>AI評価 54.1点</span></div><div class="ai-combo"><b>44位 3-1-2</b><span>AI評価 54.1点</span></div><div class="ai-combo"><b>45位 3-6-1</b><span>AI評価 53.9点</span></div><div class="ai-combo"><b>46位 3-2-1</b><span>AI評価 53.8点</span></div><div class="ai-combo"><b>47位 6-5-2</b><span>AI評価 53.7点</span></div><div class="ai-combo"><b>48位 2-5-6</b><span>AI評価 53.7点</span></div><div class="ai-combo"><b>49位 4-1-6</b><span>AI評価 53.6点</span></div><div class="ai-combo"><b>50位 4-1-2</b><span>AI評価 53.6点</span></div></div>
-          </details>
-          <div class="ai-note">購入額・回収率は従来どおり上位24点で計算します。25〜50位は検証用の参考順位です。全120通りの順位データは保存済みです。</div>
-        </article>
-        
-    <article class="race-card">
+    <article class="race-card" data-race-id="20261013-04-11">
       <div class="race-head">
-        <div class="race-order">3</div>
-        <div class="race-main">
-          <div class="deadline">15:35</div>
-          <div class="race-name">尼崎 11R</div>
-        </div>
-        <div class="badge live">通常AI</div>
-      </div>
-      <div class="formation-title">通常AIスコア予測</div>
-      <div class="ai-note">風神雷神が非発動のときは、通常AIスコア予測を表示します。判定未観測のレースは発動有無を確定扱いしません。</div>
-      <div class="ai-table-wrap">
-        <table class="ai-table signal-ai-table">
-          <thead><tr><th>艇</th><th>通常</th><th>補正</th><th>補正後</th><th>順位</th></tr></thead>
-          <tbody><tr><td>1号艇 片橋幸貴</td><td>78.2</td><td>0.0</td><td>78.2</td><td>1位</td></tr><tr><td>2号艇 永井源</td><td>64.6</td><td>0.0</td><td>64.6</td><td>2位</td></tr><tr><td>4号艇 石原翼</td><td>47.3</td><td>0.0</td><td>47.3</td><td>3位</td></tr><tr><td>5号艇 向井美鈴</td><td>43.5</td><td>0.0</td><td>43.5</td><td>4位</td></tr><tr><td>3号艇 多羅尾達</td><td>39.9</td><td>0.0</td><td>39.9</td><td>5位</td></tr><tr><td>6号艇 大野芳顕</td><td>26.5</td><td>0.0</td><td>26.5</td><td>6位</td></tr></tbody>
-        </table>
-      </div>
-      <details class="ai-combo-details">
-        <summary>通常AI順位1〜50位を見る（検証用）</summary>
-        <div class="ai-combos"><div class="ai-combo"><b>1位 1-2-4</b><span>AI評価 65.4点</span></div><div class="ai-combo"><b>2位 2-1-4</b><span>AI評価 65.0点</span></div><div class="ai-combo"><b>3位 1-2-5</b><span>AI評価 63.0点</span></div><div class="ai-combo"><b>4位 2-1-5</b><span>AI評価 62.6点</span></div><div class="ai-combo"><b>5位 1-4-2</b><span>AI評価 61.9点</span></div><div class="ai-combo"><b>6位 2-4-1</b><span>AI評価 61.7点</span></div><div class="ai-combo"><b>7位 4-2-1</b><span>AI評価 59.8点</span></div><div class="ai-combo"><b>8位 4-1-2</b><span>AI評価 59.6点</span></div><div class="ai-combo"><b>9位 1-5-2</b><span>AI評価 58.6点</span></div><div class="ai-combo"><b>10位 2-5-1</b><span>AI評価 58.5点</span></div><div class="ai-combo"><b>11位 1-4-5</b><span>AI評価 58.4点</span></div><div class="ai-combo"><b>12位 5-2-1</b><span>AI評価 57.9点</span></div></div>
-      </details>
-    </article>
-    
-    <article class="race-card">
-      <div class="race-head">
-        <div class="race-order">4</div>
-        <div class="race-main">
-          <div class="deadline">15:37</div>
-          <div class="race-name">福岡 10R</div>
-        </div>
-        <div class="badge live">通常AI</div>
-      </div>
-      <div class="formation-title">通常AIスコア予測</div>
-      <div class="ai-note">風神雷神が非発動のときは、通常AIスコア予測を表示します。判定未観測のレースは発動有無を確定扱いしません。</div>
-      <div class="ai-table-wrap">
-        <table class="ai-table signal-ai-table">
-          <thead><tr><th>艇</th><th>通常</th><th>補正</th><th>補正後</th><th>順位</th></tr></thead>
-          <tbody><tr><td>1号艇 平山智加</td><td>80.0</td><td>0.0</td><td>80.0</td><td>1位</td></tr><tr><td>2号艇 山下和彦</td><td>66.8</td><td>0.0</td><td>66.8</td><td>2位</td></tr><tr><td>5号艇 北中元樹</td><td>57.4</td><td>0.0</td><td>57.4</td><td>3位</td></tr><tr><td>4号艇 前川守嗣</td><td>41.4</td><td>0.0</td><td>41.4</td><td>4位</td></tr><tr><td>3号艇 佐藤駿介</td><td>34.6</td><td>0.0</td><td>34.6</td><td>5位</td></tr><tr><td>6号艇 佐藤謙史</td><td>19.8</td><td>0.0</td><td>19.8</td><td>6位</td></tr></tbody>
-        </table>
-      </div>
-      <details class="ai-combo-details">
-        <summary>通常AI順位1〜50位を見る（検証用）</summary>
-        <div class="ai-combos"><div class="ai-combo"><b>1位 1-5-2</b><span>AI評価 66.7点</span></div><div class="ai-combo"><b>2位 1-2-5</b><span>AI評価 66.3点</span></div><div class="ai-combo"><b>3位 5-1-2</b><span>AI評価 66.2点</span></div><div class="ai-combo"><b>4位 2-1-5</b><span>AI評価 66.1点</span></div><div class="ai-combo"><b>5位 2-5-1</b><span>AI評価 65.4点</span></div><div class="ai-combo"><b>6位 5-2-1</b><span>AI評価 65.0点</span></div><div class="ai-combo"><b>7位 1-2-4</b><span>AI評価 63.1点</span></div><div class="ai-combo"><b>8位 2-1-4</b><span>AI評価 62.9点</span></div><div class="ai-combo"><b>9位 1-5-4</b><span>AI評価 60.8点</span></div><div class="ai-combo"><b>10位 5-1-4</b><span>AI評価 60.3点</span></div><div class="ai-combo"><b>11位 1-4-2</b><span>AI評価 60.2点</span></div><div class="ai-combo"><b>12位 2-4-1</b><span>AI評価 58.9点</span></div></div>
-      </details>
-    </article>
-    
-    <article class="race-card">
-      <div class="race-head">
-        <div class="race-order">5</div>
+        <div class="race-order">1</div>
         <div class="race-main">
           <div class="deadline">15:40</div>
           <div class="race-name">平和島 11R</div>
@@ -1635,9 +1973,9 @@ body { background: var(--bg) !important; color: var(--text) !important; }\n.refr
       </details>
     </article>
     
-    <article class="race-card">
+    <article class="race-card" data-race-id="20261013-15-02">
       <div class="race-head">
-        <div class="race-order">6</div>
+        <div class="race-order">2</div>
         <div class="race-main">
           <div class="deadline">15:45</div>
           <div class="race-name">丸亀 2R</div>
@@ -1658,9 +1996,9 @@ body { background: var(--bg) !important; color: var(--text) !important; }\n.refr
       </details>
     </article>
     
-    <article class="race-card">
+    <article class="race-card" data-race-id="20261013-12-02">
       <div class="race-head">
-        <div class="race-order">7</div>
+        <div class="race-order">3</div>
         <div class="race-main">
           <div class="deadline">15:47</div>
           <div class="race-name">住之江 2R</div>
@@ -1681,9 +2019,9 @@ body { background: var(--bg) !important; color: var(--text) !important; }\n.refr
       </details>
     </article>
     
-    <article class="race-card">
+    <article class="race-card" data-race-id="20261013-06-11">
       <div class="race-head">
-        <div class="race-order">8</div>
+        <div class="race-order">4</div>
         <div class="race-main">
           <div class="deadline">15:51</div>
           <div class="race-name">浜名湖 11R</div>
@@ -1704,9 +2042,9 @@ body { background: var(--bg) !important; color: var(--text) !important; }\n.refr
       </details>
     </article>
     
-    <article class="race-card">
+    <article class="race-card" data-race-id="20261013-20-02">
       <div class="race-head">
-        <div class="race-order">9</div>
+        <div class="race-order">5</div>
         <div class="race-main">
           <div class="deadline">15:54</div>
           <div class="race-name">若松 2R</div>
@@ -1727,9 +2065,9 @@ body { background: var(--bg) !important; color: var(--text) !important; }\n.refr
       </details>
     </article>
     
-    <article class="race-card">
+    <article class="race-card" data-race-id="20261013-11-12">
       <div class="race-head">
-        <div class="race-order">10</div>
+        <div class="race-order">6</div>
         <div class="race-main">
           <div class="deadline">15:59</div>
           <div class="race-name">びわこ 12R</div>
@@ -1750,9 +2088,9 @@ body { background: var(--bg) !important; color: var(--text) !important; }\n.refr
       </details>
     </article>
     
-    <article class="race-card">
+    <article class="race-card" data-race-id="20261013-13-12">
       <div class="race-head">
-        <div class="race-order">11</div>
+        <div class="race-order">7</div>
         <div class="race-main">
           <div class="deadline">16:04</div>
           <div class="race-name">尼崎 12R</div>
@@ -1773,9 +2111,9 @@ body { background: var(--bg) !important; color: var(--text) !important; }\n.refr
       </details>
     </article>
     
-    <article class="race-card">
+    <article class="race-card" data-race-id="20261013-22-11">
       <div class="race-head">
-        <div class="race-order">12</div>
+        <div class="race-order">8</div>
         <div class="race-main">
           <div class="deadline">16:06</div>
           <div class="race-name">福岡 11R</div>
@@ -1796,9 +2134,9 @@ body { background: var(--bg) !important; color: var(--text) !important; }\n.refr
       </details>
     </article>
     
-    <article class="race-card">
+    <article class="race-card" data-race-id="20261013-12-03">
       <div class="race-head">
-        <div class="race-order">13</div>
+        <div class="race-order">9</div>
         <div class="race-main">
           <div class="deadline">16:09</div>
           <div class="race-name">住之江 3R</div>
@@ -1819,9 +2157,9 @@ body { background: var(--bg) !important; color: var(--text) !important; }\n.refr
       </details>
     </article>
     
-    <article class="race-card">
+    <article class="race-card" data-race-id="20261013-15-03">
       <div class="race-head">
-        <div class="race-order">14</div>
+        <div class="race-order">10</div>
         <div class="race-main">
           <div class="deadline">16:15</div>
           <div class="race-name">丸亀 3R</div>
@@ -1842,9 +2180,9 @@ body { background: var(--bg) !important; color: var(--text) !important; }\n.refr
       </details>
     </article>
     
-    <article class="race-card">
+    <article class="race-card" data-race-id="20261013-04-12">
       <div class="race-head">
-        <div class="race-order">15</div>
+        <div class="race-order">11</div>
         <div class="race-main">
           <div class="deadline">16:20</div>
           <div class="race-name">平和島 12R</div>
@@ -1865,9 +2203,9 @@ body { background: var(--bg) !important; color: var(--text) !important; }\n.refr
       </details>
     </article>
     
-    <article class="race-card">
+    <article class="race-card" data-race-id="20261013-20-03">
       <div class="race-head">
-        <div class="race-order">16</div>
+        <div class="race-order">12</div>
         <div class="race-main">
           <div class="deadline">16:27</div>
           <div class="race-name">若松 3R</div>
@@ -1888,9 +2226,9 @@ body { background: var(--bg) !important; color: var(--text) !important; }\n.refr
       </details>
     </article>
     
-    <article class="race-card">
+    <article class="race-card" data-race-id="20261013-06-12">
       <div class="race-head">
-        <div class="race-order">17</div>
+        <div class="race-order">13</div>
         <div class="race-main">
           <div class="deadline">16:32</div>
           <div class="race-name">浜名湖 12R</div>
@@ -1911,9 +2249,9 @@ body { background: var(--bg) !important; color: var(--text) !important; }\n.refr
       </details>
     </article>
     
-    <article class="race-card">
+    <article class="race-card" data-race-id="20261013-12-04">
       <div class="race-head">
-        <div class="race-order">18</div>
+        <div class="race-order">14</div>
         <div class="race-main">
           <div class="deadline">16:36</div>
           <div class="race-name">住之江 4R</div>
@@ -1934,9 +2272,9 @@ body { background: var(--bg) !important; color: var(--text) !important; }\n.refr
       </details>
     </article>
     
-    <article class="race-card">
+    <article class="race-card" data-race-id="20261013-22-12">
       <div class="race-head">
-        <div class="race-order">19</div>
+        <div class="race-order">15</div>
         <div class="race-main">
           <div class="deadline">16:40</div>
           <div class="race-name">福岡 12R</div>
@@ -1957,9 +2295,9 @@ body { background: var(--bg) !important; color: var(--text) !important; }\n.refr
       </details>
     </article>
     
-    <article class="race-card">
+    <article class="race-card" data-race-id="20261013-15-04">
       <div class="race-head">
-        <div class="race-order">20</div>
+        <div class="race-order">16</div>
         <div class="race-main">
           <div class="deadline">16:43</div>
           <div class="race-name">丸亀 4R</div>
@@ -1980,9 +2318,9 @@ body { background: var(--bg) !important; color: var(--text) !important; }\n.refr
       </details>
     </article>
     
-    <article class="race-card">
+    <article class="race-card" data-race-id="20261013-20-04">
       <div class="race-head">
-        <div class="race-order">21</div>
+        <div class="race-order">17</div>
         <div class="race-main">
           <div class="deadline">16:52</div>
           <div class="race-name">若松 4R</div>
@@ -2003,9 +2341,9 @@ body { background: var(--bg) !important; color: var(--text) !important; }\n.refr
       </details>
     </article>
     
-    <article class="race-card">
+    <article class="race-card" data-race-id="20261013-12-05">
       <div class="race-head">
-        <div class="race-order">22</div>
+        <div class="race-order">18</div>
         <div class="race-main">
           <div class="deadline">17:01</div>
           <div class="race-name">住之江 5R</div>
@@ -2026,9 +2364,9 @@ body { background: var(--bg) !important; color: var(--text) !important; }\n.refr
       </details>
     </article>
     
-    <article class="race-card">
+    <article class="race-card" data-race-id="20261013-15-05">
       <div class="race-head">
-        <div class="race-order">23</div>
+        <div class="race-order">19</div>
         <div class="race-main">
           <div class="deadline">17:09</div>
           <div class="race-name">丸亀 5R</div>
@@ -2049,9 +2387,9 @@ body { background: var(--bg) !important; color: var(--text) !important; }\n.refr
       </details>
     </article>
     
-    <article class="race-card">
+    <article class="race-card" data-race-id="20261013-20-05">
       <div class="race-head">
-        <div class="race-order">24</div>
+        <div class="race-order">20</div>
         <div class="race-main">
           <div class="deadline">17:17</div>
           <div class="race-name">若松 5R</div>
@@ -2072,9 +2410,9 @@ body { background: var(--bg) !important; color: var(--text) !important; }\n.refr
       </details>
     </article>
     
-    <article class="race-card">
+    <article class="race-card" data-race-id="20261013-12-06">
       <div class="race-head">
-        <div class="race-order">25</div>
+        <div class="race-order">21</div>
         <div class="race-main">
           <div class="deadline">17:27</div>
           <div class="race-name">住之江 6R</div>
@@ -2095,9 +2433,9 @@ body { background: var(--bg) !important; color: var(--text) !important; }\n.refr
       </details>
     </article>
     
-    <article class="race-card">
+    <article class="race-card" data-race-id="20261013-15-06">
       <div class="race-head">
-        <div class="race-order">26</div>
+        <div class="race-order">22</div>
         <div class="race-main">
           <div class="deadline">17:34</div>
           <div class="race-name">丸亀 6R</div>
@@ -2118,9 +2456,9 @@ body { background: var(--bg) !important; color: var(--text) !important; }\n.refr
       </details>
     </article>
     
-    <article class="race-card">
+    <article class="race-card" data-race-id="20261013-19-01">
       <div class="race-head">
-        <div class="race-order">27</div>
+        <div class="race-order">23</div>
         <div class="race-main">
           <div class="deadline">17:41</div>
           <div class="race-name">下関 1R</div>
@@ -2141,9 +2479,9 @@ body { background: var(--bg) !important; color: var(--text) !important; }\n.refr
       </details>
     </article>
     
-    <article class="race-card">
+    <article class="race-card" data-race-id="20261013-20-06">
       <div class="race-head">
-        <div class="race-order">28</div>
+        <div class="race-order">24</div>
         <div class="race-main">
           <div class="deadline">17:48</div>
           <div class="race-name">若松 6R</div>
@@ -2164,9 +2502,9 @@ body { background: var(--bg) !important; color: var(--text) !important; }\n.refr
       </details>
     </article>
     
-    <article class="race-card">
+    <article class="race-card" data-race-id="20261013-12-07">
       <div class="race-head">
-        <div class="race-order">29</div>
+        <div class="race-order">25</div>
         <div class="race-main">
           <div class="deadline">17:55</div>
           <div class="race-name">住之江 7R</div>
@@ -2187,9 +2525,9 @@ body { background: var(--bg) !important; color: var(--text) !important; }\n.refr
       </details>
     </article>
     
-    <article class="race-card">
+    <article class="race-card" data-race-id="20261013-15-07">
       <div class="race-head">
-        <div class="race-order">30</div>
+        <div class="race-order">26</div>
         <div class="race-main">
           <div class="deadline">18:02</div>
           <div class="race-name">丸亀 7R</div>
@@ -2210,9 +2548,9 @@ body { background: var(--bg) !important; color: var(--text) !important; }\n.refr
       </details>
     </article>
     
-    <article class="race-card">
+    <article class="race-card" data-race-id="20261013-19-02">
       <div class="race-head">
-        <div class="race-order">31</div>
+        <div class="race-order">27</div>
         <div class="race-main">
           <div class="deadline">18:08</div>
           <div class="race-name">下関 2R</div>
@@ -2233,9 +2571,9 @@ body { background: var(--bg) !important; color: var(--text) !important; }\n.refr
       </details>
     </article>
     
-    <article class="race-card">
+    <article class="race-card" data-race-id="20261013-20-07">
       <div class="race-head">
-        <div class="race-order">32</div>
+        <div class="race-order">28</div>
         <div class="race-main">
           <div class="deadline">18:17</div>
           <div class="race-name">若松 7R</div>
@@ -2256,9 +2594,9 @@ body { background: var(--bg) !important; color: var(--text) !important; }\n.refr
       </details>
     </article>
     
-    <article class="race-card">
+    <article class="race-card" data-race-id="20261013-12-08">
       <div class="race-head">
-        <div class="race-order">33</div>
+        <div class="race-order">29</div>
         <div class="race-main">
           <div class="deadline">18:25</div>
           <div class="race-name">住之江 8R</div>
@@ -2279,9 +2617,9 @@ body { background: var(--bg) !important; color: var(--text) !important; }\n.refr
       </details>
     </article>
     
-    <article class="race-card">
+    <article class="race-card" data-race-id="20261013-19-03">
       <div class="race-head">
-        <div class="race-order">34</div>
+        <div class="race-order">30</div>
         <div class="race-main">
           <div class="deadline">18:34</div>
           <div class="race-name">下関 3R</div>
@@ -2302,9 +2640,9 @@ body { background: var(--bg) !important; color: var(--text) !important; }\n.refr
       </details>
     </article>
     
-    <article class="race-card">
+    <article class="race-card" data-race-id="20261013-15-08">
       <div class="race-head">
-        <div class="race-order">35</div>
+        <div class="race-order">31</div>
         <div class="race-main">
           <div class="deadline">18:41</div>
           <div class="race-name">丸亀 8R</div>
@@ -2325,9 +2663,9 @@ body { background: var(--bg) !important; color: var(--text) !important; }\n.refr
       </details>
     </article>
     
-    <article class="race-card">
+    <article class="race-card" data-race-id="20261013-20-08">
       <div class="race-head">
-        <div class="race-order">36</div>
+        <div class="race-order">32</div>
         <div class="race-main">
           <div class="deadline">18:48</div>
           <div class="race-name">若松 8R</div>
@@ -2348,9 +2686,9 @@ body { background: var(--bg) !important; color: var(--text) !important; }\n.refr
       </details>
     </article>
     
-    <article class="race-card">
+    <article class="race-card" data-race-id="20261013-12-09">
       <div class="race-head">
-        <div class="race-order">37</div>
+        <div class="race-order">33</div>
         <div class="race-main">
           <div class="deadline">18:55</div>
           <div class="race-name">住之江 9R</div>
@@ -2371,9 +2709,9 @@ body { background: var(--bg) !important; color: var(--text) !important; }\n.refr
       </details>
     </article>
     
-    <article class="race-card">
+    <article class="race-card" data-race-id="20261013-19-04">
       <div class="race-head">
-        <div class="race-order">38</div>
+        <div class="race-order">34</div>
         <div class="race-main">
           <div class="deadline">19:03</div>
           <div class="race-name">下関 4R</div>
@@ -2394,9 +2732,9 @@ body { background: var(--bg) !important; color: var(--text) !important; }\n.refr
       </details>
     </article>
     
-    <article class="race-card">
+    <article class="race-card" data-race-id="20261013-15-09">
       <div class="race-head">
-        <div class="race-order">39</div>
+        <div class="race-order">35</div>
         <div class="race-main">
           <div class="deadline">19:10</div>
           <div class="race-name">丸亀 9R</div>
@@ -2417,9 +2755,9 @@ body { background: var(--bg) !important; color: var(--text) !important; }\n.refr
       </details>
     </article>
     
-    <article class="race-card">
+    <article class="race-card" data-race-id="20261013-20-09">
       <div class="race-head">
-        <div class="race-order">40</div>
+        <div class="race-order">36</div>
         <div class="race-main">
           <div class="deadline">19:16</div>
           <div class="race-name">若松 9R</div>
@@ -2440,9 +2778,9 @@ body { background: var(--bg) !important; color: var(--text) !important; }\n.refr
       </details>
     </article>
     
-    <article class="race-card">
+    <article class="race-card" data-race-id="20261013-12-10">
       <div class="race-head">
-        <div class="race-order">41</div>
+        <div class="race-order">37</div>
         <div class="race-main">
           <div class="deadline">19:23</div>
           <div class="race-name">住之江 10R</div>
@@ -2463,9 +2801,9 @@ body { background: var(--bg) !important; color: var(--text) !important; }\n.refr
       </details>
     </article>
     
-    <article class="race-card">
+    <article class="race-card" data-race-id="20261013-19-05">
       <div class="race-head">
-        <div class="race-order">42</div>
+        <div class="race-order">38</div>
         <div class="race-main">
           <div class="deadline">19:30</div>
           <div class="race-name">下関 5R</div>
@@ -2486,9 +2824,9 @@ body { background: var(--bg) !important; color: var(--text) !important; }\n.refr
       </details>
     </article>
     
-    <article class="race-card">
+    <article class="race-card" data-race-id="20261013-15-10">
       <div class="race-head">
-        <div class="race-order">43</div>
+        <div class="race-order">39</div>
         <div class="race-main">
           <div class="deadline">19:39</div>
           <div class="race-name">丸亀 10R</div>
@@ -2509,9 +2847,9 @@ body { background: var(--bg) !important; color: var(--text) !important; }\n.refr
       </details>
     </article>
     
-    <article class="race-card">
+    <article class="race-card" data-race-id="20261013-20-10">
       <div class="race-head">
-        <div class="race-order">44</div>
+        <div class="race-order">40</div>
         <div class="race-main">
           <div class="deadline">19:48</div>
           <div class="race-name">若松 10R</div>
@@ -2532,9 +2870,9 @@ body { background: var(--bg) !important; color: var(--text) !important; }\n.refr
       </details>
     </article>
     
-    <article class="race-card">
+    <article class="race-card" data-race-id="20261013-19-06">
       <div class="race-head">
-        <div class="race-order">45</div>
+        <div class="race-order">41</div>
         <div class="race-main">
           <div class="deadline">19:56</div>
           <div class="race-name">下関 6R</div>
@@ -2555,9 +2893,9 @@ body { background: var(--bg) !important; color: var(--text) !important; }\n.refr
       </details>
     </article>
     
-    <article class="race-card">
+    <article class="race-card" data-race-id="20261013-12-11">
       <div class="race-head">
-        <div class="race-order">46</div>
+        <div class="race-order">42</div>
         <div class="race-main">
           <div class="deadline">20:03</div>
           <div class="race-name">住之江 11R</div>
@@ -2578,9 +2916,9 @@ body { background: var(--bg) !important; color: var(--text) !important; }\n.refr
       </details>
     </article>
     
-    <article class="race-card">
+    <article class="race-card" data-race-id="20261013-15-11">
       <div class="race-head">
-        <div class="race-order">47</div>
+        <div class="race-order">43</div>
         <div class="race-main">
           <div class="deadline">20:10</div>
           <div class="race-name">丸亀 11R</div>
@@ -2601,9 +2939,9 @@ body { background: var(--bg) !important; color: var(--text) !important; }\n.refr
       </details>
     </article>
     
-    <article class="race-card">
+    <article class="race-card" data-race-id="20261013-20-11">
       <div class="race-head">
-        <div class="race-order">48</div>
+        <div class="race-order">44</div>
         <div class="race-main">
           <div class="deadline">20:17</div>
           <div class="race-name">若松 11R</div>
@@ -2624,9 +2962,9 @@ body { background: var(--bg) !important; color: var(--text) !important; }\n.refr
       </details>
     </article>
     
-    <article class="race-card">
+    <article class="race-card" data-race-id="20261013-19-07">
       <div class="race-head">
-        <div class="race-order">49</div>
+        <div class="race-order">45</div>
         <div class="race-main">
           <div class="deadline">20:25</div>
           <div class="race-name">下関 7R</div>
@@ -2647,9 +2985,9 @@ body { background: var(--bg) !important; color: var(--text) !important; }\n.refr
       </details>
     </article>
     
-    <article class="race-card">
+    <article class="race-card" data-race-id="20261013-12-12">
       <div class="race-head">
-        <div class="race-order">50</div>
+        <div class="race-order">46</div>
         <div class="race-main">
           <div class="deadline">20:31</div>
           <div class="race-name">住之江 12R</div>
@@ -2670,9 +3008,9 @@ body { background: var(--bg) !important; color: var(--text) !important; }\n.refr
       </details>
     </article>
     
-    <article class="race-card">
+    <article class="race-card" data-race-id="20261013-15-12">
       <div class="race-head">
-        <div class="race-order">51</div>
+        <div class="race-order">47</div>
         <div class="race-main">
           <div class="deadline">20:38</div>
           <div class="race-name">丸亀 12R</div>
@@ -2693,9 +3031,9 @@ body { background: var(--bg) !important; color: var(--text) !important; }\n.refr
       </details>
     </article>
     
-    <article class="race-card">
+    <article class="race-card" data-race-id="20261013-20-12">
       <div class="race-head">
-        <div class="race-order">52</div>
+        <div class="race-order">48</div>
         <div class="race-main">
           <div class="deadline">20:45</div>
           <div class="race-name">若松 12R</div>
@@ -2716,9 +3054,9 @@ body { background: var(--bg) !important; color: var(--text) !important; }\n.refr
       </details>
     </article>
     
-    <article class="race-card">
+    <article class="race-card" data-race-id="20261013-19-08">
       <div class="race-head">
-        <div class="race-order">53</div>
+        <div class="race-order">49</div>
         <div class="race-main">
           <div class="deadline">20:59</div>
           <div class="race-name">下関 8R</div>
@@ -2739,9 +3077,9 @@ body { background: var(--bg) !important; color: var(--text) !important; }\n.refr
       </details>
     </article>
     
-    <article class="race-card">
+    <article class="race-card" data-race-id="20261013-19-09">
       <div class="race-head">
-        <div class="race-order">54</div>
+        <div class="race-order">50</div>
         <div class="race-main">
           <div class="deadline">21:25</div>
           <div class="race-name">下関 9R</div>
@@ -2762,9 +3100,9 @@ body { background: var(--bg) !important; color: var(--text) !important; }\n.refr
       </details>
     </article>
     
-    <article class="race-card">
+    <article class="race-card" data-race-id="20261013-19-10">
       <div class="race-head">
-        <div class="race-order">55</div>
+        <div class="race-order">51</div>
         <div class="race-main">
           <div class="deadline">21:51</div>
           <div class="race-name">下関 10R</div>
@@ -2785,9 +3123,9 @@ body { background: var(--bg) !important; color: var(--text) !important; }\n.refr
       </details>
     </article>
     
-    <article class="race-card">
+    <article class="race-card" data-race-id="20261013-19-11">
       <div class="race-head">
-        <div class="race-order">56</div>
+        <div class="race-order">52</div>
         <div class="race-main">
           <div class="deadline">22:20</div>
           <div class="race-name">下関 11R</div>
@@ -2808,9 +3146,9 @@ body { background: var(--bg) !important; color: var(--text) !important; }\n.refr
       </details>
     </article>
     
-    <article class="race-card">
+    <article class="race-card" data-race-id="20261013-19-12">
       <div class="race-head">
-        <div class="race-order">57</div>
+        <div class="race-order">53</div>
         <div class="race-main">
           <div class="deadline">22:45</div>
           <div class="race-name">下関 12R</div>
@@ -2831,7 +3169,7 @@ body { background: var(--bg) !important; color: var(--text) !important; }\n.refr
       </details>
     </article>
     
-    </div>
+    </template>
 
     <footer>
 
@@ -2845,15 +3183,53 @@ body { background: var(--bg) !important; color: var(--text) !important; }\n.refr
 
   <script>
     (() => {
-      const tabs = document.querySelectorAll(".prediction-tab");
-      const normalPanel = document.getElementById("normalPredictionPanel");
-      const aiPanel = document.getElementById("aiPredictionPanel");
-      tabs.forEach(tab => tab.addEventListener("click", () => {
-        const ai = tab.dataset.tab === "ai";
-        tabs.forEach(x => x.classList.toggle("active", x === tab));
-        if (normalPanel) normalPanel.classList.toggle("active", !ai);
-        if (aiPanel) aiPanel.classList.toggle("active", ai);
-      }));
+      const aiTemplates = document.getElementById("aiPredictionTemplates");
+      const readChoice = key => {
+        try { return window.sessionStorage.getItem(key); }
+        catch (error) { return null; }
+      };
+      const saveChoice = (key, value) => {
+        try { window.sessionStorage.setItem(key, value); }
+        catch (error) { /* Tab switching also works without storage. */ }
+      };
+
+      // Render only the selected race's saved AI prediction at the same spot.
+      document.querySelectorAll(".race-pair").forEach(pair => {
+        const normal = pair.querySelector(".race-local-normal");
+        const ai = pair.querySelector(".race-local-ai");
+        const buttons = pair.querySelectorAll(".race-local-tab");
+        const choiceKey = "boatrace-race-view:" + pair.dataset.raceId;
+        const ensureAi = () => {
+          if (ai.firstElementChild || ai.textContent.trim()) return;
+          const sources = aiTemplates ? aiTemplates.content.querySelectorAll(".race-card") : [];
+          const source = Array.from(sources).find(card => card.dataset.raceId === pair.dataset.raceId);
+          if (!source) {
+            ai.textContent = "このレースのAI予測を表示できません。";
+            return;
+          }
+          ai.appendChild(source.cloneNode(true));
+          ai.querySelectorAll("details").forEach((detail, i) => {
+            const key = "boatrace-race-details:" + pair.dataset.raceId + ":" + i;
+            detail.open = readChoice(key) === "open";
+            detail.addEventListener("toggle", () => saveChoice(key, detail.open ? "open" : "closed"));
+          });
+        };
+        const activate = (showAi, persist) => {
+          if (showAi) ensureAi();
+          normal.hidden = showAi;
+          ai.hidden = !showAi;
+          buttons.forEach(button => {
+            const active = (button.dataset.localView === "ai") === showAi;
+            button.classList.toggle("active", active);
+            button.setAttribute("aria-pressed", active ? "true" : "false");
+          });
+          if (persist) saveChoice(choiceKey, showAi ? "ai" : "normal");
+        };
+        buttons.forEach(button => button.addEventListener("click", () => {
+          activate(button.dataset.localView === "ai", true);
+        }));
+        if (readChoice(choiceKey) === "ai") activate(true, false);
+      });
 
       document.querySelectorAll(".race-card").forEach(card => {
         const viewTabs = card.querySelectorAll(".race-view-tab");
