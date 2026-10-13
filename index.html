@@ -15,10 +15,7 @@
     content="noindex,nofollow"
   >
 
-  <meta
-    http-equiv="refresh"
-    content="60"
-  >
+  <!-- Refresh only while idle; never interrupt a manual update wait. -->
 
   <title>
     ボートレースAI 最新予想
@@ -786,11 +783,11 @@ body { background: var(--bg) !important; color: var(--text) !important; }\n.refr
       <div class="meta">
 
         <span>
-          最終更新 2026/10/13 22:39 JST
+          最終更新 2026/10/13 23:57 JST
         </span>
 
-        <span>
-          締切前 1レース
+        <span id="upcomingRaceCount">
+          締切前 0レース
         </span>
 
       </div>
@@ -804,7 +801,7 @@ body { background: var(--bg) !important; color: var(--text) !important; }\n.refr
 <a href="analysis.html">AI分析</a>
 </nav>
 
-    <div class="refresh-panel" style="">
+    <div class="refresh-panel" style="display:none;">
       <button
         id="refreshPredictionButton"
         class="refresh-button"
@@ -813,7 +810,7 @@ body { background: var(--bg) !important; color: var(--text) !important; }\n.refr
         最新データに更新して予測
       </button>
       <div id="refreshStatus" class="refresh-status">
-        通常は直前情報を約5分間隔で自動取得し、レース終了後の照合も定期更新します。手動更新ボタンでは取得・予測・照合・AI分析・公開を順番に再実行できます。公開まで時間差があります。
+        直前情報は自動取得を行います。手動更新では公式データを再確認し、新規情報があれば予測を再計算します。追加情報がない場合も表示を再確認して公開状態を更新します。
       </div>
     </div>
 
@@ -834,60 +831,26 @@ body { background: var(--bg) !important; color: var(--text) !important; }\n.refr
 
     <div id="normalPredictionPanel" class="prediction-panel active">
       
-    <div class="race-pair" data-race-id="20261013-19-12">
-      <div class="race-local-tabs" role="group" aria-label="下関 12Rの予測切替">
-        <button type="button" class="race-local-tab active" data-local-view="normal" aria-pressed="true">通常予測</button>
-        <button type="button" class="race-local-tab" data-local-view="ai" aria-pressed="false">AI予測</button>
-      </div>
-      <div class="race-local-normal">
-    <article class="race-card">
-      <div class="race-head">
-        <div class="race-order">1</div>
-        <div class="race-main"><div class="deadline">22:45</div><div class="race-name">下関 12R<span class="fujin-raijin-stack" title="風神雷神シグナル"><span class="signal-row raijin" title="雷神シグナル 2/3｜最大上昇 +12.6｜5号艇 +12.6 / 6号艇 +11.9｜通常予測には未反映・シグナルAI再評価に使用">⚡⚡</span><span class="signal-row fujin" title="風神シグナル 1/3｜1位朝比 -9.2｜TOP3合計 3.2｜1-2位差 9.9｜通常予測には未反映・シグナルAI再評価に使用">💨</span></span></div></div>
-        <div class="race-status upcoming">締切前</div>
-        <div class="badge-wrap"><span class="data-ok" title="必須データ取得済み・全採用要素が計算ロジックへ反映済み">●</span><div class="badge live">直前</div></div>
-      </div>
-      <div class="race-view-tabs"><button type="button" class="race-view-tab" data-race-view="朝">朝予想</button><button type="button" class="race-view-tab active" data-race-view="直前">直前予想</button></div>
-      <div class="race-prediction-view hidden" data-view="朝"><div class="top-picks"><div class="pick"><span class="mark">◎</span><span class="pick-name-wrap"><span class="pick-name">1号艇 富永修一</span></span><span class="score">79.8</span></div><div class="pick"><span class="mark">○</span><span class="pick-name-wrap"><span class="pick-name">3号艇 小林文彦</span></span><span class="score">55.4</span></div><div class="pick"><span class="mark">▲</span><span class="pick-name-wrap"><span class="pick-name">2号艇 峰重力也</span></span><span class="score">51.6</span></div></div><details><summary>6艇すべてのスコア</summary><div class="scores"><span class="chip">1号艇 富永修一 79.8</span><span class="chip">3号艇 小林文彦 55.4</span><span class="chip">2号艇 峰重力也 51.6</span><span class="chip">4号艇 木場悠介 41.6</span><span class="chip">5号艇 品田直樹 37.1</span><span class="chip">6号艇 上原健次 34.5</span></div></details><div class="formation"><div class="formation-title">3連単 1着固定＋相手流し・12点・1,200円</div><div class="formation-grid"><div><b>1着</b> 1</div><div><b>2着</b> 3・2・4・5・6</div><div><b>3着</b> 3・2・4・5・6</div></div><div class="combos">1-3-2 / 1-2-3 / 1-3-4 / 1-3-5 / 1-2-4 / 1-4-3 / 1-3-6 / 1-2-5 / 1-4-2 / 1-2-6 / 1-5-3 / 1-5-2</div></div></div>
-      <div class="race-prediction-view" data-view="直前"><div class="top-picks"><div class="pick"><span class="mark">◎</span><span class="pick-name-wrap"><span class="pick-name">1号艇 富永修一</span><span class="score-delta down">▼ -9.2</span></span><span class="score">70.6</span></div><div class="pick"><span class="mark">○</span><span class="pick-name-wrap"><span class="pick-name">3号艇 小林文彦</span><span class="score-delta up">▲ +5.3</span></span><span class="score">60.7</span></div><div class="pick"><span class="mark">▲</span><span class="pick-name-wrap"><span class="pick-name">2号艇 峰重力也</span><span class="score-delta up">▲ +7.0</span></span><span class="score">58.6</span></div></div><details><summary>6艇すべてのスコア</summary><div class="scores"><span class="chip">1号艇 富永修一 70.6<span class="score-delta down">▼ -9.2</span></span><span class="chip">3号艇 小林文彦 60.7<span class="score-delta up">▲ +5.3</span></span><span class="chip">2号艇 峰重力也 58.6<span class="score-delta up">▲ +7.0</span></span><span class="chip">5号艇 品田直樹 49.7<span class="score-delta up">▲ +12.6</span></span><span class="chip">6号艇 上原健次 46.4<span class="score-delta up">▲ +11.9</span></span><span class="chip">4号艇 木場悠介 41.8<span class="score-delta up">▲ +0.2</span></span></div></details><div class="formation"><div class="formation-title">3連単 準軸・8点・800円</div><div class="formation-grid"><div><b>1着</b> 1・3</div><div><b>2着</b> 1・3・2</div><div><b>3着</b> 1・3・2・5</div></div><div class="combos">1-3-2 / 1-2-3 / 1-3-5 / 3-1-2 / 1-2-5 / 3-2-1 / 3-1-5 / 3-2-5</div></div></div>
-    </article>
-    </div>
-      <div class="race-local-ai" hidden></div>
-    </div>
-    
+        <div class="empty all-finished">
+          <div class="finished-title">本日の全レースは終了しました。</div>
+          <div class="finished-copy">
+            本日の最終予想は保存されています。翌日の朝、または当日の朝情報を再取得したい場合は下のボタンを押してください。
+          </div>
+          <button
+            id="morningCollectionButton"
+            class="refresh-button morning-collection-button"
+            type="button"
+          >
+            朝のレース情報を取得
+          </button>
+          <div id="morningCollectionStatus" class="refresh-status">
+            朝の番組表・選手・モーター情報を取得して朝予測を更新します。
+          </div>
+        </div>
+        
     </div>
     <template id="aiPredictionTemplates">
       
-        <article class="race-card" data-race-id="20261013-19-12">
-          <div class="race-head">
-            <div class="race-order">1</div>
-            <div class="race-main">
-              <div class="deadline">22:45</div>
-              <div class="race-name">下関 12R<span class="fujin-raijin-stack" title="風神雷神シグナル"><span class="signal-row raijin" title="雷神シグナル 2/3｜最大上昇 +12.6｜5号艇 +12.6 / 6号艇 +11.9｜通常予測には未反映・シグナルAI再評価に使用">⚡⚡</span><span class="signal-row fujin" title="風神シグナル 1/3｜1位朝比 -9.2｜TOP3合計 3.2｜1-2位差 9.9｜通常予測には未反映・シグナルAI再評価に使用">💨</span></span></div>
-            </div>
-            <div class="badge live">シグナルAI</div>
-          </div>
-          <div class="formation-title">6艇のシグナルAI再評価</div>
-          <div class="ai-note">通常予測は変更せず、F1R2専用補正で6艇を再評価しています。</div>
-          <div class="ai-table-wrap">
-            <table class="ai-table signal-ai-table">
-              <thead><tr><th>艇</th><th>通常</th><th>補正</th><th>補正後</th><th>順位</th></tr></thead>
-              <tbody><tr><td>1号艇 富永修一</td><td>70.6</td><td>-8.0</td><td>62.6</td><td>1位</td></tr><tr><td>2号艇 峰重力也</td><td>58.6</td><td>0.0</td><td>58.6</td><td>3位</td></tr><tr><td>3号艇 小林文彦</td><td>60.7</td><td>0.0</td><td>60.7</td><td>2位</td></tr><tr><td>4号艇 木場悠介</td><td>41.8</td><td>0.0</td><td>41.8</td><td>6位</td></tr><tr><td>5号艇 品田直樹</td><td>49.7</td><td>3.1</td><td>52.8</td><td>4位</td></tr><tr><td>6号艇 上原健次</td><td>46.4</td><td>3.0</td><td>49.4</td><td>5位</td></tr></tbody>
-            </table>
-          </div>
-          <div class="formation-title signal-ai-purchase-title">シグナル専用3連単予測</div>
-          <details class="ai-combo-details signal-ai-purchase-details">
-            <summary>1〜24位を見る（検証用・各100円／計2,400円）</summary>
-            <div class="ai-note">風神雷神の補正後スコアで評価した24点です。通常予測の買い目とは別集計です。</div>
-            <div class="ai-combos signal-ai-purchase-list" aria-label="シグナル専用3連単上位24点"><div class="ai-combo"><b>1位 1-3-2</b><span>AI評価 61.3点</span></div><div class="ai-combo"><b>2位 1-2-3</b><span>AI評価 61.1点</span></div><div class="ai-combo"><b>3位 3-1-2</b><span>AI評価 60.9点</span></div><div class="ai-combo"><b>4位 3-2-1</b><span>AI評価 60.5点</span></div><div class="ai-combo"><b>5位 2-1-3</b><span>AI評価 60.3点</span></div><div class="ai-combo"><b>6位 1-3-5</b><span>AI評価 60.1点</span></div><div class="ai-combo"><b>7位 2-3-1</b><span>AI評価 60.1点</span></div><div class="ai-combo"><b>8位 3-1-5</b><span>AI評価 59.7点</span></div><div class="ai-combo"><b>9位 1-2-5</b><span>AI評価 59.5点</span></div><div class="ai-combo"><b>10位 1-3-6</b><span>AI評価 59.4点</span></div><div class="ai-combo"><b>11位 1-5-3</b><span>AI評価 59.3点</span></div><div class="ai-combo"><b>12位 3-1-6</b><span>AI評価 59.0点</span></div><div class="ai-combo"><b>13位 1-5-2</b><span>AI評価 58.9点</span></div><div class="ai-combo"><b>14位 1-2-6</b><span>AI評価 58.8点</span></div><div class="ai-combo"><b>15位 3-5-1</b><span>AI評価 58.7点</span></div><div class="ai-combo"><b>16位 2-1-5</b><span>AI評価 58.7点</span></div><div class="ai-combo"><b>17位 3-2-5</b><span>AI評価 58.5点</span></div><div class="ai-combo"><b>18位 1-6-3</b><span>AI評価 58.3点</span></div><div class="ai-combo"><b>19位 2-3-5</b><span>AI評価 58.1点</span></div><div class="ai-combo"><b>20位 2-1-6</b><span>AI評価 58.0点</span></div><div class="ai-combo"><b>21位 3-5-2</b><span>AI評価 57.9点</span></div><div class="ai-combo"><b>22位 1-3-4</b><span>AI評価 57.9点</span></div><div class="ai-combo"><b>23位 1-6-2</b><span>AI評価 57.9点</span></div><div class="ai-combo"><b>24位 3-2-6</b><span>AI評価 57.8点</span></div></div>
-            <details class="ai-combo-details signal-ai-reference-details">
-              <summary>参考順位25〜50位を見る（購入対象外）</summary>
-              <div class="ai-combos"><div class="ai-combo"><b>25位 2-5-1</b><span>AI評価 57.7点</span></div><div class="ai-combo"><b>26位 3-6-1</b><span>AI評価 57.7点</span></div><div class="ai-combo"><b>27位 3-1-4</b><span>AI評価 57.5点</span></div><div class="ai-combo"><b>28位 2-3-6</b><span>AI評価 57.4点</span></div><div class="ai-combo"><b>29位 5-1-3</b><span>AI評価 57.3点</span></div><div class="ai-combo"><b>30位 2-5-3</b><span>AI評価 57.3点</span></div><div class="ai-combo"><b>31位 1-2-4</b><span>AI評価 57.3点</span></div><div class="ai-combo"><b>32位 5-3-1</b><span>AI評価 57.2点</span></div><div class="ai-combo"><b>33位 1-5-6</b><span>AI評価 57.0点</span></div><div class="ai-combo"><b>34位 5-1-2</b><span>AI評価 56.9点</span></div><div class="ai-combo"><b>35位 3-6-2</b><span>AI評価 56.9点</span></div><div class="ai-combo"><b>36位 1-6-5</b><span>AI評価 56.7点</span></div><div class="ai-combo"><b>37位 2-6-1</b><span>AI評価 56.7点</span></div><div class="ai-combo"><b>38位 5-2-1</b><span>AI評価 56.5点</span></div><div class="ai-combo"><b>39位 2-1-4</b><span>AI評価 56.5点</span></div><div class="ai-combo"><b>40位 5-3-2</b><span>AI評価 56.4点</span></div><div class="ai-combo"><b>41位 3-2-4</b><span>AI評価 56.3点</span></div><div class="ai-combo"><b>42位 2-6-3</b><span>AI評価 56.3点</span></div><div class="ai-combo"><b>43位 5-2-3</b><span>AI評価 56.2点</span></div><div class="ai-combo"><b>44位 3-5-6</b><span>AI評価 56.1点</span></div><div class="ai-combo"><b>45位 1-4-3</b><span>AI評価 56.0点</span></div><div class="ai-combo"><b>46位 2-3-4</b><span>AI評価 55.9点</span></div><div class="ai-combo"><b>47位 3-6-5</b><span>AI評価 55.7点</span></div><div class="ai-combo"><b>48位 6-1-3</b><span>AI評価 55.6点</span></div><div class="ai-combo"><b>49位 1-4-2</b><span>AI評価 55.6点</span></div><div class="ai-combo"><b>50位 1-5-4</b><span>AI評価 55.5点</span></div></div>
-            </details>
-          </details>
-          <div class="ai-note">購入額・回収率は従来どおり上位24点で計算します。25〜50位は検証用の参考順位です。全120通りの順位データは保存済みです。</div>
-        </article>
-        
     </template>
 
     <footer>
@@ -965,6 +928,32 @@ body { background: var(--bg) !important; color: var(--text) !important; }\n.refr
         }));
       });
 
+      // Client-side deadline gate is independent of GitHub/Pages publication.
+      // Every displayed race has a full offset-aware deadline, never just HH:mm.
+      const applyDeadlineVisibility = () => {
+        const pairs = Array.from(document.querySelectorAll(
+          "#normalPredictionPanel > .race-pair[data-deadline-at]"
+        ));
+        let active = 0;
+        for (const pair of pairs) {
+          const cutoff = Date.parse(pair.dataset.deadlineAt || "");
+          const closed = Number.isFinite(cutoff) && Date.now() >= cutoff;
+          pair.style.display = closed ? "none" : "";
+          if (!closed) active++;
+        }
+        if (pairs.length) {
+          const summary = document.getElementById("upcomingRaceCount");
+          if (summary) summary.textContent = "締切前 " + active + "レース";
+          const endNotice = document.getElementById("liveFinishedNotice");
+          if (endNotice) endNotice.style.display = active === 0 ? "" : "none";
+          const refreshPanel = document.querySelector(".refresh-panel");
+          if (refreshPanel) refreshPanel.style.display = active === 0 ? "none" : "";
+        }
+      };
+      applyDeadlineVisibility();
+      window.setInterval(applyDeadlineVisibility, 15000);
+      document.addEventListener("visibilitychange", applyDeadlineVisibility);
+
       const button = document.getElementById("refreshPredictionButton");
       const status = document.getElementById("refreshStatus");
       const endpoint = "https://boatrace-family-trigger.onrender.com/trigger";
@@ -989,8 +978,6 @@ body { background: var(--bg) !important; color: var(--text) !important; }\n.refr
       const morningButton = document.getElementById("morningCollectionButton");
       const morningStatus = document.getElementById("morningCollectionStatus");
 
-      if (!button || !status) return;
-
       if (morningButton && morningStatus) {
         morningButton.addEventListener("click", async () => {
           if (!window.confirm("朝のレース情報を取得して朝予測を更新します。実行しますか？")) return;
@@ -1010,6 +997,13 @@ body { background: var(--bg) !important; color: var(--text) !important; }\n.refr
           }
         });
       }
+
+      // Live data still refreshes periodically, but not during the button's
+      // 6-minute publication check. The old 60s meta refresh interrupted it.
+      window.setInterval(() => {
+        if (!button || !button.disabled) window.location.reload();
+      }, 120000);
+      if (!button || !status) return;
 
       button.addEventListener("click", async () => {
         if (!window.confirm("最新の直前情報を収集して予測を更新します。実行しますか？")) return;

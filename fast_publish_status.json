@@ -1,15 +1,16 @@
 {
   "schema_version": 1,
   "target_date": "20261013",
-  "canonical_blob_sha": "6282d554e770aef667f31c1b96f9c98fb86d85a7",
-  "page_builder_blob_sha": "673d45dd36f55cb2316ce2b79c2c70b075c0a103",
+  "canonical_blob_sha": "1d63c25dbcadeff50cd7fdc07451fe9a79ba5b0a",
+  "page_builder_blob_sha": "254f5b30c4f4b7ea7169ed51eaa0cc2df5b454de",
   "canonical_path": "predictions/2026/10/13/live/formation_predictions_final_20261013.json",
-  "prediction_commit_at_utc": "2026-10-13T13:39:31+00:00",
-  "published_commit_prepared_at_utc": "2026-10-13T13:40:31.748072+00:00",
-  "prediction_commit_to_publication_seconds": 61,
-  "publisher_run_id": "38406758829",
-  "published_at_jst": "2026-10-13T22:40:31.748072+09:00",
+  "prediction_commit_at_utc": "2026-10-13T14:57:19+00:00",
+  "published_commit_prepared_at_utc": "2026-10-13T15:04:29.650872+00:00",
+  "prediction_commit_to_publication_seconds": 431,
+  "publisher_run_id": "38418780438",
+  "published_at_jst": "2026-10-14T00:04:29.650872+09:00",
   "scope": "latest_prediction_index_only",
   "other_tabs_untouched": true,
-  "pages_deployment_verified": false
+  "pages_deployment_verified": false,
+  "refresh_result": "canonical_publication"
 }
