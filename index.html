@@ -216,6 +216,15 @@
       border-radius:8px; background:var(--score-row);
     }
     .signal-ai-reference-details { margin-top:12px; }
+    .signal-ai-tier { margin-top:10px; }
+    .signal-ai-tier > summary { min-height:40px; padding:9px; background:var(--score-row); border-radius:8px; }
+    .signal-ai-tier-label { font-size:13px; margin:12px 0 7px; }
+    .signal-ai-pick-controls { display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between; gap:8px; margin-top:10px; }
+    .signal-ai-reset { border:1px solid var(--line); background:var(--score-row); border-radius:8px; padding:7px 10px; }
+    .signal-ai-ticket-row { cursor:pointer; align-items:center; border-left:3px solid transparent; }
+    .signal-ai-ticket-row input { accent-color:var(--live-accent); min-width:17px; min-height:17px; }
+    .signal-ai-ticket-row b { flex:1; }
+    .signal-ai-ticket-row.is-selected { border-left:4px solid var(--live-accent); background:rgba(20,140,130,.12); }
     .signal-ai-purchase-list .ai-combo { border-left: 3px solid var(--live-accent); }
     .ai-combo {
       display: flex;
@@ -787,7 +796,7 @@ body { background: var(--bg) !important; color: var(--text) !important; }\n.refr
         </span>
 
         <span id="upcomingRaceCount">
-          締切前 98レース
+          締切前 96レース
         </span>
 
       </div>
@@ -831,48 +840,6 @@ body { background: var(--bg) !important; color: var(--text) !important; }\n.refr
 
     <div id="normalPredictionPanel" class="prediction-panel active">
       
-    <div class="race-pair" data-race-id="20261014-06-05" data-deadline-at="2026-10-14T13:19:00+09:00">
-      <div class="race-local-tabs" role="group" aria-label="浜名湖 5Rの予測切替">
-        <button type="button" class="race-local-tab active" data-local-view="normal" aria-pressed="true">通常予測</button>
-        <button type="button" class="race-local-tab" data-local-view="ai" aria-pressed="false">AI予測</button>
-      </div>
-      <div class="race-local-normal">
-    <article class="race-card">
-      <div class="race-head">
-        <div class="race-order">1</div>
-        <div class="race-main"><div class="deadline">13:19</div><div class="race-name">浜名湖 5R<span class="fujin-raijin-stack" title="風神雷神シグナル"><span class="signal-row raijin" title="雷神シグナル 3/3｜最大上昇 +8.3｜4号艇 +8.3｜通常予測には未反映・シグナルAI再評価に使用">⚡⚡⚡</span><span class="signal-row fujin empty-signal">&nbsp;</span></span></div></div>
-        <div class="race-status upcoming">締切前</div>
-        <div class="badge-wrap"><span class="data-ok" title="必須データ取得済み・全採用要素が計算ロジックへ反映済み">●</span><div class="badge live">直前</div></div>
-      </div>
-      <div class="race-view-tabs"><button type="button" class="race-view-tab" data-race-view="朝">朝予想</button><button type="button" class="race-view-tab active" data-race-view="直前">直前予想</button></div>
-      <div class="race-prediction-view hidden" data-view="朝"><div class="top-picks"><div class="pick"><span class="mark">◎</span><span class="pick-name-wrap"><span class="pick-name">1号艇 北村征嗣</span></span><span class="score">79.2</span></div><div class="pick"><span class="mark">○</span><span class="pick-name-wrap"><span class="pick-name">3号艇 竹之内極</span></span><span class="score">70.4</span></div><div class="pick"><span class="mark">▲</span><span class="pick-name-wrap"><span class="pick-name">4号艇 滝沢芳行</span></span><span class="score">58.3</span></div></div><details><summary>6艇すべてのスコア</summary><div class="scores"><span class="chip">1号艇 北村征嗣 79.2</span><span class="chip">3号艇 竹之内極 70.4</span><span class="chip">4号艇 滝沢芳行 58.3</span><span class="chip">2号艇 中岡健人 39.1</span><span class="chip">5号艇 小野信樹 28.7</span><span class="chip">6号艇 花本剛 24.3</span></div></details><div class="formation"><div class="formation-title">3連単 準軸・8点・800円</div><div class="formation-grid"><div><b>1着</b> 1・3</div><div><b>2着</b> 1・3・4</div><div><b>3着</b> 1・3・4・2</div></div><div class="combos">1-3-4 / 1-4-3 / 3-1-4 / 1-3-2 / 3-4-1 / 3-1-2 / 1-4-2 / 3-4-2</div></div></div>
-      <div class="race-prediction-view" data-view="直前"><div class="top-picks"><div class="pick"><span class="mark">◎</span><span class="pick-name-wrap"><span class="pick-name">3号艇 竹之内極</span><span class="score-delta up">▲ +3.5</span></span><span class="score">73.9</span></div><div class="pick"><span class="mark">○</span><span class="pick-name-wrap"><span class="pick-name">1号艇 北村征嗣</span><span class="score-delta down">▼ -5.4</span></span><span class="score">73.8</span></div><div class="pick"><span class="mark">▲</span><span class="pick-name-wrap"><span class="pick-name">4号艇 滝沢芳行</span><span class="score-delta up">▲ +8.3</span></span><span class="score">66.6</span></div></div><details><summary>6艇すべてのスコア</summary><div class="scores"><span class="chip">3号艇 竹之内極 73.9<span class="score-delta up">▲ +3.5</span></span><span class="chip">1号艇 北村征嗣 73.8<span class="score-delta down">▼ -5.4</span></span><span class="chip">4号艇 滝沢芳行 66.6<span class="score-delta up">▲ +8.3</span></span><span class="chip">2号艇 中岡健人 46.5<span class="score-delta up">▲ +7.4</span></span><span class="chip">5号艇 小野信樹 31.8<span class="score-delta up">▲ +3.1</span></span><span class="chip">6号艇 花本剛 22.8<span class="score-delta down">▼ -1.5</span></span></div></details><div class="formation"><div class="formation-title">3連単 混戦・12点・1,200円</div><div class="formation-grid"><div><b>1着</b> 3・1</div><div><b>2着</b> 3・1・4・2</div><div><b>3着</b> 3・1・4・2・5</div></div><div class="combos">3-1-4 / 1-3-4 / 3-4-1 / 1-4-3 / 3-1-2 / 1-3-2 / 3-4-2 / 1-4-2 / 3-2-1 / 1-2-3 / 3-1-5 / 1-3-5</div></div></div>
-    </article>
-    </div>
-      <div class="race-local-ai" hidden></div>
-    </div>
-    
-    <div class="race-pair" data-race-id="20261014-04-07" data-deadline-at="2026-10-14T13:24:00+09:00">
-      <div class="race-local-tabs" role="group" aria-label="平和島 7Rの予測切替">
-        <button type="button" class="race-local-tab active" data-local-view="normal" aria-pressed="true">通常予測</button>
-        <button type="button" class="race-local-tab" data-local-view="ai" aria-pressed="false">AI予測</button>
-      </div>
-      <div class="race-local-normal">
-    <article class="race-card">
-      <div class="race-head">
-        <div class="race-order">2</div>
-        <div class="race-main"><div class="deadline">13:24</div><div class="race-name">平和島 7R<span class="fujin-raijin-stack" title="風神雷神シグナル"><span class="signal-row raijin" title="雷神シグナル 3/3｜最大上昇 +9.2｜3号艇 +9.2｜通常予測には未反映・シグナルAI再評価に使用">⚡⚡⚡</span><span class="signal-row fujin empty-signal">&nbsp;</span></span></div></div>
-        <div class="race-status upcoming">締切前</div>
-        <div class="badge-wrap"><span class="data-ok" title="必須データ取得済み・全採用要素が計算ロジックへ反映済み">●</span><div class="badge live">直前</div></div>
-      </div>
-      <div class="race-view-tabs"><button type="button" class="race-view-tab" data-race-view="朝">朝予想</button><button type="button" class="race-view-tab active" data-race-view="直前">直前予想</button></div>
-      <div class="race-prediction-view hidden" data-view="朝"><div class="top-picks"><div class="pick"><span class="mark">◎</span><span class="pick-name-wrap"><span class="pick-name">1号艇 萩原秀人</span></span><span class="score">93.9</span></div><div class="pick"><span class="mark">○</span><span class="pick-name-wrap"><span class="pick-name">4号艇 吉田裕平</span></span><span class="score">58.5</span></div><div class="pick"><span class="mark">▲</span><span class="pick-name-wrap"><span class="pick-name">3号艇 瓜生正義</span></span><span class="score">54.2</span></div></div><details><summary>6艇すべてのスコア</summary><div class="scores"><span class="chip">1号艇 萩原秀人 93.9</span><span class="chip">4号艇 吉田裕平 58.5</span><span class="chip">3号艇 瓜生正義 54.2</span><span class="chip">2号艇 寺田祥 50.8</span><span class="chip">5号艇 大池佑来 34.9</span><span class="chip">6号艇 石渡鉄兵 7.7</span></div></details><div class="formation"><div class="formation-title">3連単 1着固定＋相手流し・12点・1,200円</div><div class="formation-grid"><div><b>1着</b> 1</div><div><b>2着</b> 4・3・2・5・6</div><div><b>3着</b> 4・3・2・5・6</div></div><div class="combos">1-4-3 / 1-3-4 / 1-4-2 / 1-2-4 / 1-3-2 / 1-2-3 / 1-4-5 / 1-3-5 / 1-2-5 / 1-5-4 / 1-5-3 / 1-5-2</div></div></div>
-      <div class="race-prediction-view" data-view="直前"><div class="top-picks"><div class="pick"><span class="mark">◎</span><span class="pick-name-wrap"><span class="pick-name">1号艇 萩原秀人</span><span class="score-delta flat">→ ±0.0</span></span><span class="score">93.9</span></div><div class="pick"><span class="mark">○</span><span class="pick-name-wrap"><span class="pick-name">4号艇 吉田裕平</span><span class="score-delta up">▲ +5.9</span></span><span class="score">64.4</span></div><div class="pick"><span class="mark">▲</span><span class="pick-name-wrap"><span class="pick-name">3号艇 瓜生正義</span><span class="score-delta up">▲ +9.2</span></span><span class="score">63.4</span></div></div><details><summary>6艇すべてのスコア</summary><div class="scores"><span class="chip">1号艇 萩原秀人 93.9<span class="score-delta flat">→ ±0.0</span></span><span class="chip">4号艇 吉田裕平 64.4<span class="score-delta up">▲ +5.9</span></span><span class="chip">3号艇 瓜生正義 63.4<span class="score-delta up">▲ +9.2</span></span><span class="chip">2号艇 寺田祥 55.8<span class="score-delta up">▲ +5.0</span></span><span class="chip">5号艇 大池佑来 30.3<span class="score-delta down">▼ -4.6</span></span><span class="chip">6号艇 石渡鉄兵 15.0<span class="score-delta up">▲ +7.3</span></span></div></details><div class="formation"><div class="formation-title">3連単 1着固定＋相手流し・12点・1,200円</div><div class="formation-grid"><div><b>1着</b> 1</div><div><b>2着</b> 4・3・2・5・6</div><div><b>3着</b> 4・3・2・5・6</div></div><div class="combos">1-4-3 / 1-3-4 / 1-4-2 / 1-3-2 / 1-2-4 / 1-2-3 / 1-4-5 / 1-3-5 / 1-2-5 / 1-4-6 / 1-3-6 / 1-5-4</div></div></div>
-    </article>
-    </div>
-      <div class="race-local-ai" hidden></div>
-    </div>
-    
     <div class="race-pair" data-race-id="20261014-22-06" data-deadline-at="2026-10-14T13:30:00+09:00">
       <div class="race-local-tabs" role="group" aria-label="福岡 6Rの予測切替">
         <button type="button" class="race-local-tab active" data-local-view="normal" aria-pressed="true">通常予測</button>
@@ -881,7 +848,7 @@ body { background: var(--bg) !important; color: var(--text) !important; }\n.refr
       <div class="race-local-normal">
     <article class="race-card">
       <div class="race-head">
-        <div class="race-order">3</div>
+        <div class="race-order">1</div>
         <div class="race-main"><div class="deadline">13:30</div><div class="race-name">福岡 6R<span class="fujin-raijin-stack" title="風神雷神シグナル"><span class="signal-row raijin" title="雷神シグナル 3/3｜最大上昇 +17.5｜6号艇 +17.5｜通常予測には未反映・シグナルAI再評価に使用">⚡⚡⚡</span><span class="signal-row fujin empty-signal">&nbsp;</span></span></div></div>
         <div class="race-status upcoming">締切前</div>
         <div class="badge-wrap"><span class="data-ok" title="必須データ取得済み・全採用要素が計算ロジックへ反映済み">●</span><div class="badge live">直前</div></div>
@@ -902,7 +869,7 @@ body { background: var(--bg) !important; color: var(--text) !important; }\n.refr
       <div class="race-local-normal">
     <article class="race-card">
       <div class="race-head">
-        <div class="race-order">4</div>
+        <div class="race-order">2</div>
         <div class="race-main"><div class="deadline">13:32</div><div class="race-name">尼崎 7R</div></div>
         <div class="race-status upcoming">締切前</div>
         <div class="badge-wrap"><span class="data-ok" title="必須データ取得済み・全採用要素が計算ロジックへ反映済み">●</span><div class="badge live">直前</div></div>
@@ -923,7 +890,7 @@ body { background: var(--bg) !important; color: var(--text) !important; }\n.refr
       <div class="race-local-normal">
     <article class="race-card">
       <div class="race-head">
-        <div class="race-order">5</div>
+        <div class="race-order">3</div>
         <div class="race-main"><div class="deadline">13:34</div><div class="race-name">鳴門 11R<span class="fujin-raijin-stack" title="風神雷神シグナル"><span class="signal-row raijin" title="雷神シグナル 2/3｜最大上昇 +10.1｜5号艇 +10.1｜通常予測には未反映・シグナルAI再評価に使用">⚡⚡</span><span class="signal-row fujin" title="風神シグナル 2/3｜1位朝比 -8.7｜TOP3合計 -6.0｜1-2位差 2.1｜通常予測には未反映・シグナルAI再評価に使用">💨💨</span></span></div></div>
         <div class="race-status upcoming">締切前</div>
         <div class="badge-wrap"><span class="data-ok" title="必須データ取得済み・全採用要素が計算ロジックへ反映済み">●</span><div class="badge live">直前</div></div>
@@ -944,7 +911,7 @@ body { background: var(--bg) !important; color: var(--text) !important; }\n.refr
       <div class="race-local-normal">
     <article class="race-card">
       <div class="race-head">
-        <div class="race-order">6</div>
+        <div class="race-order">4</div>
         <div class="race-main"><div class="deadline">13:42</div><div class="race-name">徳山 11R</div></div>
         <div class="race-status upcoming">締切前</div>
         <div class="badge-wrap"><div class="badge morning">朝</div></div>
@@ -965,7 +932,7 @@ body { background: var(--bg) !important; color: var(--text) !important; }\n.refr
       <div class="race-local-normal">
     <article class="race-card">
       <div class="race-head">
-        <div class="race-order">7</div>
+        <div class="race-order">5</div>
         <div class="race-main"><div class="deadline">13:45</div><div class="race-name">びわこ 8R</div></div>
         <div class="race-status upcoming">締切前</div>
         <div class="badge-wrap"><div class="badge morning">朝</div></div>
@@ -986,7 +953,7 @@ body { background: var(--bg) !important; color: var(--text) !important; }\n.refr
       <div class="race-local-normal">
     <article class="race-card">
       <div class="race-head">
-        <div class="race-order">8</div>
+        <div class="race-order">6</div>
         <div class="race-main"><div class="deadline">13:47</div><div class="race-name">浜名湖 6R</div></div>
         <div class="race-status upcoming">締切前</div>
         <div class="badge-wrap"><div class="badge morning">朝</div></div>
@@ -1007,7 +974,7 @@ body { background: var(--bg) !important; color: var(--text) !important; }\n.refr
       <div class="race-local-normal">
     <article class="race-card">
       <div class="race-head">
-        <div class="race-order">9</div>
+        <div class="race-order">7</div>
         <div class="race-main"><div class="deadline">13:50</div><div class="race-name">芦屋 11R</div></div>
         <div class="race-status upcoming">締切前</div>
         <div class="badge-wrap"><div class="badge morning">朝</div></div>
@@ -1028,7 +995,7 @@ body { background: var(--bg) !important; color: var(--text) !important; }\n.refr
       <div class="race-local-normal">
     <article class="race-card">
       <div class="race-head">
-        <div class="race-order">10</div>
+        <div class="race-order">8</div>
         <div class="race-main"><div class="deadline">13:55</div><div class="race-name">福岡 7R</div></div>
         <div class="race-status upcoming">締切前</div>
         <div class="badge-wrap"><div class="badge morning">朝</div></div>
@@ -1049,7 +1016,7 @@ body { background: var(--bg) !important; color: var(--text) !important; }\n.refr
       <div class="race-local-normal">
     <article class="race-card">
       <div class="race-head">
-        <div class="race-order">11</div>
+        <div class="race-order">9</div>
         <div class="race-main"><div class="deadline">13:57</div><div class="race-name">平和島 8R</div></div>
         <div class="race-status upcoming">締切前</div>
         <div class="badge-wrap"><div class="badge morning">朝</div></div>
@@ -1070,7 +1037,7 @@ body { background: var(--bg) !important; color: var(--text) !important; }\n.refr
       <div class="race-local-normal">
     <article class="race-card">
       <div class="race-head">
-        <div class="race-order">12</div>
+        <div class="race-order">10</div>
         <div class="race-main"><div class="deadline">14:05</div><div class="race-name">尼崎 8R</div></div>
         <div class="race-status upcoming">締切前</div>
         <div class="badge-wrap"><div class="badge morning">朝</div></div>
@@ -1091,7 +1058,7 @@ body { background: var(--bg) !important; color: var(--text) !important; }\n.refr
       <div class="race-local-normal">
     <article class="race-card">
       <div class="race-head">
-        <div class="race-order">13</div>
+        <div class="race-order">11</div>
         <div class="race-main"><div class="deadline">14:11</div><div class="race-name">鳴門 12R</div></div>
         <div class="race-status upcoming">締切前</div>
         <div class="badge-wrap"><div class="badge morning">朝</div></div>
@@ -1112,7 +1079,7 @@ body { background: var(--bg) !important; color: var(--text) !important; }\n.refr
       <div class="race-local-normal">
     <article class="race-card">
       <div class="race-head">
-        <div class="race-order">14</div>
+        <div class="race-order">12</div>
         <div class="race-main"><div class="deadline">14:15</div><div class="race-name">浜名湖 7R</div></div>
         <div class="race-status upcoming">締切前</div>
         <div class="badge-wrap"><div class="badge morning">朝</div></div>
@@ -1133,7 +1100,7 @@ body { background: var(--bg) !important; color: var(--text) !important; }\n.refr
       <div class="race-local-normal">
     <article class="race-card">
       <div class="race-head">
-        <div class="race-order">15</div>
+        <div class="race-order">13</div>
         <div class="race-main"><div class="deadline">14:18</div><div class="race-name">びわこ 9R</div></div>
         <div class="race-status upcoming">締切前</div>
         <div class="badge-wrap"><div class="badge morning">朝</div></div>
@@ -1154,7 +1121,7 @@ body { background: var(--bg) !important; color: var(--text) !important; }\n.refr
       <div class="race-local-normal">
     <article class="race-card">
       <div class="race-head">
-        <div class="race-order">16</div>
+        <div class="race-order">14</div>
         <div class="race-main"><div class="deadline">14:20</div><div class="race-name">徳山 12R</div></div>
         <div class="race-status upcoming">締切前</div>
         <div class="badge-wrap"><div class="badge morning">朝</div></div>
@@ -1175,7 +1142,7 @@ body { background: var(--bg) !important; color: var(--text) !important; }\n.refr
       <div class="race-local-normal">
     <article class="race-card">
       <div class="race-head">
-        <div class="race-order">17</div>
+        <div class="race-order">15</div>
         <div class="race-main"><div class="deadline">14:24</div><div class="race-name">福岡 8R</div></div>
         <div class="race-status upcoming">締切前</div>
         <div class="badge-wrap"><div class="badge morning">朝</div></div>
@@ -1196,7 +1163,7 @@ body { background: var(--bg) !important; color: var(--text) !important; }\n.refr
       <div class="race-local-normal">
     <article class="race-card">
       <div class="race-head">
-        <div class="race-order">18</div>
+        <div class="race-order">16</div>
         <div class="race-main"><div class="deadline">14:27</div><div class="race-name">芦屋 12R</div></div>
         <div class="race-status upcoming">締切前</div>
         <div class="badge-wrap"><div class="badge morning">朝</div></div>
@@ -1217,7 +1184,7 @@ body { background: var(--bg) !important; color: var(--text) !important; }\n.refr
       <div class="race-local-normal">
     <article class="race-card">
       <div class="race-head">
-        <div class="race-order">19</div>
+        <div class="race-order">17</div>
         <div class="race-main"><div class="deadline">14:30</div><div class="race-name">平和島 9R</div></div>
         <div class="race-status upcoming">締切前</div>
         <div class="badge-wrap"><div class="badge morning">朝</div></div>
@@ -1238,7 +1205,7 @@ body { background: var(--bg) !important; color: var(--text) !important; }\n.refr
       <div class="race-local-normal">
     <article class="race-card">
       <div class="race-head">
-        <div class="race-order">20</div>
+        <div class="race-order">18</div>
         <div class="race-main"><div class="deadline">14:36</div><div class="race-name">尼崎 9R</div></div>
         <div class="race-status upcoming">締切前</div>
         <div class="badge-wrap"><div class="badge morning">朝</div></div>
@@ -1259,7 +1226,7 @@ body { background: var(--bg) !important; color: var(--text) !important; }\n.refr
       <div class="race-local-normal">
     <article class="race-card">
       <div class="race-head">
-        <div class="race-order">21</div>
+        <div class="race-order">19</div>
         <div class="race-main"><div class="deadline">14:42</div><div class="race-name">浜名湖 8R</div></div>
         <div class="race-status upcoming">締切前</div>
         <div class="badge-wrap"><div class="badge morning">朝</div></div>
@@ -1280,7 +1247,7 @@ body { background: var(--bg) !important; color: var(--text) !important; }\n.refr
       <div class="race-local-normal">
     <article class="race-card">
       <div class="race-head">
-        <div class="race-order">22</div>
+        <div class="race-order">20</div>
         <div class="race-main"><div class="deadline">14:47</div><div class="race-name">びわこ 10R</div></div>
         <div class="race-status upcoming">締切前</div>
         <div class="badge-wrap"><div class="badge morning">朝</div></div>
@@ -1301,7 +1268,7 @@ body { background: var(--bg) !important; color: var(--text) !important; }\n.refr
       <div class="race-local-normal">
     <article class="race-card">
       <div class="race-head">
-        <div class="race-order">23</div>
+        <div class="race-order">21</div>
         <div class="race-main"><div class="deadline">14:55</div><div class="race-name">福岡 9R</div></div>
         <div class="race-status upcoming">締切前</div>
         <div class="badge-wrap"><div class="badge morning">朝</div></div>
@@ -1322,7 +1289,7 @@ body { background: var(--bg) !important; color: var(--text) !important; }\n.refr
       <div class="race-local-normal">
     <article class="race-card">
       <div class="race-head">
-        <div class="race-order">24</div>
+        <div class="race-order">22</div>
         <div class="race-main"><div class="deadline">15:00</div><div class="race-name">尼崎 10R</div></div>
         <div class="race-status upcoming">締切前</div>
         <div class="badge-wrap"><div class="badge morning">朝</div></div>
@@ -1343,7 +1310,7 @@ body { background: var(--bg) !important; color: var(--text) !important; }\n.refr
       <div class="race-local-normal">
     <article class="race-card">
       <div class="race-head">
-        <div class="race-order">25</div>
+        <div class="race-order">23</div>
         <div class="race-main"><div class="deadline">15:04</div><div class="race-name">平和島 10R</div></div>
         <div class="race-status upcoming">締切前</div>
         <div class="badge-wrap"><div class="badge morning">朝</div></div>
@@ -1364,7 +1331,7 @@ body { background: var(--bg) !important; color: var(--text) !important; }\n.refr
       <div class="race-local-normal">
     <article class="race-card">
       <div class="race-head">
-        <div class="race-order">26</div>
+        <div class="race-order">24</div>
         <div class="race-main"><div class="deadline">15:09</div><div class="race-name">浜名湖 9R</div></div>
         <div class="race-status upcoming">締切前</div>
         <div class="badge-wrap"><div class="badge morning">朝</div></div>
@@ -1385,7 +1352,7 @@ body { background: var(--bg) !important; color: var(--text) !important; }\n.refr
       <div class="race-local-normal">
     <article class="race-card">
       <div class="race-head">
-        <div class="race-order">27</div>
+        <div class="race-order">25</div>
         <div class="race-main"><div class="deadline">15:15</div><div class="race-name">びわこ 11R</div></div>
         <div class="race-status upcoming">締切前</div>
         <div class="badge-wrap"><div class="badge morning">朝</div></div>
@@ -1406,7 +1373,7 @@ body { background: var(--bg) !important; color: var(--text) !important; }\n.refr
       <div class="race-local-normal">
     <article class="race-card">
       <div class="race-head">
-        <div class="race-order">28</div>
+        <div class="race-order">26</div>
         <div class="race-main"><div class="deadline">15:17</div><div class="race-name">住之江 1R</div></div>
         <div class="race-status upcoming">締切前</div>
         <div class="badge-wrap"><div class="badge morning">朝</div></div>
@@ -1427,7 +1394,7 @@ body { background: var(--bg) !important; color: var(--text) !important; }\n.refr
       <div class="race-local-normal">
     <article class="race-card">
       <div class="race-head">
-        <div class="race-order">29</div>
+        <div class="race-order">27</div>
         <div class="race-main"><div class="deadline">15:20</div><div class="race-name">丸亀 1R</div></div>
         <div class="race-status upcoming">締切前</div>
         <div class="badge-wrap"><div class="badge morning">朝</div></div>
@@ -1448,7 +1415,7 @@ body { background: var(--bg) !important; color: var(--text) !important; }\n.refr
       <div class="race-local-normal">
     <article class="race-card">
       <div class="race-head">
-        <div class="race-order">30</div>
+        <div class="race-order">28</div>
         <div class="race-main"><div class="deadline">15:23</div><div class="race-name">大村 1R</div></div>
         <div class="race-status upcoming">締切前</div>
         <div class="badge-wrap"><div class="badge morning">朝</div></div>
@@ -1469,7 +1436,7 @@ body { background: var(--bg) !important; color: var(--text) !important; }\n.refr
       <div class="race-local-normal">
     <article class="race-card">
       <div class="race-head">
-        <div class="race-order">31</div>
+        <div class="race-order">29</div>
         <div class="race-main"><div class="deadline">15:25</div><div class="race-name">若松 1R</div></div>
         <div class="race-status upcoming">締切前</div>
         <div class="badge-wrap"><div class="badge morning">朝</div></div>
@@ -1490,7 +1457,7 @@ body { background: var(--bg) !important; color: var(--text) !important; }\n.refr
       <div class="race-local-normal">
     <article class="race-card">
       <div class="race-head">
-        <div class="race-order">32</div>
+        <div class="race-order">30</div>
         <div class="race-main"><div class="deadline">15:30</div><div class="race-name">福岡 10R</div></div>
         <div class="race-status upcoming">締切前</div>
         <div class="badge-wrap"><div class="badge morning">朝</div></div>
@@ -1511,7 +1478,7 @@ body { background: var(--bg) !important; color: var(--text) !important; }\n.refr
       <div class="race-local-normal">
     <article class="race-card">
       <div class="race-head">
-        <div class="race-order">33</div>
+        <div class="race-order">31</div>
         <div class="race-main"><div class="deadline">15:33</div><div class="race-name">尼崎 11R</div></div>
         <div class="race-status upcoming">締切前</div>
         <div class="badge-wrap"><div class="badge morning">朝</div></div>
@@ -1532,7 +1499,7 @@ body { background: var(--bg) !important; color: var(--text) !important; }\n.refr
       <div class="race-local-normal">
     <article class="race-card">
       <div class="race-head">
-        <div class="race-order">34</div>
+        <div class="race-order">32</div>
         <div class="race-main"><div class="deadline">15:37</div><div class="race-name">浜名湖 10R</div></div>
         <div class="race-status upcoming">締切前</div>
         <div class="badge-wrap"><div class="badge morning">朝</div></div>
@@ -1553,7 +1520,7 @@ body { background: var(--bg) !important; color: var(--text) !important; }\n.refr
       <div class="race-local-normal">
     <article class="race-card">
       <div class="race-head">
-        <div class="race-order">35</div>
+        <div class="race-order">33</div>
         <div class="race-main"><div class="deadline">15:40</div><div class="race-name">平和島 11R</div></div>
         <div class="race-status upcoming">締切前</div>
         <div class="badge-wrap"><div class="badge morning">朝</div></div>
@@ -1574,7 +1541,7 @@ body { background: var(--bg) !important; color: var(--text) !important; }\n.refr
       <div class="race-local-normal">
     <article class="race-card">
       <div class="race-head">
-        <div class="race-order">36</div>
+        <div class="race-order">34</div>
         <div class="race-main"><div class="deadline">15:44</div><div class="race-name">丸亀 2R</div></div>
         <div class="race-status upcoming">締切前</div>
         <div class="badge-wrap"><div class="badge morning">朝</div></div>
@@ -1595,7 +1562,7 @@ body { background: var(--bg) !important; color: var(--text) !important; }\n.refr
       <div class="race-local-normal">
     <article class="race-card">
       <div class="race-head">
-        <div class="race-order">37</div>
+        <div class="race-order">35</div>
         <div class="race-main"><div class="deadline">15:47</div><div class="race-name">びわこ 12R</div></div>
         <div class="race-status upcoming">締切前</div>
         <div class="badge-wrap"><div class="badge morning">朝</div></div>
@@ -1616,7 +1583,7 @@ body { background: var(--bg) !important; color: var(--text) !important; }\n.refr
       <div class="race-local-normal">
     <article class="race-card">
       <div class="race-head">
-        <div class="race-order">38</div>
+        <div class="race-order">36</div>
         <div class="race-main"><div class="deadline">15:49</div><div class="race-name">住之江 2R</div></div>
         <div class="race-status upcoming">締切前</div>
         <div class="badge-wrap"><div class="badge morning">朝</div></div>
@@ -1637,7 +1604,7 @@ body { background: var(--bg) !important; color: var(--text) !important; }\n.refr
       <div class="race-local-normal">
     <article class="race-card">
       <div class="race-head">
-        <div class="race-order">39</div>
+        <div class="race-order">37</div>
         <div class="race-main"><div class="deadline">15:52</div><div class="race-name">大村 2R</div></div>
         <div class="race-status upcoming">締切前</div>
         <div class="badge-wrap"><div class="badge morning">朝</div></div>
@@ -1658,7 +1625,7 @@ body { background: var(--bg) !important; color: var(--text) !important; }\n.refr
       <div class="race-local-normal">
     <article class="race-card">
       <div class="race-head">
-        <div class="race-order">40</div>
+        <div class="race-order">38</div>
         <div class="race-main"><div class="deadline">15:54</div><div class="race-name">若松 2R</div></div>
         <div class="race-status upcoming">締切前</div>
         <div class="badge-wrap"><div class="badge morning">朝</div></div>
@@ -1679,7 +1646,7 @@ body { background: var(--bg) !important; color: var(--text) !important; }\n.refr
       <div class="race-local-normal">
     <article class="race-card">
       <div class="race-head">
-        <div class="race-order">41</div>
+        <div class="race-order">39</div>
         <div class="race-main"><div class="deadline">15:58</div><div class="race-name">福岡 11R</div></div>
         <div class="race-status upcoming">締切前</div>
         <div class="badge-wrap"><div class="badge morning">朝</div></div>
@@ -1700,7 +1667,7 @@ body { background: var(--bg) !important; color: var(--text) !important; }\n.refr
       <div class="race-local-normal">
     <article class="race-card">
       <div class="race-head">
-        <div class="race-order">42</div>
+        <div class="race-order">40</div>
         <div class="race-main"><div class="deadline">16:02</div><div class="race-name">尼崎 12R</div></div>
         <div class="race-status upcoming">締切前</div>
         <div class="badge-wrap"><div class="badge morning">朝</div></div>
@@ -1721,7 +1688,7 @@ body { background: var(--bg) !important; color: var(--text) !important; }\n.refr
       <div class="race-local-normal">
     <article class="race-card">
       <div class="race-head">
-        <div class="race-order">43</div>
+        <div class="race-order">41</div>
         <div class="race-main"><div class="deadline">16:09</div><div class="race-name">浜名湖 11R</div></div>
         <div class="race-status upcoming">締切前</div>
         <div class="badge-wrap"><div class="badge morning">朝</div></div>
@@ -1742,7 +1709,7 @@ body { background: var(--bg) !important; color: var(--text) !important; }\n.refr
       <div class="race-local-normal">
     <article class="race-card">
       <div class="race-head">
-        <div class="race-order">44</div>
+        <div class="race-order">42</div>
         <div class="race-main"><div class="deadline">16:11</div><div class="race-name">住之江 3R</div></div>
         <div class="race-status upcoming">締切前</div>
         <div class="badge-wrap"><div class="badge morning">朝</div></div>
@@ -1763,7 +1730,7 @@ body { background: var(--bg) !important; color: var(--text) !important; }\n.refr
       <div class="race-local-normal">
     <article class="race-card">
       <div class="race-head">
-        <div class="race-order">45</div>
+        <div class="race-order">43</div>
         <div class="race-main"><div class="deadline">16:13</div><div class="race-name">丸亀 3R</div></div>
         <div class="race-status upcoming">締切前</div>
         <div class="badge-wrap"><div class="badge morning">朝</div></div>
@@ -1784,7 +1751,7 @@ body { background: var(--bg) !important; color: var(--text) !important; }\n.refr
       <div class="race-local-normal">
     <article class="race-card">
       <div class="race-head">
-        <div class="race-order">46</div>
+        <div class="race-order">44</div>
         <div class="race-main"><div class="deadline">16:17</div><div class="race-name">大村 3R</div></div>
         <div class="race-status upcoming">締切前</div>
         <div class="badge-wrap"><div class="badge morning">朝</div></div>
@@ -1805,7 +1772,7 @@ body { background: var(--bg) !important; color: var(--text) !important; }\n.refr
       <div class="race-local-normal">
     <article class="race-card">
       <div class="race-head">
-        <div class="race-order">47</div>
+        <div class="race-order">45</div>
         <div class="race-main"><div class="deadline">16:20</div><div class="race-name">平和島 12R</div></div>
         <div class="race-status upcoming">締切前</div>
         <div class="badge-wrap"><div class="badge morning">朝</div></div>
@@ -1826,7 +1793,7 @@ body { background: var(--bg) !important; color: var(--text) !important; }\n.refr
       <div class="race-local-normal">
     <article class="race-card">
       <div class="race-head">
-        <div class="race-order">48</div>
+        <div class="race-order">46</div>
         <div class="race-main"><div class="deadline">16:27</div><div class="race-name">若松 3R</div></div>
         <div class="race-status upcoming">締切前</div>
         <div class="badge-wrap"><div class="badge morning">朝</div></div>
@@ -1847,7 +1814,7 @@ body { background: var(--bg) !important; color: var(--text) !important; }\n.refr
       <div class="race-local-normal">
     <article class="race-card">
       <div class="race-head">
-        <div class="race-order">49</div>
+        <div class="race-order">47</div>
         <div class="race-main"><div class="deadline">16:31</div><div class="race-name">福岡 12R</div></div>
         <div class="race-status upcoming">締切前</div>
         <div class="badge-wrap"><div class="badge morning">朝</div></div>
@@ -1868,7 +1835,7 @@ body { background: var(--bg) !important; color: var(--text) !important; }\n.refr
       <div class="race-local-normal">
     <article class="race-card">
       <div class="race-head">
-        <div class="race-order">50</div>
+        <div class="race-order">48</div>
         <div class="race-main"><div class="deadline">16:34</div><div class="race-name">住之江 4R</div></div>
         <div class="race-status upcoming">締切前</div>
         <div class="badge-wrap"><div class="badge morning">朝</div></div>
@@ -1889,7 +1856,7 @@ body { background: var(--bg) !important; color: var(--text) !important; }\n.refr
       <div class="race-local-normal">
     <article class="race-card">
       <div class="race-head">
-        <div class="race-order">51</div>
+        <div class="race-order">49</div>
         <div class="race-main"><div class="deadline">16:36</div><div class="race-name">浜名湖 12R</div></div>
         <div class="race-status upcoming">締切前</div>
         <div class="badge-wrap"><div class="badge morning">朝</div></div>
@@ -1910,7 +1877,7 @@ body { background: var(--bg) !important; color: var(--text) !important; }\n.refr
       <div class="race-local-normal">
     <article class="race-card">
       <div class="race-head">
-        <div class="race-order">52</div>
+        <div class="race-order">50</div>
         <div class="race-main"><div class="deadline">16:42</div><div class="race-name">丸亀 4R</div></div>
         <div class="race-status upcoming">締切前</div>
         <div class="badge-wrap"><div class="badge morning">朝</div></div>
@@ -1931,7 +1898,7 @@ body { background: var(--bg) !important; color: var(--text) !important; }\n.refr
       <div class="race-local-normal">
     <article class="race-card">
       <div class="race-head">
-        <div class="race-order">53</div>
+        <div class="race-order">51</div>
         <div class="race-main"><div class="deadline">16:46</div><div class="race-name">大村 4R</div></div>
         <div class="race-status upcoming">締切前</div>
         <div class="badge-wrap"><div class="badge morning">朝</div></div>
@@ -1952,7 +1919,7 @@ body { background: var(--bg) !important; color: var(--text) !important; }\n.refr
       <div class="race-local-normal">
     <article class="race-card">
       <div class="race-head">
-        <div class="race-order">54</div>
+        <div class="race-order">52</div>
         <div class="race-main"><div class="deadline">16:53</div><div class="race-name">若松 4R</div></div>
         <div class="race-status upcoming">締切前</div>
         <div class="badge-wrap"><div class="badge morning">朝</div></div>
@@ -1973,7 +1940,7 @@ body { background: var(--bg) !important; color: var(--text) !important; }\n.refr
       <div class="race-local-normal">
     <article class="race-card">
       <div class="race-head">
-        <div class="race-order">55</div>
+        <div class="race-order">53</div>
         <div class="race-main"><div class="deadline">17:01</div><div class="race-name">住之江 5R</div></div>
         <div class="race-status upcoming">締切前</div>
         <div class="badge-wrap"><div class="badge morning">朝</div></div>
@@ -1994,7 +1961,7 @@ body { background: var(--bg) !important; color: var(--text) !important; }\n.refr
       <div class="race-local-normal">
     <article class="race-card">
       <div class="race-head">
-        <div class="race-order">56</div>
+        <div class="race-order">54</div>
         <div class="race-main"><div class="deadline">17:06</div><div class="race-name">丸亀 5R</div></div>
         <div class="race-status upcoming">締切前</div>
         <div class="badge-wrap"><div class="badge morning">朝</div></div>
@@ -2015,7 +1982,7 @@ body { background: var(--bg) !important; color: var(--text) !important; }\n.refr
       <div class="race-local-normal">
     <article class="race-card">
       <div class="race-head">
-        <div class="race-order">57</div>
+        <div class="race-order">55</div>
         <div class="race-main"><div class="deadline">17:11</div><div class="race-name">大村 5R</div></div>
         <div class="race-status upcoming">締切前</div>
         <div class="badge-wrap"><div class="badge morning">朝</div></div>
@@ -2036,7 +2003,7 @@ body { background: var(--bg) !important; color: var(--text) !important; }\n.refr
       <div class="race-local-normal">
     <article class="race-card">
       <div class="race-head">
-        <div class="race-order">58</div>
+        <div class="race-order">56</div>
         <div class="race-main"><div class="deadline">17:19</div><div class="race-name">若松 5R</div></div>
         <div class="race-status upcoming">締切前</div>
         <div class="badge-wrap"><div class="badge morning">朝</div></div>
@@ -2057,7 +2024,7 @@ body { background: var(--bg) !important; color: var(--text) !important; }\n.refr
       <div class="race-local-normal">
     <article class="race-card">
       <div class="race-head">
-        <div class="race-order">59</div>
+        <div class="race-order">57</div>
         <div class="race-main"><div class="deadline">17:25</div><div class="race-name">住之江 6R</div></div>
         <div class="race-status upcoming">締切前</div>
         <div class="badge-wrap"><div class="badge morning">朝</div></div>
@@ -2078,7 +2045,7 @@ body { background: var(--bg) !important; color: var(--text) !important; }\n.refr
       <div class="race-local-normal">
     <article class="race-card">
       <div class="race-head">
-        <div class="race-order">60</div>
+        <div class="race-order">58</div>
         <div class="race-main"><div class="deadline">17:31</div><div class="race-name">丸亀 6R</div></div>
         <div class="race-status upcoming">締切前</div>
         <div class="badge-wrap"><div class="badge morning">朝</div></div>
@@ -2099,7 +2066,7 @@ body { background: var(--bg) !important; color: var(--text) !important; }\n.refr
       <div class="race-local-normal">
     <article class="race-card">
       <div class="race-head">
-        <div class="race-order">61</div>
+        <div class="race-order">59</div>
         <div class="race-main"><div class="deadline">17:36</div><div class="race-name">大村 6R</div></div>
         <div class="race-status upcoming">締切前</div>
         <div class="badge-wrap"><div class="badge morning">朝</div></div>
@@ -2120,7 +2087,7 @@ body { background: var(--bg) !important; color: var(--text) !important; }\n.refr
       <div class="race-local-normal">
     <article class="race-card">
       <div class="race-head">
-        <div class="race-order">62</div>
+        <div class="race-order">60</div>
         <div class="race-main"><div class="deadline">17:41</div><div class="race-name">下関 1R</div></div>
         <div class="race-status upcoming">締切前</div>
         <div class="badge-wrap"><div class="badge morning">朝</div></div>
@@ -2141,7 +2108,7 @@ body { background: var(--bg) !important; color: var(--text) !important; }\n.refr
       <div class="race-local-normal">
     <article class="race-card">
       <div class="race-head">
-        <div class="race-order">63</div>
+        <div class="race-order">61</div>
         <div class="race-main"><div class="deadline">17:47</div><div class="race-name">若松 6R</div></div>
         <div class="race-status upcoming">締切前</div>
         <div class="badge-wrap"><div class="badge morning">朝</div></div>
@@ -2162,7 +2129,7 @@ body { background: var(--bg) !important; color: var(--text) !important; }\n.refr
       <div class="race-local-normal">
     <article class="race-card">
       <div class="race-head">
-        <div class="race-order">64</div>
+        <div class="race-order">62</div>
         <div class="race-main"><div class="deadline">17:52</div><div class="race-name">住之江 7R</div></div>
         <div class="race-status upcoming">締切前</div>
         <div class="badge-wrap"><div class="badge morning">朝</div></div>
@@ -2183,7 +2150,7 @@ body { background: var(--bg) !important; color: var(--text) !important; }\n.refr
       <div class="race-local-normal">
     <article class="race-card">
       <div class="race-head">
-        <div class="race-order">65</div>
+        <div class="race-order">63</div>
         <div class="race-main"><div class="deadline">17:58</div><div class="race-name">丸亀 7R</div></div>
         <div class="race-status upcoming">締切前</div>
         <div class="badge-wrap"><div class="badge morning">朝</div></div>
@@ -2204,7 +2171,7 @@ body { background: var(--bg) !important; color: var(--text) !important; }\n.refr
       <div class="race-local-normal">
     <article class="race-card">
       <div class="race-head">
-        <div class="race-order">66</div>
+        <div class="race-order">64</div>
         <div class="race-main"><div class="deadline">18:03</div><div class="race-name">大村 7R</div></div>
         <div class="race-status upcoming">締切前</div>
         <div class="badge-wrap"><div class="badge morning">朝</div></div>
@@ -2225,7 +2192,7 @@ body { background: var(--bg) !important; color: var(--text) !important; }\n.refr
       <div class="race-local-normal">
     <article class="race-card">
       <div class="race-head">
-        <div class="race-order">67</div>
+        <div class="race-order">65</div>
         <div class="race-main"><div class="deadline">18:08</div><div class="race-name">下関 2R</div></div>
         <div class="race-status upcoming">締切前</div>
         <div class="badge-wrap"><div class="badge morning">朝</div></div>
@@ -2246,7 +2213,7 @@ body { background: var(--bg) !important; color: var(--text) !important; }\n.refr
       <div class="race-local-normal">
     <article class="race-card">
       <div class="race-head">
-        <div class="race-order">68</div>
+        <div class="race-order">66</div>
         <div class="race-main"><div class="deadline">18:15</div><div class="race-name">若松 7R</div></div>
         <div class="race-status upcoming">締切前</div>
         <div class="badge-wrap"><div class="badge morning">朝</div></div>
@@ -2267,7 +2234,7 @@ body { background: var(--bg) !important; color: var(--text) !important; }\n.refr
       <div class="race-local-normal">
     <article class="race-card">
       <div class="race-head">
-        <div class="race-order">69</div>
+        <div class="race-order">67</div>
         <div class="race-main"><div class="deadline">18:22</div><div class="race-name">住之江 8R</div></div>
         <div class="race-status upcoming">締切前</div>
         <div class="badge-wrap"><div class="badge morning">朝</div></div>
@@ -2288,7 +2255,7 @@ body { background: var(--bg) !important; color: var(--text) !important; }\n.refr
       <div class="race-local-normal">
     <article class="race-card">
       <div class="race-head">
-        <div class="race-order">70</div>
+        <div class="race-order">68</div>
         <div class="race-main"><div class="deadline">18:28</div><div class="race-name">丸亀 8R</div></div>
         <div class="race-status upcoming">締切前</div>
         <div class="badge-wrap"><div class="badge morning">朝</div></div>
@@ -2309,7 +2276,7 @@ body { background: var(--bg) !important; color: var(--text) !important; }\n.refr
       <div class="race-local-normal">
     <article class="race-card">
       <div class="race-head">
-        <div class="race-order">71</div>
+        <div class="race-order">69</div>
         <div class="race-main"><div class="deadline">18:34</div><div class="race-name">下関 3R</div></div>
         <div class="race-status upcoming">締切前</div>
         <div class="badge-wrap"><div class="badge morning">朝</div></div>
@@ -2330,7 +2297,7 @@ body { background: var(--bg) !important; color: var(--text) !important; }\n.refr
       <div class="race-local-normal">
     <article class="race-card">
       <div class="race-head">
-        <div class="race-order">72</div>
+        <div class="race-order">70</div>
         <div class="race-main"><div class="deadline">18:40</div><div class="race-name">大村 8R</div></div>
         <div class="race-status upcoming">締切前</div>
         <div class="badge-wrap"><div class="badge morning">朝</div></div>
@@ -2351,7 +2318,7 @@ body { background: var(--bg) !important; color: var(--text) !important; }\n.refr
       <div class="race-local-normal">
     <article class="race-card">
       <div class="race-head">
-        <div class="race-order">73</div>
+        <div class="race-order">71</div>
         <div class="race-main"><div class="deadline">18:46</div><div class="race-name">若松 8R</div></div>
         <div class="race-status upcoming">締切前</div>
         <div class="badge-wrap"><div class="badge morning">朝</div></div>
@@ -2372,7 +2339,7 @@ body { background: var(--bg) !important; color: var(--text) !important; }\n.refr
       <div class="race-local-normal">
     <article class="race-card">
       <div class="race-head">
-        <div class="race-order">74</div>
+        <div class="race-order">72</div>
         <div class="race-main"><div class="deadline">18:52</div><div class="race-name">住之江 9R</div></div>
         <div class="race-status upcoming">締切前</div>
         <div class="badge-wrap"><div class="badge morning">朝</div></div>
@@ -2393,7 +2360,7 @@ body { background: var(--bg) !important; color: var(--text) !important; }\n.refr
       <div class="race-local-normal">
     <article class="race-card">
       <div class="race-head">
-        <div class="race-order">75</div>
+        <div class="race-order">73</div>
         <div class="race-main"><div class="deadline">18:58</div><div class="race-name">丸亀 9R</div></div>
         <div class="race-status upcoming">締切前</div>
         <div class="badge-wrap"><div class="badge morning">朝</div></div>
@@ -2414,7 +2381,7 @@ body { background: var(--bg) !important; color: var(--text) !important; }\n.refr
       <div class="race-local-normal">
     <article class="race-card">
       <div class="race-head">
-        <div class="race-order">76</div>
+        <div class="race-order">74</div>
         <div class="race-main"><div class="deadline">19:03</div><div class="race-name">下関 4R</div></div>
         <div class="race-status upcoming">締切前</div>
         <div class="badge-wrap"><div class="badge morning">朝</div></div>
@@ -2435,7 +2402,7 @@ body { background: var(--bg) !important; color: var(--text) !important; }\n.refr
       <div class="race-local-normal">
     <article class="race-card">
       <div class="race-head">
-        <div class="race-order">77</div>
+        <div class="race-order">75</div>
         <div class="race-main"><div class="deadline">19:11</div><div class="race-name">大村 9R</div></div>
         <div class="race-status upcoming">締切前</div>
         <div class="badge-wrap"><div class="badge morning">朝</div></div>
@@ -2456,7 +2423,7 @@ body { background: var(--bg) !important; color: var(--text) !important; }\n.refr
       <div class="race-local-normal">
     <article class="race-card">
       <div class="race-head">
-        <div class="race-order">78</div>
+        <div class="race-order">76</div>
         <div class="race-main"><div class="deadline">19:18</div><div class="race-name">若松 9R</div></div>
         <div class="race-status upcoming">締切前</div>
         <div class="badge-wrap"><div class="badge morning">朝</div></div>
@@ -2477,7 +2444,7 @@ body { background: var(--bg) !important; color: var(--text) !important; }\n.refr
       <div class="race-local-normal">
     <article class="race-card">
       <div class="race-head">
-        <div class="race-order">79</div>
+        <div class="race-order">77</div>
         <div class="race-main"><div class="deadline">19:24</div><div class="race-name">住之江 10R</div></div>
         <div class="race-status upcoming">締切前</div>
         <div class="badge-wrap"><div class="badge morning">朝</div></div>
@@ -2498,7 +2465,7 @@ body { background: var(--bg) !important; color: var(--text) !important; }\n.refr
       <div class="race-local-normal">
     <article class="race-card">
       <div class="race-head">
-        <div class="race-order">80</div>
+        <div class="race-order">78</div>
         <div class="race-main"><div class="deadline">19:30</div><div class="race-name">下関 5R</div></div>
         <div class="race-status upcoming">締切前</div>
         <div class="badge-wrap"><div class="badge morning">朝</div></div>
@@ -2519,7 +2486,7 @@ body { background: var(--bg) !important; color: var(--text) !important; }\n.refr
       <div class="race-local-normal">
     <article class="race-card">
       <div class="race-head">
-        <div class="race-order">81</div>
+        <div class="race-order">79</div>
         <div class="race-main"><div class="deadline">19:36</div><div class="race-name">丸亀 10R</div></div>
         <div class="race-status upcoming">締切前</div>
         <div class="badge-wrap"><div class="badge morning">朝</div></div>
@@ -2540,7 +2507,7 @@ body { background: var(--bg) !important; color: var(--text) !important; }\n.refr
       <div class="race-local-normal">
     <article class="race-card">
       <div class="race-head">
-        <div class="race-order">82</div>
+        <div class="race-order">80</div>
         <div class="race-main"><div class="deadline">19:42</div><div class="race-name">大村 10R</div></div>
         <div class="race-status upcoming">締切前</div>
         <div class="badge-wrap"><div class="badge morning">朝</div></div>
@@ -2561,7 +2528,7 @@ body { background: var(--bg) !important; color: var(--text) !important; }\n.refr
       <div class="race-local-normal">
     <article class="race-card">
       <div class="race-head">
-        <div class="race-order">83</div>
+        <div class="race-order">81</div>
         <div class="race-main"><div class="deadline">19:49</div><div class="race-name">若松 10R</div></div>
         <div class="race-status upcoming">締切前</div>
         <div class="badge-wrap"><div class="badge morning">朝</div></div>
@@ -2582,7 +2549,7 @@ body { background: var(--bg) !important; color: var(--text) !important; }\n.refr
       <div class="race-local-normal">
     <article class="race-card">
       <div class="race-head">
-        <div class="race-order">84</div>
+        <div class="race-order">82</div>
         <div class="race-main"><div class="deadline">19:56</div><div class="race-name">下関 6R</div></div>
         <div class="race-status upcoming">締切前</div>
         <div class="badge-wrap"><div class="badge morning">朝</div></div>
@@ -2603,7 +2570,7 @@ body { background: var(--bg) !important; color: var(--text) !important; }\n.refr
       <div class="race-local-normal">
     <article class="race-card">
       <div class="race-head">
-        <div class="race-order">85</div>
+        <div class="race-order">83</div>
         <div class="race-main"><div class="deadline">20:02</div><div class="race-name">住之江 11R</div></div>
         <div class="race-status upcoming">締切前</div>
         <div class="badge-wrap"><div class="badge morning">朝</div></div>
@@ -2624,7 +2591,7 @@ body { background: var(--bg) !important; color: var(--text) !important; }\n.refr
       <div class="race-local-normal">
     <article class="race-card">
       <div class="race-head">
-        <div class="race-order">86</div>
+        <div class="race-order">84</div>
         <div class="race-main"><div class="deadline">20:08</div><div class="race-name">丸亀 11R</div></div>
         <div class="race-status upcoming">締切前</div>
         <div class="badge-wrap"><div class="badge morning">朝</div></div>
@@ -2645,7 +2612,7 @@ body { background: var(--bg) !important; color: var(--text) !important; }\n.refr
       <div class="race-local-normal">
     <article class="race-card">
       <div class="race-head">
-        <div class="race-order">87</div>
+        <div class="race-order">85</div>
         <div class="race-main"><div class="deadline">20:13</div><div class="race-name">大村 11R</div></div>
         <div class="race-status upcoming">締切前</div>
         <div class="badge-wrap"><div class="badge morning">朝</div></div>
@@ -2666,7 +2633,7 @@ body { background: var(--bg) !important; color: var(--text) !important; }\n.refr
       <div class="race-local-normal">
     <article class="race-card">
       <div class="race-head">
-        <div class="race-order">88</div>
+        <div class="race-order">86</div>
         <div class="race-main"><div class="deadline">20:18</div><div class="race-name">若松 11R</div></div>
         <div class="race-status upcoming">締切前</div>
         <div class="badge-wrap"><div class="badge morning">朝</div></div>
@@ -2687,7 +2654,7 @@ body { background: var(--bg) !important; color: var(--text) !important; }\n.refr
       <div class="race-local-normal">
     <article class="race-card">
       <div class="race-head">
-        <div class="race-order">89</div>
+        <div class="race-order">87</div>
         <div class="race-main"><div class="deadline">20:25</div><div class="race-name">下関 7R</div></div>
         <div class="race-status upcoming">締切前</div>
         <div class="badge-wrap"><div class="badge morning">朝</div></div>
@@ -2708,7 +2675,7 @@ body { background: var(--bg) !important; color: var(--text) !important; }\n.refr
       <div class="race-local-normal">
     <article class="race-card">
       <div class="race-head">
-        <div class="race-order">90</div>
+        <div class="race-order">88</div>
         <div class="race-main"><div class="deadline">20:31</div><div class="race-name">住之江 12R</div></div>
         <div class="race-status upcoming">締切前</div>
         <div class="badge-wrap"><div class="badge morning">朝</div></div>
@@ -2729,7 +2696,7 @@ body { background: var(--bg) !important; color: var(--text) !important; }\n.refr
       <div class="race-local-normal">
     <article class="race-card">
       <div class="race-head">
-        <div class="race-order">91</div>
+        <div class="race-order">89</div>
         <div class="race-main"><div class="deadline">20:36</div><div class="race-name">丸亀 12R</div></div>
         <div class="race-status upcoming">締切前</div>
         <div class="badge-wrap"><div class="badge morning">朝</div></div>
@@ -2750,7 +2717,7 @@ body { background: var(--bg) !important; color: var(--text) !important; }\n.refr
       <div class="race-local-normal">
     <article class="race-card">
       <div class="race-head">
-        <div class="race-order">92</div>
+        <div class="race-order">90</div>
         <div class="race-main"><div class="deadline">20:41</div><div class="race-name">大村 12R</div></div>
         <div class="race-status upcoming">締切前</div>
         <div class="badge-wrap"><div class="badge morning">朝</div></div>
@@ -2771,7 +2738,7 @@ body { background: var(--bg) !important; color: var(--text) !important; }\n.refr
       <div class="race-local-normal">
     <article class="race-card">
       <div class="race-head">
-        <div class="race-order">93</div>
+        <div class="race-order">91</div>
         <div class="race-main"><div class="deadline">20:45</div><div class="race-name">若松 12R</div></div>
         <div class="race-status upcoming">締切前</div>
         <div class="badge-wrap"><div class="badge morning">朝</div></div>
@@ -2792,7 +2759,7 @@ body { background: var(--bg) !important; color: var(--text) !important; }\n.refr
       <div class="race-local-normal">
     <article class="race-card">
       <div class="race-head">
-        <div class="race-order">94</div>
+        <div class="race-order">92</div>
         <div class="race-main"><div class="deadline">20:59</div><div class="race-name">下関 8R</div></div>
         <div class="race-status upcoming">締切前</div>
         <div class="badge-wrap"><div class="badge morning">朝</div></div>
@@ -2813,7 +2780,7 @@ body { background: var(--bg) !important; color: var(--text) !important; }\n.refr
       <div class="race-local-normal">
     <article class="race-card">
       <div class="race-head">
-        <div class="race-order">95</div>
+        <div class="race-order">93</div>
         <div class="race-main"><div class="deadline">21:25</div><div class="race-name">下関 9R</div></div>
         <div class="race-status upcoming">締切前</div>
         <div class="badge-wrap"><div class="badge morning">朝</div></div>
@@ -2834,7 +2801,7 @@ body { background: var(--bg) !important; color: var(--text) !important; }\n.refr
       <div class="race-local-normal">
     <article class="race-card">
       <div class="race-head">
-        <div class="race-order">96</div>
+        <div class="race-order">94</div>
         <div class="race-main"><div class="deadline">21:51</div><div class="race-name">下関 10R</div></div>
         <div class="race-status upcoming">締切前</div>
         <div class="badge-wrap"><div class="badge morning">朝</div></div>
@@ -2855,7 +2822,7 @@ body { background: var(--bg) !important; color: var(--text) !important; }\n.refr
       <div class="race-local-normal">
     <article class="race-card">
       <div class="race-head">
-        <div class="race-order">97</div>
+        <div class="race-order">95</div>
         <div class="race-main"><div class="deadline">22:20</div><div class="race-name">下関 11R</div></div>
         <div class="race-status upcoming">締切前</div>
         <div class="badge-wrap"><div class="badge morning">朝</div></div>
@@ -2876,7 +2843,7 @@ body { background: var(--bg) !important; color: var(--text) !important; }\n.refr
       <div class="race-local-normal">
     <article class="race-card">
       <div class="race-head">
-        <div class="race-order">98</div>
+        <div class="race-order">96</div>
         <div class="race-main"><div class="deadline">22:45</div><div class="race-name">下関 12R</div></div>
         <div class="race-status upcoming">締切前</div>
         <div class="badge-wrap"><div class="badge morning">朝</div></div>
@@ -2906,69 +2873,9 @@ body { background: var(--bg) !important; color: var(--text) !important; }\n.refr
     </div>
     <template id="aiPredictionTemplates">
       
-        <article class="race-card" data-race-id="20261014-06-05">
-          <div class="race-head">
-            <div class="race-order">1</div>
-            <div class="race-main">
-              <div class="deadline">13:19</div>
-              <div class="race-name">浜名湖 5R<span class="fujin-raijin-stack" title="風神雷神シグナル"><span class="signal-row raijin" title="雷神シグナル 3/3｜最大上昇 +8.3｜4号艇 +8.3｜通常予測には未反映・シグナルAI再評価に使用">⚡⚡⚡</span><span class="signal-row fujin empty-signal">&nbsp;</span></span></div>
-            </div>
-            <div class="badge live">シグナルAI</div>
-          </div>
-          <div class="formation-title">6艇のシグナルAI再評価</div>
-          <div class="ai-note">通常予測は変更せず、F0R3専用補正で6艇を再評価しています。</div>
-          <div class="ai-table-wrap">
-            <table class="ai-table signal-ai-table">
-              <thead><tr><th>艇</th><th>通常</th><th>補正</th><th>補正後</th><th>順位</th></tr></thead>
-              <tbody><tr><td>1号艇 北村征嗣</td><td>73.8</td><td>0.0</td><td>73.8</td><td>3位</td></tr><tr><td>2号艇 中岡健人</td><td>46.5</td><td>0.0</td><td>46.5</td><td>4位</td></tr><tr><td>3号艇 竹之内極</td><td>73.9</td><td>0.0</td><td>73.9</td><td>2位</td></tr><tr><td>4号艇 滝沢芳行</td><td>66.6</td><td>29.2</td><td>95.8</td><td>1位</td></tr><tr><td>5号艇 小野信樹</td><td>31.8</td><td>0.0</td><td>31.8</td><td>5位</td></tr><tr><td>6号艇 花本剛</td><td>22.8</td><td>0.0</td><td>22.8</td><td>6位</td></tr></tbody>
-            </table>
-          </div>
-          <div class="formation-title signal-ai-purchase-title">シグナル専用3連単予測</div>
-          <details class="ai-combo-details signal-ai-purchase-details">
-            <summary>1〜24位を見る（検証用・各100円／計2,400円）</summary>
-            <div class="ai-note">風神雷神の補正後スコアで評価した24点です。通常予測の買い目とは別集計です。</div>
-            <div class="ai-combos signal-ai-purchase-list" aria-label="シグナル専用3連単上位24点"><div class="ai-combo"><b>1位 4-3-1</b><span>AI評価 84.8点</span></div><div class="ai-combo"><b>2位 4-1-3</b><span>AI評価 84.8点</span></div><div class="ai-combo"><b>3位 3-4-1</b><span>AI評価 80.5点</span></div><div class="ai-combo"><b>4位 1-4-3</b><span>AI評価 80.4点</span></div><div class="ai-combo"><b>5位 4-3-2</b><span>AI評価 79.4点</span></div><div class="ai-combo"><b>6位 4-1-2</b><span>AI評価 79.3点</span></div><div class="ai-combo"><b>7位 3-1-4</b><span>AI評価 78.3点</span></div><div class="ai-combo"><b>8位 1-3-4</b><span>AI評価 78.2点</span></div><div class="ai-combo"><b>9位 4-2-3</b><span>AI評価 76.6点</span></div><div class="ai-combo"><b>10位 4-2-1</b><span>AI評価 76.6点</span></div><div class="ai-combo"><b>11位 4-3-5</b><span>AI評価 76.5点</span></div><div class="ai-combo"><b>12位 4-1-5</b><span>AI評価 76.4点</span></div><div class="ai-combo"><b>13位 3-4-2</b><span>AI評価 75.0点</span></div><div class="ai-combo"><b>14位 1-4-2</b><span>AI評価 74.9点</span></div><div class="ai-combo"><b>15位 4-3-6</b><span>AI評価 74.7点</span></div><div class="ai-combo"><b>16位 4-1-6</b><span>AI評価 74.6点</span></div><div class="ai-combo"><b>17位 4-5-3</b><span>AI評価 72.3点</span></div><div class="ai-combo"><b>18位 4-5-1</b><span>AI評価 72.2点</span></div><div class="ai-combo"><b>19位 3-4-5</b><span>AI評価 72.1点</span></div><div class="ai-combo"><b>20位 1-4-5</b><span>AI評価 72.0点</span></div><div class="ai-combo"><b>21位 3-4-6</b><span>AI評価 70.3点</span></div><div class="ai-combo"><b>22位 1-4-6</b><span>AI評価 70.2点</span></div><div class="ai-combo"><b>23位 3-2-4</b><span>AI評価 70.1点</span></div><div class="ai-combo"><b>24位 1-2-4</b><span>AI評価 70.0点</span></div></div>
-            <details class="ai-combo-details signal-ai-reference-details">
-              <summary>参考順位25〜50位を見る（購入対象外）</summary>
-              <div class="ai-combos"><div class="ai-combo"><b>25位 4-6-3</b><span>AI評価 69.5点</span></div><div class="ai-combo"><b>26位 4-6-1</b><span>AI評価 69.5点</span></div><div class="ai-combo"><b>27位 3-1-2</b><span>AI評価 68.4点</span></div><div class="ai-combo"><b>28位 1-3-2</b><span>AI評価 68.4点</span></div><div class="ai-combo"><b>29位 4-2-5</b><span>AI評価 68.2点</span></div><div class="ai-combo"><b>30位 2-4-3</b><span>AI評価 66.8点</span></div><div class="ai-combo"><b>31位 4-5-2</b><span>AI評価 66.8点</span></div><div class="ai-combo"><b>32位 2-4-1</b><span>AI評価 66.7点</span></div><div class="ai-combo"><b>33位 4-2-6</b><span>AI評価 66.4点</span></div><div class="ai-combo"><b>34位 3-5-4</b><span>AI評価 65.7点</span></div><div class="ai-combo"><b>35位 3-2-1</b><span>AI評価 65.7点</span></div><div class="ai-combo"><b>36位 1-2-3</b><span>AI評価 65.6点</span></div><div class="ai-combo"><b>37位 1-5-4</b><span>AI評価 65.6点</span></div><div class="ai-combo"><b>38位 3-1-5</b><span>AI評価 65.5点</span></div><div class="ai-combo"><b>39位 1-3-5</b><span>AI評価 65.4点</span></div><div class="ai-combo"><b>40位 2-3-4</b><span>AI評価 64.6点</span></div><div class="ai-combo"><b>41位 2-1-4</b><span>AI評価 64.5点</span></div><div class="ai-combo"><b>42位 4-6-2</b><span>AI評価 64.1点</span></div><div class="ai-combo"><b>43位 3-1-6</b><span>AI評価 63.7点</span></div><div class="ai-combo"><b>44位 1-3-6</b><span>AI評価 63.6点</span></div><div class="ai-combo"><b>45位 3-6-4</b><span>AI評価 63.0点</span></div><div class="ai-combo"><b>46位 1-6-4</b><span>AI評価 62.9点</span></div><div class="ai-combo"><b>47位 4-5-6</b><span>AI評価 62.0点</span></div><div class="ai-combo"><b>48位 3-5-1</b><span>AI評価 61.3点</span></div><div class="ai-combo"><b>49位 1-5-3</b><span>AI評価 61.2点</span></div><div class="ai-combo"><b>50位 4-6-5</b><span>AI評価 61.1点</span></div></div>
-            </details>
-          </details>
-          <div class="ai-note">購入額・回収率は従来どおり上位24点で計算します。25〜50位は検証用の参考順位です。全120通りの順位データは保存済みです。</div>
-        </article>
-        
-        <article class="race-card" data-race-id="20261014-04-07">
-          <div class="race-head">
-            <div class="race-order">2</div>
-            <div class="race-main">
-              <div class="deadline">13:24</div>
-              <div class="race-name">平和島 7R<span class="fujin-raijin-stack" title="風神雷神シグナル"><span class="signal-row raijin" title="雷神シグナル 3/3｜最大上昇 +9.2｜3号艇 +9.2｜通常予測には未反映・シグナルAI再評価に使用">⚡⚡⚡</span><span class="signal-row fujin empty-signal">&nbsp;</span></span></div>
-            </div>
-            <div class="badge live">シグナルAI</div>
-          </div>
-          <div class="formation-title">6艇のシグナルAI再評価</div>
-          <div class="ai-note">通常予測は変更せず、F0R3専用補正で6艇を再評価しています。</div>
-          <div class="ai-table-wrap">
-            <table class="ai-table signal-ai-table">
-              <thead><tr><th>艇</th><th>通常</th><th>補正</th><th>補正後</th><th>順位</th></tr></thead>
-              <tbody><tr><td>1号艇 萩原秀人</td><td>93.9</td><td>0.0</td><td>93.9</td><td>2位</td></tr><tr><td>2号艇 寺田祥</td><td>55.8</td><td>0.0</td><td>55.8</td><td>4位</td></tr><tr><td>3号艇 瓜生正義</td><td>63.4</td><td>32.1</td><td>95.4</td><td>1位</td></tr><tr><td>4号艇 吉田裕平</td><td>64.4</td><td>0.0</td><td>64.4</td><td>3位</td></tr><tr><td>5号艇 大池佑来</td><td>30.3</td><td>0.0</td><td>30.3</td><td>5位</td></tr><tr><td>6号艇 石渡鉄兵</td><td>15.0</td><td>0.0</td><td>15.0</td><td>6位</td></tr></tbody>
-            </table>
-          </div>
-          <div class="formation-title signal-ai-purchase-title">シグナル専用3連単予測</div>
-          <details class="ai-combo-details signal-ai-purchase-details">
-            <summary>1〜24位を見る（検証用・各100円／計2,400円）</summary>
-            <div class="ai-note">風神雷神の補正後スコアで評価した24点です。通常予測の買い目とは別集計です。</div>
-            <div class="ai-combos signal-ai-purchase-list" aria-label="シグナル専用3連単上位24点"><div class="ai-combo"><b>1位 3-1-4</b><span>AI評価 88.8点</span></div><div class="ai-combo"><b>2位 1-3-4</b><span>AI評価 88.5点</span></div><div class="ai-combo"><b>3位 3-1-2</b><span>AI評価 87.1点</span></div><div class="ai-combo"><b>4位 1-3-2</b><span>AI評価 86.8点</span></div><div class="ai-combo"><b>5位 3-4-1</b><span>AI評価 85.8点</span></div><div class="ai-combo"><b>6位 1-4-3</b><span>AI評価 85.4点</span></div><div class="ai-combo"><b>7位 3-2-1</b><span>AI評価 83.2点</span></div><div class="ai-combo"><b>8位 1-2-3</b><span>AI評価 82.8点</span></div><div class="ai-combo"><b>9位 3-1-5</b><span>AI評価 82.0点</span></div><div class="ai-combo"><b>10位 1-3-5</b><span>AI評価 81.7点</span></div><div class="ai-combo"><b>11位 4-3-1</b><span>AI評価 79.6点</span></div><div class="ai-combo"><b>12位 4-1-3</b><span>AI評価 79.5点</span></div><div class="ai-combo"><b>13位 3-1-6</b><span>AI評価 78.9点</span></div><div class="ai-combo"><b>14位 1-3-6</b><span>AI評価 78.6点</span></div><div class="ai-combo"><b>15位 3-4-2</b><span>AI評価 78.2点</span></div><div class="ai-combo"><b>16位 1-4-2</b><span>AI評価 77.4点</span></div><div class="ai-combo"><b>17位 3-2-4</b><span>AI評価 77.3点</span></div><div class="ai-combo"><b>18位 1-2-4</b><span>AI評価 76.6点</span></div><div class="ai-combo"><b>19位 3-5-1</b><span>AI評価 75.6点</span></div><div class="ai-combo"><b>20位 2-3-1</b><span>AI評価 75.3点</span></div><div class="ai-combo"><b>21位 2-1-3</b><span>AI評価 75.2点</span></div><div class="ai-combo"><b>22位 1-5-3</b><span>AI評価 75.1点</span></div><div class="ai-combo"><b>23位 3-4-5</b><span>AI評価 73.1点</span></div><div class="ai-combo"><b>24位 1-4-5</b><span>AI評価 72.3点</span></div></div>
-            <details class="ai-combo-details signal-ai-reference-details">
-              <summary>参考順位25〜50位を見る（購入対象外）</summary>
-              <div class="ai-combos"><div class="ai-combo"><b>25位 4-3-2</b><span>AI評価 72.0点</span></div><div class="ai-combo"><b>26位 4-1-2</b><span>AI評価 71.5点</span></div><div class="ai-combo"><b>27位 3-6-1</b><span>AI評価 71.0点</span></div><div class="ai-combo"><b>28位 1-6-3</b><span>AI評価 70.5点</span></div><div class="ai-combo"><b>29位 3-2-5</b><span>AI評価 70.5点</span></div><div class="ai-combo"><b>30位 3-4-6</b><span>AI評価 70.0点</span></div><div class="ai-combo"><b>31位 1-2-5</b><span>AI評価 69.8点</span></div><div class="ai-combo"><b>32位 3-5-4</b><span>AI評価 69.7点</span></div><div class="ai-combo"><b>33位 2-3-4</b><span>AI評価 69.4点</span></div><div class="ai-combo"><b>34位 1-4-6</b><span>AI評価 69.3点</span></div><div class="ai-combo"><b>35位 2-1-4</b><span>AI評価 69.0点</span></div><div class="ai-combo"><b>36位 1-5-4</b><span>AI評価 68.9点</span></div><div class="ai-combo"><b>37位 4-2-3</b><span>AI評価 68.0点</span></div><div class="ai-combo"><b>38位 3-5-2</b><span>AI評価 68.0点</span></div><div class="ai-combo"><b>39位 4-2-1</b><span>AI評価 67.7点</span></div><div class="ai-combo"><b>40位 3-2-6</b><span>AI評価 67.5点</span></div><div class="ai-combo"><b>41位 1-5-2</b><span>AI評価 67.2点</span></div><div class="ai-combo"><b>42位 4-3-5</b><span>AI評価 66.9点</span></div><div class="ai-combo"><b>43位 1-2-6</b><span>AI評価 66.7点</span></div><div class="ai-combo"><b>44位 4-1-5</b><span>AI評価 66.4点</span></div><div class="ai-combo"><b>45位 2-4-3</b><span>AI評価 66.3点</span></div><div class="ai-combo"><b>46位 2-4-1</b><span>AI評価 66.0点</span></div><div class="ai-combo"><b>47位 3-6-4</b><span>AI評価 65.1点</span></div><div class="ai-combo"><b>48位 1-6-4</b><span>AI評価 64.3点</span></div><div class="ai-combo"><b>49位 4-3-6</b><span>AI評価 63.8点</span></div><div class="ai-combo"><b>50位 3-6-2</b><span>AI評価 63.4点</span></div></div>
-            </details>
-          </details>
-          <div class="ai-note">購入額・回収率は従来どおり上位24点で計算します。25〜50位は検証用の参考順位です。全120通りの順位データは保存済みです。</div>
-        </article>
-        
         <article class="race-card" data-race-id="20261014-22-06">
           <div class="race-head">
-            <div class="race-order">3</div>
+            <div class="race-order">1</div>
             <div class="race-main">
               <div class="deadline">13:30</div>
               <div class="race-name">福岡 6R<span class="fujin-raijin-stack" title="風神雷神シグナル"><span class="signal-row raijin" title="雷神シグナル 3/3｜最大上昇 +17.5｜6号艇 +17.5｜通常予測には未反映・シグナルAI再評価に使用">⚡⚡⚡</span><span class="signal-row fujin empty-signal">&nbsp;</span></span></div>
@@ -2983,22 +2890,26 @@ body { background: var(--bg) !important; color: var(--text) !important; }\n.refr
               <tbody><tr><td>1号艇 大場恒季</td><td>69.5</td><td>0.0</td><td>69.5</td><td>2位</td></tr><tr><td>2号艇 小池公生</td><td>41.1</td><td>0.0</td><td>41.1</td><td>5位</td></tr><tr><td>3号艇 上村慎太</td><td>63.6</td><td>0.0</td><td>63.6</td><td>3位</td></tr><tr><td>4号艇 齊藤仁</td><td>56.2</td><td>0.0</td><td>56.2</td><td>4位</td></tr><tr><td>5号艇 宮田栞</td><td>30.6</td><td>0.0</td><td>30.6</td><td>6位</td></tr><tr><td>6号艇 平山智加</td><td>62.6</td><td>61.1</td><td>123.7</td><td>1位</td></tr></tbody>
             </table>
           </div>
-          <div class="formation-title signal-ai-purchase-title">シグナル専用3連単予測</div>
+          <div class="formation-title signal-ai-purchase-title">シグナル専用3連単予測・120順位帯</div>
+          <div class="signal-ai-pick-controls">
+            <strong>選択中 <span class="signal-ai-selected-count">24</span> / 24点</strong>
+            <button type="button" class="signal-ai-reset">上位24点に戻す</button>
+          </div>
+          <div class="ai-note signal-ai-pick-message" aria-live="polite">研究用候補24点をチェックで選択できます（初期選択は上位24点）。</div>
           <details class="ai-combo-details signal-ai-purchase-details">
-            <summary>1〜24位を見る（検証用・各100円／計2,400円）</summary>
-            <div class="ai-note">風神雷神の補正後スコアで評価した24点です。通常予測の買い目とは別集計です。</div>
-            <div class="ai-combos signal-ai-purchase-list" aria-label="シグナル専用3連単上位24点"><div class="ai-combo"><b>1位 6-1-3</b><span>AI評価 95.4点</span></div><div class="ai-combo"><b>2位 6-3-1</b><span>AI評価 94.8点</span></div><div class="ai-combo"><b>3位 6-1-4</b><span>AI評価 93.9点</span></div><div class="ai-combo"><b>4位 6-4-1</b><span>AI評価 92.6点</span></div><div class="ai-combo"><b>5位 6-3-4</b><span>AI評価 92.2点</span></div><div class="ai-combo"><b>6位 6-4-3</b><span>AI評価 91.4点</span></div><div class="ai-combo"><b>7位 6-1-2</b><span>AI評価 90.9点</span></div><div class="ai-combo"><b>8位 6-3-2</b><span>AI評価 89.1点</span></div><div class="ai-combo"><b>9位 6-1-5</b><span>AI評価 88.8点</span></div><div class="ai-combo"><b>10位 6-2-1</b><span>AI評価 88.1点</span></div><div class="ai-combo"><b>11位 6-3-5</b><span>AI評価 87.0点</span></div><div class="ai-combo"><b>12位 6-4-2</b><span>AI評価 86.9点</span></div><div class="ai-combo"><b>13位 6-2-3</b><span>AI評価 86.9点</span></div><div class="ai-combo"><b>14位 6-2-4</b><span>AI評価 85.4点</span></div><div class="ai-combo"><b>15位 6-5-1</b><span>AI評価 84.9点</span></div><div class="ai-combo"><b>16位 6-4-5</b><span>AI評価 84.8点</span></div><div class="ai-combo"><b>17位 1-6-3</b><span>AI評価 84.6点</span></div><div class="ai-combo"><b>18位 6-5-3</b><span>AI評価 83.7点</span></div><div class="ai-combo"><b>19位 1-6-4</b><span>AI評価 83.1点</span></div><div class="ai-combo"><b>20位 3-6-1</b><span>AI評価 82.8点</span></div><div class="ai-combo"><b>21位 6-5-4</b><span>AI評価 82.2点</span></div><div class="ai-combo"><b>22位 6-2-5</b><span>AI評価 80.3点</span></div><div class="ai-combo"><b>23位 3-6-4</b><span>AI評価 80.1点</span></div><div class="ai-combo"><b>24位 1-6-2</b><span>AI評価 80.1点</span></div></div>
+            <summary>1〜24位を見る（強本線・本線・準本線）</summary>
+            <div class="signal-ai-purchase-list"><h4 class="signal-ai-tier-label">強本線 1〜6位</h4><div class="ai-combos"><label class="ai-combo signal-ai-ticket-row"><input type="checkbox" class="signal-ai-ticket" value="6-1-3" data-rank="1" checked><b>1位 6-1-3</b><span>AI評価 95.4点</span></label><label class="ai-combo signal-ai-ticket-row"><input type="checkbox" class="signal-ai-ticket" value="6-3-1" data-rank="2" checked><b>2位 6-3-1</b><span>AI評価 94.8点</span></label><label class="ai-combo signal-ai-ticket-row"><input type="checkbox" class="signal-ai-ticket" value="6-1-4" data-rank="3" checked><b>3位 6-1-4</b><span>AI評価 93.9点</span></label><label class="ai-combo signal-ai-ticket-row"><input type="checkbox" class="signal-ai-ticket" value="6-4-1" data-rank="4" checked><b>4位 6-4-1</b><span>AI評価 92.6点</span></label><label class="ai-combo signal-ai-ticket-row"><input type="checkbox" class="signal-ai-ticket" value="6-3-4" data-rank="5" checked><b>5位 6-3-4</b><span>AI評価 92.2点</span></label><label class="ai-combo signal-ai-ticket-row"><input type="checkbox" class="signal-ai-ticket" value="6-4-3" data-rank="6" checked><b>6位 6-4-3</b><span>AI評価 91.4点</span></label></div><h4 class="signal-ai-tier-label">本線 7〜12位</h4><div class="ai-combos"><label class="ai-combo signal-ai-ticket-row"><input type="checkbox" class="signal-ai-ticket" value="6-1-2" data-rank="7" checked><b>7位 6-1-2</b><span>AI評価 90.9点</span></label><label class="ai-combo signal-ai-ticket-row"><input type="checkbox" class="signal-ai-ticket" value="6-3-2" data-rank="8" checked><b>8位 6-3-2</b><span>AI評価 89.1点</span></label><label class="ai-combo signal-ai-ticket-row"><input type="checkbox" class="signal-ai-ticket" value="6-1-5" data-rank="9" checked><b>9位 6-1-5</b><span>AI評価 88.8点</span></label><label class="ai-combo signal-ai-ticket-row"><input type="checkbox" class="signal-ai-ticket" value="6-2-1" data-rank="10" checked><b>10位 6-2-1</b><span>AI評価 88.1点</span></label><label class="ai-combo signal-ai-ticket-row"><input type="checkbox" class="signal-ai-ticket" value="6-3-5" data-rank="11" checked><b>11位 6-3-5</b><span>AI評価 87.0点</span></label><label class="ai-combo signal-ai-ticket-row"><input type="checkbox" class="signal-ai-ticket" value="6-4-2" data-rank="12" checked><b>12位 6-4-2</b><span>AI評価 86.9点</span></label></div><h4 class="signal-ai-tier-label">準本線 13〜24位</h4><div class="ai-combos"><label class="ai-combo signal-ai-ticket-row"><input type="checkbox" class="signal-ai-ticket" value="6-2-3" data-rank="13" checked><b>13位 6-2-3</b><span>AI評価 86.9点</span></label><label class="ai-combo signal-ai-ticket-row"><input type="checkbox" class="signal-ai-ticket" value="6-2-4" data-rank="14" checked><b>14位 6-2-4</b><span>AI評価 85.4点</span></label><label class="ai-combo signal-ai-ticket-row"><input type="checkbox" class="signal-ai-ticket" value="6-5-1" data-rank="15" checked><b>15位 6-5-1</b><span>AI評価 84.9点</span></label><label class="ai-combo signal-ai-ticket-row"><input type="checkbox" class="signal-ai-ticket" value="6-4-5" data-rank="16" checked><b>16位 6-4-5</b><span>AI評価 84.8点</span></label><label class="ai-combo signal-ai-ticket-row"><input type="checkbox" class="signal-ai-ticket" value="1-6-3" data-rank="17" checked><b>17位 1-6-3</b><span>AI評価 84.6点</span></label><label class="ai-combo signal-ai-ticket-row"><input type="checkbox" class="signal-ai-ticket" value="6-5-3" data-rank="18" checked><b>18位 6-5-3</b><span>AI評価 83.7点</span></label><label class="ai-combo signal-ai-ticket-row"><input type="checkbox" class="signal-ai-ticket" value="1-6-4" data-rank="19" checked><b>19位 1-6-4</b><span>AI評価 83.1点</span></label><label class="ai-combo signal-ai-ticket-row"><input type="checkbox" class="signal-ai-ticket" value="3-6-1" data-rank="20" checked><b>20位 3-6-1</b><span>AI評価 82.8点</span></label><label class="ai-combo signal-ai-ticket-row"><input type="checkbox" class="signal-ai-ticket" value="6-5-4" data-rank="21" checked><b>21位 6-5-4</b><span>AI評価 82.2点</span></label><label class="ai-combo signal-ai-ticket-row"><input type="checkbox" class="signal-ai-ticket" value="6-2-5" data-rank="22" checked><b>22位 6-2-5</b><span>AI評価 80.3点</span></label><label class="ai-combo signal-ai-ticket-row"><input type="checkbox" class="signal-ai-ticket" value="3-6-4" data-rank="23" checked><b>23位 3-6-4</b><span>AI評価 80.1点</span></label><label class="ai-combo signal-ai-ticket-row"><input type="checkbox" class="signal-ai-ticket" value="1-6-2" data-rank="24" checked><b>24位 1-6-2</b><span>AI評価 80.1点</span></label></div></div>
             <details class="ai-combo-details signal-ai-reference-details">
-              <summary>参考順位25〜50位を見る（購入対象外）</summary>
-              <div class="ai-combos"><div class="ai-combo"><b>25位 6-5-2</b><span>AI評価 79.2点</span></div><div class="ai-combo"><b>26位 4-6-1</b><span>AI評価 79.1点</span></div><div class="ai-combo"><b>27位 1-3-6</b><span>AI評価 78.6点</span></div><div class="ai-combo"><b>28位 1-6-5</b><span>AI評価 78.0点</span></div><div class="ai-combo"><b>29位 4-6-3</b><span>AI評価 77.9点</span></div><div class="ai-combo"><b>30位 3-1-6</b><span>AI評価 77.4点</span></div><div class="ai-combo"><b>31位 3-6-2</b><span>AI評価 77.1点</span></div><div class="ai-combo"><b>32位 1-4-6</b><span>AI評価 76.4点</span></div><div class="ai-combo"><b>33位 3-6-5</b><span>AI評価 75.0点</span></div><div class="ai-combo"><b>34位 4-1-6</b><span>AI評価 73.7点</span></div><div class="ai-combo"><b>35位 4-6-2</b><span>AI評価 73.4点</span></div><div class="ai-combo"><b>36位 3-4-6</b><span>AI評価 73.4点</span></div><div class="ai-combo"><b>37位 4-3-6</b><span>AI評価 71.9点</span></div><div class="ai-combo"><b>38位 1-2-6</b><span>AI評価 71.8点</span></div><div class="ai-combo"><b>39位 2-6-1</b><span>AI評価 71.6点</span></div><div class="ai-combo"><b>40位 4-6-5</b><span>AI評価 71.3点</span></div><div class="ai-combo"><b>41位 2-6-3</b><span>AI評価 70.4点</span></div><div class="ai-combo"><b>42位 2-6-4</b><span>AI評価 68.9点</span></div><div class="ai-combo"><b>43位 3-2-6</b><span>AI評価 68.9点</span></div><div class="ai-combo"><b>44位 1-5-6</b><span>AI評価 68.7点</span></div><div class="ai-combo"><b>45位 5-6-1</b><span>AI評価 66.3点</span></div><div class="ai-combo"><b>46位 2-1-6</b><span>AI評価 66.2点</span></div><div class="ai-combo"><b>47位 3-5-6</b><span>AI評価 65.7点</span></div><div class="ai-combo"><b>48位 4-2-6</b><span>AI評価 65.2点</span></div><div class="ai-combo"><b>49位 5-6-3</b><span>AI評価 65.1点</span></div><div class="ai-combo"><b>50位 1-3-4</b><span>AI評価 65.1点</span></div></div>
+              <summary>参考順位25〜120位を見る（中穴・穴・大穴）</summary>
+              <details class="ai-combo-details signal-ai-tier"><summary>中穴 25〜48位</summary><div class="ai-combos"><label class="ai-combo signal-ai-ticket-row"><input type="checkbox" class="signal-ai-ticket" value="6-5-2" data-rank="25"><b>25位 6-5-2</b><span>AI評価 79.2点</span></label><label class="ai-combo signal-ai-ticket-row"><input type="checkbox" class="signal-ai-ticket" value="4-6-1" data-rank="26"><b>26位 4-6-1</b><span>AI評価 79.1点</span></label><label class="ai-combo signal-ai-ticket-row"><input type="checkbox" class="signal-ai-ticket" value="1-3-6" data-rank="27"><b>27位 1-3-6</b><span>AI評価 78.6点</span></label><label class="ai-combo signal-ai-ticket-row"><input type="checkbox" class="signal-ai-ticket" value="1-6-5" data-rank="28"><b>28位 1-6-5</b><span>AI評価 78.0点</span></label><label class="ai-combo signal-ai-ticket-row"><input type="checkbox" class="signal-ai-ticket" value="4-6-3" data-rank="29"><b>29位 4-6-3</b><span>AI評価 77.9点</span></label><label class="ai-combo signal-ai-ticket-row"><input type="checkbox" class="signal-ai-ticket" value="3-1-6" data-rank="30"><b>30位 3-1-6</b><span>AI評価 77.4点</span></label><label class="ai-combo signal-ai-ticket-row"><input type="checkbox" class="signal-ai-ticket" value="3-6-2" data-rank="31"><b>31位 3-6-2</b><span>AI評価 77.1点</span></label><label class="ai-combo signal-ai-ticket-row"><input type="checkbox" class="signal-ai-ticket" value="1-4-6" data-rank="32"><b>32位 1-4-6</b><span>AI評価 76.4点</span></label><label class="ai-combo signal-ai-ticket-row"><input type="checkbox" class="signal-ai-ticket" value="3-6-5" data-rank="33"><b>33位 3-6-5</b><span>AI評価 75.0点</span></label><label class="ai-combo signal-ai-ticket-row"><input type="checkbox" class="signal-ai-ticket" value="4-1-6" data-rank="34"><b>34位 4-1-6</b><span>AI評価 73.7点</span></label><label class="ai-combo signal-ai-ticket-row"><input type="checkbox" class="signal-ai-ticket" value="4-6-2" data-rank="35"><b>35位 4-6-2</b><span>AI評価 73.4点</span></label><label class="ai-combo signal-ai-ticket-row"><input type="checkbox" class="signal-ai-ticket" value="3-4-6" data-rank="36"><b>36位 3-4-6</b><span>AI評価 73.4点</span></label><label class="ai-combo signal-ai-ticket-row"><input type="checkbox" class="signal-ai-ticket" value="4-3-6" data-rank="37"><b>37位 4-3-6</b><span>AI評価 71.9点</span></label><label class="ai-combo signal-ai-ticket-row"><input type="checkbox" class="signal-ai-ticket" value="1-2-6" data-rank="38"><b>38位 1-2-6</b><span>AI評価 71.8点</span></label><label class="ai-combo signal-ai-ticket-row"><input type="checkbox" class="signal-ai-ticket" value="2-6-1" data-rank="39"><b>39位 2-6-1</b><span>AI評価 71.6点</span></label><label class="ai-combo signal-ai-ticket-row"><input type="checkbox" class="signal-ai-ticket" value="4-6-5" data-rank="40"><b>40位 4-6-5</b><span>AI評価 71.3点</span></label><label class="ai-combo signal-ai-ticket-row"><input type="checkbox" class="signal-ai-ticket" value="2-6-3" data-rank="41"><b>41位 2-6-3</b><span>AI評価 70.4点</span></label><label class="ai-combo signal-ai-ticket-row"><input type="checkbox" class="signal-ai-ticket" value="2-6-4" data-rank="42"><b>42位 2-6-4</b><span>AI評価 68.9点</span></label><label class="ai-combo signal-ai-ticket-row"><input type="checkbox" class="signal-ai-ticket" value="3-2-6" data-rank="43"><b>43位 3-2-6</b><span>AI評価 68.9点</span></label><label class="ai-combo signal-ai-ticket-row"><input type="checkbox" class="signal-ai-ticket" value="1-5-6" data-rank="44"><b>44位 1-5-6</b><span>AI評価 68.7点</span></label><label class="ai-combo signal-ai-ticket-row"><input type="checkbox" class="signal-ai-ticket" value="5-6-1" data-rank="45"><b>45位 5-6-1</b><span>AI評価 66.3点</span></label><label class="ai-combo signal-ai-ticket-row"><input type="checkbox" class="signal-ai-ticket" value="2-1-6" data-rank="46"><b>46位 2-1-6</b><span>AI評価 66.2点</span></label><label class="ai-combo signal-ai-ticket-row"><input type="checkbox" class="signal-ai-ticket" value="3-5-6" data-rank="47"><b>47位 3-5-6</b><span>AI評価 65.7点</span></label><label class="ai-combo signal-ai-ticket-row"><input type="checkbox" class="signal-ai-ticket" value="4-2-6" data-rank="48"><b>48位 4-2-6</b><span>AI評価 65.2点</span></label></div></details><details class="ai-combo-details signal-ai-tier"><summary>穴 49〜72位</summary><div class="ai-combos"><label class="ai-combo signal-ai-ticket-row"><input type="checkbox" class="signal-ai-ticket" value="5-6-3" data-rank="49"><b>49位 5-6-3</b><span>AI評価 65.1点</span></label><label class="ai-combo signal-ai-ticket-row"><input type="checkbox" class="signal-ai-ticket" value="1-3-4" data-rank="50"><b>50位 1-3-4</b><span>AI評価 65.1点</span></label><label class="ai-combo signal-ai-ticket-row"><input type="checkbox" class="signal-ai-ticket" value="2-3-6" data-rank="51"><b>51位 2-3-6</b><span>AI評価 64.4点</span></label><label class="ai-combo signal-ai-ticket-row"><input type="checkbox" class="signal-ai-ticket" value="1-4-3" data-rank="52"><b>52位 1-4-3</b><span>AI評価 64.3点</span></label><label class="ai-combo signal-ai-ticket-row"><input type="checkbox" class="signal-ai-ticket" value="3-1-4" data-rank="53"><b>53位 3-1-4</b><span>AI評価 63.9点</span></label><label class="ai-combo signal-ai-ticket-row"><input type="checkbox" class="signal-ai-ticket" value="2-6-5" data-rank="54"><b>54位 2-6-5</b><span>AI評価 63.8点</span></label><label class="ai-combo signal-ai-ticket-row"><input type="checkbox" class="signal-ai-ticket" value="5-6-4" data-rank="55"><b>55位 5-6-4</b><span>AI評価 63.6点</span></label><label class="ai-combo signal-ai-ticket-row"><input type="checkbox" class="signal-ai-ticket" value="3-4-1" data-rank="56"><b>56位 3-4-1</b><span>AI評価 62.6点</span></label><label class="ai-combo signal-ai-ticket-row"><input type="checkbox" class="signal-ai-ticket" value="2-4-6" data-rank="57"><b>57位 2-4-6</b><span>AI評価 62.2点</span></label><label class="ai-combo signal-ai-ticket-row"><input type="checkbox" class="signal-ai-ticket" value="1-3-2" data-rank="58"><b>58位 1-3-2</b><span>AI評価 62.1点</span></label><label class="ai-combo signal-ai-ticket-row"><input type="checkbox" class="signal-ai-ticket" value="4-5-6" data-rank="59"><b>59位 4-5-6</b><span>AI評価 62.0点</span></label><label class="ai-combo signal-ai-ticket-row"><input type="checkbox" class="signal-ai-ticket" value="4-1-3" data-rank="60"><b>60位 4-1-3</b><span>AI評価 61.7点</span></label><label class="ai-combo signal-ai-ticket-row"><input type="checkbox" class="signal-ai-ticket" value="4-3-1" data-rank="61"><b>61位 4-3-1</b><span>AI評価 61.1点</span></label><label class="ai-combo signal-ai-ticket-row"><input type="checkbox" class="signal-ai-ticket" value="3-1-2" data-rank="62"><b>62位 3-1-2</b><span>AI評価 60.9点</span></label><label class="ai-combo signal-ai-ticket-row"><input type="checkbox" class="signal-ai-ticket" value="5-1-6" data-rank="63"><b>63位 5-1-6</b><span>AI評価 60.9点</span></label><label class="ai-combo signal-ai-ticket-row"><input type="checkbox" class="signal-ai-ticket" value="5-6-2" data-rank="64"><b>64位 5-6-2</b><span>AI評価 60.6点</span></label><label class="ai-combo signal-ai-ticket-row"><input type="checkbox" class="signal-ai-ticket" value="1-3-5" data-rank="65"><b>65位 1-3-5</b><span>AI評価 60.0点</span></label><label class="ai-combo signal-ai-ticket-row"><input type="checkbox" class="signal-ai-ticket" value="1-4-2" data-rank="66"><b>66位 1-4-2</b><span>AI評価 59.9点</span></label><label class="ai-combo signal-ai-ticket-row"><input type="checkbox" class="signal-ai-ticket" value="1-2-3" data-rank="67"><b>67位 1-2-3</b><span>AI評価 59.8点</span></label><label class="ai-combo signal-ai-ticket-row"><input type="checkbox" class="signal-ai-ticket" value="5-3-6" data-rank="68"><b>68位 5-3-6</b><span>AI評価 59.1点</span></label><label class="ai-combo signal-ai-ticket-row"><input type="checkbox" class="signal-ai-ticket" value="3-1-5" data-rank="69"><b>69位 3-1-5</b><span>AI評価 58.8点</span></label><label class="ai-combo signal-ai-ticket-row"><input type="checkbox" class="signal-ai-ticket" value="1-2-4" data-rank="70"><b>70位 1-2-4</b><span>AI評価 58.3点</span></label><label class="ai-combo signal-ai-ticket-row"><input type="checkbox" class="signal-ai-ticket" value="3-2-1" data-rank="71"><b>71位 3-2-1</b><span>AI評価 58.0点</span></label><label class="ai-combo signal-ai-ticket-row"><input type="checkbox" class="signal-ai-ticket" value="1-4-5" data-rank="72"><b>72位 1-4-5</b><span>AI評価 57.7点</span></label></div></details><details class="ai-combo-details signal-ai-tier"><summary>大穴 73〜120位</summary><div class="ai-combos"><label class="ai-combo signal-ai-ticket-row"><input type="checkbox" class="signal-ai-ticket" value="4-1-2" data-rank="73"><b>73位 4-1-2</b><span>AI評価 57.2点</span></label><label class="ai-combo signal-ai-ticket-row"><input type="checkbox" class="signal-ai-ticket" value="3-4-2" data-rank="74"><b>74位 3-4-2</b><span>AI評価 56.9点</span></label><label class="ai-combo signal-ai-ticket-row"><input type="checkbox" class="signal-ai-ticket" value="5-4-6" data-rank="75"><b>75位 5-4-6</b><span>AI評価 56.9点</span></label><label class="ai-combo signal-ai-ticket-row"><input type="checkbox" class="signal-ai-ticket" value="1-5-3" data-rank="76"><b>76位 1-5-3</b><span>AI評価 56.7点</span></label><label class="ai-combo signal-ai-ticket-row"><input type="checkbox" class="signal-ai-ticket" value="4-3-2" data-rank="77"><b>77位 4-3-2</b><span>AI評価 55.4点</span></label><label class="ai-combo signal-ai-ticket-row"><input type="checkbox" class="signal-ai-ticket" value="3-2-4" data-rank="78"><b>78位 3-2-4</b><span>AI評価 55.4点</span></label><label class="ai-combo signal-ai-ticket-row"><input type="checkbox" class="signal-ai-ticket" value="1-5-4" data-rank="79"><b>79位 1-5-4</b><span>AI評価 55.2点</span></label><label class="ai-combo signal-ai-ticket-row"><input type="checkbox" class="signal-ai-ticket" value="4-1-5" data-rank="80"><b>80位 4-1-5</b><span>AI評価 55.1点</span></label><label class="ai-combo signal-ai-ticket-row"><input type="checkbox" class="signal-ai-ticket" value="3-5-1" data-rank="81"><b>81位 3-5-1</b><span>AI評価 54.9点</span></label><label class="ai-combo signal-ai-ticket-row"><input type="checkbox" class="signal-ai-ticket" value="3-4-5" data-rank="82"><b>82位 3-4-5</b><span>AI評価 54.8点</span></label><label class="ai-combo signal-ai-ticket-row"><input type="checkbox" class="signal-ai-ticket" value="2-5-6" data-rank="83"><b>83位 2-5-6</b><span>AI評価 54.5点</span></label><label class="ai-combo signal-ai-ticket-row"><input type="checkbox" class="signal-ai-ticket" value="4-2-1" data-rank="84"><b>84位 4-2-1</b><span>AI評価 54.3点</span></label><label class="ai-combo signal-ai-ticket-row"><input type="checkbox" class="signal-ai-ticket" value="2-1-3" data-rank="85"><b>85位 2-1-3</b><span>AI評価 54.1点</span></label><label class="ai-combo signal-ai-ticket-row"><input type="checkbox" class="signal-ai-ticket" value="2-3-1" data-rank="86"><b>86位 2-3-1</b><span>AI評価 53.6点</span></label><label class="ai-combo signal-ai-ticket-row"><input type="checkbox" class="signal-ai-ticket" value="4-3-5" data-rank="87"><b>87位 4-3-5</b><span>AI評価 53.3点</span></label><label class="ai-combo signal-ai-ticket-row"><input type="checkbox" class="signal-ai-ticket" value="1-2-5" data-rank="88"><b>88位 1-2-5</b><span>AI評価 53.2点</span></label><label class="ai-combo signal-ai-ticket-row"><input type="checkbox" class="signal-ai-ticket" value="4-2-3" data-rank="89"><b>89位 4-2-3</b><span>AI評価 53.2点</span></label><label class="ai-combo signal-ai-ticket-row"><input type="checkbox" class="signal-ai-ticket" value="2-1-4" data-rank="90"><b>90位 2-1-4</b><span>AI評価 52.7点</span></label><label class="ai-combo signal-ai-ticket-row"><input type="checkbox" class="signal-ai-ticket" value="5-2-6" data-rank="91"><b>91位 5-2-6</b><span>AI評価 52.4点</span></label><label class="ai-combo signal-ai-ticket-row"><input type="checkbox" class="signal-ai-ticket" value="3-5-4" data-rank="92"><b>92位 3-5-4</b><span>AI評価 52.2点</span></label><label class="ai-combo signal-ai-ticket-row"><input type="checkbox" class="signal-ai-ticket" value="1-5-2" data-rank="93"><b>93位 1-5-2</b><span>AI評価 52.2点</span></label><label class="ai-combo signal-ai-ticket-row"><input type="checkbox" class="signal-ai-ticket" value="2-4-1" data-rank="94"><b>94位 2-4-1</b><span>AI評価 51.3点</span></label><label class="ai-combo signal-ai-ticket-row"><input type="checkbox" class="signal-ai-ticket" value="4-5-1" data-rank="95"><b>95位 4-5-1</b><span>AI評価 51.2点</span></label><label class="ai-combo signal-ai-ticket-row"><input type="checkbox" class="signal-ai-ticket" value="2-3-4" data-rank="96"><b>96位 2-3-4</b><span>AI評価 50.9点</span></label><label class="ai-combo signal-ai-ticket-row"><input type="checkbox" class="signal-ai-ticket" value="3-2-5" data-rank="97"><b>97位 3-2-5</b><span>AI評価 50.3点</span></label><label class="ai-combo signal-ai-ticket-row"><input type="checkbox" class="signal-ai-ticket" value="2-4-3" data-rank="98"><b>98位 2-4-3</b><span>AI評価 50.1点</span></label><label class="ai-combo signal-ai-ticket-row"><input type="checkbox" class="signal-ai-ticket" value="4-5-3" data-rank="99"><b>99位 4-5-3</b><span>AI評価 50.0点</span></label><label class="ai-combo signal-ai-ticket-row"><input type="checkbox" class="signal-ai-ticket" value="3-5-2" data-rank="100"><b>100位 3-5-2</b><span>AI評価 49.2点</span></label><label class="ai-combo signal-ai-ticket-row"><input type="checkbox" class="signal-ai-ticket" value="5-1-3" data-rank="101"><b>101位 5-1-3</b><span>AI評価 48.9点</span></label><label class="ai-combo signal-ai-ticket-row"><input type="checkbox" class="signal-ai-ticket" value="5-3-1" data-rank="102"><b>102位 5-3-1</b><span>AI評価 48.3点</span></label><label class="ai-combo signal-ai-ticket-row"><input type="checkbox" class="signal-ai-ticket" value="2-1-5" data-rank="103"><b>103位 2-1-5</b><span>AI評価 47.5点</span></label><label class="ai-combo signal-ai-ticket-row"><input type="checkbox" class="signal-ai-ticket" value="5-1-4" data-rank="104"><b>104位 5-1-4</b><span>AI評価 47.4点</span></label><label class="ai-combo signal-ai-ticket-row"><input type="checkbox" class="signal-ai-ticket" value="4-2-5" data-rank="105"><b>105位 4-2-5</b><span>AI評価 46.5点</span></label><label class="ai-combo signal-ai-ticket-row"><input type="checkbox" class="signal-ai-ticket" value="5-4-1" data-rank="106"><b>106位 5-4-1</b><span>AI評価 46.0点</span></label><label class="ai-combo signal-ai-ticket-row"><input type="checkbox" class="signal-ai-ticket" value="2-3-5" data-rank="107"><b>107位 2-3-5</b><span>AI評価 45.8点</span></label><label class="ai-combo signal-ai-ticket-row"><input type="checkbox" class="signal-ai-ticket" value="5-3-4" data-rank="108"><b>108位 5-3-4</b><span>AI評価 45.6点</span></label><label class="ai-combo signal-ai-ticket-row"><input type="checkbox" class="signal-ai-ticket" value="4-5-2" data-rank="109"><b>109位 4-5-2</b><span>AI評価 45.5点</span></label><label class="ai-combo signal-ai-ticket-row"><input type="checkbox" class="signal-ai-ticket" value="5-4-3" data-rank="110"><b>110位 5-4-3</b><span>AI評価 44.9点</span></label><label class="ai-combo signal-ai-ticket-row"><input type="checkbox" class="signal-ai-ticket" value="5-1-2" data-rank="111"><b>111位 5-1-2</b><span>AI評価 44.4点</span></label><label class="ai-combo signal-ai-ticket-row"><input type="checkbox" class="signal-ai-ticket" value="2-5-1" data-rank="112"><b>112位 2-5-1</b><span>AI評価 43.6点</span></label><label class="ai-combo signal-ai-ticket-row"><input type="checkbox" class="signal-ai-ticket" value="2-4-5" data-rank="113"><b>113位 2-4-5</b><span>AI評価 43.5点</span></label><label class="ai-combo signal-ai-ticket-row"><input type="checkbox" class="signal-ai-ticket" value="5-3-2" data-rank="114"><b>114位 5-3-2</b><span>AI評価 42.6点</span></label><label class="ai-combo signal-ai-ticket-row"><input type="checkbox" class="signal-ai-ticket" value="2-5-3" data-rank="115"><b>115位 2-5-3</b><span>AI評価 42.5点</span></label><label class="ai-combo signal-ai-ticket-row"><input type="checkbox" class="signal-ai-ticket" value="5-2-1" data-rank="116"><b>116位 5-2-1</b><span>AI評価 41.5点</span></label><label class="ai-combo signal-ai-ticket-row"><input type="checkbox" class="signal-ai-ticket" value="2-5-4" data-rank="117"><b>117位 2-5-4</b><span>AI評価 41.0点</span></label><label class="ai-combo signal-ai-ticket-row"><input type="checkbox" class="signal-ai-ticket" value="5-4-2" data-rank="118"><b>118位 5-4-2</b><span>AI評価 40.4点</span></label><label class="ai-combo signal-ai-ticket-row"><input type="checkbox" class="signal-ai-ticket" value="5-2-3" data-rank="119"><b>119位 5-2-3</b><span>AI評価 40.3点</span></label><label class="ai-combo signal-ai-ticket-row"><input type="checkbox" class="signal-ai-ticket" value="5-2-4" data-rank="120"><b>120位 5-2-4</b><span>AI評価 38.9点</span></label></div></details>
             </details>
           </details>
-          <div class="ai-note">購入額・回収率は従来どおり上位24点で計算します。25〜50位は検証用の参考順位です。全120通りの順位データは保存済みです。</div>
+          <div class="ai-note">選択は研究用の端末内表示のみ。従来の24点成績計算・補正ロジック・自動購入は変更しません。5艇レース等は計算された順位まで表示します。</div>
         </article>
         
     <article class="race-card" data-race-id="20261014-13-07">
       <div class="race-head">
-        <div class="race-order">4</div>
+        <div class="race-order">2</div>
         <div class="race-main">
           <div class="deadline">13:32</div>
           <div class="race-name">尼崎 7R</div>
@@ -3021,7 +2932,7 @@ body { background: var(--bg) !important; color: var(--text) !important; }\n.refr
     
         <article class="race-card" data-race-id="20261014-14-11">
           <div class="race-head">
-            <div class="race-order">5</div>
+            <div class="race-order">3</div>
             <div class="race-main">
               <div class="deadline">13:34</div>
               <div class="race-name">鳴門 11R<span class="fujin-raijin-stack" title="風神雷神シグナル"><span class="signal-row raijin" title="雷神シグナル 2/3｜最大上昇 +10.1｜5号艇 +10.1｜通常予測には未反映・シグナルAI再評価に使用">⚡⚡</span><span class="signal-row fujin" title="風神シグナル 2/3｜1位朝比 -8.7｜TOP3合計 -6.0｜1-2位差 2.1｜通常予測には未反映・シグナルAI再評価に使用">💨💨</span></span></div>
@@ -3036,22 +2947,26 @@ body { background: var(--bg) !important; color: var(--text) !important; }\n.refr
               <tbody><tr><td>1号艇 米玉利大</td><td>74.3</td><td>0.0</td><td>74.3</td><td>1位</td></tr><tr><td>2号艇 山本幸也</td><td>31.8</td><td>0.0</td><td>31.8</td><td>5位</td></tr><tr><td>3号艇 濱野斗馬</td><td>76.5</td><td>-12.0</td><td>64.5</td><td>3位</td></tr><tr><td>4号艇 西川拓利</td><td>66.6</td><td>0.0</td><td>66.6</td><td>2位</td></tr><tr><td>5号艇 常盤海心</td><td>47.8</td><td>5.0</td><td>52.8</td><td>4位</td></tr><tr><td>6号艇 豊田祥生</td><td>12.9</td><td>0.0</td><td>12.9</td><td>6位</td></tr></tbody>
             </table>
           </div>
-          <div class="formation-title signal-ai-purchase-title">シグナル専用3連単予測</div>
+          <div class="formation-title signal-ai-purchase-title">シグナル専用3連単予測・120順位帯</div>
+          <div class="signal-ai-pick-controls">
+            <strong>選択中 <span class="signal-ai-selected-count">24</span> / 24点</strong>
+            <button type="button" class="signal-ai-reset">上位24点に戻す</button>
+          </div>
+          <div class="ai-note signal-ai-pick-message" aria-live="polite">研究用候補24点をチェックで選択できます（初期選択は上位24点）。</div>
           <details class="ai-combo-details signal-ai-purchase-details">
-            <summary>1〜24位を見る（検証用・各100円／計2,400円）</summary>
-            <div class="ai-note">風神雷神の補正後スコアで評価した24点です。通常予測の買い目とは別集計です。</div>
-            <div class="ai-combos signal-ai-purchase-list" aria-label="シグナル専用3連単上位24点"><div class="ai-combo"><b>1位 1-4-3</b><span>AI評価 70.0点</span></div><div class="ai-combo"><b>2位 1-3-4</b><span>AI評価 69.8点</span></div><div class="ai-combo"><b>3位 4-1-3</b><span>AI評価 68.5点</span></div><div class="ai-combo"><b>4位 3-1-4</b><span>AI評価 67.9点</span></div><div class="ai-combo"><b>5位 1-4-5</b><span>AI評価 67.7点</span></div><div class="ai-combo"><b>6位 4-3-1</b><span>AI評価 67.5点</span></div><div class="ai-combo"><b>7位 3-4-1</b><span>AI評価 67.1点</span></div><div class="ai-combo"><b>8位 1-3-5</b><span>AI評価 67.1点</span></div><div class="ai-combo"><b>9位 1-5-4</b><span>AI評価 66.3点</span></div><div class="ai-combo"><b>10位 4-1-5</b><span>AI評価 66.2点</span></div><div class="ai-combo"><b>11位 1-5-3</b><span>AI評価 65.9点</span></div><div class="ai-combo"><b>12位 3-1-5</b><span>AI評価 65.1点</span></div><div class="ai-combo"><b>13位 4-5-1</b><span>AI評価 64.0点</span></div><div class="ai-combo"><b>14位 1-4-2</b><span>AI評価 63.5点</span></div><div class="ai-combo"><b>15位 4-3-5</b><span>AI評価 63.2点</span></div><div class="ai-combo"><b>16位 3-5-1</b><span>AI評価 62.9点</span></div><div class="ai-combo"><b>17位 1-3-2</b><span>AI評価 62.9点</span></div><div class="ai-combo"><b>18位 3-4-5</b><span>AI評価 62.8点</span></div><div class="ai-combo"><b>19位 4-5-3</b><span>AI評価 62.0点</span></div><div class="ai-combo"><b>20位 5-1-4</b><span>AI評価 62.0点</span></div><div class="ai-combo"><b>21位 4-1-2</b><span>AI評価 62.0点</span></div><div class="ai-combo"><b>22位 5-1-3</b><span>AI評価 61.6点</span></div><div class="ai-combo"><b>23位 3-5-4</b><span>AI評価 61.4点</span></div><div class="ai-combo"><b>24位 5-4-1</b><span>AI評価 61.3点</span></div></div>
+            <summary>1〜24位を見る（強本線・本線・準本線）</summary>
+            <div class="signal-ai-purchase-list"><h4 class="signal-ai-tier-label">強本線 1〜6位</h4><div class="ai-combos"><label class="ai-combo signal-ai-ticket-row"><input type="checkbox" class="signal-ai-ticket" value="1-4-3" data-rank="1" checked><b>1位 1-4-3</b><span>AI評価 70.0点</span></label><label class="ai-combo signal-ai-ticket-row"><input type="checkbox" class="signal-ai-ticket" value="1-3-4" data-rank="2" checked><b>2位 1-3-4</b><span>AI評価 69.8点</span></label><label class="ai-combo signal-ai-ticket-row"><input type="checkbox" class="signal-ai-ticket" value="4-1-3" data-rank="3" checked><b>3位 4-1-3</b><span>AI評価 68.5点</span></label><label class="ai-combo signal-ai-ticket-row"><input type="checkbox" class="signal-ai-ticket" value="3-1-4" data-rank="4" checked><b>4位 3-1-4</b><span>AI評価 67.9点</span></label><label class="ai-combo signal-ai-ticket-row"><input type="checkbox" class="signal-ai-ticket" value="1-4-5" data-rank="5" checked><b>5位 1-4-5</b><span>AI評価 67.7点</span></label><label class="ai-combo signal-ai-ticket-row"><input type="checkbox" class="signal-ai-ticket" value="4-3-1" data-rank="6" checked><b>6位 4-3-1</b><span>AI評価 67.5点</span></label></div><h4 class="signal-ai-tier-label">本線 7〜12位</h4><div class="ai-combos"><label class="ai-combo signal-ai-ticket-row"><input type="checkbox" class="signal-ai-ticket" value="3-4-1" data-rank="7" checked><b>7位 3-4-1</b><span>AI評価 67.1点</span></label><label class="ai-combo signal-ai-ticket-row"><input type="checkbox" class="signal-ai-ticket" value="1-3-5" data-rank="8" checked><b>8位 1-3-5</b><span>AI評価 67.1点</span></label><label class="ai-combo signal-ai-ticket-row"><input type="checkbox" class="signal-ai-ticket" value="1-5-4" data-rank="9" checked><b>9位 1-5-4</b><span>AI評価 66.3点</span></label><label class="ai-combo signal-ai-ticket-row"><input type="checkbox" class="signal-ai-ticket" value="4-1-5" data-rank="10" checked><b>10位 4-1-5</b><span>AI評価 66.2点</span></label><label class="ai-combo signal-ai-ticket-row"><input type="checkbox" class="signal-ai-ticket" value="1-5-3" data-rank="11" checked><b>11位 1-5-3</b><span>AI評価 65.9点</span></label><label class="ai-combo signal-ai-ticket-row"><input type="checkbox" class="signal-ai-ticket" value="3-1-5" data-rank="12" checked><b>12位 3-1-5</b><span>AI評価 65.1点</span></label></div><h4 class="signal-ai-tier-label">準本線 13〜24位</h4><div class="ai-combos"><label class="ai-combo signal-ai-ticket-row"><input type="checkbox" class="signal-ai-ticket" value="4-5-1" data-rank="13" checked><b>13位 4-5-1</b><span>AI評価 64.0点</span></label><label class="ai-combo signal-ai-ticket-row"><input type="checkbox" class="signal-ai-ticket" value="1-4-2" data-rank="14" checked><b>14位 1-4-2</b><span>AI評価 63.5点</span></label><label class="ai-combo signal-ai-ticket-row"><input type="checkbox" class="signal-ai-ticket" value="4-3-5" data-rank="15" checked><b>15位 4-3-5</b><span>AI評価 63.2点</span></label><label class="ai-combo signal-ai-ticket-row"><input type="checkbox" class="signal-ai-ticket" value="3-5-1" data-rank="16" checked><b>16位 3-5-1</b><span>AI評価 62.9点</span></label><label class="ai-combo signal-ai-ticket-row"><input type="checkbox" class="signal-ai-ticket" value="1-3-2" data-rank="17" checked><b>17位 1-3-2</b><span>AI評価 62.9点</span></label><label class="ai-combo signal-ai-ticket-row"><input type="checkbox" class="signal-ai-ticket" value="3-4-5" data-rank="18" checked><b>18位 3-4-5</b><span>AI評価 62.8点</span></label><label class="ai-combo signal-ai-ticket-row"><input type="checkbox" class="signal-ai-ticket" value="4-5-3" data-rank="19" checked><b>19位 4-5-3</b><span>AI評価 62.0点</span></label><label class="ai-combo signal-ai-ticket-row"><input type="checkbox" class="signal-ai-ticket" value="5-1-4" data-rank="20" checked><b>20位 5-1-4</b><span>AI評価 62.0点</span></label><label class="ai-combo signal-ai-ticket-row"><input type="checkbox" class="signal-ai-ticket" value="4-1-2" data-rank="21" checked><b>21位 4-1-2</b><span>AI評価 62.0点</span></label><label class="ai-combo signal-ai-ticket-row"><input type="checkbox" class="signal-ai-ticket" value="5-1-3" data-rank="22" checked><b>22位 5-1-3</b><span>AI評価 61.6点</span></label><label class="ai-combo signal-ai-ticket-row"><input type="checkbox" class="signal-ai-ticket" value="3-5-4" data-rank="23" checked><b>23位 3-5-4</b><span>AI評価 61.4点</span></label><label class="ai-combo signal-ai-ticket-row"><input type="checkbox" class="signal-ai-ticket" value="5-4-1" data-rank="24" checked><b>24位 5-4-1</b><span>AI評価 61.3点</span></label></div></div>
             <details class="ai-combo-details signal-ai-reference-details">
-              <summary>参考順位25〜50位を見る（購入対象外）</summary>
-              <div class="ai-combos"><div class="ai-combo"><b>25位 3-1-2</b><span>AI評価 60.9点</span></div><div class="ai-combo"><b>26位 5-3-1</b><span>AI評価 60.6点</span></div><div class="ai-combo"><b>27位 1-2-4</b><span>AI評価 60.0点</span></div><div class="ai-combo"><b>28位 1-4-6</b><span>AI評価 59.7点</span></div><div class="ai-combo"><b>29位 1-2-3</b><span>AI評価 59.6点</span></div><div class="ai-combo"><b>30位 1-5-2</b><span>AI評価 59.4点</span></div><div class="ai-combo"><b>31位 5-4-3</b><span>AI評価 59.3点</span></div><div class="ai-combo"><b>32位 1-3-6</b><span>AI評価 59.1点</span></div><div class="ai-combo"><b>33位 5-3-4</b><span>AI評価 59.1点</span></div><div class="ai-combo"><b>34位 4-3-2</b><span>AI評価 59.0点</span></div><div class="ai-combo"><b>35位 3-4-2</b><span>AI評価 58.6点</span></div><div class="ai-combo"><b>36位 4-1-6</b><span>AI評価 58.2点</span></div><div class="ai-combo"><b>37位 4-2-1</b><span>AI評価 57.7点</span></div><div class="ai-combo"><b>38位 1-2-5</b><span>AI評価 57.3点</span></div><div class="ai-combo"><b>39位 3-1-6</b><span>AI評価 57.1点</span></div><div class="ai-combo"><b>40位 3-2-1</b><span>AI評価 56.6点</span></div><div class="ai-combo"><b>41位 4-2-3</b><span>AI評価 55.8点</span></div><div class="ai-combo"><b>42位 1-5-6</b><span>AI評価 55.6点</span></div><div class="ai-combo"><b>43位 4-5-2</b><span>AI評価 55.5点</span></div><div class="ai-combo"><b>44位 4-3-6</b><span>AI評価 55.2点</span></div><div class="ai-combo"><b>45位 3-2-4</b><span>AI評価 55.1点</span></div><div class="ai-combo"><b>46位 5-1-2</b><span>AI評価 55.1点</span></div><div class="ai-combo"><b>47位 3-4-6</b><span>AI評価 54.8点</span></div><div class="ai-combo"><b>48位 3-5-2</b><span>AI評価 54.4点</span></div><div class="ai-combo"><b>49位 1-6-4</b><span>AI評価 54.4点</span></div><div class="ai-combo"><b>50位 1-6-3</b><span>AI評価 53.9点</span></div></div>
+              <summary>参考順位25〜120位を見る（中穴・穴・大穴）</summary>
+              <details class="ai-combo-details signal-ai-tier"><summary>中穴 25〜48位</summary><div class="ai-combos"><label class="ai-combo signal-ai-ticket-row"><input type="checkbox" class="signal-ai-ticket" value="3-1-2" data-rank="25"><b>25位 3-1-2</b><span>AI評価 60.9点</span></label><label class="ai-combo signal-ai-ticket-row"><input type="checkbox" class="signal-ai-ticket" value="5-3-1" data-rank="26"><b>26位 5-3-1</b><span>AI評価 60.6点</span></label><label class="ai-combo signal-ai-ticket-row"><input type="checkbox" class="signal-ai-ticket" value="1-2-4" data-rank="27"><b>27位 1-2-4</b><span>AI評価 60.0点</span></label><label class="ai-combo signal-ai-ticket-row"><input type="checkbox" class="signal-ai-ticket" value="1-4-6" data-rank="28"><b>28位 1-4-6</b><span>AI評価 59.7点</span></label><label class="ai-combo signal-ai-ticket-row"><input type="checkbox" class="signal-ai-ticket" value="1-2-3" data-rank="29"><b>29位 1-2-3</b><span>AI評価 59.6点</span></label><label class="ai-combo signal-ai-ticket-row"><input type="checkbox" class="signal-ai-ticket" value="1-5-2" data-rank="30"><b>30位 1-5-2</b><span>AI評価 59.4点</span></label><label class="ai-combo signal-ai-ticket-row"><input type="checkbox" class="signal-ai-ticket" value="5-4-3" data-rank="31"><b>31位 5-4-3</b><span>AI評価 59.3点</span></label><label class="ai-combo signal-ai-ticket-row"><input type="checkbox" class="signal-ai-ticket" value="1-3-6" data-rank="32"><b>32位 1-3-6</b><span>AI評価 59.1点</span></label><label class="ai-combo signal-ai-ticket-row"><input type="checkbox" class="signal-ai-ticket" value="5-3-4" data-rank="33"><b>33位 5-3-4</b><span>AI評価 59.1点</span></label><label class="ai-combo signal-ai-ticket-row"><input type="checkbox" class="signal-ai-ticket" value="4-3-2" data-rank="34"><b>34位 4-3-2</b><span>AI評価 59.0点</span></label><label class="ai-combo signal-ai-ticket-row"><input type="checkbox" class="signal-ai-ticket" value="3-4-2" data-rank="35"><b>35位 3-4-2</b><span>AI評価 58.6点</span></label><label class="ai-combo signal-ai-ticket-row"><input type="checkbox" class="signal-ai-ticket" value="4-1-6" data-rank="36"><b>36位 4-1-6</b><span>AI評価 58.2点</span></label><label class="ai-combo signal-ai-ticket-row"><input type="checkbox" class="signal-ai-ticket" value="4-2-1" data-rank="37"><b>37位 4-2-1</b><span>AI評価 57.7点</span></label><label class="ai-combo signal-ai-ticket-row"><input type="checkbox" class="signal-ai-ticket" value="1-2-5" data-rank="38"><b>38位 1-2-5</b><span>AI評価 57.3点</span></label><label class="ai-combo signal-ai-ticket-row"><input type="checkbox" class="signal-ai-ticket" value="3-1-6" data-rank="39"><b>39位 3-1-6</b><span>AI評価 57.1点</span></label><label class="ai-combo signal-ai-ticket-row"><input type="checkbox" class="signal-ai-ticket" value="3-2-1" data-rank="40"><b>40位 3-2-1</b><span>AI評価 56.6点</span></label><label class="ai-combo signal-ai-ticket-row"><input type="checkbox" class="signal-ai-ticket" value="4-2-3" data-rank="41"><b>41位 4-2-3</b><span>AI評価 55.8点</span></label><label class="ai-combo signal-ai-ticket-row"><input type="checkbox" class="signal-ai-ticket" value="1-5-6" data-rank="42"><b>42位 1-5-6</b><span>AI評価 55.6点</span></label><label class="ai-combo signal-ai-ticket-row"><input type="checkbox" class="signal-ai-ticket" value="4-5-2" data-rank="43"><b>43位 4-5-2</b><span>AI評価 55.5点</span></label><label class="ai-combo signal-ai-ticket-row"><input type="checkbox" class="signal-ai-ticket" value="4-3-6" data-rank="44"><b>44位 4-3-6</b><span>AI評価 55.2点</span></label><label class="ai-combo signal-ai-ticket-row"><input type="checkbox" class="signal-ai-ticket" value="3-2-4" data-rank="45"><b>45位 3-2-4</b><span>AI評価 55.1点</span></label><label class="ai-combo signal-ai-ticket-row"><input type="checkbox" class="signal-ai-ticket" value="5-1-2" data-rank="46"><b>46位 5-1-2</b><span>AI評価 55.1点</span></label><label class="ai-combo signal-ai-ticket-row"><input type="checkbox" class="signal-ai-ticket" value="3-4-6" data-rank="47"><b>47位 3-4-6</b><span>AI評価 54.8点</span></label><label class="ai-combo signal-ai-ticket-row"><input type="checkbox" class="signal-ai-ticket" value="3-5-2" data-rank="48"><b>48位 3-5-2</b><span>AI評価 54.4点</span></label></div></details><details class="ai-combo-details signal-ai-tier"><summary>穴 49〜72位</summary><div class="ai-combos"><label class="ai-combo signal-ai-ticket-row"><input type="checkbox" class="signal-ai-ticket" value="1-6-4" data-rank="49"><b>49位 1-6-4</b><span>AI評価 54.4点</span></label><label class="ai-combo signal-ai-ticket-row"><input type="checkbox" class="signal-ai-ticket" value="1-6-3" data-rank="50"><b>50位 1-6-3</b><span>AI評価 53.9点</span></label><label class="ai-combo signal-ai-ticket-row"><input type="checkbox" class="signal-ai-ticket" value="4-2-5" data-rank="51"><b>51位 4-2-5</b><span>AI評価 53.4点</span></label><label class="ai-combo signal-ai-ticket-row"><input type="checkbox" class="signal-ai-ticket" value="5-4-2" data-rank="52"><b>52位 5-4-2</b><span>AI評価 52.8点</span></label><label class="ai-combo signal-ai-ticket-row"><input type="checkbox" class="signal-ai-ticket" value="3-2-5" data-rank="53"><b>53位 3-2-5</b><span>AI評価 52.3点</span></label><label class="ai-combo signal-ai-ticket-row"><input type="checkbox" class="signal-ai-ticket" value="5-3-2" data-rank="54"><b>54位 5-3-2</b><span>AI評価 52.1点</span></label><label class="ai-combo signal-ai-ticket-row"><input type="checkbox" class="signal-ai-ticket" value="4-6-1" data-rank="55"><b>55位 4-6-1</b><span>AI評価 52.0点</span></label><label class="ai-combo signal-ai-ticket-row"><input type="checkbox" class="signal-ai-ticket" value="4-5-6" data-rank="56"><b>56位 4-5-6</b><span>AI評価 51.7点</span></label><label class="ai-combo signal-ai-ticket-row"><input type="checkbox" class="signal-ai-ticket" value="1-6-5" data-rank="57"><b>57位 1-6-5</b><span>AI評価 51.6点</span></label><label class="ai-combo signal-ai-ticket-row"><input type="checkbox" class="signal-ai-ticket" value="2-1-4" data-rank="58"><b>58位 2-1-4</b><span>AI評価 51.5点</span></label><label class="ai-combo signal-ai-ticket-row"><input type="checkbox" class="signal-ai-ticket" value="5-1-6" data-rank="59"><b>59位 5-1-6</b><span>AI評価 51.3点</span></label><label class="ai-combo signal-ai-ticket-row"><input type="checkbox" class="signal-ai-ticket" value="2-1-3" data-rank="60"><b>60位 2-1-3</b><span>AI評価 51.1点</span></label><label class="ai-combo signal-ai-ticket-row"><input type="checkbox" class="signal-ai-ticket" value="3-6-1" data-rank="61"><b>61位 3-6-1</b><span>AI評価 51.0点</span></label><label class="ai-combo signal-ai-ticket-row"><input type="checkbox" class="signal-ai-ticket" value="5-2-1" data-rank="62"><b>62位 5-2-1</b><span>AI評価 50.8点</span></label><label class="ai-combo signal-ai-ticket-row"><input type="checkbox" class="signal-ai-ticket" value="2-4-1" data-rank="63"><b>63位 2-4-1</b><span>AI評価 50.8点</span></label><label class="ai-combo signal-ai-ticket-row"><input type="checkbox" class="signal-ai-ticket" value="3-5-6" data-rank="64"><b>64位 3-5-6</b><span>AI評価 50.6点</span></label><label class="ai-combo signal-ai-ticket-row"><input type="checkbox" class="signal-ai-ticket" value="2-3-1" data-rank="65"><b>65位 2-3-1</b><span>AI評価 50.1点</span></label><label class="ai-combo signal-ai-ticket-row"><input type="checkbox" class="signal-ai-ticket" value="4-6-3" data-rank="66"><b>66位 4-6-3</b><span>AI評価 50.1点</span></label><label class="ai-combo signal-ai-ticket-row"><input type="checkbox" class="signal-ai-ticket" value="3-6-4" data-rank="67"><b>67位 3-6-4</b><span>AI評価 49.4点</span></label><label class="ai-combo signal-ai-ticket-row"><input type="checkbox" class="signal-ai-ticket" value="1-2-6" data-rank="68"><b>68位 1-2-6</b><span>AI評価 49.3点</span></label><label class="ai-combo signal-ai-ticket-row"><input type="checkbox" class="signal-ai-ticket" value="5-2-4" data-rank="69"><b>69位 5-2-4</b><span>AI評価 49.3点</span></label><label class="ai-combo signal-ai-ticket-row"><input type="checkbox" class="signal-ai-ticket" value="5-4-6" data-rank="70"><b>70位 5-4-6</b><span>AI評価 49.0点</span></label><label class="ai-combo signal-ai-ticket-row"><input type="checkbox" class="signal-ai-ticket" value="5-2-3" data-rank="71"><b>71位 5-2-3</b><span>AI評価 48.8点</span></label><label class="ai-combo signal-ai-ticket-row"><input type="checkbox" class="signal-ai-ticket" value="2-4-3" data-rank="72"><b>72位 2-4-3</b><span>AI評価 48.8点</span></label></div></details><details class="ai-combo-details signal-ai-tier"><summary>大穴 73〜120位</summary><div class="ai-combos"><label class="ai-combo signal-ai-ticket-row"><input type="checkbox" class="signal-ai-ticket" value="2-1-5" data-rank="73"><b>73位 2-1-5</b><span>AI評価 48.8点</span></label><label class="ai-combo signal-ai-ticket-row"><input type="checkbox" class="signal-ai-ticket" value="2-3-4" data-rank="74"><b>74位 2-3-4</b><span>AI評価 48.6点</span></label><label class="ai-combo signal-ai-ticket-row"><input type="checkbox" class="signal-ai-ticket" value="5-3-6" data-rank="75"><b>75位 5-3-6</b><span>AI評価 48.3点</span></label><label class="ai-combo signal-ai-ticket-row"><input type="checkbox" class="signal-ai-ticket" value="4-6-5" data-rank="76"><b>76位 4-6-5</b><span>AI評価 47.7点</span></label><label class="ai-combo signal-ai-ticket-row"><input type="checkbox" class="signal-ai-ticket" value="1-6-2" data-rank="77"><b>77位 1-6-2</b><span>AI評価 47.4点</span></label><label class="ai-combo signal-ai-ticket-row"><input type="checkbox" class="signal-ai-ticket" value="3-6-5" data-rank="78"><b>78位 3-6-5</b><span>AI評価 46.7点</span></label><label class="ai-combo signal-ai-ticket-row"><input type="checkbox" class="signal-ai-ticket" value="2-5-1" data-rank="79"><b>79位 2-5-1</b><span>AI評価 46.6点</span></label><label class="ai-combo signal-ai-ticket-row"><input type="checkbox" class="signal-ai-ticket" value="2-4-5" data-rank="80"><b>80位 2-4-5</b><span>AI評価 46.5点</span></label><label class="ai-combo signal-ai-ticket-row"><input type="checkbox" class="signal-ai-ticket" value="2-3-5" data-rank="81"><b>81位 2-3-5</b><span>AI評価 45.8点</span></label><label class="ai-combo signal-ai-ticket-row"><input type="checkbox" class="signal-ai-ticket" value="4-2-6" data-rank="82"><b>82位 4-2-6</b><span>AI評価 45.4点</span></label><label class="ai-combo signal-ai-ticket-row"><input type="checkbox" class="signal-ai-ticket" value="5-6-1" data-rank="83"><b>83位 5-6-1</b><span>AI評価 45.1点</span></label><label class="ai-combo signal-ai-ticket-row"><input type="checkbox" class="signal-ai-ticket" value="2-5-4" data-rank="84"><b>84位 2-5-4</b><span>AI評価 45.1点</span></label><label class="ai-combo signal-ai-ticket-row"><input type="checkbox" class="signal-ai-ticket" value="2-5-3" data-rank="85"><b>85位 2-5-3</b><span>AI評価 44.6点</span></label><label class="ai-combo signal-ai-ticket-row"><input type="checkbox" class="signal-ai-ticket" value="3-2-6" data-rank="86"><b>86位 3-2-6</b><span>AI評価 44.4点</span></label><label class="ai-combo signal-ai-ticket-row"><input type="checkbox" class="signal-ai-ticket" value="5-6-4" data-rank="87"><b>87位 5-6-4</b><span>AI評価 43.6点</span></label><label class="ai-combo signal-ai-ticket-row"><input type="checkbox" class="signal-ai-ticket" value="4-6-2" data-rank="88"><b>88位 4-6-2</b><span>AI評価 43.6点</span></label><label class="ai-combo signal-ai-ticket-row"><input type="checkbox" class="signal-ai-ticket" value="5-6-3" data-rank="89"><b>89位 5-6-3</b><span>AI評価 43.2点</span></label><label class="ai-combo signal-ai-ticket-row"><input type="checkbox" class="signal-ai-ticket" value="3-6-2" data-rank="90"><b>90位 3-6-2</b><span>AI評価 42.5点</span></label><label class="ai-combo signal-ai-ticket-row"><input type="checkbox" class="signal-ai-ticket" value="6-1-4" data-rank="91"><b>91位 6-1-4</b><span>AI評価 42.1点</span></label><label class="ai-combo signal-ai-ticket-row"><input type="checkbox" class="signal-ai-ticket" value="6-1-3" data-rank="92"><b>92位 6-1-3</b><span>AI評価 41.6点</span></label><label class="ai-combo signal-ai-ticket-row"><input type="checkbox" class="signal-ai-ticket" value="6-4-1" data-rank="93"><b>93位 6-4-1</b><span>AI評価 41.3点</span></label><label class="ai-combo signal-ai-ticket-row"><input type="checkbox" class="signal-ai-ticket" value="2-1-6" data-rank="94"><b>94位 2-1-6</b><span>AI評価 40.8点</span></label><label class="ai-combo signal-ai-ticket-row"><input type="checkbox" class="signal-ai-ticket" value="6-3-1" data-rank="95"><b>95位 6-3-1</b><span>AI評価 40.6点</span></label><label class="ai-combo signal-ai-ticket-row"><input type="checkbox" class="signal-ai-ticket" value="6-4-3" data-rank="96"><b>96位 6-4-3</b><span>AI評価 39.3点</span></label><label class="ai-combo signal-ai-ticket-row"><input type="checkbox" class="signal-ai-ticket" value="6-1-5" data-rank="97"><b>97位 6-1-5</b><span>AI評価 39.3点</span></label><label class="ai-combo signal-ai-ticket-row"><input type="checkbox" class="signal-ai-ticket" value="6-3-4" data-rank="98"><b>98位 6-3-4</b><span>AI評価 39.1点</span></label><label class="ai-combo signal-ai-ticket-row"><input type="checkbox" class="signal-ai-ticket" value="5-2-6" data-rank="99"><b>99位 5-2-6</b><span>AI評価 38.5点</span></label><label class="ai-combo signal-ai-ticket-row"><input type="checkbox" class="signal-ai-ticket" value="2-4-6" data-rank="100"><b>100位 2-4-6</b><span>AI評価 38.5点</span></label><label class="ai-combo signal-ai-ticket-row"><input type="checkbox" class="signal-ai-ticket" value="2-3-6" data-rank="101"><b>101位 2-3-6</b><span>AI評価 37.8点</span></label><label class="ai-combo signal-ai-ticket-row"><input type="checkbox" class="signal-ai-ticket" value="6-5-1" data-rank="102"><b>102位 6-5-1</b><span>AI評価 37.1点</span></label><label class="ai-combo signal-ai-ticket-row"><input type="checkbox" class="signal-ai-ticket" value="6-4-5" data-rank="103"><b>103位 6-4-5</b><span>AI評価 37.0点</span></label><label class="ai-combo signal-ai-ticket-row"><input type="checkbox" class="signal-ai-ticket" value="5-6-2" data-rank="104"><b>104位 5-6-2</b><span>AI評価 36.6点</span></label><label class="ai-combo signal-ai-ticket-row"><input type="checkbox" class="signal-ai-ticket" value="6-3-5" data-rank="105"><b>105位 6-3-5</b><span>AI評価 36.3点</span></label><label class="ai-combo signal-ai-ticket-row"><input type="checkbox" class="signal-ai-ticket" value="6-5-4" data-rank="106"><b>106位 6-5-4</b><span>AI評価 35.6点</span></label><label class="ai-combo signal-ai-ticket-row"><input type="checkbox" class="signal-ai-ticket" value="6-5-3" data-rank="107"><b>107位 6-5-3</b><span>AI評価 35.2点</span></label><label class="ai-combo signal-ai-ticket-row"><input type="checkbox" class="signal-ai-ticket" value="6-1-2" data-rank="108"><b>108位 6-1-2</b><span>AI評価 35.1点</span></label><label class="ai-combo signal-ai-ticket-row"><input type="checkbox" class="signal-ai-ticket" value="2-6-1" data-rank="109"><b>109位 2-6-1</b><span>AI評価 34.6点</span></label><label class="ai-combo signal-ai-ticket-row"><input type="checkbox" class="signal-ai-ticket" value="2-5-6" data-rank="110"><b>110位 2-5-6</b><span>AI評価 34.3点</span></label><label class="ai-combo signal-ai-ticket-row"><input type="checkbox" class="signal-ai-ticket" value="2-6-4" data-rank="111"><b>111位 2-6-4</b><span>AI評価 33.1点</span></label><label class="ai-combo signal-ai-ticket-row"><input type="checkbox" class="signal-ai-ticket" value="6-4-2" data-rank="112"><b>112位 6-4-2</b><span>AI評価 32.8点</span></label><label class="ai-combo signal-ai-ticket-row"><input type="checkbox" class="signal-ai-ticket" value="2-6-3" data-rank="113"><b>113位 2-6-3</b><span>AI評価 32.7点</span></label><label class="ai-combo signal-ai-ticket-row"><input type="checkbox" class="signal-ai-ticket" value="6-3-2" data-rank="114"><b>114位 6-3-2</b><span>AI評価 32.1点</span></label><label class="ai-combo signal-ai-ticket-row"><input type="checkbox" class="signal-ai-ticket" value="6-2-1" data-rank="115"><b>115位 6-2-1</b><span>AI評価 30.9点</span></label><label class="ai-combo signal-ai-ticket-row"><input type="checkbox" class="signal-ai-ticket" value="2-6-5" data-rank="116"><b>116位 2-6-5</b><span>AI評価 30.3点</span></label><label class="ai-combo signal-ai-ticket-row"><input type="checkbox" class="signal-ai-ticket" value="6-2-4" data-rank="117"><b>117位 6-2-4</b><span>AI評価 29.3点</span></label><label class="ai-combo signal-ai-ticket-row"><input type="checkbox" class="signal-ai-ticket" value="6-2-3" data-rank="118"><b>118位 6-2-3</b><span>AI評価 28.9点</span></label><label class="ai-combo signal-ai-ticket-row"><input type="checkbox" class="signal-ai-ticket" value="6-5-2" data-rank="119"><b>119位 6-5-2</b><span>AI評価 28.6点</span></label><label class="ai-combo signal-ai-ticket-row"><input type="checkbox" class="signal-ai-ticket" value="6-2-5" data-rank="120"><b>120位 6-2-5</b><span>AI評価 26.6点</span></label></div></details>
             </details>
           </details>
-          <div class="ai-note">購入額・回収率は従来どおり上位24点で計算します。25〜50位は検証用の参考順位です。全120通りの順位データは保存済みです。</div>
+          <div class="ai-note">選択は研究用の端末内表示のみ。従来の24点成績計算・補正ロジック・自動購入は変更しません。5艇レース等は計算された順位まで表示します。</div>
         </article>
         
     <article class="race-card" data-race-id="20261014-18-11">
       <div class="race-head">
-        <div class="race-order">6</div>
+        <div class="race-order">4</div>
         <div class="race-main">
           <div class="deadline">13:42</div>
           <div class="race-name">徳山 11R</div>
@@ -3074,7 +2989,7 @@ body { background: var(--bg) !important; color: var(--text) !important; }\n.refr
     
     <article class="race-card" data-race-id="20261014-11-08">
       <div class="race-head">
-        <div class="race-order">7</div>
+        <div class="race-order">5</div>
         <div class="race-main">
           <div class="deadline">13:45</div>
           <div class="race-name">びわこ 8R</div>
@@ -3097,7 +3012,7 @@ body { background: var(--bg) !important; color: var(--text) !important; }\n.refr
     
     <article class="race-card" data-race-id="20261014-06-06">
       <div class="race-head">
-        <div class="race-order">8</div>
+        <div class="race-order">6</div>
         <div class="race-main">
           <div class="deadline">13:47</div>
           <div class="race-name">浜名湖 6R</div>
@@ -3120,7 +3035,7 @@ body { background: var(--bg) !important; color: var(--text) !important; }\n.refr
     
     <article class="race-card" data-race-id="20261014-21-11">
       <div class="race-head">
-        <div class="race-order">9</div>
+        <div class="race-order">7</div>
         <div class="race-main">
           <div class="deadline">13:50</div>
           <div class="race-name">芦屋 11R</div>
@@ -3143,7 +3058,7 @@ body { background: var(--bg) !important; color: var(--text) !important; }\n.refr
     
     <article class="race-card" data-race-id="20261014-22-07">
       <div class="race-head">
-        <div class="race-order">10</div>
+        <div class="race-order">8</div>
         <div class="race-main">
           <div class="deadline">13:55</div>
           <div class="race-name">福岡 7R</div>
@@ -3166,7 +3081,7 @@ body { background: var(--bg) !important; color: var(--text) !important; }\n.refr
     
     <article class="race-card" data-race-id="20261014-04-08">
       <div class="race-head">
-        <div class="race-order">11</div>
+        <div class="race-order">9</div>
         <div class="race-main">
           <div class="deadline">13:57</div>
           <div class="race-name">平和島 8R</div>
@@ -3189,7 +3104,7 @@ body { background: var(--bg) !important; color: var(--text) !important; }\n.refr
     
     <article class="race-card" data-race-id="20261014-13-08">
       <div class="race-head">
-        <div class="race-order">12</div>
+        <div class="race-order">10</div>
         <div class="race-main">
           <div class="deadline">14:05</div>
           <div class="race-name">尼崎 8R</div>
@@ -3212,7 +3127,7 @@ body { background: var(--bg) !important; color: var(--text) !important; }\n.refr
     
     <article class="race-card" data-race-id="20261014-14-12">
       <div class="race-head">
-        <div class="race-order">13</div>
+        <div class="race-order">11</div>
         <div class="race-main">
           <div class="deadline">14:11</div>
           <div class="race-name">鳴門 12R</div>
@@ -3235,7 +3150,7 @@ body { background: var(--bg) !important; color: var(--text) !important; }\n.refr
     
     <article class="race-card" data-race-id="20261014-06-07">
       <div class="race-head">
-        <div class="race-order">14</div>
+        <div class="race-order">12</div>
         <div class="race-main">
           <div class="deadline">14:15</div>
           <div class="race-name">浜名湖 7R</div>
@@ -3258,7 +3173,7 @@ body { background: var(--bg) !important; color: var(--text) !important; }\n.refr
     
     <article class="race-card" data-race-id="20261014-11-09">
       <div class="race-head">
-        <div class="race-order">15</div>
+        <div class="race-order">13</div>
         <div class="race-main">
           <div class="deadline">14:18</div>
           <div class="race-name">びわこ 9R</div>
@@ -3281,7 +3196,7 @@ body { background: var(--bg) !important; color: var(--text) !important; }\n.refr
     
     <article class="race-card" data-race-id="20261014-18-12">
       <div class="race-head">
-        <div class="race-order">16</div>
+        <div class="race-order">14</div>
         <div class="race-main">
           <div class="deadline">14:20</div>
           <div class="race-name">徳山 12R</div>
@@ -3304,7 +3219,7 @@ body { background: var(--bg) !important; color: var(--text) !important; }\n.refr
     
     <article class="race-card" data-race-id="20261014-22-08">
       <div class="race-head">
-        <div class="race-order">17</div>
+        <div class="race-order">15</div>
         <div class="race-main">
           <div class="deadline">14:24</div>
           <div class="race-name">福岡 8R</div>
@@ -3327,7 +3242,7 @@ body { background: var(--bg) !important; color: var(--text) !important; }\n.refr
     
     <article class="race-card" data-race-id="20261014-21-12">
       <div class="race-head">
-        <div class="race-order">18</div>
+        <div class="race-order">16</div>
         <div class="race-main">
           <div class="deadline">14:27</div>
           <div class="race-name">芦屋 12R</div>
@@ -3350,7 +3265,7 @@ body { background: var(--bg) !important; color: var(--text) !important; }\n.refr
     
     <article class="race-card" data-race-id="20261014-04-09">
       <div class="race-head">
-        <div class="race-order">19</div>
+        <div class="race-order">17</div>
         <div class="race-main">
           <div class="deadline">14:30</div>
           <div class="race-name">平和島 9R</div>
@@ -3373,7 +3288,7 @@ body { background: var(--bg) !important; color: var(--text) !important; }\n.refr
     
     <article class="race-card" data-race-id="20261014-13-09">
       <div class="race-head">
-        <div class="race-order">20</div>
+        <div class="race-order">18</div>
         <div class="race-main">
           <div class="deadline">14:36</div>
           <div class="race-name">尼崎 9R</div>
@@ -3396,7 +3311,7 @@ body { background: var(--bg) !important; color: var(--text) !important; }\n.refr
     
     <article class="race-card" data-race-id="20261014-06-08">
       <div class="race-head">
-        <div class="race-order">21</div>
+        <div class="race-order">19</div>
         <div class="race-main">
           <div class="deadline">14:42</div>
           <div class="race-name">浜名湖 8R</div>
@@ -3419,7 +3334,7 @@ body { background: var(--bg) !important; color: var(--text) !important; }\n.refr
     
     <article class="race-card" data-race-id="20261014-11-10">
       <div class="race-head">
-        <div class="race-order">22</div>
+        <div class="race-order">20</div>
         <div class="race-main">
           <div class="deadline">14:47</div>
           <div class="race-name">びわこ 10R</div>
@@ -3442,7 +3357,7 @@ body { background: var(--bg) !important; color: var(--text) !important; }\n.refr
     
     <article class="race-card" data-race-id="20261014-22-09">
       <div class="race-head">
-        <div class="race-order">23</div>
+        <div class="race-order">21</div>
         <div class="race-main">
           <div class="deadline">14:55</div>
           <div class="race-name">福岡 9R</div>
@@ -3465,7 +3380,7 @@ body { background: var(--bg) !important; color: var(--text) !important; }\n.refr
     
     <article class="race-card" data-race-id="20261014-13-10">
       <div class="race-head">
-        <div class="race-order">24</div>
+        <div class="race-order">22</div>
         <div class="race-main">
           <div class="deadline">15:00</div>
           <div class="race-name">尼崎 10R</div>
@@ -3488,7 +3403,7 @@ body { background: var(--bg) !important; color: var(--text) !important; }\n.refr
     
     <article class="race-card" data-race-id="20261014-04-10">
       <div class="race-head">
-        <div class="race-order">25</div>
+        <div class="race-order">23</div>
         <div class="race-main">
           <div class="deadline">15:04</div>
           <div class="race-name">平和島 10R</div>
@@ -3511,7 +3426,7 @@ body { background: var(--bg) !important; color: var(--text) !important; }\n.refr
     
     <article class="race-card" data-race-id="20261014-06-09">
       <div class="race-head">
-        <div class="race-order">26</div>
+        <div class="race-order">24</div>
         <div class="race-main">
           <div class="deadline">15:09</div>
           <div class="race-name">浜名湖 9R</div>
@@ -3534,7 +3449,7 @@ body { background: var(--bg) !important; color: var(--text) !important; }\n.refr
     
     <article class="race-card" data-race-id="20261014-11-11">
       <div class="race-head">
-        <div class="race-order">27</div>
+        <div class="race-order">25</div>
         <div class="race-main">
           <div class="deadline">15:15</div>
           <div class="race-name">びわこ 11R</div>
@@ -3557,7 +3472,7 @@ body { background: var(--bg) !important; color: var(--text) !important; }\n.refr
     
     <article class="race-card" data-race-id="20261014-12-01">
       <div class="race-head">
-        <div class="race-order">28</div>
+        <div class="race-order">26</div>
         <div class="race-main">
           <div class="deadline">15:17</div>
           <div class="race-name">住之江 1R</div>
@@ -3580,7 +3495,7 @@ body { background: var(--bg) !important; color: var(--text) !important; }\n.refr
     
     <article class="race-card" data-race-id="20261014-15-01">
       <div class="race-head">
-        <div class="race-order">29</div>
+        <div class="race-order">27</div>
         <div class="race-main">
           <div class="deadline">15:20</div>
           <div class="race-name">丸亀 1R</div>
@@ -3603,7 +3518,7 @@ body { background: var(--bg) !important; color: var(--text) !important; }\n.refr
     
     <article class="race-card" data-race-id="20261014-24-01">
       <div class="race-head">
-        <div class="race-order">30</div>
+        <div class="race-order">28</div>
         <div class="race-main">
           <div class="deadline">15:23</div>
           <div class="race-name">大村 1R</div>
@@ -3626,7 +3541,7 @@ body { background: var(--bg) !important; color: var(--text) !important; }\n.refr
     
     <article class="race-card" data-race-id="20261014-20-01">
       <div class="race-head">
-        <div class="race-order">31</div>
+        <div class="race-order">29</div>
         <div class="race-main">
           <div class="deadline">15:25</div>
           <div class="race-name">若松 1R</div>
@@ -3649,7 +3564,7 @@ body { background: var(--bg) !important; color: var(--text) !important; }\n.refr
     
     <article class="race-card" data-race-id="20261014-22-10">
       <div class="race-head">
-        <div class="race-order">32</div>
+        <div class="race-order">30</div>
         <div class="race-main">
           <div class="deadline">15:30</div>
           <div class="race-name">福岡 10R</div>
@@ -3672,7 +3587,7 @@ body { background: var(--bg) !important; color: var(--text) !important; }\n.refr
     
     <article class="race-card" data-race-id="20261014-13-11">
       <div class="race-head">
-        <div class="race-order">33</div>
+        <div class="race-order">31</div>
         <div class="race-main">
           <div class="deadline">15:33</div>
           <div class="race-name">尼崎 11R</div>
@@ -3695,7 +3610,7 @@ body { background: var(--bg) !important; color: var(--text) !important; }\n.refr
     
     <article class="race-card" data-race-id="20261014-06-10">
       <div class="race-head">
-        <div class="race-order">34</div>
+        <div class="race-order">32</div>
         <div class="race-main">
           <div class="deadline">15:37</div>
           <div class="race-name">浜名湖 10R</div>
@@ -3718,7 +3633,7 @@ body { background: var(--bg) !important; color: var(--text) !important; }\n.refr
     
     <article class="race-card" data-race-id="20261014-04-11">
       <div class="race-head">
-        <div class="race-order">35</div>
+        <div class="race-order">33</div>
         <div class="race-main">
           <div class="deadline">15:40</div>
           <div class="race-name">平和島 11R</div>
@@ -3741,7 +3656,7 @@ body { background: var(--bg) !important; color: var(--text) !important; }\n.refr
     
     <article class="race-card" data-race-id="20261014-15-02">
       <div class="race-head">
-        <div class="race-order">36</div>
+        <div class="race-order">34</div>
         <div class="race-main">
           <div class="deadline">15:44</div>
           <div class="race-name">丸亀 2R</div>
@@ -3764,7 +3679,7 @@ body { background: var(--bg) !important; color: var(--text) !important; }\n.refr
     
     <article class="race-card" data-race-id="20261014-11-12">
       <div class="race-head">
-        <div class="race-order">37</div>
+        <div class="race-order">35</div>
         <div class="race-main">
           <div class="deadline">15:47</div>
           <div class="race-name">びわこ 12R</div>
@@ -3787,7 +3702,7 @@ body { background: var(--bg) !important; color: var(--text) !important; }\n.refr
     
     <article class="race-card" data-race-id="20261014-12-02">
       <div class="race-head">
-        <div class="race-order">38</div>
+        <div class="race-order">36</div>
         <div class="race-main">
           <div class="deadline">15:49</div>
           <div class="race-name">住之江 2R</div>
@@ -3810,7 +3725,7 @@ body { background: var(--bg) !important; color: var(--text) !important; }\n.refr
     
     <article class="race-card" data-race-id="20261014-24-02">
       <div class="race-head">
-        <div class="race-order">39</div>
+        <div class="race-order">37</div>
         <div class="race-main">
           <div class="deadline">15:52</div>
           <div class="race-name">大村 2R</div>
@@ -3833,7 +3748,7 @@ body { background: var(--bg) !important; color: var(--text) !important; }\n.refr
     
     <article class="race-card" data-race-id="20261014-20-02">
       <div class="race-head">
-        <div class="race-order">40</div>
+        <div class="race-order">38</div>
         <div class="race-main">
           <div class="deadline">15:54</div>
           <div class="race-name">若松 2R</div>
@@ -3856,7 +3771,7 @@ body { background: var(--bg) !important; color: var(--text) !important; }\n.refr
     
     <article class="race-card" data-race-id="20261014-22-11">
       <div class="race-head">
-        <div class="race-order">41</div>
+        <div class="race-order">39</div>
         <div class="race-main">
           <div class="deadline">15:58</div>
           <div class="race-name">福岡 11R</div>
@@ -3879,7 +3794,7 @@ body { background: var(--bg) !important; color: var(--text) !important; }\n.refr
     
     <article class="race-card" data-race-id="20261014-13-12">
       <div class="race-head">
-        <div class="race-order">42</div>
+        <div class="race-order">40</div>
         <div class="race-main">
           <div class="deadline">16:02</div>
           <div class="race-name">尼崎 12R</div>
@@ -3902,7 +3817,7 @@ body { background: var(--bg) !important; color: var(--text) !important; }\n.refr
     
     <article class="race-card" data-race-id="20261014-06-11">
       <div class="race-head">
-        <div class="race-order">43</div>
+        <div class="race-order">41</div>
         <div class="race-main">
           <div class="deadline">16:09</div>
           <div class="race-name">浜名湖 11R</div>
@@ -3925,7 +3840,7 @@ body { background: var(--bg) !important; color: var(--text) !important; }\n.refr
     
     <article class="race-card" data-race-id="20261014-12-03">
       <div class="race-head">
-        <div class="race-order">44</div>
+        <div class="race-order">42</div>
         <div class="race-main">
           <div class="deadline">16:11</div>
           <div class="race-name">住之江 3R</div>
@@ -3948,7 +3863,7 @@ body { background: var(--bg) !important; color: var(--text) !important; }\n.refr
     
     <article class="race-card" data-race-id="20261014-15-03">
       <div class="race-head">
-        <div class="race-order">45</div>
+        <div class="race-order">43</div>
         <div class="race-main">
           <div class="deadline">16:13</div>
           <div class="race-name">丸亀 3R</div>
@@ -3971,7 +3886,7 @@ body { background: var(--bg) !important; color: var(--text) !important; }\n.refr
     
     <article class="race-card" data-race-id="20261014-24-03">
       <div class="race-head">
-        <div class="race-order">46</div>
+        <div class="race-order">44</div>
         <div class="race-main">
           <div class="deadline">16:17</div>
           <div class="race-name">大村 3R</div>
@@ -3994,7 +3909,7 @@ body { background: var(--bg) !important; color: var(--text) !important; }\n.refr
     
     <article class="race-card" data-race-id="20261014-04-12">
       <div class="race-head">
-        <div class="race-order">47</div>
+        <div class="race-order">45</div>
         <div class="race-main">
           <div class="deadline">16:20</div>
           <div class="race-name">平和島 12R</div>
@@ -4017,7 +3932,7 @@ body { background: var(--bg) !important; color: var(--text) !important; }\n.refr
     
     <article class="race-card" data-race-id="20261014-20-03">
       <div class="race-head">
-        <div class="race-order">48</div>
+        <div class="race-order">46</div>
         <div class="race-main">
           <div class="deadline">16:27</div>
           <div class="race-name">若松 3R</div>
@@ -4040,7 +3955,7 @@ body { background: var(--bg) !important; color: var(--text) !important; }\n.refr
     
     <article class="race-card" data-race-id="20261014-22-12">
       <div class="race-head">
-        <div class="race-order">49</div>
+        <div class="race-order">47</div>
         <div class="race-main">
           <div class="deadline">16:31</div>
           <div class="race-name">福岡 12R</div>
@@ -4063,7 +3978,7 @@ body { background: var(--bg) !important; color: var(--text) !important; }\n.refr
     
     <article class="race-card" data-race-id="20261014-12-04">
       <div class="race-head">
-        <div class="race-order">50</div>
+        <div class="race-order">48</div>
         <div class="race-main">
           <div class="deadline">16:34</div>
           <div class="race-name">住之江 4R</div>
@@ -4086,7 +4001,7 @@ body { background: var(--bg) !important; color: var(--text) !important; }\n.refr
     
     <article class="race-card" data-race-id="20261014-06-12">
       <div class="race-head">
-        <div class="race-order">51</div>
+        <div class="race-order">49</div>
         <div class="race-main">
           <div class="deadline">16:36</div>
           <div class="race-name">浜名湖 12R</div>
@@ -4109,7 +4024,7 @@ body { background: var(--bg) !important; color: var(--text) !important; }\n.refr
     
     <article class="race-card" data-race-id="20261014-15-04">
       <div class="race-head">
-        <div class="race-order">52</div>
+        <div class="race-order">50</div>
         <div class="race-main">
           <div class="deadline">16:42</div>
           <div class="race-name">丸亀 4R</div>
@@ -4132,7 +4047,7 @@ body { background: var(--bg) !important; color: var(--text) !important; }\n.refr
     
     <article class="race-card" data-race-id="20261014-24-04">
       <div class="race-head">
-        <div class="race-order">53</div>
+        <div class="race-order">51</div>
         <div class="race-main">
           <div class="deadline">16:46</div>
           <div class="race-name">大村 4R</div>
@@ -4155,7 +4070,7 @@ body { background: var(--bg) !important; color: var(--text) !important; }\n.refr
     
     <article class="race-card" data-race-id="20261014-20-04">
       <div class="race-head">
-        <div class="race-order">54</div>
+        <div class="race-order">52</div>
         <div class="race-main">
           <div class="deadline">16:53</div>
           <div class="race-name">若松 4R</div>
@@ -4178,7 +4093,7 @@ body { background: var(--bg) !important; color: var(--text) !important; }\n.refr
     
     <article class="race-card" data-race-id="20261014-12-05">
       <div class="race-head">
-        <div class="race-order">55</div>
+        <div class="race-order">53</div>
         <div class="race-main">
           <div class="deadline">17:01</div>
           <div class="race-name">住之江 5R</div>
@@ -4201,7 +4116,7 @@ body { background: var(--bg) !important; color: var(--text) !important; }\n.refr
     
     <article class="race-card" data-race-id="20261014-15-05">
       <div class="race-head">
-        <div class="race-order">56</div>
+        <div class="race-order">54</div>
         <div class="race-main">
           <div class="deadline">17:06</div>
           <div class="race-name">丸亀 5R</div>
@@ -4224,7 +4139,7 @@ body { background: var(--bg) !important; color: var(--text) !important; }\n.refr
     
     <article class="race-card" data-race-id="20261014-24-05">
       <div class="race-head">
-        <div class="race-order">57</div>
+        <div class="race-order">55</div>
         <div class="race-main">
           <div class="deadline">17:11</div>
           <div class="race-name">大村 5R</div>
@@ -4247,7 +4162,7 @@ body { background: var(--bg) !important; color: var(--text) !important; }\n.refr
     
     <article class="race-card" data-race-id="20261014-20-05">
       <div class="race-head">
-        <div class="race-order">58</div>
+        <div class="race-order">56</div>
         <div class="race-main">
           <div class="deadline">17:19</div>
           <div class="race-name">若松 5R</div>
@@ -4270,7 +4185,7 @@ body { background: var(--bg) !important; color: var(--text) !important; }\n.refr
     
     <article class="race-card" data-race-id="20261014-12-06">
       <div class="race-head">
-        <div class="race-order">59</div>
+        <div class="race-order">57</div>
         <div class="race-main">
           <div class="deadline">17:25</div>
           <div class="race-name">住之江 6R</div>
@@ -4293,7 +4208,7 @@ body { background: var(--bg) !important; color: var(--text) !important; }\n.refr
     
     <article class="race-card" data-race-id="20261014-15-06">
       <div class="race-head">
-        <div class="race-order">60</div>
+        <div class="race-order">58</div>
         <div class="race-main">
           <div class="deadline">17:31</div>
           <div class="race-name">丸亀 6R</div>
@@ -4316,7 +4231,7 @@ body { background: var(--bg) !important; color: var(--text) !important; }\n.refr
     
     <article class="race-card" data-race-id="20261014-24-06">
       <div class="race-head">
-        <div class="race-order">61</div>
+        <div class="race-order">59</div>
         <div class="race-main">
           <div class="deadline">17:36</div>
           <div class="race-name">大村 6R</div>
@@ -4339,7 +4254,7 @@ body { background: var(--bg) !important; color: var(--text) !important; }\n.refr
     
     <article class="race-card" data-race-id="20261014-19-01">
       <div class="race-head">
-        <div class="race-order">62</div>
+        <div class="race-order">60</div>
         <div class="race-main">
           <div class="deadline">17:41</div>
           <div class="race-name">下関 1R</div>
@@ -4362,7 +4277,7 @@ body { background: var(--bg) !important; color: var(--text) !important; }\n.refr
     
     <article class="race-card" data-race-id="20261014-20-06">
       <div class="race-head">
-        <div class="race-order">63</div>
+        <div class="race-order">61</div>
         <div class="race-main">
           <div class="deadline">17:47</div>
           <div class="race-name">若松 6R</div>
@@ -4385,7 +4300,7 @@ body { background: var(--bg) !important; color: var(--text) !important; }\n.refr
     
     <article class="race-card" data-race-id="20261014-12-07">
       <div class="race-head">
-        <div class="race-order">64</div>
+        <div class="race-order">62</div>
         <div class="race-main">
           <div class="deadline">17:52</div>
           <div class="race-name">住之江 7R</div>
@@ -4408,7 +4323,7 @@ body { background: var(--bg) !important; color: var(--text) !important; }\n.refr
     
     <article class="race-card" data-race-id="20261014-15-07">
       <div class="race-head">
-        <div class="race-order">65</div>
+        <div class="race-order">63</div>
         <div class="race-main">
           <div class="deadline">17:58</div>
           <div class="race-name">丸亀 7R</div>
@@ -4431,7 +4346,7 @@ body { background: var(--bg) !important; color: var(--text) !important; }\n.refr
     
     <article class="race-card" data-race-id="20261014-24-07">
       <div class="race-head">
-        <div class="race-order">66</div>
+        <div class="race-order">64</div>
         <div class="race-main">
           <div class="deadline">18:03</div>
           <div class="race-name">大村 7R</div>
@@ -4454,7 +4369,7 @@ body { background: var(--bg) !important; color: var(--text) !important; }\n.refr
     
     <article class="race-card" data-race-id="20261014-19-02">
       <div class="race-head">
-        <div class="race-order">67</div>
+        <div class="race-order">65</div>
         <div class="race-main">
           <div class="deadline">18:08</div>
           <div class="race-name">下関 2R</div>
@@ -4477,7 +4392,7 @@ body { background: var(--bg) !important; color: var(--text) !important; }\n.refr
     
     <article class="race-card" data-race-id="20261014-20-07">
       <div class="race-head">
-        <div class="race-order">68</div>
+        <div class="race-order">66</div>
         <div class="race-main">
           <div class="deadline">18:15</div>
           <div class="race-name">若松 7R</div>
@@ -4500,7 +4415,7 @@ body { background: var(--bg) !important; color: var(--text) !important; }\n.refr
     
     <article class="race-card" data-race-id="20261014-12-08">
       <div class="race-head">
-        <div class="race-order">69</div>
+        <div class="race-order">67</div>
         <div class="race-main">
           <div class="deadline">18:22</div>
           <div class="race-name">住之江 8R</div>
@@ -4523,7 +4438,7 @@ body { background: var(--bg) !important; color: var(--text) !important; }\n.refr
     
     <article class="race-card" data-race-id="20261014-15-08">
       <div class="race-head">
-        <div class="race-order">70</div>
+        <div class="race-order">68</div>
         <div class="race-main">
           <div class="deadline">18:28</div>
           <div class="race-name">丸亀 8R</div>
@@ -4546,7 +4461,7 @@ body { background: var(--bg) !important; color: var(--text) !important; }\n.refr
     
     <article class="race-card" data-race-id="20261014-19-03">
       <div class="race-head">
-        <div class="race-order">71</div>
+        <div class="race-order">69</div>
         <div class="race-main">
           <div class="deadline">18:34</div>
           <div class="race-name">下関 3R</div>
@@ -4569,7 +4484,7 @@ body { background: var(--bg) !important; color: var(--text) !important; }\n.refr
     
     <article class="race-card" data-race-id="20261014-24-08">
       <div class="race-head">
-        <div class="race-order">72</div>
+        <div class="race-order">70</div>
         <div class="race-main">
           <div class="deadline">18:40</div>
           <div class="race-name">大村 8R</div>
@@ -4592,7 +4507,7 @@ body { background: var(--bg) !important; color: var(--text) !important; }\n.refr
     
     <article class="race-card" data-race-id="20261014-20-08">
       <div class="race-head">
-        <div class="race-order">73</div>
+        <div class="race-order">71</div>
         <div class="race-main">
           <div class="deadline">18:46</div>
           <div class="race-name">若松 8R</div>
@@ -4615,7 +4530,7 @@ body { background: var(--bg) !important; color: var(--text) !important; }\n.refr
     
     <article class="race-card" data-race-id="20261014-12-09">
       <div class="race-head">
-        <div class="race-order">74</div>
+        <div class="race-order">72</div>
         <div class="race-main">
           <div class="deadline">18:52</div>
           <div class="race-name">住之江 9R</div>
@@ -4638,7 +4553,7 @@ body { background: var(--bg) !important; color: var(--text) !important; }\n.refr
     
     <article class="race-card" data-race-id="20261014-15-09">
       <div class="race-head">
-        <div class="race-order">75</div>
+        <div class="race-order">73</div>
         <div class="race-main">
           <div class="deadline">18:58</div>
           <div class="race-name">丸亀 9R</div>
@@ -4661,7 +4576,7 @@ body { background: var(--bg) !important; color: var(--text) !important; }\n.refr
     
     <article class="race-card" data-race-id="20261014-19-04">
       <div class="race-head">
-        <div class="race-order">76</div>
+        <div class="race-order">74</div>
         <div class="race-main">
           <div class="deadline">19:03</div>
           <div class="race-name">下関 4R</div>
@@ -4684,7 +4599,7 @@ body { background: var(--bg) !important; color: var(--text) !important; }\n.refr
     
     <article class="race-card" data-race-id="20261014-24-09">
       <div class="race-head">
-        <div class="race-order">77</div>
+        <div class="race-order">75</div>
         <div class="race-main">
           <div class="deadline">19:11</div>
           <div class="race-name">大村 9R</div>
@@ -4707,7 +4622,7 @@ body { background: var(--bg) !important; color: var(--text) !important; }\n.refr
     
     <article class="race-card" data-race-id="20261014-20-09">
       <div class="race-head">
-        <div class="race-order">78</div>
+        <div class="race-order">76</div>
         <div class="race-main">
           <div class="deadline">19:18</div>
           <div class="race-name">若松 9R</div>
@@ -4730,7 +4645,7 @@ body { background: var(--bg) !important; color: var(--text) !important; }\n.refr
     
     <article class="race-card" data-race-id="20261014-12-10">
       <div class="race-head">
-        <div class="race-order">79</div>
+        <div class="race-order">77</div>
         <div class="race-main">
           <div class="deadline">19:24</div>
           <div class="race-name">住之江 10R</div>
@@ -4753,7 +4668,7 @@ body { background: var(--bg) !important; color: var(--text) !important; }\n.refr
     
     <article class="race-card" data-race-id="20261014-19-05">
       <div class="race-head">
-        <div class="race-order">80</div>
+        <div class="race-order">78</div>
         <div class="race-main">
           <div class="deadline">19:30</div>
           <div class="race-name">下関 5R</div>
@@ -4776,7 +4691,7 @@ body { background: var(--bg) !important; color: var(--text) !important; }\n.refr
     
     <article class="race-card" data-race-id="20261014-15-10">
       <div class="race-head">
-        <div class="race-order">81</div>
+        <div class="race-order">79</div>
         <div class="race-main">
           <div class="deadline">19:36</div>
           <div class="race-name">丸亀 10R</div>
@@ -4799,7 +4714,7 @@ body { background: var(--bg) !important; color: var(--text) !important; }\n.refr
     
     <article class="race-card" data-race-id="20261014-24-10">
       <div class="race-head">
-        <div class="race-order">82</div>
+        <div class="race-order">80</div>
         <div class="race-main">
           <div class="deadline">19:42</div>
           <div class="race-name">大村 10R</div>
@@ -4822,7 +4737,7 @@ body { background: var(--bg) !important; color: var(--text) !important; }\n.refr
     
     <article class="race-card" data-race-id="20261014-20-10">
       <div class="race-head">
-        <div class="race-order">83</div>
+        <div class="race-order">81</div>
         <div class="race-main">
           <div class="deadline">19:49</div>
           <div class="race-name">若松 10R</div>
@@ -4845,7 +4760,7 @@ body { background: var(--bg) !important; color: var(--text) !important; }\n.refr
     
     <article class="race-card" data-race-id="20261014-19-06">
       <div class="race-head">
-        <div class="race-order">84</div>
+        <div class="race-order">82</div>
         <div class="race-main">
           <div class="deadline">19:56</div>
           <div class="race-name">下関 6R</div>
@@ -4868,7 +4783,7 @@ body { background: var(--bg) !important; color: var(--text) !important; }\n.refr
     
     <article class="race-card" data-race-id="20261014-12-11">
       <div class="race-head">
-        <div class="race-order">85</div>
+        <div class="race-order">83</div>
         <div class="race-main">
           <div class="deadline">20:02</div>
           <div class="race-name">住之江 11R</div>
@@ -4891,7 +4806,7 @@ body { background: var(--bg) !important; color: var(--text) !important; }\n.refr
     
     <article class="race-card" data-race-id="20261014-15-11">
       <div class="race-head">
-        <div class="race-order">86</div>
+        <div class="race-order">84</div>
         <div class="race-main">
           <div class="deadline">20:08</div>
           <div class="race-name">丸亀 11R</div>
@@ -4914,7 +4829,7 @@ body { background: var(--bg) !important; color: var(--text) !important; }\n.refr
     
     <article class="race-card" data-race-id="20261014-24-11">
       <div class="race-head">
-        <div class="race-order">87</div>
+        <div class="race-order">85</div>
         <div class="race-main">
           <div class="deadline">20:13</div>
           <div class="race-name">大村 11R</div>
@@ -4937,7 +4852,7 @@ body { background: var(--bg) !important; color: var(--text) !important; }\n.refr
     
     <article class="race-card" data-race-id="20261014-20-11">
       <div class="race-head">
-        <div class="race-order">88</div>
+        <div class="race-order">86</div>
         <div class="race-main">
           <div class="deadline">20:18</div>
           <div class="race-name">若松 11R</div>
@@ -4960,7 +4875,7 @@ body { background: var(--bg) !important; color: var(--text) !important; }\n.refr
     
     <article class="race-card" data-race-id="20261014-19-07">
       <div class="race-head">
-        <div class="race-order">89</div>
+        <div class="race-order">87</div>
         <div class="race-main">
           <div class="deadline">20:25</div>
           <div class="race-name">下関 7R</div>
@@ -4983,7 +4898,7 @@ body { background: var(--bg) !important; color: var(--text) !important; }\n.refr
     
     <article class="race-card" data-race-id="20261014-12-12">
       <div class="race-head">
-        <div class="race-order">90</div>
+        <div class="race-order">88</div>
         <div class="race-main">
           <div class="deadline">20:31</div>
           <div class="race-name">住之江 12R</div>
@@ -5006,7 +4921,7 @@ body { background: var(--bg) !important; color: var(--text) !important; }\n.refr
     
     <article class="race-card" data-race-id="20261014-15-12">
       <div class="race-head">
-        <div class="race-order">91</div>
+        <div class="race-order">89</div>
         <div class="race-main">
           <div class="deadline">20:36</div>
           <div class="race-name">丸亀 12R</div>
@@ -5029,7 +4944,7 @@ body { background: var(--bg) !important; color: var(--text) !important; }\n.refr
     
     <article class="race-card" data-race-id="20261014-24-12">
       <div class="race-head">
-        <div class="race-order">92</div>
+        <div class="race-order">90</div>
         <div class="race-main">
           <div class="deadline">20:41</div>
           <div class="race-name">大村 12R</div>
@@ -5052,7 +4967,7 @@ body { background: var(--bg) !important; color: var(--text) !important; }\n.refr
     
     <article class="race-card" data-race-id="20261014-20-12">
       <div class="race-head">
-        <div class="race-order">93</div>
+        <div class="race-order">91</div>
         <div class="race-main">
           <div class="deadline">20:45</div>
           <div class="race-name">若松 12R</div>
@@ -5075,7 +4990,7 @@ body { background: var(--bg) !important; color: var(--text) !important; }\n.refr
     
     <article class="race-card" data-race-id="20261014-19-08">
       <div class="race-head">
-        <div class="race-order">94</div>
+        <div class="race-order">92</div>
         <div class="race-main">
           <div class="deadline">20:59</div>
           <div class="race-name">下関 8R</div>
@@ -5098,7 +5013,7 @@ body { background: var(--bg) !important; color: var(--text) !important; }\n.refr
     
     <article class="race-card" data-race-id="20261014-19-09">
       <div class="race-head">
-        <div class="race-order">95</div>
+        <div class="race-order">93</div>
         <div class="race-main">
           <div class="deadline">21:25</div>
           <div class="race-name">下関 9R</div>
@@ -5121,7 +5036,7 @@ body { background: var(--bg) !important; color: var(--text) !important; }\n.refr
     
     <article class="race-card" data-race-id="20261014-19-10">
       <div class="race-head">
-        <div class="race-order">96</div>
+        <div class="race-order">94</div>
         <div class="race-main">
           <div class="deadline">21:51</div>
           <div class="race-name">下関 10R</div>
@@ -5144,7 +5059,7 @@ body { background: var(--bg) !important; color: var(--text) !important; }\n.refr
     
     <article class="race-card" data-race-id="20261014-19-11">
       <div class="race-head">
-        <div class="race-order">97</div>
+        <div class="race-order">95</div>
         <div class="race-main">
           <div class="deadline">22:20</div>
           <div class="race-name">下関 11R</div>
@@ -5167,7 +5082,7 @@ body { background: var(--bg) !important; color: var(--text) !important; }\n.refr
     
     <article class="race-card" data-race-id="20261014-19-12">
       <div class="race-head">
-        <div class="race-order">98</div>
+        <div class="race-order">96</div>
         <div class="race-main">
           <div class="deadline">22:45</div>
           <div class="race-name">下関 12R</div>
@@ -5212,6 +5127,48 @@ body { background: var(--bg) !important; color: var(--text) !important; }\n.refr
         catch (error) { /* Tab switching also works without storage. */ }
       };
 
+      // Candidate selection is local research UI, never persisted as a bet.
+      const initSignalTickets = (card, raceId) => {
+        const inputs = Array.from(card.querySelectorAll(".signal-ai-ticket"));
+        if (!inputs.length) return;
+        const key = "boatrace-signal-ticket-selection:v1:" + raceId;
+        const available = new Set(inputs.map(x => x.value));
+        const defaults = inputs.slice(0,24).map(x => x.value);
+        let selected = new Set(defaults);
+        try {
+          const saved = JSON.parse(readChoice(key) || "null");
+          if (Array.isArray(saved) && saved.length <= 24 && saved.every(x => available.has(x))) selected = new Set(saved);
+        } catch (error) { /* Restore defaults on invalid storage. */ }
+        const counter = card.querySelector(".signal-ai-selected-count");
+        const message = card.querySelector(".signal-ai-pick-message");
+        const render = () => {
+          inputs.forEach(x => {
+            x.checked = selected.has(x.value);
+            x.closest(".signal-ai-ticket-row")?.classList.toggle("is-selected", x.checked);
+          });
+          if (counter) counter.textContent = String(selected.size);
+        };
+        inputs.forEach(x => x.addEventListener("change", () => {
+          if (x.checked && selected.size >= 24 && !selected.has(x.value)) {
+            x.checked = false;
+            if (message) message.textContent = "最大24点です。先に別候補を外してください。";
+            return;
+          }
+          if (x.checked) selected.add(x.value);
+          else selected.delete(x.value);
+          saveChoice(key, JSON.stringify(Array.from(selected)));
+          if (message) message.textContent = "候補は端末内に保存しました。実際の24点成績には反映しません。";
+          render();
+        }));
+        card.querySelector(".signal-ai-reset")?.addEventListener("click", () => {
+          selected = new Set(defaults);
+          saveChoice(key, JSON.stringify(defaults));
+          if (message) message.textContent = "上位24点に戻しました。";
+          render();
+        });
+        render();
+      };
+
       // Render only the selected race's saved AI prediction at the same spot.
       document.querySelectorAll(".race-pair").forEach(pair => {
         const normal = pair.querySelector(".race-local-normal");
@@ -5227,6 +5184,7 @@ body { background: var(--bg) !important; color: var(--text) !important; }\n.refr
             return;
           }
           ai.appendChild(source.cloneNode(true));
+          initSignalTickets(ai, pair.dataset.raceId);
           ai.querySelectorAll("details").forEach((detail, i) => {
             const key = "boatrace-race-details:" + pair.dataset.raceId + ":" + i;
             detail.open = readChoice(key) === "open";
