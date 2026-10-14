@@ -951,7 +951,7 @@
       "morning_six_identity_verified": true,
       "original_folder_boats": 6,
       "saved_predeadline_boats": 0,
-      "clock_consistent_snapshot_count": 1,
+      "clock_consistent_snapshot_count": 2,
       "clock_consistent_earliest": {
         "collected_at": "2026-10-15T08:42:24.889966+09:00",
         "saved_folder_clock": "2026-10-15T08:44:39+09:00",
