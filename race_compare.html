@@ -723,6 +723,185 @@ details.all-scores summary {
 
 }
 
+
+/* family-navigation-v5-unified */
+
+.family-nav {
+  display: grid !important;
+  grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+  gap: 8px !important;
+  width: 100% !important;
+  margin: 0 0 14px 0 !important;
+  padding: 6px !important;
+  border: 1px solid var(--line) !important;
+  border-radius: 14px !important;
+  background: var(--card) !important;
+  box-sizing: border-box !important;
+}
+
+.family-nav a {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  min-width: 0 !important;
+  min-height: 44px !important;
+  padding: 11px 5px !important;
+  border: 0 !important;
+  border-radius: 10px !important;
+  background: transparent !important;
+  color: var(--text) !important;
+  text-align: center !important;
+  text-decoration: none !important;
+  font-size: 13px !important;
+  font-weight: 800 !important;
+  line-height: 1.25 !important;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.family-nav a:link,
+.family-nav a:visited {
+  color: var(--text) !important;
+  text-decoration: none !important;
+}
+
+.family-nav a.active,
+.family-nav a.active:link,
+.family-nav a.active:visited {
+  background: #174f7a !important;
+  color: #ffffff !important;
+  text-decoration: none !important;
+}
+
+.wrap {
+  width: min(920px, 100%) !important;
+  margin: 0 auto !important;
+  padding: 16px 12px 48px !important;
+}
+
+header {
+  margin-bottom: 12px !important;
+}
+
+header h1 {
+  margin: 0 !important;
+  font-size: 23px !important;
+  font-weight: 800 !important;
+  line-height: 1.35 !important;
+  letter-spacing: 0 !important;
+}
+
+header .meta {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  gap: 4px 10px !important;
+  margin-top: 6px !important;
+  color: var(--muted) !important;
+  font-size: 13px !important;
+  line-height: 1.5 !important;
+}
+
+.notice {
+  margin: 0 0 14px 0 !important;
+  padding: 14px !important;
+  border: 1px solid var(--line) !important;
+  border-radius: 14px !important;
+  background: var(--card) !important;
+  color: var(--muted) !important;
+  font-size: 13px !important;
+  line-height: 1.7 !important;
+  box-sizing: border-box !important;
+}
+
+@media (prefers-color-scheme: dark) {
+
+  .family-nav a.active,
+  .family-nav a.active:link,
+  .family-nav a.active:visited {
+    background: #3b82f6 !important;
+    color: #ffffff !important;
+  }
+
+}
+
+@media (max-width: 560px) {
+
+  .family-nav {
+    gap: 4px !important;
+    padding: 5px !important;
+  }
+
+  .family-nav a {
+    min-height: 42px !important;
+    padding: 9px 2px !important;
+    font-size: 11px !important;
+  }
+
+  header h1 {
+    font-size: 23px !important;
+  }
+
+  header .meta {
+    font-size: 13px !important;
+  }
+
+  .notice {
+    padding: 13px !important;
+    font-size: 13px !important;
+  }
+
+}
+
+:root {
+  color-scheme: light dark;
+  --bg: #eef4f8;
+  --surface: #d4e2ec;
+  --card: #dce8f0;
+  --card-strong: #e7f0f5;
+  --panel: #d1e0ea;
+  --score-row: #c8dbe8;
+  --chip: #d1e0ea;
+  --text: #172033;
+  --muted: #60758a;
+  --line: #b7cad8;
+  --primary: #174f7a;
+  --primary-strong: #123d60;
+  --primary-soft: #d2e3ef;
+  --action: #b94f6b;
+  --action-strong: #9e3f59;
+  --analysis-action: #b94f6b;
+  --live-bg: #cceae3;
+  --live-text: #0e6659;
+  --live-accent: #168477;
+  --morning-bg: #d4e5f6;
+  --morning-text: #285a91;
+  --morning-accent: #3976b8;
+  --good-bg: #dcefe6;
+  --good-text: #17603f;
+  --warn-bg: #f5e5cf;
+  --warn-text: #8a5317;
+  --warning: #a94646;
+}
+body { background: var(--bg) !important; color: var(--text) !important; }\n.refresh-button, .analysis-action-button { background: var(--action) !important; color:#fff !important; }\n.refresh-button:hover, .analysis-action-button:hover { background: var(--action-strong) !important; }
+.family-nav, .nav { background: var(--surface) !important; border-color: var(--line) !important; }
+.family-nav a.active, .family-nav a.active:link, .family-nav a.active:visited,
+.nav a.active, .nav a.active:link, .nav a.active:visited {
+  background: var(--primary) !important; color:#fff !important;
+}
+.notice, .note, .race-card, .card, .metric-card, .summary-card, .summary-box, .panel, .section, .analysis-section {
+  background: var(--card) !important;
+  border-color: var(--line) !important;
+}
+.pick, .chip, .result-box, .bet-box, .metric, .stat, .score-row, .actual, .tag, .score-chip, .simulation-box, .money-box, .ai-result-pick {
+  background: var(--score-row) !important;
+}
+
+
+/* Race comparison and legacy page aliases: keep all surfaces on the shared theme. */
+.summary-box, .race-card, .empty { background: var(--card) !important; border-color: var(--line) !important; }
+.actual, .tag, .score-chip, .simulation-box, .money-box, .ai-result-pick {
+  background: var(--score-row) !important;
+}
+
 </style>
 
 </head>
@@ -741,32 +920,16 @@ details.all-scores summary {
   ・確定
   3R
   ・更新
-  2026/10/15 09:08
+  2026/10/15 09:09
   JST
 </div>
 
 
-<nav class="nav">
-
-  <a href="index.html">
-    最新予想
-  </a>
-
-  <a href="results.html">
-    結果・成績
-  </a>
-
-  <a href="analysis.html">
-    AI分析
-  </a>
-
-  <a
-    href="race_compare.html"
-    class="active"
-  >
-    レース照合
-  </a>
-
+<nav class="family-nav">
+<a href="index.html">最新予想</a>
+<a href="race_compare.html" class="active">レース照合</a>
+<a href="results.html">結果・成績</a>
+<a href="analysis.html">AI分析</a>
 </nav>
 
 
@@ -901,7 +1064,7 @@ details.all-scores summary {
 
   </div>
 
-  
+  <div class="signal-research-note">雷神V2の研究用事後再判定。公式保存の直前スコアで算出した検証結果で、締切時の検知・実購入ではありません。</div>
 
   
 
@@ -976,14 +1139,14 @@ details.all-scores summary {
   
     <details class="simulation-box ai-result-box">
       <summary class="ai-result-summary">
-        <span class="simulation-title">風神雷神専用AI予想を見る</span>
+        <span class="simulation-title">風神雷神専用AI予想（V2・事後研究24点）を見る</span>
         <span class="ai-result-summary-meta">
-          購入24点 ／ <span class="signal-rank-miss" title="購入24点の外でも実着のAI評価順位を確認できます">不的中・実着53位／120通り</span> ／ 仮想投資 <b>2,400円</b> ／ 払戻 <b>0円</b> ／ 収支 <b>-2,400円</b>
+          検証用仮想24点 ／ <span class="signal-rank-miss" title="研究用上位24点の外でも実着のAI評価順位を確認できます">不的中・実着53位／120通り</span> ／ 仮想投資 <b>2,400円</b> ／ 払戻 <b>0円</b> ／ 収支 <b>-2,400円</b>
         </span>
       </summary>
       <div class="ai-result-body">
-        <div class="simulation-meta"> AI順位表示50位まで ／ 購入上位24点・各100円 ／ 購入範囲外は参考順位（全120通りは保存データで管理）</div>
-        <div class="ai-result-list"><div class="ai-result-pick ai-bought"><b>1位 3-1-4</b><span>AI評価 64.4点 ／ 購入</span></div><div class="ai-result-pick ai-bought"><b>2位 3-4-1</b><span>AI評価 64.1点 ／ 購入</span></div><div class="ai-result-pick ai-bought"><b>3位 1-3-4</b><span>AI評価 63.4点 ／ 購入</span></div><div class="ai-result-pick ai-bought"><b>4位 3-1-2</b><span>AI評価 62.7点 ／ 購入</span></div><div class="ai-result-pick ai-bought"><b>5位 4-3-1</b><span>AI評価 62.7点 ／ 購入</span></div><div class="ai-result-pick ai-bought"><b>6位 1-4-3</b><span>AI評価 62.7点 ／ 購入</span></div><div class="ai-result-pick ai-bought"><b>7位 4-1-3</b><span>AI評価 62.2点 ／ 購入</span></div><div class="ai-result-pick ai-bought"><b>8位 3-4-2</b><span>AI評価 62.0点 ／ 購入</span></div><div class="ai-result-pick ai-bought"><b>9位 1-3-2</b><span>AI評価 61.7点 ／ 購入</span></div><div class="ai-result-pick ai-bought"><b>10位 3-2-1</b><span>AI評価 61.6点 ／ 購入</span></div><div class="ai-result-pick ai-bought"><b>11位 3-1-5</b><span>AI評価 61.6点 ／ 購入</span></div><div class="ai-result-pick ai-bought"><b>12位 3-2-4</b><span>AI評価 61.1点 ／ 購入</span></div><div class="ai-result-pick ai-bought"><b>13位 3-1-6</b><span>AI評価 60.9点 ／ 購入</span></div><div class="ai-result-pick ai-bought"><b>14位 3-4-5</b><span>AI評価 60.9点 ／ 購入</span></div><div class="ai-result-pick ai-bought"><b>15位 1-3-5</b><span>AI評価 60.6点 ／ 購入</span></div><div class="ai-result-pick ai-bought"><b>16位 4-3-2</b><span>AI評価 60.5点 ／ 購入</span></div><div class="ai-result-pick ai-bought"><b>17位 3-4-6</b><span>AI評価 60.2点 ／ 購入</span></div><div class="ai-result-pick ai-bought"><b>18位 1-2-3</b><span>AI評価 60.1点 ／ 購入</span></div><div class="ai-result-pick ai-bought"><b>19位 3-5-1</b><span>AI評価 59.9点 ／ 購入</span></div><div class="ai-result-pick ai-bought"><b>20位 1-3-6</b><span>AI評価 59.9点 ／ 購入</span></div><div class="ai-result-pick ai-bought"><b>21位 1-4-2</b><span>AI評価 59.5点 ／ 購入</span></div><div class="ai-result-pick ai-bought"><b>22位 3-5-4</b><span>AI評価 59.5点 ／ 購入</span></div><div class="ai-result-pick ai-bought"><b>23位 4-3-5</b><span>AI評価 59.4点 ／ 購入</span></div><div class="ai-result-pick ai-bought"><b>24位 4-1-2</b><span>AI評価 59.0点 ／ 購入</span></div><div class="ai-result-pick"><b>25位 3-6-1</b><span>AI評価 58.9点 ／ 参考</span></div><div class="ai-result-pick"><b>26位 4-2-3</b><span>AI評価 58.9点 ／ 参考</span></div><div class="ai-result-pick"><b>27位 4-3-6</b><span>AI評価 58.7点 ／ 参考</span></div><div class="ai-result-pick"><b>28位 1-2-4</b><span>AI評価 58.7点 ／ 参考</span></div><div class="ai-result-pick"><b>29位 3-6-4</b><span>AI評価 58.5点 ／ 参考</span></div><div class="ai-result-pick"><b>30位 1-5-3</b><span>AI評価 58.5点 ／ 参考</span></div><div class="ai-result-pick"><b>31位 2-3-1</b><span>AI評価 58.5点 ／ 参考</span></div><div class="ai-result-pick"><b>32位 1-4-5</b><span>AI評価 58.4点 ／ 参考</span></div><div class="ai-result-pick"><b>33位 3-2-5</b><span>AI評価 58.3点 ／ 参考</span></div><div class="ai-result-pick"><b>34位 2-3-4</b><span>AI評価 58.0点 ／ 参考</span></div><div class="ai-result-pick"><b>35位 2-1-3</b><span>AI評価 58.0点 ／ 参考</span></div><div class="ai-result-pick"><b>36位 4-2-1</b><span>AI評価 57.9点 ／ 参考</span></div><div class="ai-result-pick"><b>37位 4-1-5</b><span>AI評価 57.9点 ／ 参考</span></div><div class="ai-result-pick"><b>38位 3-5-2</b><span>AI評価 57.8点 ／ 参考</span></div><div class="ai-result-pick"><b>39位 1-4-6</b><span>AI評価 57.7点 ／ 参考</span></div><div class="ai-result-pick"><b>40位 3-2-6</b><span>AI評価 57.7点 ／ 参考</span></div><div class="ai-result-pick"><b>41位 1-6-3</b><span>AI評価 57.5点 ／ 参考</span></div><div class="ai-result-pick"><b>42位 4-5-3</b><span>AI評価 57.3点 ／ 参考</span></div><div class="ai-result-pick"><b>43位 4-1-6</b><span>AI評価 57.3点 ／ 参考</span></div><div class="ai-result-pick"><b>44位 2-4-3</b><span>AI評価 57.2点 ／ 参考</span></div><div class="ai-result-pick"><b>45位 1-5-4</b><span>AI評価 57.0点 ／ 参考</span></div><div class="ai-result-pick"><b>46位 3-6-2</b><span>AI評価 56.8点 ／ 参考</span></div><div class="ai-result-pick"><b>47位 2-1-4</b><span>AI評価 56.5点 ／ 参考</span></div><div class="ai-result-pick"><b>48位 4-5-1</b><span>AI評価 56.3点 ／ 参考</span></div><div class="ai-result-pick"><b>49位 4-6-3</b><span>AI評価 56.3点 ／ 参考</span></div><div class="ai-result-pick"><b>50位 2-4-1</b><span>AI評価 56.3点 ／ 参考</span></div></div>
+        <div class="simulation-meta">研究用の事後再計算です。当時の締切前予測・購入履歴とは別の仮想収支です。 AI順位表示50位まで ／ 検証用仮想上位24点・各100円 ／ 購入範囲外は参考順位（全120通りは保存データで管理）</div>
+        <div class="ai-result-list"><div class="ai-result-pick ai-bought"><b>1位 3-1-4</b><span>AI評価 64.4点 ／ 検証候補</span></div><div class="ai-result-pick ai-bought"><b>2位 3-4-1</b><span>AI評価 64.1点 ／ 検証候補</span></div><div class="ai-result-pick ai-bought"><b>3位 1-3-4</b><span>AI評価 63.4点 ／ 検証候補</span></div><div class="ai-result-pick ai-bought"><b>4位 3-1-2</b><span>AI評価 62.7点 ／ 検証候補</span></div><div class="ai-result-pick ai-bought"><b>5位 4-3-1</b><span>AI評価 62.7点 ／ 検証候補</span></div><div class="ai-result-pick ai-bought"><b>6位 1-4-3</b><span>AI評価 62.7点 ／ 検証候補</span></div><div class="ai-result-pick ai-bought"><b>7位 4-1-3</b><span>AI評価 62.2点 ／ 検証候補</span></div><div class="ai-result-pick ai-bought"><b>8位 3-4-2</b><span>AI評価 62.0点 ／ 検証候補</span></div><div class="ai-result-pick ai-bought"><b>9位 1-3-2</b><span>AI評価 61.7点 ／ 検証候補</span></div><div class="ai-result-pick ai-bought"><b>10位 3-2-1</b><span>AI評価 61.6点 ／ 検証候補</span></div><div class="ai-result-pick ai-bought"><b>11位 3-1-5</b><span>AI評価 61.6点 ／ 検証候補</span></div><div class="ai-result-pick ai-bought"><b>12位 3-2-4</b><span>AI評価 61.1点 ／ 検証候補</span></div><div class="ai-result-pick ai-bought"><b>13位 3-1-6</b><span>AI評価 60.9点 ／ 検証候補</span></div><div class="ai-result-pick ai-bought"><b>14位 3-4-5</b><span>AI評価 60.9点 ／ 検証候補</span></div><div class="ai-result-pick ai-bought"><b>15位 1-3-5</b><span>AI評価 60.6点 ／ 検証候補</span></div><div class="ai-result-pick ai-bought"><b>16位 4-3-2</b><span>AI評価 60.5点 ／ 検証候補</span></div><div class="ai-result-pick ai-bought"><b>17位 3-4-6</b><span>AI評価 60.2点 ／ 検証候補</span></div><div class="ai-result-pick ai-bought"><b>18位 1-2-3</b><span>AI評価 60.1点 ／ 検証候補</span></div><div class="ai-result-pick ai-bought"><b>19位 3-5-1</b><span>AI評価 59.9点 ／ 検証候補</span></div><div class="ai-result-pick ai-bought"><b>20位 1-3-6</b><span>AI評価 59.9点 ／ 検証候補</span></div><div class="ai-result-pick ai-bought"><b>21位 1-4-2</b><span>AI評価 59.5点 ／ 検証候補</span></div><div class="ai-result-pick ai-bought"><b>22位 3-5-4</b><span>AI評価 59.5点 ／ 検証候補</span></div><div class="ai-result-pick ai-bought"><b>23位 4-3-5</b><span>AI評価 59.4点 ／ 検証候補</span></div><div class="ai-result-pick ai-bought"><b>24位 4-1-2</b><span>AI評価 59.0点 ／ 検証候補</span></div><div class="ai-result-pick"><b>25位 3-6-1</b><span>AI評価 58.9点 ／ 参考</span></div><div class="ai-result-pick"><b>26位 4-2-3</b><span>AI評価 58.9点 ／ 参考</span></div><div class="ai-result-pick"><b>27位 4-3-6</b><span>AI評価 58.7点 ／ 参考</span></div><div class="ai-result-pick"><b>28位 1-2-4</b><span>AI評価 58.7点 ／ 参考</span></div><div class="ai-result-pick"><b>29位 3-6-4</b><span>AI評価 58.5点 ／ 参考</span></div><div class="ai-result-pick"><b>30位 1-5-3</b><span>AI評価 58.5点 ／ 参考</span></div><div class="ai-result-pick"><b>31位 2-3-1</b><span>AI評価 58.5点 ／ 参考</span></div><div class="ai-result-pick"><b>32位 1-4-5</b><span>AI評価 58.4点 ／ 参考</span></div><div class="ai-result-pick"><b>33位 3-2-5</b><span>AI評価 58.3点 ／ 参考</span></div><div class="ai-result-pick"><b>34位 2-3-4</b><span>AI評価 58.0点 ／ 参考</span></div><div class="ai-result-pick"><b>35位 2-1-3</b><span>AI評価 58.0点 ／ 参考</span></div><div class="ai-result-pick"><b>36位 4-2-1</b><span>AI評価 57.9点 ／ 参考</span></div><div class="ai-result-pick"><b>37位 4-1-5</b><span>AI評価 57.9点 ／ 参考</span></div><div class="ai-result-pick"><b>38位 3-5-2</b><span>AI評価 57.8点 ／ 参考</span></div><div class="ai-result-pick"><b>39位 1-4-6</b><span>AI評価 57.7点 ／ 参考</span></div><div class="ai-result-pick"><b>40位 3-2-6</b><span>AI評価 57.7点 ／ 参考</span></div><div class="ai-result-pick"><b>41位 1-6-3</b><span>AI評価 57.5点 ／ 参考</span></div><div class="ai-result-pick"><b>42位 4-5-3</b><span>AI評価 57.3点 ／ 参考</span></div><div class="ai-result-pick"><b>43位 4-1-6</b><span>AI評価 57.3点 ／ 参考</span></div><div class="ai-result-pick"><b>44位 2-4-3</b><span>AI評価 57.2点 ／ 参考</span></div><div class="ai-result-pick"><b>45位 1-5-4</b><span>AI評価 57.0点 ／ 参考</span></div><div class="ai-result-pick"><b>46位 3-6-2</b><span>AI評価 56.8点 ／ 参考</span></div><div class="ai-result-pick"><b>47位 2-1-4</b><span>AI評価 56.5点 ／ 参考</span></div><div class="ai-result-pick"><b>48位 4-5-1</b><span>AI評価 56.3点 ／ 参考</span></div><div class="ai-result-pick"><b>49位 4-6-3</b><span>AI評価 56.3点 ／ 参考</span></div><div class="ai-result-pick"><b>50位 2-4-1</b><span>AI評価 56.3点 ／ 参考</span></div></div>
       </div>
     </details>
     
@@ -1052,7 +1215,7 @@ details.all-scores summary {
 
   </div>
 
-  
+  <div class="signal-research-note">雷神V2の研究用事後再判定。公式保存の直前スコアで算出した検証結果で、締切時の検知・実購入ではありません。</div>
 
   
 
@@ -1127,14 +1290,14 @@ details.all-scores summary {
   
     <details class="simulation-box ai-result-box">
       <summary class="ai-result-summary">
-        <span class="simulation-title">風神雷神専用AI予想を見る</span>
+        <span class="simulation-title">風神雷神専用AI予想（V2・事後研究24点）を見る</span>
         <span class="ai-result-summary-meta">
-          購入24点 ／ <span class="signal-rank-miss" title="購入24点の外でも実着のAI評価順位を確認できます">不的中・実着78位／120通り</span> ／ 仮想投資 <b>2,400円</b> ／ 払戻 <b>0円</b> ／ 収支 <b>-2,400円</b>
+          検証用仮想24点 ／ <span class="signal-rank-miss" title="研究用上位24点の外でも実着のAI評価順位を確認できます">不的中・実着78位／120通り</span> ／ 仮想投資 <b>2,400円</b> ／ 払戻 <b>0円</b> ／ 収支 <b>-2,400円</b>
         </span>
       </summary>
       <div class="ai-result-body">
-        <div class="simulation-meta"> AI順位表示50位まで ／ 購入上位24点・各100円 ／ 購入範囲外は参考順位（全120通りは保存データで管理）</div>
-        <div class="ai-result-list"><div class="ai-result-pick ai-bought"><b>1位 2-1-6</b><span>AI評価 72.9点 ／ 購入</span></div><div class="ai-result-pick ai-bought"><b>2位 2-6-1</b><span>AI評価 72.6点 ／ 購入</span></div><div class="ai-result-pick ai-bought"><b>3位 1-2-6</b><span>AI評価 72.0点 ／ 購入</span></div><div class="ai-result-pick ai-bought"><b>4位 6-2-1</b><span>AI評価 71.3点 ／ 購入</span></div><div class="ai-result-pick ai-bought"><b>5位 1-6-2</b><span>AI評価 71.3点 ／ 購入</span></div><div class="ai-result-pick ai-bought"><b>6位 6-1-2</b><span>AI評価 70.8点 ／ 購入</span></div><div class="ai-result-pick ai-bought"><b>7位 2-1-5</b><span>AI評価 70.3点 ／ 購入</span></div><div class="ai-result-pick ai-bought"><b>8位 2-6-5</b><span>AI評価 69.6点 ／ 購入</span></div><div class="ai-result-pick ai-bought"><b>9位 1-2-5</b><span>AI評価 69.4点 ／ 購入</span></div><div class="ai-result-pick ai-bought"><b>10位 2-5-1</b><span>AI評価 68.8点 ／ 購入</span></div><div class="ai-result-pick ai-bought"><b>11位 2-1-4</b><span>AI評価 68.4点 ／ 購入</span></div><div class="ai-result-pick ai-bought"><b>12位 2-1-3</b><span>AI評価 68.3点 ／ 購入</span></div><div class="ai-result-pick ai-bought"><b>13位 2-5-6</b><span>AI評価 68.3点 ／ 購入</span></div><div class="ai-result-pick ai-bought"><b>14位 6-2-5</b><span>AI評価 68.3点 ／ 購入</span></div><div class="ai-result-pick ai-bought"><b>15位 2-6-4</b><span>AI評価 67.8点 ／ 購入</span></div><div class="ai-result-pick ai-bought"><b>16位 2-6-3</b><span>AI評価 67.7点 ／ 購入</span></div><div class="ai-result-pick ai-bought"><b>17位 1-2-4</b><span>AI評価 67.5点 ／ 購入</span></div><div class="ai-result-pick ai-bought"><b>18位 1-2-3</b><span>AI評価 67.4点 ／ 購入</span></div><div class="ai-result-pick ai-bought"><b>19位 1-5-2</b><span>AI評価 67.4点 ／ 購入</span></div><div class="ai-result-pick ai-bought"><b>20位 1-6-5</b><span>AI評価 67.3点 ／ 購入</span></div><div class="ai-result-pick ai-bought"><b>21位 6-1-5</b><span>AI評価 66.9点 ／ 購入</span></div><div class="ai-result-pick ai-bought"><b>22位 6-2-4</b><span>AI評価 66.4点 ／ 購入</span></div><div class="ai-result-pick ai-bought"><b>23位 6-2-3</b><span>AI評価 66.3点 ／ 購入</span></div><div class="ai-result-pick ai-bought"><b>24位 6-5-2</b><span>AI評価 66.3点 ／ 購入</span></div><div class="ai-result-pick"><b>25位 1-5-6</b><span>AI評価 66.0点 ／ 参考</span></div><div class="ai-result-pick"><b>26位 2-4-1</b><span>AI評価 66.0点 ／ 参考</span></div><div class="ai-result-pick"><b>27位 2-3-1</b><span>AI評価 65.9点 ／ 参考</span></div><div class="ai-result-pick"><b>28位 2-4-6</b><span>AI評価 65.5点 ／ 参考</span></div><div class="ai-result-pick"><b>29位 1-6-4</b><span>AI評価 65.5点 ／ 参考</span></div><div class="ai-result-pick"><b>30位 2-3-6</b><span>AI評価 65.4点 ／ 参考</span></div><div class="ai-result-pick"><b>31位 1-6-3</b><span>AI評価 65.4点 ／ 参考</span></div><div class="ai-result-pick"><b>32位 6-5-1</b><span>AI評価 65.4点 ／ 参考</span></div><div class="ai-result-pick"><b>33位 6-1-4</b><span>AI評価 65.0点 ／ 参考</span></div><div class="ai-result-pick"><b>34位 6-1-3</b><span>AI評価 64.9点 ／ 参考</span></div><div class="ai-result-pick"><b>35位 5-2-1</b><span>AI評価 64.8点 ／ 参考</span></div><div class="ai-result-pick"><b>36位 1-4-2</b><span>AI評価 64.6点 ／ 参考</span></div><div class="ai-result-pick"><b>37位 1-3-2</b><span>AI評価 64.5点 ／ 参考</span></div><div class="ai-result-pick"><b>38位 5-2-6</b><span>AI評価 64.4点 ／ 参考</span></div><div class="ai-result-pick"><b>39位 5-1-2</b><span>AI評価 64.4点 ／ 参考</span></div><div class="ai-result-pick"><b>40位 2-5-4</b><span>AI評価 63.9点 ／ 参考</span></div><div class="ai-result-pick"><b>41位 2-5-3</b><span>AI評価 63.8点 ／ 参考</span></div><div class="ai-result-pick"><b>42位 5-6-2</b><span>AI評価 63.7点 ／ 参考</span></div><div class="ai-result-pick"><b>43位 6-4-2</b><span>AI評価 63.5点 ／ 参考</span></div><div class="ai-result-pick"><b>44位 6-3-2</b><span>AI評価 63.4点 ／ 参考</span></div><div class="ai-result-pick"><b>45位 1-4-6</b><span>AI評価 63.3点 ／ 参考</span></div><div class="ai-result-pick"><b>46位 1-3-6</b><span>AI評価 63.1点 ／ 参考</span></div><div class="ai-result-pick"><b>47位 5-1-6</b><span>AI評価 63.0点 ／ 参考</span></div><div class="ai-result-pick"><b>48位 2-4-5</b><span>AI評価 63.0点 ／ 参考</span></div><div class="ai-result-pick"><b>49位 2-3-5</b><span>AI評価 62.8点 ／ 参考</span></div><div class="ai-result-pick"><b>50位 5-6-1</b><span>AI評価 62.8点 ／ 参考</span></div></div>
+        <div class="simulation-meta">研究用の事後再計算です。当時の締切前予測・購入履歴とは別の仮想収支です。 AI順位表示50位まで ／ 検証用仮想上位24点・各100円 ／ 購入範囲外は参考順位（全120通りは保存データで管理）</div>
+        <div class="ai-result-list"><div class="ai-result-pick ai-bought"><b>1位 2-1-6</b><span>AI評価 72.9点 ／ 検証候補</span></div><div class="ai-result-pick ai-bought"><b>2位 2-6-1</b><span>AI評価 72.6点 ／ 検証候補</span></div><div class="ai-result-pick ai-bought"><b>3位 1-2-6</b><span>AI評価 72.0点 ／ 検証候補</span></div><div class="ai-result-pick ai-bought"><b>4位 6-2-1</b><span>AI評価 71.3点 ／ 検証候補</span></div><div class="ai-result-pick ai-bought"><b>5位 1-6-2</b><span>AI評価 71.3点 ／ 検証候補</span></div><div class="ai-result-pick ai-bought"><b>6位 6-1-2</b><span>AI評価 70.8点 ／ 検証候補</span></div><div class="ai-result-pick ai-bought"><b>7位 2-1-5</b><span>AI評価 70.3点 ／ 検証候補</span></div><div class="ai-result-pick ai-bought"><b>8位 2-6-5</b><span>AI評価 69.6点 ／ 検証候補</span></div><div class="ai-result-pick ai-bought"><b>9位 1-2-5</b><span>AI評価 69.4点 ／ 検証候補</span></div><div class="ai-result-pick ai-bought"><b>10位 2-5-1</b><span>AI評価 68.8点 ／ 検証候補</span></div><div class="ai-result-pick ai-bought"><b>11位 2-1-4</b><span>AI評価 68.4点 ／ 検証候補</span></div><div class="ai-result-pick ai-bought"><b>12位 2-1-3</b><span>AI評価 68.3点 ／ 検証候補</span></div><div class="ai-result-pick ai-bought"><b>13位 2-5-6</b><span>AI評価 68.3点 ／ 検証候補</span></div><div class="ai-result-pick ai-bought"><b>14位 6-2-5</b><span>AI評価 68.3点 ／ 検証候補</span></div><div class="ai-result-pick ai-bought"><b>15位 2-6-4</b><span>AI評価 67.8点 ／ 検証候補</span></div><div class="ai-result-pick ai-bought"><b>16位 2-6-3</b><span>AI評価 67.7点 ／ 検証候補</span></div><div class="ai-result-pick ai-bought"><b>17位 1-2-4</b><span>AI評価 67.5点 ／ 検証候補</span></div><div class="ai-result-pick ai-bought"><b>18位 1-2-3</b><span>AI評価 67.4点 ／ 検証候補</span></div><div class="ai-result-pick ai-bought"><b>19位 1-5-2</b><span>AI評価 67.4点 ／ 検証候補</span></div><div class="ai-result-pick ai-bought"><b>20位 1-6-5</b><span>AI評価 67.3点 ／ 検証候補</span></div><div class="ai-result-pick ai-bought"><b>21位 6-1-5</b><span>AI評価 66.9点 ／ 検証候補</span></div><div class="ai-result-pick ai-bought"><b>22位 6-2-4</b><span>AI評価 66.4点 ／ 検証候補</span></div><div class="ai-result-pick ai-bought"><b>23位 6-2-3</b><span>AI評価 66.3点 ／ 検証候補</span></div><div class="ai-result-pick ai-bought"><b>24位 6-5-2</b><span>AI評価 66.3点 ／ 検証候補</span></div><div class="ai-result-pick"><b>25位 1-5-6</b><span>AI評価 66.0点 ／ 参考</span></div><div class="ai-result-pick"><b>26位 2-4-1</b><span>AI評価 66.0点 ／ 参考</span></div><div class="ai-result-pick"><b>27位 2-3-1</b><span>AI評価 65.9点 ／ 参考</span></div><div class="ai-result-pick"><b>28位 2-4-6</b><span>AI評価 65.5点 ／ 参考</span></div><div class="ai-result-pick"><b>29位 1-6-4</b><span>AI評価 65.5点 ／ 参考</span></div><div class="ai-result-pick"><b>30位 2-3-6</b><span>AI評価 65.4点 ／ 参考</span></div><div class="ai-result-pick"><b>31位 1-6-3</b><span>AI評価 65.4点 ／ 参考</span></div><div class="ai-result-pick"><b>32位 6-5-1</b><span>AI評価 65.4点 ／ 参考</span></div><div class="ai-result-pick"><b>33位 6-1-4</b><span>AI評価 65.0点 ／ 参考</span></div><div class="ai-result-pick"><b>34位 6-1-3</b><span>AI評価 64.9点 ／ 参考</span></div><div class="ai-result-pick"><b>35位 5-2-1</b><span>AI評価 64.8点 ／ 参考</span></div><div class="ai-result-pick"><b>36位 1-4-2</b><span>AI評価 64.6点 ／ 参考</span></div><div class="ai-result-pick"><b>37位 1-3-2</b><span>AI評価 64.5点 ／ 参考</span></div><div class="ai-result-pick"><b>38位 5-2-6</b><span>AI評価 64.4点 ／ 参考</span></div><div class="ai-result-pick"><b>39位 5-1-2</b><span>AI評価 64.4点 ／ 参考</span></div><div class="ai-result-pick"><b>40位 2-5-4</b><span>AI評価 63.9点 ／ 参考</span></div><div class="ai-result-pick"><b>41位 2-5-3</b><span>AI評価 63.8点 ／ 参考</span></div><div class="ai-result-pick"><b>42位 5-6-2</b><span>AI評価 63.7点 ／ 参考</span></div><div class="ai-result-pick"><b>43位 6-4-2</b><span>AI評価 63.5点 ／ 参考</span></div><div class="ai-result-pick"><b>44位 6-3-2</b><span>AI評価 63.4点 ／ 参考</span></div><div class="ai-result-pick"><b>45位 1-4-6</b><span>AI評価 63.3点 ／ 参考</span></div><div class="ai-result-pick"><b>46位 1-3-6</b><span>AI評価 63.1点 ／ 参考</span></div><div class="ai-result-pick"><b>47位 5-1-6</b><span>AI評価 63.0点 ／ 参考</span></div><div class="ai-result-pick"><b>48位 2-4-5</b><span>AI評価 63.0点 ／ 参考</span></div><div class="ai-result-pick"><b>49位 2-3-5</b><span>AI評価 62.8点 ／ 参考</span></div><div class="ai-result-pick"><b>50位 5-6-1</b><span>AI評価 62.8点 ／ 参考</span></div></div>
       </div>
     </details>
     
@@ -1203,7 +1366,7 @@ details.all-scores summary {
 
   </div>
 
-  
+  <div class="signal-research-note">雷神V2の研究用事後再判定。公式保存の直前スコアで算出した検証結果で、締切時の検知・実購入ではありません。</div>
 
   
 
@@ -1278,14 +1441,14 @@ details.all-scores summary {
   
     <details class="simulation-box ai-result-box">
       <summary class="ai-result-summary">
-        <span class="simulation-title">風神雷神専用AI予想を見る</span>
+        <span class="simulation-title">風神雷神専用AI予想（V2・事後研究24点）を見る</span>
         <span class="ai-result-summary-meta">
-          購入24点 ／ <span class="signal-rank-miss" title="購入24点の外でも実着のAI評価順位を確認できます">不的中・実着30位／120通り</span> ／ 仮想投資 <b>2,400円</b> ／ 払戻 <b>0円</b> ／ 収支 <b>-2,400円</b>
+          検証用仮想24点 ／ <span class="signal-rank-miss" title="研究用上位24点の外でも実着のAI評価順位を確認できます">不的中・実着30位／120通り</span> ／ 仮想投資 <b>2,400円</b> ／ 払戻 <b>0円</b> ／ 収支 <b>-2,400円</b>
         </span>
       </summary>
       <div class="ai-result-body">
-        <div class="simulation-meta"> AI順位表示50位まで ／ 購入上位24点・各100円 ／ 購入範囲外は参考順位（全120通りは保存データで管理）</div>
-        <div class="ai-result-list"><div class="ai-result-pick ai-bought"><b>1位 1-4-2</b><span>AI評価 66.5点 ／ 購入</span></div><div class="ai-result-pick ai-bought"><b>2位 4-1-2</b><span>AI評価 65.7点 ／ 購入</span></div><div class="ai-result-pick ai-bought"><b>3位 1-2-4</b><span>AI評価 65.6点 ／ 購入</span></div><div class="ai-result-pick ai-bought"><b>4位 1-4-3</b><span>AI評価 64.9点 ／ 購入</span></div><div class="ai-result-pick ai-bought"><b>5位 4-2-1</b><span>AI評価 64.4点 ／ 購入</span></div><div class="ai-result-pick ai-bought"><b>6位 4-1-3</b><span>AI評価 64.1点 ／ 購入</span></div><div class="ai-result-pick ai-bought"><b>7位 1-3-4</b><span>AI評価 63.2点 ／ 購入</span></div><div class="ai-result-pick ai-bought"><b>8位 2-1-4</b><span>AI評価 63.1点 ／ 購入</span></div><div class="ai-result-pick ai-bought"><b>9位 2-4-1</b><span>AI評価 62.6点 ／ 購入</span></div><div class="ai-result-pick ai-bought"><b>10位 1-2-3</b><span>AI評価 62.3点 ／ 購入</span></div><div class="ai-result-pick ai-bought"><b>11位 4-3-1</b><span>AI評価 62.0点 ／ 購入</span></div><div class="ai-result-pick ai-bought"><b>12位 1-4-5</b><span>AI評価 61.7点 ／ 購入</span></div><div class="ai-result-pick ai-bought"><b>13位 1-3-2</b><span>AI評価 61.5点 ／ 購入</span></div><div class="ai-result-pick ai-bought"><b>14位 4-1-5</b><span>AI評価 60.8点 ／ 購入</span></div><div class="ai-result-pick ai-bought"><b>15位 4-2-3</b><span>AI評価 60.2点 ／ 購入</span></div><div class="ai-result-pick ai-bought"><b>16位 2-1-3</b><span>AI評価 59.7点 ／ 購入</span></div><div class="ai-result-pick ai-bought"><b>17位 4-3-2</b><span>AI評価 59.4点 ／ 購入</span></div><div class="ai-result-pick ai-bought"><b>18位 3-1-4</b><span>AI評価 59.1点 ／ 購入</span></div><div class="ai-result-pick ai-bought"><b>19位 1-2-5</b><span>AI評価 59.0点 ／ 購入</span></div><div class="ai-result-pick ai-bought"><b>20位 3-4-1</b><span>AI評価 58.7点 ／ 購入</span></div><div class="ai-result-pick ai-bought"><b>21位 1-4-6</b><span>AI評価 58.6点 ／ 購入</span></div><div class="ai-result-pick ai-bought"><b>22位 2-4-3</b><span>AI評価 58.5点 ／ 購入</span></div><div class="ai-result-pick ai-bought"><b>23位 1-5-4</b><span>AI評価 58.4点 ／ 購入</span></div><div class="ai-result-pick ai-bought"><b>24位 4-1-6</b><span>AI評価 57.8点 ／ 購入</span></div><div class="ai-result-pick"><b>25位 2-3-1</b><span>AI評価 57.6点 ／ 参考</span></div><div class="ai-result-pick"><b>26位 3-1-2</b><span>AI評価 57.3点 ／ 参考</span></div><div class="ai-result-pick"><b>27位 4-5-1</b><span>AI評価 57.1点 ／ 参考</span></div><div class="ai-result-pick"><b>28位 4-2-5</b><span>AI評価 57.0点 ／ 参考</span></div><div class="ai-result-pick"><b>29位 2-3-4</b><span>AI評価 56.8点 ／ 参考</span></div><div class="ai-result-pick hit-pick"><b>30位 1-3-5</b><span>AI評価 56.7点 ／ 参考</span></div><div class="ai-result-pick"><b>31位 1-5-2</b><span>AI評価 56.6点 ／ 参考</span></div><div class="ai-result-pick"><b>32位 2-1-5</b><span>AI評価 56.5点 ／ 参考</span></div><div class="ai-result-pick"><b>33位 3-4-2</b><span>AI評価 56.1点 ／ 参考</span></div><div class="ai-result-pick"><b>34位 3-2-1</b><span>AI評価 56.0点 ／ 参考</span></div><div class="ai-result-pick"><b>35位 1-2-6</b><span>AI評価 56.0点 ／ 参考</span></div><div class="ai-result-pick"><b>36位 2-4-5</b><span>AI評価 55.2点 ／ 参考</span></div><div class="ai-result-pick"><b>37位 3-2-4</b><span>AI評価 55.2点 ／ 参考</span></div><div class="ai-result-pick"><b>38位 1-5-3</b><span>AI評価 55.0点 ／ 参考</span></div><div class="ai-result-pick"><b>39位 4-3-5</b><span>AI評価 54.6点 ／ 参考</span></div><div class="ai-result-pick"><b>40位 4-5-2</b><span>AI評価 54.6点 ／ 参考</span></div><div class="ai-result-pick"><b>41位 4-2-6</b><span>AI評価 53.9点 ／ 参考</span></div><div class="ai-result-pick"><b>42位 1-6-4</b><span>AI評価 53.8点 ／ 参考</span></div><div class="ai-result-pick"><b>43位 1-3-6</b><span>AI評価 53.6点 ／ 参考</span></div><div class="ai-result-pick"><b>44位 2-1-6</b><span>AI評価 53.4点 ／ 参考</span></div><div class="ai-result-pick"><b>45位 4-5-3</b><span>AI評価 53.0点 ／ 参考</span></div><div class="ai-result-pick"><b>46位 2-5-1</b><span>AI評価 52.8点 ／ 参考</span></div><div class="ai-result-pick"><b>47位 4-6-1</b><span>AI評価 52.5点 ／ 参考</span></div><div class="ai-result-pick"><b>48位 3-1-5</b><span>AI評価 52.5点 ／ 参考</span></div><div class="ai-result-pick"><b>49位 2-4-6</b><span>AI評価 52.2点 ／ 参考</span></div><div class="ai-result-pick"><b>50位 1-6-2</b><span>AI評価 52.1点 ／ 参考</span></div></div>
+        <div class="simulation-meta">研究用の事後再計算です。当時の締切前予測・購入履歴とは別の仮想収支です。 AI順位表示50位まで ／ 検証用仮想上位24点・各100円 ／ 購入範囲外は参考順位（全120通りは保存データで管理）</div>
+        <div class="ai-result-list"><div class="ai-result-pick ai-bought"><b>1位 1-4-2</b><span>AI評価 66.5点 ／ 検証候補</span></div><div class="ai-result-pick ai-bought"><b>2位 4-1-2</b><span>AI評価 65.7点 ／ 検証候補</span></div><div class="ai-result-pick ai-bought"><b>3位 1-2-4</b><span>AI評価 65.6点 ／ 検証候補</span></div><div class="ai-result-pick ai-bought"><b>4位 1-4-3</b><span>AI評価 64.9点 ／ 検証候補</span></div><div class="ai-result-pick ai-bought"><b>5位 4-2-1</b><span>AI評価 64.4点 ／ 検証候補</span></div><div class="ai-result-pick ai-bought"><b>6位 4-1-3</b><span>AI評価 64.1点 ／ 検証候補</span></div><div class="ai-result-pick ai-bought"><b>7位 1-3-4</b><span>AI評価 63.2点 ／ 検証候補</span></div><div class="ai-result-pick ai-bought"><b>8位 2-1-4</b><span>AI評価 63.1点 ／ 検証候補</span></div><div class="ai-result-pick ai-bought"><b>9位 2-4-1</b><span>AI評価 62.6点 ／ 検証候補</span></div><div class="ai-result-pick ai-bought"><b>10位 1-2-3</b><span>AI評価 62.3点 ／ 検証候補</span></div><div class="ai-result-pick ai-bought"><b>11位 4-3-1</b><span>AI評価 62.0点 ／ 検証候補</span></div><div class="ai-result-pick ai-bought"><b>12位 1-4-5</b><span>AI評価 61.7点 ／ 検証候補</span></div><div class="ai-result-pick ai-bought"><b>13位 1-3-2</b><span>AI評価 61.5点 ／ 検証候補</span></div><div class="ai-result-pick ai-bought"><b>14位 4-1-5</b><span>AI評価 60.8点 ／ 検証候補</span></div><div class="ai-result-pick ai-bought"><b>15位 4-2-3</b><span>AI評価 60.2点 ／ 検証候補</span></div><div class="ai-result-pick ai-bought"><b>16位 2-1-3</b><span>AI評価 59.7点 ／ 検証候補</span></div><div class="ai-result-pick ai-bought"><b>17位 4-3-2</b><span>AI評価 59.4点 ／ 検証候補</span></div><div class="ai-result-pick ai-bought"><b>18位 3-1-4</b><span>AI評価 59.1点 ／ 検証候補</span></div><div class="ai-result-pick ai-bought"><b>19位 1-2-5</b><span>AI評価 59.0点 ／ 検証候補</span></div><div class="ai-result-pick ai-bought"><b>20位 3-4-1</b><span>AI評価 58.7点 ／ 検証候補</span></div><div class="ai-result-pick ai-bought"><b>21位 1-4-6</b><span>AI評価 58.6点 ／ 検証候補</span></div><div class="ai-result-pick ai-bought"><b>22位 2-4-3</b><span>AI評価 58.5点 ／ 検証候補</span></div><div class="ai-result-pick ai-bought"><b>23位 1-5-4</b><span>AI評価 58.4点 ／ 検証候補</span></div><div class="ai-result-pick ai-bought"><b>24位 4-1-6</b><span>AI評価 57.8点 ／ 検証候補</span></div><div class="ai-result-pick"><b>25位 2-3-1</b><span>AI評価 57.6点 ／ 参考</span></div><div class="ai-result-pick"><b>26位 3-1-2</b><span>AI評価 57.3点 ／ 参考</span></div><div class="ai-result-pick"><b>27位 4-5-1</b><span>AI評価 57.1点 ／ 参考</span></div><div class="ai-result-pick"><b>28位 4-2-5</b><span>AI評価 57.0点 ／ 参考</span></div><div class="ai-result-pick"><b>29位 2-3-4</b><span>AI評価 56.8点 ／ 参考</span></div><div class="ai-result-pick hit-pick"><b>30位 1-3-5</b><span>AI評価 56.7点 ／ 参考</span></div><div class="ai-result-pick"><b>31位 1-5-2</b><span>AI評価 56.6点 ／ 参考</span></div><div class="ai-result-pick"><b>32位 2-1-5</b><span>AI評価 56.5点 ／ 参考</span></div><div class="ai-result-pick"><b>33位 3-4-2</b><span>AI評価 56.1点 ／ 参考</span></div><div class="ai-result-pick"><b>34位 3-2-1</b><span>AI評価 56.0点 ／ 参考</span></div><div class="ai-result-pick"><b>35位 1-2-6</b><span>AI評価 56.0点 ／ 参考</span></div><div class="ai-result-pick"><b>36位 2-4-5</b><span>AI評価 55.2点 ／ 参考</span></div><div class="ai-result-pick"><b>37位 3-2-4</b><span>AI評価 55.2点 ／ 参考</span></div><div class="ai-result-pick"><b>38位 1-5-3</b><span>AI評価 55.0点 ／ 参考</span></div><div class="ai-result-pick"><b>39位 4-3-5</b><span>AI評価 54.6点 ／ 参考</span></div><div class="ai-result-pick"><b>40位 4-5-2</b><span>AI評価 54.6点 ／ 参考</span></div><div class="ai-result-pick"><b>41位 4-2-6</b><span>AI評価 53.9点 ／ 参考</span></div><div class="ai-result-pick"><b>42位 1-6-4</b><span>AI評価 53.8点 ／ 参考</span></div><div class="ai-result-pick"><b>43位 1-3-6</b><span>AI評価 53.6点 ／ 参考</span></div><div class="ai-result-pick"><b>44位 2-1-6</b><span>AI評価 53.4点 ／ 参考</span></div><div class="ai-result-pick"><b>45位 4-5-3</b><span>AI評価 53.0点 ／ 参考</span></div><div class="ai-result-pick"><b>46位 2-5-1</b><span>AI評価 52.8点 ／ 参考</span></div><div class="ai-result-pick"><b>47位 4-6-1</b><span>AI評価 52.5点 ／ 参考</span></div><div class="ai-result-pick"><b>48位 3-1-5</b><span>AI評価 52.5点 ／ 参考</span></div><div class="ai-result-pick"><b>49位 2-4-6</b><span>AI評価 52.2点 ／ 参考</span></div><div class="ai-result-pick"><b>50位 1-6-2</b><span>AI評価 52.1点 ／ 参考</span></div></div>
       </div>
     </details>
     
