@@ -975,7 +975,7 @@
       "morning_six_identity_verified": true,
       "original_folder_boats": 6,
       "saved_predeadline_boats": 0,
-      "clock_consistent_snapshot_count": 3,
+      "clock_consistent_snapshot_count": 4,
       "clock_consistent_earliest": {
         "collected_at": "2026-10-16T10:46:04.485634+09:00",
         "saved_folder_clock": "2026-10-16T10:48:48+09:00",
@@ -1595,7 +1595,7 @@
       "morning_six_identity_verified": true,
       "original_folder_boats": 6,
       "saved_predeadline_boats": 0,
-      "clock_consistent_snapshot_count": 3,
+      "clock_consistent_snapshot_count": 4,
       "clock_consistent_earliest": {
         "collected_at": "2026-10-16T10:46:05.559196+09:00",
         "saved_folder_clock": "2026-10-16T10:48:48+09:00",
@@ -2015,7 +2015,7 @@
       "morning_six_identity_verified": true,
       "original_folder_boats": 6,
       "saved_predeadline_boats": 0,
-      "clock_consistent_snapshot_count": 3,
+      "clock_consistent_snapshot_count": 4,
       "clock_consistent_earliest": {
         "collected_at": "2026-10-16T10:48:37.269351+09:00",
         "saved_folder_clock": "2026-10-16T10:48:48+09:00",
@@ -3587,7 +3587,7 @@
       "morning_six_identity_verified": true,
       "original_folder_boats": 6,
       "saved_predeadline_boats": 0,
-      "clock_consistent_snapshot_count": 3,
+      "clock_consistent_snapshot_count": 4,
       "clock_consistent_earliest": {
         "collected_at": "2026-10-16T10:46:12.737354+09:00",
         "saved_folder_clock": "2026-10-16T10:48:48+09:00",
