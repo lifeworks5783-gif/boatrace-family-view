@@ -45,25 +45,27 @@
       "race_id": "20261016-01-02",
       "morning_entry_count": 6,
       "morning_six_identity_verified": true,
-      "original_folder_boats": 0,
+      "original_folder_boats": 6,
       "saved_predeadline_boats": 0,
-      "clock_consistent_snapshot_count": 0,
-      "clock_consistent_earliest": null,
+      "clock_consistent_snapshot_count": 2,
+      "clock_consistent_earliest": {
+        "collected_at": "2026-10-16T15:41:26.305292+09:00",
+        "saved_folder_clock": "2026-10-16T15:43:58+09:00",
+        "deadline": "2026-10-16T15:57:00+09:00",
+        "seconds_before_deadline": 934,
+        "evidence_level": "three_clock_consistent_not_independently_attested"
+      },
       "reconstructed_after_result_boats": 0,
       "legacy_time_unverified_boats": 6,
-      "beforeinfo_state": "historical_capture_time_unverified",
+      "beforeinfo_state": "original_folder_time_consistent_not_proven",
       "morning_prediction_saved": true,
-      "live_prediction_saved": false,
+      "live_prediction_saved": true,
       "canonical_prediction_saved": true,
       "official_html_original_archived": false,
       "issues": [
         {
-          "code": "predeadline_capture_not_confirmed",
+          "code": "predeadline_capture_not_independently_attested",
           "field": "provenance"
-        },
-        {
-          "code": "live_prediction_not_saved_for_race",
-          "field": "live_prediction"
         }
       ]
     },
@@ -599,25 +601,27 @@
       "race_id": "20261016-02-11",
       "morning_entry_count": 6,
       "morning_six_identity_verified": true,
-      "original_folder_boats": 0,
+      "original_folder_boats": 6,
       "saved_predeadline_boats": 0,
-      "clock_consistent_snapshot_count": 0,
-      "clock_consistent_earliest": null,
+      "clock_consistent_snapshot_count": 2,
+      "clock_consistent_earliest": {
+        "collected_at": "2026-10-16T15:41:15.066115+09:00",
+        "saved_folder_clock": "2026-10-16T15:43:58+09:00",
+        "deadline": "2026-10-16T15:51:00+09:00",
+        "seconds_before_deadline": 585,
+        "evidence_level": "three_clock_consistent_not_independently_attested"
+      },
       "reconstructed_after_result_boats": 0,
       "legacy_time_unverified_boats": 6,
-      "beforeinfo_state": "historical_capture_time_unverified",
+      "beforeinfo_state": "original_folder_time_consistent_not_proven",
       "morning_prediction_saved": true,
-      "live_prediction_saved": false,
+      "live_prediction_saved": true,
       "canonical_prediction_saved": true,
       "official_html_original_archived": false,
       "issues": [
         {
-          "code": "predeadline_capture_not_confirmed",
+          "code": "predeadline_capture_not_independently_attested",
           "field": "provenance"
-        },
-        {
-          "code": "live_prediction_not_saved_for_race",
-          "field": "live_prediction"
         }
       ]
     },
@@ -917,25 +921,27 @@
       "race_id": "20261016-03-11",
       "morning_entry_count": 6,
       "morning_six_identity_verified": true,
-      "original_folder_boats": 0,
+      "original_folder_boats": 6,
       "saved_predeadline_boats": 0,
-      "clock_consistent_snapshot_count": 0,
-      "clock_consistent_earliest": null,
+      "clock_consistent_snapshot_count": 2,
+      "clock_consistent_earliest": {
+        "collected_at": "2026-10-16T15:41:24.300959+09:00",
+        "saved_folder_clock": "2026-10-16T15:43:58+09:00",
+        "deadline": "2026-10-16T15:53:00+09:00",
+        "seconds_before_deadline": 696,
+        "evidence_level": "three_clock_consistent_not_independently_attested"
+      },
       "reconstructed_after_result_boats": 0,
       "legacy_time_unverified_boats": 6,
-      "beforeinfo_state": "historical_capture_time_unverified",
+      "beforeinfo_state": "original_folder_time_consistent_not_proven",
       "morning_prediction_saved": true,
-      "live_prediction_saved": false,
+      "live_prediction_saved": true,
       "canonical_prediction_saved": true,
       "official_html_original_archived": false,
       "issues": [
         {
-          "code": "predeadline_capture_not_confirmed",
+          "code": "predeadline_capture_not_independently_attested",
           "field": "provenance"
-        },
-        {
-          "code": "live_prediction_not_saved_for_race",
-          "field": "live_prediction"
         }
       ]
     },
@@ -1255,25 +1261,21 @@
       "race_id": "20261016-04-11",
       "morning_entry_count": 6,
       "morning_six_identity_verified": true,
-      "original_folder_boats": 0,
+      "original_folder_boats": 6,
       "saved_predeadline_boats": 0,
       "clock_consistent_snapshot_count": 0,
       "clock_consistent_earliest": null,
       "reconstructed_after_result_boats": 0,
       "legacy_time_unverified_boats": 6,
-      "beforeinfo_state": "historical_capture_time_unverified",
+      "beforeinfo_state": "original_folder_saved_unverified_time",
       "morning_prediction_saved": true,
-      "live_prediction_saved": false,
+      "live_prediction_saved": true,
       "canonical_prediction_saved": true,
       "official_html_original_archived": false,
       "issues": [
         {
-          "code": "predeadline_capture_not_confirmed",
+          "code": "predeadline_capture_time_not_independently_verified",
           "field": "provenance"
-        },
-        {
-          "code": "live_prediction_not_saved_for_race",
-          "field": "live_prediction"
         }
       ]
     },
@@ -1591,20 +1593,26 @@
       "race_id": "20261016-08-12",
       "morning_entry_count": 6,
       "morning_six_identity_verified": true,
-      "original_folder_boats": 0,
+      "original_folder_boats": 6,
       "saved_predeadline_boats": 0,
-      "clock_consistent_snapshot_count": 0,
-      "clock_consistent_earliest": null,
+      "clock_consistent_snapshot_count": 2,
+      "clock_consistent_earliest": {
+        "collected_at": "2026-10-16T15:43:47.968649+09:00",
+        "saved_folder_clock": "2026-10-16T15:43:58+09:00",
+        "deadline": "2026-10-16T16:02:00+09:00",
+        "seconds_before_deadline": 1092,
+        "evidence_level": "three_clock_consistent_not_independently_attested"
+      },
       "reconstructed_after_result_boats": 0,
       "legacy_time_unverified_boats": 0,
-      "beforeinfo_state": "no_saved_beforeinfo",
+      "beforeinfo_state": "original_folder_time_consistent_not_proven",
       "morning_prediction_saved": true,
       "live_prediction_saved": false,
       "canonical_prediction_saved": true,
       "official_html_original_archived": false,
       "issues": [
         {
-          "code": "predeadline_capture_not_confirmed",
+          "code": "predeadline_capture_not_independently_attested",
           "field": "provenance"
         },
         {
@@ -1913,17 +1921,13 @@
       "legacy_time_unverified_boats": 6,
       "beforeinfo_state": "historical_capture_time_unverified",
       "morning_prediction_saved": true,
-      "live_prediction_saved": false,
+      "live_prediction_saved": true,
       "canonical_prediction_saved": true,
       "official_html_original_archived": false,
       "issues": [
         {
           "code": "predeadline_capture_not_confirmed",
           "field": "provenance"
-        },
-        {
-          "code": "live_prediction_not_saved_for_race",
-          "field": "live_prediction"
         }
       ]
     },
@@ -3259,25 +3263,27 @@
       "race_id": "20261016-20-02",
       "morning_entry_count": 6,
       "morning_six_identity_verified": true,
-      "original_folder_boats": 0,
+      "original_folder_boats": 6,
       "saved_predeadline_boats": 0,
-      "clock_consistent_snapshot_count": 0,
-      "clock_consistent_earliest": null,
+      "clock_consistent_snapshot_count": 2,
+      "clock_consistent_earliest": {
+        "collected_at": "2026-10-16T15:41:17.098002+09:00",
+        "saved_folder_clock": "2026-10-16T15:43:58+09:00",
+        "deadline": "2026-10-16T15:49:00+09:00",
+        "seconds_before_deadline": 463,
+        "evidence_level": "three_clock_consistent_not_independently_attested"
+      },
       "reconstructed_after_result_boats": 0,
       "legacy_time_unverified_boats": 6,
-      "beforeinfo_state": "historical_capture_time_unverified",
+      "beforeinfo_state": "original_folder_time_consistent_not_proven",
       "morning_prediction_saved": true,
-      "live_prediction_saved": false,
+      "live_prediction_saved": true,
       "canonical_prediction_saved": true,
       "official_html_original_archived": false,
       "issues": [
         {
-          "code": "predeadline_capture_not_confirmed",
+          "code": "predeadline_capture_not_independently_attested",
           "field": "provenance"
-        },
-        {
-          "code": "live_prediction_not_saved_for_race",
-          "field": "live_prediction"
         }
       ]
     },
@@ -3883,25 +3889,27 @@
       "race_id": "20261016-24-02",
       "morning_entry_count": 6,
       "morning_six_identity_verified": true,
-      "original_folder_boats": 0,
+      "original_folder_boats": 6,
       "saved_predeadline_boats": 0,
-      "clock_consistent_snapshot_count": 0,
-      "clock_consistent_earliest": null,
+      "clock_consistent_snapshot_count": 2,
+      "clock_consistent_earliest": {
+        "collected_at": "2026-10-16T15:41:16.081191+09:00",
+        "saved_folder_clock": "2026-10-16T15:43:58+09:00",
+        "deadline": "2026-10-16T15:47:00+09:00",
+        "seconds_before_deadline": 344,
+        "evidence_level": "three_clock_consistent_not_independently_attested"
+      },
       "reconstructed_after_result_boats": 0,
       "legacy_time_unverified_boats": 6,
-      "beforeinfo_state": "historical_capture_time_unverified",
+      "beforeinfo_state": "original_folder_time_consistent_not_proven",
       "morning_prediction_saved": true,
-      "live_prediction_saved": false,
+      "live_prediction_saved": true,
       "canonical_prediction_saved": true,
       "official_html_original_archived": false,
       "issues": [
         {
-          "code": "predeadline_capture_not_confirmed",
+          "code": "predeadline_capture_not_independently_attested",
           "field": "provenance"
-        },
-        {
-          "code": "live_prediction_not_saved_for_race",
-          "field": "live_prediction"
         }
       ]
     },
@@ -4170,13 +4178,13 @@
     "total": 156,
     "morning_six": 156,
     "predeadline_live_six": 0,
-    "original_folder_six": 71,
-    "clock_consistent_not_proven": 60,
+    "original_folder_six": 78,
+    "clock_consistent_not_proven": 66,
     "recovered_only": 27,
-    "no_live_saved": 49,
-    "unknown_time": 9,
+    "no_live_saved": 48,
+    "unknown_time": 3,
     "morning_prediction_saved": 156,
-    "live_prediction_saved": 65,
+    "live_prediction_saved": 72,
     "canonical_prediction_saved": 156
   }
 }
